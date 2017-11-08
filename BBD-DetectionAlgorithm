@@ -1,8 +1,5 @@
-# IMPORTANT! Make sure you change this part to your own working directory 
-# where all the files related to this script are placed 
-
-#setwd("C:/Users/Tagi/Desktop/UWaterloo/Research/Restructuring/Codes/BBD-DetectionAlgorithm")
-setwd("U:/decomp_community")
+setwd("C:/Users/Tagi/Desktop/UWaterloo/Research/Restructuring/Codes/BBD-DetectionAlgorithm")
+#setwd("U:/decomp_community")
 
 # Install/Load Necessary Packages #
 dynamic_require = function(package){ 
@@ -41,7 +38,7 @@ read.MPS = function(filename){
     MIPLIB.RHS = MIPLIB[(marker.ind[which(MARKERS=="RHS")]+1):(marker.ind[which(MARKERS=="ENDATA")]-1),] 
   }
   
-#  MIPLIB.BOUNDS = MIPLIB[(marker.ind[which(MARKERS=="BOUNDS")]+1):(marker.ind[which(MARKERS=="ENDATA")]-1),]
+  #  MIPLIB.BOUNDS = MIPLIB[(marker.ind[which(MARKERS=="BOUNDS")]+1):(marker.ind[which(MARKERS=="ENDATA")]-1),]
   
   MIPLIB.dir = NULL  
   constraints = NULL  
@@ -194,7 +191,7 @@ read.MPS = function(filename){
   #     }                
   #   }
   # }  
-
+  
   list(A=MIPLIB.A, rnames=constraints, filename=filename)
   
 }
@@ -334,7 +331,7 @@ merge = function(G, S, L){
       merge.goodness = c(merge.goodness, (- quality.D(G, S) + quality.D(G, s.i))/length(rem) )
     }
     S.prev = S
-#    S = S[-which(merges%in%names(merge.freq)[which(merge.goodness==max(merge.goodness))[1]])]    
+    #    S = S[-which(merges%in%names(merge.freq)[which(merge.goodness==max(merge.goodness))[1]])]    
     S = S[-which(merges%in%names(merge.freq)[which(merge.goodness==max(merge.goodness))])]    
     
     L = c(L, list(S))
@@ -382,7 +379,7 @@ KEE = function(instance){
       Gamma.best = Gamma.rem
       S.best = rem.S.best
     }
-
+    
     mer = merge(G, S, L)
     S = mer$S
     L = mer$L
@@ -422,7 +419,7 @@ KEE = function(instance){
   }
   myout = cbind(rnames[V(G.bdiag)$names[which( V(G.bdiag)$type==0 )]], bdiag$membership[which(V(G.bdiag)$type==0)]-1)
   write.table(data.frame(myout), paste(filename, ".blocks_comm", sep=""), sep="\t", quote=FALSE, row.names = F, col.names=F)
-  list(border = border, block.rows = block.rows, block.columns = block.columns)
+  list(border = border, block.rows = block.rows, block.columns = block.columns, output=data.frame(myout))
 }
 
 
@@ -474,12 +471,38 @@ BBD.plot = function(A, BBD){
 #filename= "a1c1s1"
 #filename="atm_miplib2010"
 
-#filename= "\\\\orgrdnfs01\\data\\miplib\\z10teams"
-filename= "\\\\orgrdnfs01\\data\\miplib\\aflow30a"
+problem.set = c("10teams",
+                "aflow30a",
+                "aflow40b",
+                "fiber",
+                "fixnet6",
+                "gesa2-o",
+                "harp2",
+                "mkc",
+                "modglob",
+                "noswot",
+                "opt1217",
+                "p2756",
+                "pp08a",
+                "pp08aCUTS",
+                "rout",
+                "set1ch",
+                "beasleyC3",
+                "gmu-35-40",
+                "macrophage",
+                "mcsched",
+                "mine-166-5",
+                "mine-90-10",
+                "pw-myciel4",
+                "ran16x16",
+                "reblock67",
+                "rmine6",
+                "rococoC10-001000"
+)
 
-instance = read.MPS(filename)
-myBBD = KEE(instance)
-BBD.plot(instance$A, myBBD)
-
-
-
+for(i in 1:length(problem.set)){
+  filename=problem.set[i]
+  instance = read.MPS(filename)
+  myBBD = KEE(instance)
+  BBD.plot(instance$A, myBBD)
+}
