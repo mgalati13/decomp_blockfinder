@@ -1,0 +1,480 @@
+# IMPORTANT! Make sure you change this part to your own working directory 
+# where all the files related to this script are placed 
+
+setwd("C:/Users/Tagi/Desktop/UWaterloo/Research/Restructuring/Codes/BBD-DetectionAlgorithm")
+
+# Install/Load Necessary Packages #
+dynamic_require = function(package){ 
+  if(!eval(parse(text=paste("require(",package,")")))){
+    install.packages(package) 
+  }
+  eval(parse(text=paste("require(",package,")"))) 
+}
+dynamic_require("igraph")
+dynamic_require("Matrix")
+
+#
+
+# Read Problem instances from MPS file format #
+read.MPS = function(filename){
+  MIPLIB <- read.table(paste(filename,".mps",sep=""), comment.char="",header=T,sep="\t", as.is=T, strip.white=T)
+  var.markers =MIPLIB[grep("MARK000",MIPLIB[,1]),]
+  MARKERS = c("ROWS",
+              "COLUMNS",
+              var.markers,  
+              "RHS",
+              "BOUNDS",
+              "ENDATA")
+  
+  if(!"BOUNDS" %in% MIPLIB[which(MIPLIB[,1] %in% MARKERS),1]){
+    MARKERS = MARKERS[-which(MARKERS=="BOUNDS")]
+  }
+  
+  marker.ind = which(MIPLIB[,1] %in% MARKERS)
+  MIPLIB.ROWS = MIPLIB[(marker.ind[which(MARKERS=="ROWS")]+1):(marker.ind[which(MARKERS=="COLUMNS")]-1),]
+  MIPLIB.COLS = MIPLIB[(marker.ind[which(MARKERS=="COLUMNS")]+1):(marker.ind[which(MARKERS=="RHS")]-1) ,]
+  if("BOUNDS" %in% MARKERS){
+    MIPLIB.RHS = MIPLIB[(marker.ind[which(MARKERS=="RHS")]+1):(marker.ind[which(MARKERS=="BOUNDS")]-1),] 
+  }
+  if(!"BOUNDS" %in% MARKERS){
+    MIPLIB.RHS = MIPLIB[(marker.ind[which(MARKERS=="RHS")]+1):(marker.ind[which(MARKERS=="ENDATA")]-1),] 
+  }
+  
+#  MIPLIB.BOUNDS = MIPLIB[(marker.ind[which(MARKERS=="BOUNDS")]+1):(marker.ind[which(MARKERS=="ENDATA")]-1),]
+  
+  MIPLIB.dir = NULL  
+  constraints = NULL  
+  for(k in 1:length(MIPLIB.ROWS)){
+    if("" %in% unlist(strsplit(MIPLIB.ROWS[k], split="\\s"))){
+      row = unlist(strsplit(MIPLIB.ROWS[k], split="\\s"))[-which(unlist(strsplit(MIPLIB.ROWS[k], split="\\s"))=="")]
+    }
+    if(!"" %in% unlist(strsplit(MIPLIB.ROWS[k], split="\\s"))){
+      row = unlist(strsplit(MIPLIB.ROWS[k], split="\\s"))
+    }
+    if(row[1]=="N"){
+      objname = row[2]      
+    }
+    else{
+      constraints = c(constraints, row[2])
+      j = length(constraints)
+      if(row[1] == "E"){
+        MIPLIB.dir[j] = "="
+      }
+      if(row[1] == "L"){
+        MIPLIB.dir[j] = "<="
+      }
+      if(row[1] == "G"){
+        MIPLIB.dir[j] = ">="
+      }
+    }
+  }
+  
+  variables = NULL
+  for(k in 1:length(MIPLIB.COLS)){
+    if("" %in% unlist(strsplit(MIPLIB.COLS[k], split="\\s"))){
+      column = unlist(strsplit(MIPLIB.COLS[k], split="\\s"))[-which(unlist(strsplit(MIPLIB.COLS[k], split="\\s"))=="")]  
+    }
+    if(!"" %in% unlist(strsplit(MIPLIB.COLS[k], split="\\s"))){
+      column = unlist(strsplit(MIPLIB.COLS[k], split="\\s"))  
+    }
+    if(column[2]=="MARKER"){
+      
+    }
+    else{
+      if( !(column[1] %in% variables) ){
+        variables = c(variables, column[1])
+      }
+    }
+  }
+  
+  nr_cols = length(variables)
+  nr_rows = length(constraints)  
+  
+  MIPLIB.obj = rep(0, nr_cols)
+  MIPLIB.A = matrix(0, nrow=nr_rows, ncol=nr_cols)
+  MIPLIB.vtype = rep(0,nr_cols)
+  var.indicator = 0
+  
+  
+  for(k in 1:length(MIPLIB.COLS)){
+    if("" %in% unlist(strsplit(MIPLIB.COLS[k], split="\\s"))){
+      column = unlist(strsplit(MIPLIB.COLS[k], split="\\s"))[-which(unlist(strsplit(MIPLIB.COLS[k], split="\\s"))=="")]  
+    }
+    if(!"" %in% unlist(strsplit(MIPLIB.COLS[k], split="\\s"))){
+      column = unlist(strsplit(MIPLIB.COLS[k], split="\\s")) 
+    }
+    if(column[2]=="MARKER"){
+      var.indicator = abs(var.indicator-1)      
+    }
+    else{
+      if(length(column)==5){
+        i = which(variables==column[1])
+        MIPLIB.vtype[i] = var.indicator
+        if( (column[2]==objname)| (column[2]=="obj") | (column[2]=="minobj") | (column[2]=="maxobj") ){
+          MIPLIB.obj[i] =  as.numeric(column[3])
+          j = which(constraints==column[4])
+          MIPLIB.A[j,i] = as.numeric(column[5])
+        }
+        if(column[4]==""){
+          j = which(constraints==column[2])
+          MIPLIB.A[j,i] = as.numeric(column[3])
+        }
+        else{
+          j1 = which(constraints==column[2])
+          MIPLIB.A[j1,i] = as.numeric(column[3])
+          j2 = which(constraints==column[4])
+          MIPLIB.A[j2,i] = as.numeric(column[5])
+        }    
+      }
+      if(length(column)==3){
+        i = which(variables==column[1])
+        MIPLIB.vtype[i] = var.indicator
+        if( (column[2]==objname)|(column[2]=="obj") | (column[2]=="minobj") | (column[2]=="maxobj")){
+          MIPLIB.obj[i] =  as.numeric(column[3])
+        }
+        else{
+          j = which(constraints==column[2])
+          MIPLIB.A[j,i] = as.numeric(column[3])
+        }
+      }      
+    }
+  }
+  
+  
+  # MIPLIB.rhs = rep(0, nr_rows)
+  # for(k in 1:length(MIPLIB.RHS)){
+  #   row = unlist(strsplit(MIPLIB.RHS[k], split="\\s"))[-which(unlist(strsplit(MIPLIB.RHS[k], split="\\s"))=="")]  
+  #   if(length(row) == 5){
+  #     j1 = which(constraints==row[2])    
+  #     j2 = which(constraints==row[4])    
+  #     MIPLIB.rhs[j1]= as.numeric(row[3])
+  #     MIPLIB.rhs[j2]= as.numeric(row[5])
+  #   }
+  #   if(length(row)==3){
+  #     j = which(constraints==row[2])    
+  #     MIPLIB.rhs[j]= as.numeric(row[3])
+  #   }  
+  # }  
+  # 
+  # 
+  # MIPLIB.ub = rep(NA, nrow=nr_cols)
+  # MIPLIB.lb = rep(NA, nrow=nr_cols)
+  # for(k in 1:length(MIPLIB.BOUNDS)){
+  #   column = unlist(strsplit(MIPLIB.BOUNDS[k], split="\\s"))[-which(unlist(strsplit(MIPLIB.BOUNDS[k], split="\\s"))=="")]  
+  #   i = which(variables==column[3])
+  #   if(length(column) ==3){
+  #     if(column[1]=="BV"){
+  #       MIPLIB.ub[i] = 1
+  #       MIPLIB.lb[i] = 0
+  #       MIPLIB.vtype[i] = 1
+  #     }      
+  #     if(column[1]=="FR"){
+  #       MIPLIB.ub[i] = Inf
+  #       MIPLIB.lb[i] = -Inf        
+  #     }            
+  #   }
+  #   else{
+  #     if(column[1]=="FX"){
+  #       MIPLIB.ub[i] = as.numeric(column[4])
+  #       MIPLIB.lb[i] = as.numeric(column[4])                
+  #     } 
+  #     if(column[1]=="UP"){
+  #       MIPLIB.ub[i] = as.numeric(column[4])
+  #       MIPLIB.lb[i] = 0                
+  #     }
+  #     if(column[1]=="LO"){
+  #       MIPLIB.ub[i] = Inf
+  #       MIPLIB.lb[i] = as.numeric(column[4])                        
+  #     }
+  #     if(column[1]=="LI"){
+  #       MIPLIB.ub[i] = Inf
+  #       MIPLIB.lb[i] = 0                        
+  #       MIPLIB.vtype[i] = 1
+  #     }                
+  #   }
+  # }  
+
+  list(A=MIPLIB.A, rnames=constraints, filename=filename)
+  
+}
+#
+
+# Bipartite graph representation # 
+get.graph = function(A){
+  rows = (which(A!=0) %% nrow(A))
+  rows[which(rows == 0)] = nrow(A)
+  ord = order(rows)
+  rows = rows[ord]
+  cols = ceiling((which(A!=0) / nrow(A)))
+  cols = cols + nrow(A)
+  cols = cols[ord]
+  edges=as.vector(t(cbind(rows,cols)))
+  
+  G = graph(edges, directed=F)    
+  V(G)$names = 1:(nrow(A)+ncol(A))
+  V(G)$type = c(rep(0, nrow(A)), rep(1, ncol(A))) 
+  
+  G
+}
+#
+
+# Quality of Block-diagonal Portion #
+quality.D = function(G, S){
+  if(length(S)==0){
+    G.base = G
+  }
+  if(length(S)!=0){
+    G.base = G - S
+  }    
+  m.decomp = clusters(G.base)$membership
+  modularity(G.base, m.decomp)
+}
+#
+
+# Quality of Border Portion #
+quality.B = function(G, S, lambda=5){
+  exp(-lambda*(length(S)/length( which(V(G)$type==0))))
+}
+#
+
+# Goodness of BBD #
+goodness = function(G, S, lambda=5){
+  quality.D(G,S)*quality.B(G,S, lambda)
+}
+
+
+# Noise calculator #
+noise.d = function(G, S, membership){
+  if(length(S)==0){
+    G.base = G
+  }
+  if(length(S)!=0){
+    G.base = G - S
+  }      
+  out.edge = NULL
+  neigh = neighborhood(G.base, 1, V(G.base)[which(V(G.base)$type==0)])
+  for(i in 1:length(neigh)){
+    my.neigh = neigh[[i]]
+    my.comm = membership[my.neigh[1]]
+    out.edge[i] = length(which(membership[my.neigh]!=my.comm)) 
+  }
+  out.edge
+}
+
+# Remove #
+remove = function(G, S, L){
+  S.best = NULL
+  check = F
+  if(length(S)==0){
+    G.base = G
+    check = T    
+  }
+  if(length(S)!=0){
+    G.base = G - S
+  }    
+  Gamma.curr = goodness(G, S)
+  Gamma.best = Gamma.curr
+  s = NULL
+  max.N = 1
+  while( max.N > 0 ){
+    if(Gamma.curr > Gamma.best){
+      Gamma.best = Gamma.curr
+      S.best = S
+    }
+    R.G.base = V(G.base)$names[which(V(G.base)$type==0)]
+    comm.base = fastgreedy.community(G.base, weights=NULL)
+    mod.base = max(comm.base$modularity)
+    print(paste("Modularity:", mod.base, sep=""))
+    print(paste("Goodness  :", goodness(G,S), sep=""))
+    N = noise.d(G, S, comm.base$membership)
+    max.N = max(N)    
+    if(max.N <= 0){
+      Gamma.curr = 0
+    }
+    else{
+      s = R.G.base[which(N==max.N)]
+      S = c(S, s)
+      L = c(L, list(S))
+      rem.ind = which(V(G.base)$names %in% s)
+      G.base = G.base - rem.ind
+      Gamma.curr = goodness(G, S)
+    }
+  }
+  list(S=S, S.best=S.best, L=L) 
+}
+
+# Merge
+merge = function(G, S, L){
+  if(length(S)==0){
+    G.rest = G
+  }
+  if(length(S)!=0){
+    G.rest = G - S
+  }    
+  Gamma.best = goodness(G, S)
+  Gamma.curr = Gamma.best
+  S.best = S
+  comp.rest = clusters(G.rest)
+  communities = 1:length(comp.rest$csize)
+  col.memberships = comp.rest$membership[(length(comp.rest$membership)-length(which(V(G)$type==1)) +1):length(comp.rest$membership)]
+  while( length(comp.rest$csize)> clusters(G)$no+1 ){
+    couple.sps = NULL
+    for(j in 1:length(S)){
+      sps = sort(unique(col.memberships[neighborhood(G, 1, S[j])[[1]][-1]-length(which(V(G)$type==0))]))
+      couple.sps = c(couple.sps, list(sps))
+    }      
+    csps = lapply(couple.sps,sort)
+    merges = unlist(lapply(csps,paste, collapse="-"))
+    merge.freq = table(merges)
+    merge.goodness = NULL
+    for(i in 1:length(merge.freq)){
+      rem = which(merges==names(merge.freq)[i])
+      s.i = S[-rem]
+      merge.goodness = c(merge.goodness, (- quality.D(G, S) + quality.D(G, s.i))/length(rem) )
+    }
+    S.prev = S
+#    S = S[-which(merges%in%names(merge.freq)[which(merge.goodness==max(merge.goodness))[1]])]    
+    S = S[-which(merges%in%names(merge.freq)[which(merge.goodness==max(merge.goodness))])]    
+    
+    L = c(L, list(S))
+    Gamma.curr = goodness(G, S)
+    if(Gamma.curr >= Gamma.best){
+      S.best = S
+      Gamma.best = Gamma.curr
+    }
+    
+    G.rest = G - S  
+    comp.rest = clusters(G.rest)
+    communities = 1:length(comp.rest$csize)
+    col.memberships = comp.rest$membership[(length(comp.rest$membership)-length(which(V(G)$type==1)) +1):length(comp.rest$membership)]
+    
+    print(comp.rest$csize)
+    print(length(S))
+    print(Gamma.curr)
+  } 
+  list(S=S, S.best=S.best, L = L)
+}
+
+KEE = function(instance){
+  A = instance$A
+  filename = instance$filename
+  rnames = instance$rnames
+  breaks = 0
+  L = NULL
+  G = get.graph(A)  
+  S = NULL
+  S.best = NULL
+  rem.S.best = NULL
+  mer.S.best = NULL
+  Gamma.best = 0.001
+  prev.best = 0
+  check = FALSE
+  while(!check){
+    prev.best = Gamma.best
+    rem = remove(G, S, L)
+    S = rem$S
+    L = rem$L
+    breaks = c(breaks, length(L))
+    rem.S.best = rem$S.best
+    Gamma.rem = goodness(G, rem.S.best)
+    if(Gamma.rem >= Gamma.best ){
+      Gamma.best = Gamma.rem
+      S.best = rem.S.best
+    }
+
+    mer = merge(G, S, L)
+    S = mer$S
+    L = mer$L
+    breaks = c(breaks, length(L))
+    mer.S.best = mer$S.best
+    Gamma.mer = goodness(G, mer.S.best)
+    if(Gamma.mer >= Gamma.best ){
+      Gamma.best = Gamma.mer
+      S.best = mer.S.best
+    }
+    for(j in 1:(length(L)-1) ){
+      if(identical(S, L[[j]])){
+        check = TRUE
+      }
+    }
+  }
+  border = NULL
+  block.rows = NULL
+  block.columns = NULL
+  
+  if(length(S.best)==0){
+    border = S.best
+    block.rows = list(1:nrow(A))
+    block.columns = list(1:ncol(A))
+  }
+  if(length(S.best)!=0){
+    border = S.best
+    G.bdiag = G-S.best
+    bdiag = clusters(G.bdiag)
+    for(i in 1:bdiag$no){
+      i.nodes = V(G.bdiag)$names[which(bdiag$membership==i)]
+      i.rows = i.nodes[which(i.nodes <= nrow(A))]
+      i.cols = i.nodes[which(i.nodes > nrow(A))] - nrow(A)
+      block.rows = c(block.rows, list(i.rows))
+      block.columns = c(block.columns, list(i.cols))
+    }
+  }
+  myout = cbind(rnames[V(G.bdiag)$names[which( V(G.bdiag)$type==0 )]], bdiag$membership[which(V(G.bdiag)$type==0)]-1)
+  write.table(data.frame(myout), paste(filename, ".txt", sep=""), sep="\t", row.names = F, col.names=F)
+  list(border = border, block.rows = block.rows, block.columns = block.columns)
+}
+
+
+# Plot the detected BBD form against the original order for comparison #
+BBD.plot = function(A, BBD){
+  A = Matrix(A)
+  
+  m <- matrix(c(1,2),nrow = 1,ncol = 2,byrow = TRUE)
+  layout(mat = m)
+  par(mar=c(5.1, 6.1, 4.1, 2.1), xpd=T)
+  
+  x = NULL
+  y = NULL
+  for(i in 1:ncol(A)){
+    non.zeros = which(A[,i]!=0)  
+    x = c(x, rep(i, length(non.zeros)))
+    y = c(y, non.zeros)
+  }
+  
+  plot(x,y, type="p", pch=20, cex=0.05, cex.main=2, cex.axis = 1, cex.lab=2,
+       xlim=c(0, ncol(A)), ylim=rev(c(0, nrow(A))),
+       main="Original", xlab="Columns", ylab="Rows")
+  
+  row.order = NULL
+  col.order = NULL
+  for(i in 1:length(BBD$block.rows)){
+    row.order = c(row.order, BBD$block.rows[[i]])
+    col.order = c(col.order, BBD$block.columns[[i]])
+  } 
+  row.order = c(row.order, BBD$border)
+  
+  x = NULL
+  y = NULL
+  for(i in 1:ncol(A)){
+    non.zeros = which(A[row.order,col.order][,i]!=0)  
+    x = c(x, rep(i, length(non.zeros)))
+    y = c(y, non.zeros)
+  }
+  
+  plot(x,y, type="p", pch=20, cex=0.05, cex.main=2, cex.axis = 1, cex.lab=2,
+       xlim=c(0, ncol(A)), ylim=rev(c(0, nrow(A))),
+       main="BBD", xlab="Columns", ylab="Rows")
+}
+#
+
+### A Sample Implementation ###
+
+filename= "10teams"
+filename= "a1c1s1"
+#filename="atm_miplib2010"
+instance = read.MPS(filename)
+myBBD = KEE(instance)
+BBD.plot(instance$A, myBBD)
+
+
+
