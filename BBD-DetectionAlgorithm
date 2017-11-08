@@ -1,7 +1,8 @@
 # IMPORTANT! Make sure you change this part to your own working directory 
 # where all the files related to this script are placed 
 
-setwd("C:/Users/Tagi/Desktop/UWaterloo/Research/Restructuring/Codes/BBD-DetectionAlgorithm")
+#setwd("C:/Users/Tagi/Desktop/UWaterloo/Research/Restructuring/Codes/BBD-DetectionAlgorithm")
+setwd("U:/decomp_community")
 
 # Install/Load Necessary Packages #
 dynamic_require = function(package){ 
@@ -420,7 +421,7 @@ KEE = function(instance){
     }
   }
   myout = cbind(rnames[V(G.bdiag)$names[which( V(G.bdiag)$type==0 )]], bdiag$membership[which(V(G.bdiag)$type==0)]-1)
-  write.table(data.frame(myout), paste(filename, ".txt", sep=""), sep="\t", row.names = F, col.names=F)
+  write.table(data.frame(myout), paste(filename, ".blocks_comm", sep=""), sep="\t", quote=FALSE, row.names = F, col.names=F)
   list(border = border, block.rows = block.rows, block.columns = block.columns)
 }
 
@@ -469,9 +470,13 @@ BBD.plot = function(A, BBD){
 
 ### A Sample Implementation ###
 
-filename= "10teams"
-filename= "a1c1s1"
+#filename= "10teams"
+#filename= "a1c1s1"
 #filename="atm_miplib2010"
+
+#filename= "\\\\orgrdnfs01\\data\\miplib\\z10teams"
+filename= "\\\\orgrdnfs01\\data\\miplib\\aflow30a"
+
 instance = read.MPS(filename)
 myBBD = KEE(instance)
 BBD.plot(instance$A, myBBD)
