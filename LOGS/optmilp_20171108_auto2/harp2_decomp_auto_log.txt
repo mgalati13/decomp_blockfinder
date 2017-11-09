@@ -1,0 +1,163 @@
+NOTE: Log file opened at  Wed, 8 Nov 2017 14:52:17.505
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P11072017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.13 seconds
+      cpu time            0.03 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171108_decomp_auto_v940m5a_branch_t4_auto2/_scr
+      ipts/harp2.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.HARP2.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem harp2 has 2993 variables (2993 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 112 constraints (1 LE, 73 EQ, 38 GE, 0 range).
+NOTE: The problem has 5840 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 1966 variables and 20 constraints.
+NOTE: The MILP presolver removed 3812 constraint coefficients.
+NOTE: The MILP presolver modified 2 constraint coefficients.
+NOTE: The presolved problem has 1027 variables, 92 constraints, and 2028 constraint coefficients.
+NOTE: The MILP solver is called.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+WARNING: The Decomposition algorithm was not run because the automated method was unable to find block-angular form.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      4      -66627586      -74325169   10.36%       0
+             0        1      4      -66627586      -74288770   10.31%       0
+             0        1      4      -66627586      -74263215   10.28%       0
+             0        1      4      -66627586      -74246059   10.26%       0
+             0        1      4      -66627586      -74223740   10.23%       0
+             0        1      4      -66627586      -74210782   10.22%       0
+             0        1      4      -66627586      -74207031   10.21%       0
+             0        1      4      -66627586      -74196259   10.20%       0
+NOTE: The MILP solver added 34 cuts with 949 cut coefficients at the root.
+            65       66      6      -71937877      -74196259    3.04%       0
+            70       71      9      -72008106      -74196259    2.95%       0
+           192      158     11      -72143904      -74192063    2.76%       0
+           212      176     14      -72172534      -74192063    2.72%       0
+           392      213     16      -72851603      -74147354    1.75%       0
+           469      232     19      -73287348      -74147354    1.16%       0
+           484      247     20      -73304444      -74147354    1.14%       0
+           598      343     22      -73327288      -74142153    1.10%       0
+           796      461     24      -73486783      -74122960    0.86%       0
+           801      461     25      -73510108      -74122960    0.83%       0
+          1049      601     27      -73659645      -74108416    0.61%       1
+          1236      157     29      -73685829      -74108416    0.57%       1
+          2159      928     30      -73698981      -74085635    0.52%       2
+          2238      966     31      -73734489      -74081208    0.47%       2
+          2240      964     32      -73738532      -74081208    0.46%       2
+          3419     1867     33      -73750513      -74063260    0.42%       3
+          3420     1729     34      -73794663      -74062903    0.36%       3
+          3501     1757     35      -73798706      -74062451    0.36%       3
+          3534     1601     36      -73827059      -74062383    0.32%       3
+          4180     1971     37      -73841105      -74054984    0.29%       4
+          4294     2039     37      -73841105      -74052614    0.29%       5
+          8941     4889     37      -73841105      -74023505    0.25%      10
+         14016     8029     37      -73841105      -74007725    0.23%      15
+         18859    10738     37      -73841105      -73995649    0.21%      20
+         23750    13323     37      -73841105      -73985483    0.20%      25
+         28691    15970     37      -73841105      -73977757    0.18%      30
+         33498    18320     37      -73841105      -73971370    0.18%      35
+         38355    20700     37      -73841105      -73966468    0.17%      40
+         38643    20761     38      -73847325      -73966085    0.16%      40
+         38683    20776     39      -73848066      -73966033    0.16%      40
+         38688    20747     40      -73849996      -73965966    0.16%      40
+         38982    19211     41      -73873450      -73965712    0.12%      40
+         39062    18747     42      -73876843      -73965594    0.12%      40
+         39093    18272     43      -73880025      -73965557    0.12%      41
+         42224    18921     43      -73880025      -73960692    0.11%      45
+         46753    19646     43      -73880025      -73954765    0.10%      50
+         51353    20249     43      -73880025      -73949815    0.09%      55
+         55929    20652     43      -73880025      -73945195    0.09%      60
+         56707    20597     44      -73880847      -73944444    0.09%      60
+         56731    19745     45      -73885877      -73944444    0.08%      60
+         56735    19520     46      -73887068      -73944444    0.08%      60
+         56799    19441     47      -73887509      -73944377    0.08%      60
+         56804    17484     48      -73895798      -73944374    0.07%      60
+         56812    16528     49      -73899345      -73944373    0.06%      60
+         60427    15308     49      -73899345      -73938952    0.05%      65
+         65553    13087     49      -73899345      -73931891    0.04%      70
+         71112     9781     49      -73899345      -73923872    0.03%      75
+         77858     4055     49      -73899345      -73911056    0.02%      80
+         79487     2450     49      -73899345      -73906735    0.01%      80
+NOTE: Optimal within relative gap.
+NOTE: Objective = -73899345.
+NOTE: There were 8991 observations read from the data set LIB.HARP2.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           1:21.07
+      user cpu time       1:17.44
+      system cpu time     3.59 seconds
+      memory              102006.40k
+      OS Memory           109504.00k
+      Timestamp           11/08/2017 02:53:38 PM
+      Step Count                        1  Switch Count  72
+      Page Faults                       4
+      Page Reclaims                     11280
+      Page Swaps                        0
+      Voluntary Context Switches        555
+      Involuntary Context Switches      156
+      Block Input Operations            13656
+      Block Output Operations           32
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL_RGAP OBJECTIVE=-73899345 RELATIVE_GAP=0.0001 
+      ABSOLUTE_GAP=7389.9373246 PRIMAL_INFEASIBILITY=1.110223E-16 BOUND_INFEASIBILITY=0 
+      INTEGER_INFEASIBILITY=1.110223E-16 BEST_BOUND=-73906734.94 NODES=79488 ITERATIONS=1012744 PRESOLVE_TIME=0.07 
+      SOLUTION_TIME=80.92
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           1:21.34
+      user cpu time       1:17.47
+      system cpu time     3.63 seconds
+      memory              108255.21k
+      OS Memory           109504.00k
+      Timestamp           11/08/2017 02:53:38 PM
+      Step Count                        1  Switch Count  227
+      Page Faults                       4
+      Page Reclaims                     16570
+      Page Swaps                        0
+      Voluntary Context Switches        1654
+      Involuntary Context Switches      161
+      Block Input Operations            13664
+      Block Output Operations           144
+      
+
+

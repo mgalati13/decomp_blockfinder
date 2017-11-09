@@ -1,0 +1,187 @@
+NOTE: Log file opened at  Wed, 8 Nov 2017 19:46:15.178
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P11082017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.40 seconds
+      cpu time            0.05 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171108_decomp_user_v940m5a_branchcomm6_t4_comm/
+      _scripts/pp08aCUTS.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+NOTE: Libref LIBB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/decomp/data/BLOCKS
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: The infile "/ORDATA/miplib/pp08aCUTS.blocks_comm" is:
+      Filename=/ORDATA/miplib/pp08aCUTS.blocks_comm,
+      Owner Name=nobody,Group Name=nobody,
+      Access Permission=-rwxr--r--,
+      Last Modified=08Nov2017:13:15:18,
+      File Size (bytes)=2308
+
+NOTE: 238 records were read from the infile "/ORDATA/miplib/pp08aCUTS.blocks_comm".
+      The minimum record length was 4.
+      The maximum record length was 10.
+NOTE: The data set WORK.PP08ACUTS_BLOCKS has 238 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              1049.46k
+      OS Memory           8612.00k
+      Timestamp           11/08/2017 07:46:15 PM
+      Step Count                        1  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     797
+      Page Swaps                        0
+      Voluntary Context Switches        87
+      Involuntary Context Switches      3
+      Block Input Operations            16
+      Block Output Operations           136
+      
+NOTE: Data file LIB.PP08ACUTS.DATA is in a format that is native to another host, or the file encoding does not match 
+      the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources 
+      and might reduce performance.
+NOTE: The problem PP08ACUTS has 240 variables (64 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 246 constraints (182 LE, 64 EQ, 0 GE, 0 range).
+NOTE: The problem has 839 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 16 variables and 68 constraints.
+NOTE: The MILP presolver removed 243 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 224 variables, 178 constraints, and 596 constraint coefficients.
+NOTE: The MILP solver is called.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value USER is applied.
+NOTE: The problem has a decomposable structure with 8 blocks. The largest block covers 12.36% of the constraints in the 
+      problem.
+NOTE: The decomposition subproblems cover 224 (100%) variables and 170 (95.51%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .    7050.0000    8200.0000    8200.0000   16.31%   16.31%    0    1
+         4    7050.0000    7397.5655    7500.0000    4.93%    6.38%    0    1
+         7    7050.0000    7192.4182    7380.0000    2.02%    4.68%    0    1
+         8    7129.8065    7175.0484    7380.0000    0.63%    3.51%    0    1
+        10    7129.8065    7166.3798    7360.0000    0.51%    3.23%    0    2
+        11    7166.3798    7166.3798    7360.0000    0.00%    2.70%    0    2
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1     15    7360.0000    7166.3798    2.70%      0      2
+           10      12     16    7350.0000    7242.2829    1.49%      4      5
+           20      16     16    7350.0000    7256.0090    1.30%      5      6
+           30      26     16    7350.0000    7263.9299    1.18%      6      7
+           40      32     16    7350.0000    7273.9664    1.05%      6      7
+           50      38     16    7350.0000    7279.8431    0.96%      7      7
+           60      44     16    7350.0000    7285.0556    0.89%      7      8
+           70      50     16    7350.0000    7293.3333    0.78%      8      8
+           80      58     16    7350.0000    7297.5441    0.72%      8      8
+           90      64     16    7350.0000    7304.0247    0.63%      8      9
+          100      68     16    7350.0000    7308.0819    0.57%      9      9
+          110      66     16    7350.0000    7312.6389    0.51%      9      9
+          120      68     16    7350.0000    7314.1400    0.49%      9      9
+          130      70     16    7350.0000    7316.1172    0.46%     10     10
+          140      74     16    7350.0000    7317.8717    0.44%     10     10
+          150      74     16    7350.0000    7318.8865    0.43%     10     10
+          160      76     16    7350.0000    7320.3422    0.41%     11     11
+          170      74     16    7350.0000    7322.2666    0.38%     11     11
+          180      72     16    7350.0000    7323.4957    0.36%     11     11
+          190      70     16    7350.0000    7326.3672    0.32%     12     11
+          200      76     16    7350.0000    7327.9160    0.30%     12     12
+          210      76     16    7350.0000    7330.2000    0.27%     12     12
+          220      74     16    7350.0000    7334.2753    0.21%     13     12
+          230      68     16    7350.0000    7335.8944    0.19%     13     13
+          240      62     16    7350.0000    7336.5826    0.18%     13     13
+          250      58     16    7350.0000    7337.2423    0.17%     14     13
+          260      58     16    7350.0000    7338.3009    0.16%     14     13
+          270      56     16    7350.0000    7339.1468    0.15%     14     14
+          280      54     16    7350.0000    7340.2228    0.13%     15     14
+          290      54     16    7350.0000    7340.7444    0.13%     15     14
+          300      48     16    7350.0000    7342.6093    0.10%     15     14
+          310      42     16    7350.0000    7343.1034    0.09%     15     15
+          320      34     16    7350.0000    7344.5098    0.07%     16     15
+          330      28     16    7350.0000    7345.5387    0.06%     16     15
+          340      22     16    7350.0000    7346.7816    0.04%     16     15
+          350      14     16    7350.0000    7347.3571    0.04%     17     16
+          360       6     16    7350.0000    7348.4000    0.02%     17     16
+          368       0     16    7350.0000    7349.2695    0.01%     17     16
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 16.58 seconds.
+NOTE: Optimal within relative gap.
+NOTE: Objective = 7350.
+NOTE: There were 995 observations read from the data set LIB.PP08ACUTS.
+NOTE: There were 238 observations read from the data set WORK.PP08ACUTS_BLOCKS.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           17.37 seconds
+      user cpu time       17.72 seconds
+      system cpu time     16.83 seconds
+      memory              119597.48k
+      OS Memory           127488.00k
+      Timestamp           11/08/2017 07:46:33 PM
+      Step Count                        2  Switch Count  66
+      Page Faults                       7
+      Page Reclaims                     267582
+      Page Swaps                        0
+      Voluntary Context Switches        31999
+      Involuntary Context Switches      3825
+      Block Input Operations            39920
+      Block Output Operations           16
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL_RGAP OBJECTIVE=7350 RELATIVE_GAP=0.000099 ABSOLUTE_GAP=0.7305194805 
+      PRIMAL_INFEASIBILITY=4.263256E-14 BOUND_INFEASIBILITY=2.220446E-16 INTEGER_INFEASIBILITY=4.440892E-16 
+      BEST_BOUND=7349.2694805 NODES=369 ITERATIONS=925 PRESOLVE_TIME=0.01 SOLUTION_TIME=16.59
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           18.36 seconds
+      user cpu time       17.75 seconds
+      system cpu time     16.88 seconds
+      memory              126392.79k
+      OS Memory           127488.00k
+      Timestamp           11/08/2017 07:46:33 PM
+      Step Count                        2  Switch Count  211
+      Page Faults                       7
+      Page Reclaims                     273663
+      Page Swaps                        0
+      Voluntary Context Switches        33188
+      Involuntary Context Switches      3833
+      Block Input Operations            39944
+      Block Output Operations           264
+      
+
+

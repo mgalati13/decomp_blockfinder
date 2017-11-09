@@ -1,0 +1,163 @@
+NOTE: Log file opened at  Wed, 8 Nov 2017 19:40:50.092
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P11082017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.24 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171108_decomp_user_v940m5a_branchcomm6_t4_comm/
+      _scripts/fiber.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+NOTE: Libref LIBB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/decomp/data/BLOCKS
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: The infile "/ORDATA/miplib/fiber.blocks_comm" is:
+      Filename=/ORDATA/miplib/fiber.blocks_comm,
+      Owner Name=nobody,Group Name=nobody,
+      Access Permission=-rwxr--r--,
+      Last Modified=08Nov2017:13:12:31,
+      File Size (bytes)=2547
+
+NOTE: 330 records were read from the infile "/ORDATA/miplib/fiber.blocks_comm".
+      The minimum record length was 4.
+      The maximum record length was 6.
+NOTE: The data set WORK.FIBER_BLOCKS has 330 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.05 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              1049.46k
+      OS Memory           8612.00k
+      Timestamp           11/08/2017 07:40:50 PM
+      Step Count                        1  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     795
+      Page Swaps                        0
+      Voluntary Context Switches        87
+      Involuntary Context Switches      3
+      Block Input Operations            16
+      Block Output Operations           264
+      
+NOTE: Data file LIB.FIBER.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem FIBER has 1298 variables (1254 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 363 constraints (0 LE, 363 EQ, 0 GE, 0 range).
+NOTE: The problem has 2944 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 252 variables and 73 constraints.
+NOTE: The MILP presolver removed 513 constraint coefficients.
+NOTE: The MILP presolver modified 14 constraint coefficients.
+NOTE: The presolved problem has 1046 variables, 290 constraints, and 2431 constraint coefficients.
+NOTE: The MILP solver is called.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value USER is applied.
+NOTE: The problem has a decomposable structure with 5 blocks. The largest block covers 43.79% of the constraints in the 
+      problem.
+NOTE: The decomposition subproblems cover 1046 (100%) variables and 257 (88.62%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .  280141.8200   1.2460e+06   1.2460e+06  344.78%  344.78%    0    0
+         1  280141.8200   1.2460e+06   1.2460e+06  344.78%  344.78%    0    0
+         9  280141.8200  410489.1800  410489.1800   46.53%   46.53%    0    0
+         .  280141.8200  410489.1800  410489.1800   46.53%   46.53%    0    0
+        10  280141.8200  410489.1800  410489.1800   46.53%   46.53%    0    0
+        14  294977.9761  406570.5400  410489.1800   37.83%   39.16%    1    1
+        15  345381.6862  406570.5400  410489.1800   17.72%   18.85%    1    1
+        20  345381.6862  406570.5400  405935.1800   17.72%   17.53%    2    1
+        30  345381.6862  397552.8029  405935.1800   15.11%   17.53%    3    2
+        35  393510.5823  396992.1171  405935.1800    0.88%    3.16%    3    3
+        36  396378.6314  396915.4314  405935.1800    0.14%    2.41%    3    3
+         .  396378.6314  396915.4314  405935.1800    0.14%    2.41%    4    3
+        40  396378.6314  396915.4314  405935.1800    0.14%    2.41%    4    3
+        43  396456.5743  396685.3743  405935.1800    0.06%    2.39%    4    3
+        44  396685.3743  396685.3743  405935.1800    0.00%    2.33%    4    3
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1      8  405935.1800  396685.3743    2.33%      4      3
+           10       8      8  405935.1800  399827.2467    1.53%     17     13
+           20       6      8  405935.1800  403690.4800    0.56%     22     18
+           28       0      8  405935.1800  405916.6867    0.00%     25     20
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 20.52 seconds.
+NOTE: Optimal within relative gap.
+NOTE: Objective = 405935.18.
+NOTE: There were 3777 observations read from the data set LIB.FIBER.
+NOTE: There were 330 observations read from the data set WORK.FIBER_BLOCKS.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           20.75 seconds
+      user cpu time       25.73 seconds
+      system cpu time     5.22 seconds
+      memory              105476.85k
+      OS Memory           114216.00k
+      Timestamp           11/08/2017 07:41:11 PM
+      Step Count                        2  Switch Count  41
+      Page Faults                       7
+      Page Reclaims                     138726
+      Page Swaps                        0
+      Voluntary Context Switches        7437
+      Involuntary Context Switches      153
+      Block Input Operations            40280
+      Block Output Operations           16
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL_RGAP OBJECTIVE=405935.18 RELATIVE_GAP=0.000046 
+      ABSOLUTE_GAP=18.493333333 PRIMAL_INFEASIBILITY=5.551115E-16 BOUND_INFEASIBILITY=0 
+      INTEGER_INFEASIBILITY=5.551115E-16 BEST_BOUND=405916.68667 NODES=29 ITERATIONS=458 PRESOLVE_TIME=0.09 
+      SOLUTION_TIME=20.62
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           21.23 seconds
+      user cpu time       25.77 seconds
+      system cpu time     5.26 seconds
+      memory              112272.17k
+      OS Memory           114216.00k
+      Timestamp           11/08/2017 07:41:11 PM
+      Step Count                        2  Switch Count  136
+      Page Faults                       7
+      Page Reclaims                     144786
+      Page Swaps                        0
+      Voluntary Context Switches        8741
+      Involuntary Context Switches      164
+      Block Input Operations            40352
+      Block Output Operations           384
+      
+
+

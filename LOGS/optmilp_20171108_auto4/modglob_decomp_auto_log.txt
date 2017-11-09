@@ -1,0 +1,284 @@
+NOTE: Log file opened at  Wed, 8 Nov 2017 15:18:39.970
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P11072017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.12 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171108_decomp_auto_v940m5a_branch_t4_auto4/_scr
+      ipts/modglob.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.MODGLOB.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem MODGLOB has 422 variables (98 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 291 constraints (196 LE, 95 EQ, 0 GE, 0 range).
+NOTE: The problem has 968 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 68 variables and 5 constraints.
+NOTE: The MILP presolver removed 76 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 354 variables, 286 constraints, and 892 constraint coefficients.
+NOTE: The MILP solver is called.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+NOTE: The automated method will attempt to find block-angular form with 4 blocks.
+NOTE: The problem has a decomposable structure with 13 blocks. The largest block covers 24.48% of the constraints in 
+      the problem.
+NOTE: The decomposition subproblems cover 354 (100%) variables and 272 (95.1%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .   2.0431e+07   3.6181e+07   3.6181e+07   77.09%   77.09%    0    0
+         1   2.0431e+07   3.6181e+07   3.6181e+07   77.09%   77.09%    0    0
+         8   2.0431e+07   2.0830e+07   2.0839e+07    1.95%    2.00%    0    0
+         .   2.0431e+07   2.0812e+07   2.0839e+07    1.86%    2.00%    0    0
+        10   2.0431e+07   2.0812e+07   2.0839e+07    1.86%    2.00%    0    0
+        13   2.0431e+07   2.0760e+07   2.0769e+07    1.61%    1.65%    1    1
+        19   2.0431e+07   2.0737e+07   2.0746e+07    1.50%    1.54%    1    1
+         .   2.0431e+07   2.0737e+07   2.0746e+07    1.50%    1.54%    1    1
+        20   2.0431e+07   2.0737e+07   2.0746e+07    1.50%    1.54%    1    1
+        23   2.0431e+07   2.0731e+07   2.0741e+07    1.47%    1.52%    2    2
+        30   2.0431e+07   2.0710e+07   2.0741e+07    1.37%    1.52%    2    2
+        36   2.0671e+07   2.0671e+07   2.0741e+07    0.00%    0.34%    3    3
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1     21   2.0741e+07   2.0671e+07    0.34%      3      3
+           10      12     21   2.0741e+07   2.0679e+07    0.30%     15     12
+           20      22     21   2.0741e+07   2.0681e+07    0.29%     20     15
+           30      32     21   2.0741e+07   2.0684e+07    0.27%     25     19
+           40      42     21   2.0741e+07   2.0687e+07    0.26%     33     25
+           50      50     21   2.0741e+07   2.0687e+07    0.26%     39     29
+           60      60     21   2.0741e+07   2.0689e+07    0.25%     41     31
+           70      68     21   2.0741e+07   2.0691e+07    0.24%     44     33
+           80      72     21   2.0741e+07   2.0692e+07    0.23%     48     36
+           90      76     21   2.0741e+07   2.0693e+07    0.23%     52     39
+          100      84     21   2.0741e+07   2.0696e+07    0.22%     54     40
+          110      90     21   2.0741e+07   2.0697e+07    0.21%     57     43
+          120      96     21   2.0741e+07   2.0698e+07    0.21%     61     46
+          130     104     21   2.0741e+07   2.0699e+07    0.20%     67     50
+          140     112     21   2.0741e+07   2.0699e+07    0.20%     69     52
+          150     118     21   2.0741e+07   2.0700e+07    0.20%     75     56
+          160     122     21   2.0741e+07   2.0700e+07    0.20%     78     59
+          170     128     21   2.0741e+07   2.0701e+07    0.19%     80     61
+          180     134     21   2.0741e+07   2.0702e+07    0.19%     83     63
+          190     142     21   2.0741e+07   2.0702e+07    0.18%     88     67
+          200     144     21   2.0741e+07   2.0703e+07    0.18%     91     69
+          210     150     21   2.0741e+07   2.0703e+07    0.18%     97     74
+          220     160     21   2.0741e+07   2.0704e+07    0.18%     99     76
+          230     166     21   2.0741e+07   2.0705e+07    0.17%    104     80
+          240     172     21   2.0741e+07   2.0705e+07    0.17%    109     84
+          250     180     21   2.0741e+07   2.0706e+07    0.16%    113     87
+          260     188     21   2.0741e+07   2.0707e+07    0.16%    117     90
+          270     196     21   2.0741e+07   2.0707e+07    0.16%    120     92
+          280     200     21   2.0741e+07   2.0708e+07    0.16%    125     97
+          290     208     21   2.0741e+07   2.0709e+07    0.15%    131    101
+          300     218     21   2.0741e+07   2.0709e+07    0.15%    133    103
+          310     228     21   2.0741e+07   2.0709e+07    0.15%    134    104
+          320     238     21   2.0741e+07   2.0710e+07    0.15%    140    109
+          330     244     21   2.0741e+07   2.0710e+07    0.15%    145    113
+          340     252     21   2.0741e+07   2.0711e+07    0.14%    148    116
+          350     258     21   2.0741e+07   2.0711e+07    0.14%    151    119
+          360     264     21   2.0741e+07   2.0711e+07    0.14%    154    121
+          370     270     21   2.0741e+07   2.0712e+07    0.14%    157    124
+          380     272     21   2.0741e+07   2.0712e+07    0.14%    161    127
+          390     280     21   2.0741e+07   2.0713e+07    0.13%    164    129
+          400     284     21   2.0741e+07   2.0713e+07    0.13%    169    133
+          410     290     21   2.0741e+07   2.0714e+07    0.13%    172    136
+          420     294     21   2.0741e+07   2.0715e+07    0.12%    175    139
+          430     298     21   2.0741e+07   2.0716e+07    0.12%    180    143
+          440     300     21   2.0741e+07   2.0716e+07    0.12%    185    147
+          450     304     21   2.0741e+07   2.0717e+07    0.12%    189    150
+          460     306     21   2.0741e+07   2.0717e+07    0.11%    193    154
+          470     308     21   2.0741e+07   2.0718e+07    0.11%    197    157
+          480     312     21   2.0741e+07   2.0719e+07    0.11%    201    161
+          490     316     21   2.0741e+07   2.0719e+07    0.10%    204    164
+          500     320     21   2.0741e+07   2.0720e+07    0.10%    209    169
+          510     326     21   2.0741e+07   2.0720e+07    0.10%    213    172
+          520     322     21   2.0741e+07   2.0720e+07    0.10%    217    176
+          530     322     21   2.0741e+07   2.0721e+07    0.10%    222    180
+          540     322     21   2.0741e+07   2.0721e+07    0.09%    226    184
+          550     322     21   2.0741e+07   2.0722e+07    0.09%    234    190
+          560     326     21   2.0741e+07   2.0722e+07    0.09%    237    194
+          570     322     21   2.0741e+07   2.0722e+07    0.09%    242    198
+          580     326     21   2.0741e+07   2.0723e+07    0.09%    245    200
+          590     326     21   2.0741e+07   2.0723e+07    0.08%    251    205
+          600     334     21   2.0741e+07   2.0724e+07    0.08%    256    210
+          610     342     21   2.0741e+07   2.0724e+07    0.08%    259    212
+          620     348     21   2.0741e+07   2.0724e+07    0.08%    263    217
+          630     352     21   2.0741e+07   2.0724e+07    0.08%    265    218
+          640     360     21   2.0741e+07   2.0725e+07    0.08%    267    220
+          650     364     21   2.0741e+07   2.0725e+07    0.07%    271    224
+          660     368     21   2.0741e+07   2.0725e+07    0.07%    274    227
+          670     372     21   2.0741e+07   2.0726e+07    0.07%    279    231
+          680     366     21   2.0741e+07   2.0726e+07    0.07%    282    234
+          690     362     21   2.0741e+07   2.0726e+07    0.07%    285    237
+          700     360     21   2.0741e+07   2.0727e+07    0.07%    288    239
+          710     362     21   2.0741e+07   2.0727e+07    0.07%    290    241
+          720     364     21   2.0741e+07   2.0727e+07    0.06%    296    247
+          730     364     21   2.0741e+07   2.0727e+07    0.06%    299    249
+          740     358     21   2.0741e+07   2.0727e+07    0.06%    303    253
+          750     360     21   2.0741e+07   2.0728e+07    0.06%    307    257
+          760     354     21   2.0741e+07   2.0728e+07    0.06%    311    260
+          770     358     21   2.0741e+07   2.0728e+07    0.06%    315    265
+          780     362     21   2.0741e+07   2.0728e+07    0.06%    319    268
+          790     368     21   2.0741e+07   2.0728e+07    0.06%    323    271
+          800     370     21   2.0741e+07   2.0729e+07    0.06%    327    275
+          810     368     21   2.0741e+07   2.0729e+07    0.06%    330    278
+          820     366     21   2.0741e+07   2.0729e+07    0.06%    334    282
+          830     362     21   2.0741e+07   2.0729e+07    0.06%    339    287
+          840     360     21   2.0741e+07   2.0729e+07    0.06%    343    291
+          850     358     21   2.0741e+07   2.0729e+07    0.05%    346    293
+          860     356     21   2.0741e+07   2.0729e+07    0.05%    349    296
+          870     350     21   2.0741e+07   2.0730e+07    0.05%    352    299
+          880     348     21   2.0741e+07   2.0730e+07    0.05%    357    303
+          890     350     21   2.0741e+07   2.0730e+07    0.05%    360    307
+          900     348     21   2.0741e+07   2.0730e+07    0.05%    365    311
+          910     344     21   2.0741e+07   2.0730e+07    0.05%    371    316
+          920     344     21   2.0741e+07   2.0730e+07    0.05%    375    320
+          930     342     21   2.0741e+07   2.0730e+07    0.05%    379    324
+          940     342     21   2.0741e+07   2.0731e+07    0.05%    384    329
+          950     338     21   2.0741e+07   2.0731e+07    0.05%    388    333
+          960     336     21   2.0741e+07   2.0731e+07    0.05%    393    337
+          970     328     21   2.0741e+07   2.0731e+07    0.04%    396    340
+          980     324     21   2.0741e+07   2.0731e+07    0.04%    400    343
+          990     316     21   2.0741e+07   2.0732e+07    0.04%    404    348
+         1000     316     21   2.0741e+07   2.0732e+07    0.04%    408    351
+         1010     316     21   2.0741e+07   2.0732e+07    0.04%    417    359
+         1020     312     21   2.0741e+07   2.0732e+07    0.04%    420    363
+         1030     312     21   2.0741e+07   2.0732e+07    0.04%    424    366
+         1040     308     21   2.0741e+07   2.0732e+07    0.04%    429    372
+         1050     302     21   2.0741e+07   2.0732e+07    0.04%    433    376
+         1060     298     21   2.0741e+07   2.0733e+07    0.04%    436    378
+         1070     294     21   2.0741e+07   2.0733e+07    0.04%    440    382
+         1080     292     21   2.0741e+07   2.0733e+07    0.04%    443    385
+         1090     288     21   2.0741e+07   2.0733e+07    0.04%    446    388
+         1100     280     21   2.0741e+07   2.0733e+07    0.04%    451    392
+         1110     276     21   2.0741e+07   2.0733e+07    0.03%    453    395
+         1120     272     21   2.0741e+07   2.0734e+07    0.03%    455    397
+         1130     268     21   2.0741e+07   2.0734e+07    0.03%    459    401
+         1140     264     21   2.0741e+07   2.0734e+07    0.03%    463    405
+         1150     256     21   2.0741e+07   2.0734e+07    0.03%    467    408
+         1160     256     21   2.0741e+07   2.0734e+07    0.03%    469    411
+         1170     250     21   2.0741e+07   2.0735e+07    0.03%    474    415
+         1180     242     21   2.0741e+07   2.0735e+07    0.03%    480    421
+         1190     242     21   2.0741e+07   2.0735e+07    0.03%    483    424
+         1200     238     21   2.0741e+07   2.0735e+07    0.03%    490    430
+         1210     234     21   2.0741e+07   2.0735e+07    0.03%    493    433
+         1220     230     21   2.0741e+07   2.0735e+07    0.03%    496    436
+         1230     224     21   2.0741e+07   2.0735e+07    0.03%    500    440
+         1240     218     21   2.0741e+07   2.0735e+07    0.03%    506    445
+         1250     214     21   2.0741e+07   2.0735e+07    0.02%    509    449
+         1260     212     21   2.0741e+07   2.0736e+07    0.02%    512    451
+         1270     208     21   2.0741e+07   2.0736e+07    0.02%    516    455
+         1280     204     21   2.0741e+07   2.0736e+07    0.02%    521    460
+         1290     196     21   2.0741e+07   2.0736e+07    0.02%    527    466
+         1300     190     21   2.0741e+07   2.0736e+07    0.02%    532    470
+         1310     182     21   2.0741e+07   2.0736e+07    0.02%    536    474
+         1320     178     21   2.0741e+07   2.0736e+07    0.02%    540    479
+         1330     168     21   2.0741e+07   2.0736e+07    0.02%    545    484
+         1340     162     21   2.0741e+07   2.0736e+07    0.02%    551    490
+         1350     154     21   2.0741e+07   2.0737e+07    0.02%    556    494
+         1360     150     21   2.0741e+07   2.0737e+07    0.02%    561    499
+         1370     144     21   2.0741e+07   2.0737e+07    0.02%    565    503
+         1380     138     21   2.0741e+07   2.0737e+07    0.02%    569    507
+         1390     132     21   2.0741e+07   2.0737e+07    0.02%    573    511
+         1400     124     21   2.0741e+07   2.0737e+07    0.02%    578    516
+         1410     120     21   2.0741e+07   2.0737e+07    0.02%    583    521
+         1420     114     21   2.0741e+07   2.0737e+07    0.02%    585    524
+         1430     106     21   2.0741e+07   2.0737e+07    0.02%    591    529
+         1440     100     21   2.0741e+07   2.0738e+07    0.01%    598    536
+         1450      92     21   2.0741e+07   2.0738e+07    0.01%    601    539
+         1460      82     21   2.0741e+07   2.0738e+07    0.01%    606    544
+         1470      72     21   2.0741e+07   2.0738e+07    0.01%    610    548
+         1480      62     21   2.0741e+07   2.0738e+07    0.01%    617    554
+         1490      52     21   2.0741e+07   2.0738e+07    0.01%    624    561
+         1500      42     21   2.0741e+07   2.0738e+07    0.01%    627    563
+         1510      34     21   2.0741e+07   2.0738e+07    0.01%    632    569
+         1520      24     21   2.0741e+07   2.0738e+07    0.01%    638    574
+         1530      18     21   2.0741e+07   2.0738e+07    0.01%    641    578
+         1540      12     21   2.0741e+07   2.0738e+07    0.01%    646    582
+         1550       2     21   2.0741e+07   2.0738e+07    0.01%    648    585
+         1552       0     21   2.0741e+07   2.0738e+07    0.01%    650    586
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 586.64 seconds.
+NOTE: Optimal within relative gap.
+NOTE: Objective = 20740508.086.
+NOTE: There were 1192 observations read from the data set LIB.MODGLOB.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           9:46.74
+      user cpu time       10:50.29
+      system cpu time     4:17.69
+      memory              165134.20k
+      OS Memory           187596.00k
+      Timestamp           11/08/2017 03:28:26 PM
+      Step Count                        1  Switch Count  192
+      Page Faults                       3
+      Page Reclaims                     17515397
+      Page Swaps                        0
+      Voluntary Context Switches        406914
+      Involuntary Context Switches      21406
+      Block Input Operations            27008
+      Block Output Operations           168
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL_RGAP OBJECTIVE=20740508.086 RELATIVE_GAP=0.000099 
+      ABSOLUTE_GAP=2054.5115021 PRIMAL_INFEASIBILITY=2.387424E-12 BOUND_INFEASIBILITY=1.136868E-13 
+      INTEGER_INFEASIBILITY=3.330669E-16 BEST_BOUND=20738453.575 NODES=1553 ITERATIONS=9437 PRESOLVE_TIME=0.01 
+      SOLUTION_TIME=586.65
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           9:46.90
+      user cpu time       10:50.31
+      system cpu time     4:17.73
+      memory              171383.01k
+      OS Memory           187596.00k
+      Timestamp           11/08/2017 03:28:26 PM
+      Step Count                        1  Switch Count  587
+      Page Faults                       3
+      Page Reclaims                     17520643
+      Page Swaps                        0
+      Voluntary Context Switches        407588
+      Involuntary Context Switches      21411
+      Block Input Operations            27016
+      Block Output Operations           272
+      
+
+

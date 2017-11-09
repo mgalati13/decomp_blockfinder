@@ -1,0 +1,181 @@
+NOTE: Log file opened at  Wed, 8 Nov 2017 19:47:36.840
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P11082017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.80 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171108_decomp_user_v940m5a_branchcomm6_t4_comm/
+      _scripts/mcsched.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+NOTE: Libref LIBB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/decomp/data/BLOCKS
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: The infile "/ORDATA/miplib/mcsched.blocks_comm" is:
+      Filename=/ORDATA/miplib/mcsched.blocks_comm,
+      Owner Name=nobody,Group Name=nobody,
+      Access Permission=-rwxr--r--,
+      Last Modified=08Nov2017:13:18:20,
+      File Size (bytes)=24900
+
+NOTE: 2075 records were read from the infile "/ORDATA/miplib/mcsched.blocks_comm".
+      The minimum record length was 10.
+      The maximum record length was 10.
+NOTE: The data set WORK.MCSCHED_BLOCKS has 2075 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.11 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.01 seconds
+      memory              1049.46k
+      OS Memory           8612.00k
+      Timestamp           11/08/2017 07:47:37 PM
+      Step Count                        1  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     800
+      Page Swaps                        0
+      Voluntary Context Switches        101
+      Involuntary Context Switches      4
+      Block Input Operations            64
+      Block Output Operations           904
+      
+NOTE: Data file LIB.MCSCHED.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem mcsched has 1747 variables (1745 binary, 0 integer, 2 free, 14 fixed).
+NOTE: The problem has 2107 constraints (1905 LE, 202 EQ, 0 GE, 0 range).
+NOTE: The problem has 8088 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 252 variables and 254 constraints.
+NOTE: The MILP presolver removed 3581 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 1495 variables, 1853 constraints, and 4507 constraint coefficients.
+NOTE: The MILP solver is called.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value USER is applied.
+NOTE: The problem has a decomposable structure with 5 blocks. The largest block covers 20.56% of the constraints in the 
+      problem.
+NOTE: The decomposition subproblems cover 1495 (100%) variables and 1823 (98.38%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .  193774.7537  265820.0000  265820.0000   37.18%   37.18%    1    0
+         1  193774.7537  265820.0000  265820.0000   37.18%   37.18%    1    0
+         4  193774.7537  260822.0000  260822.0000   34.60%   34.60%    2    1
+         .  193774.7537  260822.0000  260822.0000   34.60%   34.60%    2    1
+        10  193774.7537  260822.0000  260822.0000   34.60%   34.60%    2    1
+         .  193774.7537  260822.0000  260822.0000   34.60%   34.60%    3    1
+        20  193774.7537  260822.0000  260822.0000   34.60%   34.60%    3    1
+        25  193774.7537  236741.0000  236741.0000   22.17%   22.17%    3    2
+        30  193774.7537  228953.0000  228953.0000   18.15%   18.15%    6    3
+        34  193774.7537  227693.0163  227842.0000   17.50%   17.58%   10    4
+         .  193774.7537  216862.0000  216862.0000   11.91%   11.91%   19   10
+        40  193774.7537  216862.0000  216862.0000   11.91%   11.91%   20   11
+        50  193774.7537  216862.0000  216862.0000   11.91%   11.91%   31   15
+        55  198680.3709  216862.0000  216862.0000    9.15%    9.15%   40   17
+        56  199133.8933  216862.0000  216862.0000    8.90%    8.90%   42   18
+        60  199133.8933  216862.0000  214902.0000    8.90%    7.92%   51   23
+        66  201633.2868  214902.0000  214902.0000    6.58%    6.58%   65   28
+        70  201633.2868  214465.4605  214902.0000    6.36%    6.58%   76   34
+        72  203658.6178  214393.5052  214902.0000    5.27%    5.52%   81   35
+        74  205322.4234  214040.7701  214902.0000    4.25%    4.67%   85   37
+        75  206638.0833  213859.3333  214902.0000    3.49%    4.00%   88   38
+         .  206638.0833  213420.3333  214902.0000    3.28%    4.00%   97   41
+        80  206638.0833  213420.3333  214902.0000    3.28%    4.00%   99   42
+        81  207988.2917  213384.8485  214902.0000    2.59%    3.32%  102   43
+        85  208226.8218  213038.8861  214902.0000    2.31%    3.21%  112   47
+        90  208226.8218  212226.3333  214902.0000    1.92%    3.21%  124   51
+        91  209352.5556  212226.3333  214902.0000    1.37%    2.65%  126   52
+        92  209359.5417  212226.3333  214902.0000    1.37%    2.65%  129   53
+        96  210222.3333  212226.3333  214902.0000    0.95%    2.23%  139   57
+       100  210646.6667  212226.3333  214902.0000    0.75%    2.02%  149   60
+       103  210926.5000  212196.2500  214902.0000    0.60%    1.88%  156   63
+       106  211378.2500  212130.5000  214902.0000    0.36%    1.67%  166   67
+       107  211463.6667  212115.8333  214902.0000    0.31%    1.63%  169   68
+       109  211514.8000  212088.3000  214902.0000    0.27%    1.60%  174   70
+       110  211514.8000  211920.0000  211920.0000    0.19%    0.19%  177   71
+       113  211891.0000  211920.0000  211920.0000    0.01%    0.01%  185   74
+       114  211911.0000  211913.0000  211913.0000    0.00%    0.00%  188   75
+NOTE: The Decomposition algorithm stopped on the integer RELOBJGAP= option.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       0     15  211913.0000  211911.0000    0.00%    188     75
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 75.54 seconds.
+NOTE: Optimal within relative gap.
+NOTE: Objective = 211913.
+NOTE: There were 12463 observations read from the data set LIB.MCSCHED.
+NOTE: There were 2075 observations read from the data set WORK.MCSCHED_BLOCKS.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           1:16.02
+      user cpu time       3:08.53
+      system cpu time     8.27 seconds
+      memory              182331.85k
+      OS Memory           192100.00k
+      Timestamp           11/08/2017 07:48:53 PM
+      Step Count                        2  Switch Count  60
+      Page Faults                       7
+      Page Reclaims                     142474
+      Page Swaps                        0
+      Voluntary Context Switches        3277
+      Involuntary Context Switches      874
+      Block Input Operations            39920
+      Block Output Operations           32
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL_RGAP OBJECTIVE=211913 RELATIVE_GAP=9.438E-6 
+      ABSOLUTE_GAP=1.9999999999 PRIMAL_INFEASIBILITY=5.400125E-13 BOUND_INFEASIBILITY=6.883383E-15 
+      INTEGER_INFEASIBILITY=6.883383E-15 BEST_BOUND=211911 NODES=1 ITERATIONS=114 PRESOLVE_TIME=0.07 SOLUTION_TIME=75.62
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           1:17.35
+      user cpu time       3:08.57
+      system cpu time     8.32 seconds
+      memory              189127.17k
+      OS Memory           192100.00k
+      Timestamp           11/08/2017 07:48:53 PM
+      Step Count                        2  Switch Count  193
+      Page Faults                       7
+      Page Reclaims                     148559
+      Page Swaps                        0
+      Voluntary Context Switches        4593
+      Involuntary Context Switches      887
+      Block Input Operations            40040
+      Block Output Operations           1048
+      
+
+

@@ -1,0 +1,323 @@
+NOTE: Log file opened at  Wed, 8 Nov 2017 15:23:02.977
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P11072017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.14 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171108_decomp_auto_v940m5a_branch_t4_auto8/_scr
+      ipts/z10teams.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.Z10TEAMS.DATA is in a format that is native to another host, or the file encoding does not match 
+      the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources 
+      and might reduce performance.
+NOTE: The problem 10TEAMS has 2025 variables (1800 binary, 0 integer, 0 free, 225 fixed).
+NOTE: The problem has 230 constraints (95 LE, 135 EQ, 0 GE, 0 range).
+NOTE: The problem has 12150 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 425 variables and 20 constraints.
+NOTE: The MILP presolver removed 2550 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 1600 variables, 210 constraints, and 9600 constraint coefficients.
+NOTE: The MILP solver is called.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+NOTE: The automated method will attempt to find block-angular form with 8 blocks.
+NOTE: The problem has a decomposable structure with 8 blocks. The largest block covers 7.143% of the constraints in the 
+      problem.
+NOTE: The decomposition subproblems cover 1600 (100%) variables and 120 (57.14%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+NOTE: Starting phase 1.
+         1       0.0000      42.0000            . 4.20e+01        .    3    3
+        10       0.0000      19.6667            . 1.97e+01        .    4    3
+        20       0.0000       7.2667            . 7.27e+00        .    4    4
+        30       0.0000       0.9536            . 9.54e-01        .    5    4
+        37       0.0000       0.0000            .    0.00%        .    5    4
+NOTE: Starting phase 2.
+        38     917.0000     943.3537            .    2.87%        .    5    4
+         .     917.0000     941.6246            .    2.69%        .    6    5
+         .     917.0000     941.5811            .    2.68%        .    6    5
+        40     917.0000     941.5811            .    2.68%        .    6    5
+        50     917.0000     924.2084            .    0.79%        .    8    7
+        51     924.0000     924.0000            .    0.00%        .    8    7
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1      0            .     924.0000        .      8      7
+           10      12      0            .     924.0000        .     16     13
+           20      22      0            .     924.0000        .     26     21
+           30      32      0            .     924.0000        .     35     28
+           40      42      0            .     924.0000        .     46     37
+           50      52      0            .     924.0000        .     56     46
+           60      62      0            .     924.0000        .     66     54
+           70      72      0            .     924.0000        .     77     64
+           80      82      0            .     924.0000        .     87     72
+           90      92      0            .     924.0000        .     98     81
+          100     102      0            .     924.0000        .    108     89
+          110     112      0            .     924.0000        .    117     97
+          120     122      0            .     924.0000        .    126    104
+          130     132      0            .     924.0000        .    135    111
+          140     142      0            .     924.0000        .    143    118
+          150     152      0            .     924.0000        .    153    126
+          160     162      0            .     924.0000        .    161    133
+          170     172      0            .     924.0000        .    166    137
+          180     182      0            .     924.0000        .    169    139
+          190     192      0            .     924.0000        .    170    140
+          200     202      0            .     924.0000        .    171    140
+          210     212      0            .     924.0000        .    172    141
+          220     222      0            .     924.0000        .    173    142
+          230     232      0            .     924.0000        .    174    143
+          240     242      0            .     924.0000        .    176    144
+          250     252      0            .     924.0000        .    179    147
+          260     262      0            .     924.0000        .    182    149
+          270     272      0            .     924.0000        .    186    153
+          280     282      0            .     924.0000        .    189    155
+          290     292      0            .     924.0000        .    195    160
+          300     302      0            .     924.0000        .    198    162
+          310     312      0            .     924.0000        .    204    167
+          320     322      0            .     924.0000        .    207    170
+          330     332      0            .     924.0000        .    210    173
+          340     342      0            .     924.0000        .    213    175
+          350     352      0            .     924.0000        .    215    177
+          360     362      0            .     924.0000        .    217    178
+          370     372      0            .     924.0000        .    222    182
+          380     382      0            .     924.0000        .    225    185
+          390     392      0            .     924.0000        .    231    190
+          400     402      0            .     924.0000        .    234    193
+          410     412      0            .     924.0000        .    237    195
+          420     422      0            .     924.0000        .    241    198
+          430     432      0            .     924.0000        .    244    200
+          440     442      0            .     924.0000        .    247    203
+          450     452      0            .     924.0000        .    249    205
+          460     462      0            .     924.0000        .    253    208
+          470     472      0            .     924.0000        .    255    209
+          480     482      0            .     924.0000        .    259    213
+          490     492      0            .     924.0000        .    261    215
+          500     502      0            .     924.0000        .    266    219
+          510     512      0            .     924.0000        .    271    223
+          520     522      0            .     924.0000        .    274    226
+          530     532      0            .     924.0000        .    276    228
+          540     542      0            .     924.0000        .    278    230
+          550     552      0            .     924.0000        .    281    232
+          560     562      0            .     924.0000        .    284    234
+          570     572      0            .     924.0000        .    285    236
+          580     582      0            .     924.0000        .    290    240
+          590     592      0            .     924.0000        .    292    242
+          600     602      0            .     924.0000        .    296    245
+          610     612      0            .     924.0000        .    300    249
+          620     622      0            .     924.0000        .    304    252
+          630     632      0            .     924.0000        .    307    254
+          640     642      0            .     924.0000        .    309    256
+          650     652      0            .     924.0000        .    312    259
+          660     662      0            .     924.0000        .    316    262
+          670     672      0            .     924.0000        .    318    265
+          680     682      0            .     924.0000        .    322    268
+          690     692      0            .     924.0000        .    325    271
+          700     702      0            .     924.0000        .    329    274
+          710     712      0            .     924.0000        .    332    277
+          720     722      0            .     924.0000        .    334    278
+          730     732      0            .     924.0000        .    336    280
+          740     742      0            .     924.0000        .    339    282
+          750     752      0            .     924.0000        .    341    284
+          760     762      0            .     924.0000        .    344    287
+          770     772      0            .     924.0000        .    346    289
+          780     782      0            .     924.0000        .    349    292
+          790     792      0            .     924.0000        .    352    294
+          800     802      0            .     924.0000        .    354    296
+          810     812      0            .     924.0000        .    357    299
+          820     822      0            .     924.0000        .    359    301
+          830     832      0            .     924.0000        .    362    304
+          840     842      0            .     924.0000        .    364    306
+          850     852      0            .     924.0000        .    367    308
+          860     862      0            .     924.0000        .    370    312
+          870     872      0            .     924.0000        .    372    314
+          880     882      0            .     924.0000        .    376    316
+          890     892      0            .     924.0000        .    378    318
+          900     902      0            .     924.0000        .    381    322
+          910     912      0            .     924.0000        .    385    325
+          920     922      0            .     924.0000        .    387    327
+          930     932      0            .     924.0000        .    390    330
+          940     942      0            .     924.0000        .    393    333
+          950     952      0            .     924.0000        .    397    336
+          960     962      0            .     924.0000        .    400    339
+          970     972      0            .     924.0000        .    403    342
+          980     982      0            .     924.0000        .    406    345
+          990     992      0            .     924.0000        .    408    346
+         1000    1002      0            .     924.0000        .    411    349
+         1010    1012      0            .     924.0000        .    413    351
+         1020    1022      0            .     924.0000        .    415    353
+         1030    1032      0            .     924.0000        .    418    355
+         1040    1042      0            .     924.0000        .    421    358
+         1050    1052      0            .     924.0000        .    423    360
+         1060    1062      0            .     924.0000        .    426    363
+         1070    1072      0            .     924.0000        .    429    366
+         1080    1082      0            .     924.0000        .    432    369
+         1090    1092      0            .     924.0000        .    435    371
+         1100    1102      0            .     924.0000        .    443    378
+         1110    1112      0            .     924.0000        .    445    380
+         1120    1122      0            .     924.0000        .    448    383
+         1130    1132      0            .     924.0000        .    451    386
+         1140    1142      0            .     924.0000        .    454    388
+         1150    1152      0            .     924.0000        .    457    391
+         1160    1162      0            .     924.0000        .    459    393
+         1170    1172      0            .     924.0000        .    465    398
+         1180    1182      0            .     924.0000        .    467    400
+         1190    1192      0            .     924.0000        .    471    403
+         1200    1202      0            .     924.0000        .    475    407
+         1210    1212      0            .     924.0000        .    478    410
+         1220    1222      0            .     924.0000        .    480    412
+         1230    1232      0            .     924.0000        .    482    414
+         1240    1242      0            .     924.0000        .    486    417
+         1250    1252      0            .     924.0000        .    489    420
+         1260    1262      0            .     924.0000        .    491    422
+         1270    1272      0            .     924.0000        .    493    424
+         1280    1282      0            .     924.0000        .    497    427
+         1290    1292      0            .     924.0000        .    499    430
+         1300    1302      0            .     924.0000        .    503    433
+         1310    1312      0            .     924.0000        .    505    435
+         1320    1322      0            .     924.0000        .    508    437
+         1330    1332      0            .     924.0000        .    511    440
+         1340    1342      0            .     924.0000        .    513    442
+         1350    1352      0            .     924.0000        .    516    445
+         1360    1362      0            .     924.0000        .    519    447
+         1370    1372      0            .     924.0000        .    523    451
+         1380    1382      0            .     924.0000        .    526    454
+         1390    1392      0            .     924.0000        .    529    457
+         1400    1402      0            .     924.0000        .    532    460
+         1410    1412      0            .     924.0000        .    535    463
+         1420    1422      0            .     924.0000        .    538    466
+         1430    1432      0            .     924.0000        .    541    468
+         1440    1442      0            .     924.0000        .    543    470
+         1450    1452      0            .     924.0000        .    546    473
+         1460    1462      0            .     924.0000        .    549    476
+         1470    1472      0            .     924.0000        .    552    478
+         1480    1482      0            .     924.0000        .    554    480
+         1490    1492      0            .     924.0000        .    556    483
+         1500    1502      0            .     924.0000        .    559    485
+         1510    1512      0            .     924.0000        .    561    487
+         1520    1522      0            .     924.0000        .    564    490
+         1530    1532      0            .     924.0000        .    567    493
+         1540    1542      0            .     924.0000        .    570    496
+         1550    1552      0            .     924.0000        .    573    498
+         1560    1562      0            .     924.0000        .    576    501
+         1570    1572      0            .     924.0000        .    578    503
+         1580    1582      0            .     924.0000        .    581    505
+         1590    1592      0            .     924.0000        .    583    507
+         1600    1602      0            .     924.0000        .    585    510
+         1610    1612      0            .     924.0000        .    588    512
+         1620    1622      0            .     924.0000        .    590    514
+         1630    1632      0            .     924.0000        .    593    517
+         1640    1642      0            .     924.0000        .    596    520
+         1650    1652      0            .     924.0000        .    599    523
+         1660    1662      0            .     924.0000        .    602    526
+         1670    1672      0            .     924.0000        .    605    528
+         1680    1682      0            .     924.0000        .    607    531
+         1690    1692      0            .     924.0000        .    610    533
+         1700    1702      0            .     924.0000        .    613    536
+         1710    1712      0            .     924.0000        .    616    538
+         1720    1722      0            .     924.0000        .    618    541
+         1730    1732      0            .     924.0000        .    621    543
+         1740    1742      0            .     924.0000        .    623    546
+         1750    1752      0            .     924.0000        .    626    549
+         1760    1762      0            .     924.0000        .    629    551
+         1770    1772      0            .     924.0000        .    632    554
+         1780    1782      0            .     924.0000        .    636    557
+         1790    1792      0            .     924.0000        .    638    560
+         1800    1802      0            .     924.0000        .    642    563
+         1810    1812      0            .     924.0000        .    645    566
+         1820    1822      0            .     924.0000        .    648    569
+         1830    1832      0            .     924.0000        .    651    572
+         1840    1842      0            .     924.0000        .    654    575
+         1850    1852      0            .     924.0000        .    657    577
+         1860    1862      0            .     924.0000        .    660    580
+         1870    1872      0            .     924.0000        .    663    582
+         1880    1882      0            .     924.0000        .    666    586
+         1890    1892      0            .     924.0000        .    670    589
+         1900    1902      0            .     924.0000        .    673    592
+         1910    1912      0            .     924.0000        .    676    595
+         1920    1922      0            .     924.0000        .    679    597
+         1930    1932      0            .     924.0000        .    681    599
+         1940    1942      0            .     924.0000        .    684    602
+         1946       0      1     924.0000     924.0000    0.00%    685    604
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 604.15 seconds.
+NOTE: Optimal.
+NOTE: Objective = 924.
+NOTE: There were 10479 observations read from the data set LIB.Z10TEAMS.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           10:04.39
+      user cpu time       11:25.89
+      system cpu time     2:31.17
+      memory              228451.31k
+      OS Memory           242572.00k
+      Timestamp           11/08/2017 03:33:07 PM
+      Step Count                        1  Switch Count  232
+      Page Faults                       7
+      Page Reclaims                     20572919
+      Page Swaps                        0
+      Voluntary Context Switches        262576
+      Involuntary Context Switches      35598
+      Block Input Operations            39920
+      Block Output Operations           176
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL OBJECTIVE=924 RELATIVE_GAP=0 ABSOLUTE_GAP=0 
+      PRIMAL_INFEASIBILITY=1.967315E-13 BOUND_INFEASIBILITY=2.731149E-14 INTEGER_INFEASIBILITY=6.189715E-12 
+      BEST_BOUND=924 NODES=1947 ITERATIONS=9956 PRESOLVE_TIME=0.09 SOLUTION_TIME=604.24
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           10:04.58
+      user cpu time       11:25.91
+      system cpu time     2:31.20
+      memory              234700.31k
+      OS Memory           242572.00k
+      Timestamp           11/08/2017 03:33:07 PM
+      Step Count                        1  Switch Count  707
+      Page Faults                       7
+      Page Reclaims                     20578198
+      Page Swaps                        0
+      Voluntary Context Switches        263507
+      Involuntary Context Switches      35602
+      Block Input Operations            39928
+      Block Output Operations           280
+      
+
+
