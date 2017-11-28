@@ -1,5 +1,5 @@
-setwd("C:/Users/Tagi/Desktop/UWaterloo/Research/Restructuring/Codes/BBD-DetectionAlgorithm")
-#setwd("U:/decomp_community")
+#setwd("C:/Users/Tagi/Desktop/UWaterloo/Research/Restructuring/Codes/BBD-DetectionAlgorithm")
+setwd("U:/decomp_community")
 
 # Install/Load Necessary Packages #
 dynamic_require = function(package){ 
@@ -471,34 +471,39 @@ BBD.plot = function(A, BBD){
 #filename= "a1c1s1"
 #filename="atm_miplib2010"
 
-problem.set = c("10teams",
-                "aflow30a",
-                "aflow40b",
-                "fiber",
-                "fixnet6",
-                "gesa2-o",
-                "harp2",
-                "mkc",
-                "modglob",
-                "noswot",
-                "opt1217",
-                "p2756",
-                "pp08a",
-                "pp08aCUTS",
-                "rout",
-                "set1ch",
-                "beasleyC3",
-                "gmu-35-40",
-                "macrophage",
-                "mcsched",
-                "mine-166-5",
-                "mine-90-10",
-                "pw-myciel4",
-                "ran16x16",
-                "reblock67",
-                "rmine6",
-                "rococoC10-001000"
+problem.set = c(
+#"\\\\orgrdnfs01\\data\\miplib\\z10teams",
+#                "\\\\orgrdnfs01\\data\\miplib\\aflow30a",
+#                "\\\\orgrdnfs01\\data\\miplib\\aflow40b",
+#                "\\\\orgrdnfs01\\data\\miplib\\fiber",
+#                "\\\\orgrdnfs01\\data\\miplib\\fixnet6",
+#                "\\\\orgrdnfs01\\data\\miplib\\gesa2_o",
+#                "\\\\orgrdnfs01\\data\\miplib\\harp2",
+#                "\\\\orgrdnfs01\\data\\miplib\\mkc",
+#                "\\\\orgrdnfs01\\data\\miplib\\modglob",
+#                "\\\\orgrdnfs01\\data\\miplib\\noswot",
+#                "\\\\orgrdnfs01\\data\\miplib\\opt1217",
+#                "\\\\orgrdnfs01\\data\\miplib\\p2756",
+#                "\\\\orgrdnfs01\\data\\miplib\\pp08a",
+#                "\\\\orgrdnfs01\\data\\miplib\\pp08aCUTS",
+#                "\\\\orgrdnfs01\\data\\miplib\\rout",
+#                "\\\\orgrdnfs01\\data\\miplib\\set1ch",
+#                "\\\\orgrdnfs01\\data\\miplib\\beasleyC3",
+#                "\\\\orgrdnfs01\\data\\miplib\\gmu_35_40",
+#                "\\\\orgrdnfs01\\data\\miplib\\macrophage",
+#                "\\\\orgrdnfs01\\data\\miplib\\mcsched",
+#                "\\\\orgrdnfs01\\data\\miplib\\mine_166_5",
+#                "\\\\orgrdnfs01\\data\\miplib\\mine_90_10",
+#                "\\\\orgrdnfs01\\data\\miplib\\pw_myciel4",
+#                "\\\\orgrdnfs01\\data\\miplib\\ran16x16",
+#                "\\\\orgrdnfs01\\data\\miplib\\reblock67",
+#                "\\\\orgrdnfs01\\data\\miplib\\rmine6",
+#                "\\\\orgrdnfs01\\data\\miplib\\rococoC10_001000"
+
+                "\\\\orgrdnfs01\\data\\miplib\\acc_tight5"
+
 )
+
 
 for(i in 1:length(problem.set)){
   filename=problem.set[i]
