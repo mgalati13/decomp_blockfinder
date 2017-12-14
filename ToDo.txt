@@ -1,0 +1,28 @@
+------------------------------------
+Terms:
+------------------------------------
+dBBD = doubly block-border diagonal
+sBBD = singly block-border diagonal
+ACP = current stretching approach (this is not hyper-graph partitioning) and can easily end up with dBBD (at least half of the instances end up with dBBD)
+KEE = Taghi's community-based approach
+
+------------------------------------
+ToDo:
+------------------------------------
+(1) Try row-graph - ACP vs ACP+KEE vs KEE
+I am somewhat skeptical of this approach due to the potential density of AA^t.
+(2) Implement and try col-graph - ACP vs ACP+KEE vs KEE
+(3) Check on the instances where maxTime 600s was exceeded (e.g., dbs)
+(4) Check effect of tolerance relaxation on Louvain/LabelProp
+(5) Investigate warm-start ideas for Louvain/LabelProp
+(6) Implement a fast-greedy community?
+(7) Look at slow cases of KEE, profile and see if any data structure fixes.
+(8) Look at slow cases of KEE, profile and see if any algorithm changes - e.g., Taghi's cheaper merge (which seemed to lose too much quality).
+(9) Consider starting KEE with S from crossing edges of community, rather than starting with S=empty.
+(10) Come up with a determinstic stopping criteria (not maxTime)
+(11) Look at cases of ACP+KEE vs KEE where KEE does better despsite having a worse goodness factor (likely the dBBD cases).
+(12) Related to (11), consider a better way to measure/compare dBBD structure to sBBD structures that reflects what we are seeing in (11) - that sBBD should be strongly favored. Do we need to compare to a true hyper-graph partitioning approach [license issue at SAS]. I believe SCIP/GCG uses hMetis(?).
+(13) Decide by ~Jan 15, if this topic would make a good MIP2018 talk - if so, draw up outline.
+(14) Some stuck cases? Running for 13 hours??
+  -- npmv07, psin5
+(15) LabelProp bug? S1395671
