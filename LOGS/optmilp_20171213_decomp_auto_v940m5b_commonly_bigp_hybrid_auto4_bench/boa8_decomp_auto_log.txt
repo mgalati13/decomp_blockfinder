@@ -1,0 +1,106 @@
+NOTE: Log file opened at Wed, 13 Dec 2017 13:34:25.266
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12122017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.13 seconds
+      cpu time            0.03 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171213_decomp_auto_v940m5b_commonly_bipg_hybrid
+      _auto4_bench/_scripts/boa8.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.BOA8.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem MODEL has 310 variables (305 binary, 0 integer, 5 free, 0 fixed).
+NOTE: The problem has 91 constraints (0 LE, 61 EQ, 30 GE, 0 range).
+NOTE: The problem has 3975 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 0 variables and 20 constraints.
+NOTE: The MILP presolver removed 3050 constraint coefficients.
+NOTE: The MILP presolver modified 61 constraint coefficients.
+NOTE: The presolved problem has 310 variables, 71 constraints, and 925 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      2     15.4400000      0.0160000 96400.0%       0
+NOTE: The MILP solver's symmetry detection found 10 orbits. The largest orbit contains 61 variables.
+             0        1      4      0.4800000      0.4800000    0.00%       0
+             0        0      4      0.4800000      0.4800000    0.00%       0
+NOTE: The MILP solver added 68 cuts with 4475 cut coefficients at the root.
+NOTE: Optimal.
+NOTE: Objective = 0.48.
+NOTE: There were 4480 observations read from the data set LIB.BOA8.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           0.20 seconds
+      user cpu time       0.10 seconds
+      system cpu time     0.03 seconds
+      memory              23771.68k
+      OS Memory           30704.00k
+      Timestamp           12/13/2017 01:34:25 PM
+      Step Count                        1  Switch Count  18
+      Page Faults                       4
+      Page Reclaims                     3478
+      Page Swaps                        0
+      Voluntary Context Switches        360
+      Involuntary Context Switches      36
+      Block Input Operations            14256
+      Block Output Operations           8
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL OBJECTIVE=0.48 RELATIVE_GAP=0 ABSOLUTE_GAP=0 
+      PRIMAL_INFEASIBILITY=2.4869E-14 BOUND_INFEASIBILITY=8.881784E-15 INTEGER_INFEASIBILITY=8.881784E-15 
+      BEST_BOUND=0.48 NODES=1 ITERATIONS=100 PRESOLVE_TIME=0.06 SOLUTION_TIME=0.07
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.38 seconds
+      user cpu time       0.13 seconds
+      system cpu time     0.05 seconds
+      memory              30026.96k
+      OS Memory           30704.00k
+      Timestamp           12/13/2017 01:34:25 PM
+      Step Count                        1  Switch Count  65
+      Page Faults                       5
+      Page Reclaims                     8733
+      Page Swaps                        0
+      Voluntary Context Switches        1284
+      Involuntary Context Switches      43
+      Block Input Operations            15568
+      Block Output Operations           104
+      
+
+

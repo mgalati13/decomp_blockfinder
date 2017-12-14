@@ -1,0 +1,212 @@
+NOTE: Log file opened at Wed, 13 Dec 2017 14:19:23.297
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12122017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.11 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171213_decomp_auto_v940m5b_commonly_bipg_hybrid
+      _auto4_bench/_scripts/color_cyclotomic_61.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.COLOR_CYCLOTOMIC_61.DATA is in a format that is native to another host, or the file encoding does 
+      not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU 
+      resources and might reduce performance.
+NOTE: The problem color_Cyclotomic_61 has 682 variables (682 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 1403 constraints (1342 LE, 0 EQ, 61 GE, 0 range).
+NOTE: The problem has 16104 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 0 variables and 0 constraints.
+NOTE: The MILP presolver removed 0 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 682 variables, 1403 constraints, and 16104 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      2     11.0000000      1.0000000 1000.00%       0
+NOTE: The MILP solver's symmetry detection found 2 orbits. The largest orbit contains 671 variables.
+             0        1      2     11.0000000      1.0000000 1000.00%       0
+             0        1      2     11.0000000      1.0000000 1000.00%       0
+             0        1      2     11.0000000      1.0000000 1000.00%       0
+             0        1      2     11.0000000      1.0000000 1000.00%       1
+NOTE: The MILP solver added 75 cuts with 300 cut coefficients at the root.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+Time in community    0.012 (real)    0.010 (cpu)
+Community numComponents=72 numBlocks=11 Q=0.9090414189 P=0.8135401931 QP=0.7395417315 SBBBorderArea= 0.0412719892 
+BorderRows=61 LIndex=0
+Time in community    0.010 (real)    0.010 (cpu)
+Best Goodness=0.7395417315 LIndex=0 in    0.024 (real)    0.020 (cpu) - total time in Comm    0.022
+Community numComponents=72 numBlocks=11 Q=0.9090414189 P=0.8135401931 QP=0.7395417315 SBBBorderArea= 0.0412719892 
+BorderRows=61 LIndex=1
+Final goodness:0.7395417315
+TIME----BDFTime: 0.2293050289 BDFGood: 0.7395417315 CommTime: 0.0241270065 CommRemove: 0.022028923 CommMerge: 
+0.0001630783 CommGood: 0.7395417315 DBDF: 0 CommNBlocks: 11 HitMaxTime: 0
+STAT: 0.2293050289 0.7395417315 0.0241270065 0.022028923 0.0001630783 0.7395417315 0 11 0
+Using community decomposition with goodness=0.7395417315
+NOTE: The problem has a decomposable structure with 11 blocks. The largest block covers 10.08% of the constraints in 
+      the problem.
+NOTE: The decomposition subproblems cover 682 (100%) variables and 1417 (95.87%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .       1.0000      11.0000      11.0000 1000.00% 1000.00%    1    1
+         1       1.0000      11.0000      11.0000 1000.00% 1000.00%    1    1
+         .       1.0000      11.0000      11.0000 1000.00% 1000.00%    1    1
+        10       1.0000      11.0000      11.0000 1000.00% 1000.00%    1    1
+         .       1.0000      11.0000      11.0000 1000.00% 1000.00%    1    1
+        20       1.0000      11.0000      11.0000 1000.00% 1000.00%    1    1
+        30       1.0000      11.0000      11.0000 1000.00% 1000.00%    3    2
+        37       1.0000      10.0000      10.0000  900.00%  900.00%    7    3
+         .       1.0000      10.0000      10.0000  900.00%  900.00%    8    4
+        40       1.0000      10.0000      10.0000  900.00%  900.00%    9    4
+        50       1.0000       9.9903      10.0000  899.03%  900.00%   24   12
+        60       1.0000       8.8792      10.0000  787.92%  900.00%   45   20
+        70       1.0000       8.2977      10.0000  729.77%  900.00%   62   26
+         .       1.0000       8.1984      10.0000  719.84%  900.00%   83   33
+        80       1.0000       8.1984      10.0000  719.84%  900.00%   88   34
+        86       2.7731       8.0874      10.0000  191.64%  260.61%  106   40
+        90       2.7731       8.0205      10.0000  189.23%  260.61%  126   46
+        91       3.0835       8.0075      10.0000  159.69%  224.31%  134   48
+        92       3.2040       7.9918      10.0000  149.43%  212.11%  142   51
+       100       3.2040       7.8963      10.0000  146.45%  212.11%  177   62
+       102       3.3775       7.8740      10.0000  133.13%  196.07%  191   66
+       103       3.7131       7.8658      10.0000  111.84%  169.31%  203   70
+       104       4.4757       7.8560      10.0000   75.53%  123.43%  215   74
+       110       4.9275       7.7249      10.0000   56.77%  102.94%  273   92
+       111       4.9802       7.7152      10.0000   54.92%  100.79%  287   96
+       120       5.4482       7.6519      10.0000   40.45%   83.55%  395  130
+       130       7.6250       7.6250      10.0000    0.00%   31.15%  555  180
+         .       7.6250       7.6250      10.0000    0.00%   31.15%  561  182
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1      3      10.0000       7.6250   31.15%    561    182
+           10      12      3      10.0000       7.6250   31.15%   1257    457
+           20      22      3      10.0000       7.6250   31.15%   2130    799
+           30      32      3      10.0000       7.6250   31.15%   2972   1118
+           40      42      3      10.0000       7.6250   31.15%   3858   1470
+           50      52      3      10.0000       7.6250   31.15%   4704   1811
+           60      62      4       9.0000       7.6250   18.03%   5455   2122
+           70      72      4       9.0000       7.6250   18.03%   6152   2422
+           80      82      4       9.0000       7.6250   18.03%   6760   2694
+           90      92      4       9.0000       7.6250   18.03%   7060   2829
+          100     102      4       9.0000       7.6250   18.03%   7150   2871
+          110     112      4       9.0000       7.6250   18.03%   7231   2905
+          120     122      4       9.0000       7.6250   18.03%   7253   2912
+          130     132      4       9.0000       7.6250   18.03%   7272   2921
+          140     142      4       9.0000       7.6250   18.03%   7367   2959
+          150     152      4       9.0000       7.6250   18.03%   7491   3007
+          160     162      4       9.0000       7.6250   18.03%   7569   3036
+          170     172      4       9.0000       7.6250   18.03%   7611   3053
+          180     182      4       9.0000       7.6250   18.03%   7661   3072
+          190     192      4       9.0000       7.6250   18.03%   7683   3081
+          200     202      4       9.0000       7.6250   18.03%   7702   3088
+          210     212      4       9.0000       7.6250   18.03%   7764   3113
+          220     222      4       9.0000       7.6250   18.03%   7806   3131
+          230     232      4       9.0000       7.6250   18.03%   7859   3154
+          240     242      4       9.0000       7.6250   18.03%   7923   3182
+          250     252      4       9.0000       7.6250   18.03%   7959   3198
+          260     262      4       9.0000       7.6250   18.03%   7982   3207
+          270     272      4       9.0000       7.6250   18.03%   8000   3213
+          280     282      4       9.0000       7.6250   18.03%   8040   3232
+          290     292      4       9.0000       7.6250   18.03%   8101   3258
+          300     302      4       9.0000       7.6250   18.03%   8156   3283
+          310     312      4       9.0000       7.6250   18.03%   8181   3293
+          320     322      4       9.0000       7.6250   18.03%   8203   3302
+          330     332      4       9.0000       7.6250   18.03%   8238   3314
+          340     342      4       9.0000       7.6250   18.03%   8261   3326
+          350     352      4       9.0000       7.6250   18.03%   8278   3332
+          360     362      4       9.0000       7.6250   18.03%   8312   3347
+          370     372      4       9.0000       7.6250   18.03%   8347   3361
+          380     382      4       9.0000       7.6250   18.03%   8425   3391
+          390     392      4       9.0000       7.6250   18.03%   8505   3426
+          400     402      4       9.0000       7.6250   18.03%   8537   3441
+          410     412      4       9.0000       7.6250   18.03%   8572   3456
+          420     422      4       9.0000       7.6250   18.03%   8597   3467
+          430     432      4       9.0000       7.6250   18.03%   8623   3480
+          440     442      4       9.0000       7.6250   18.03%   8663   3502
+          450     452      4       9.0000       7.6250   18.03%   8740   3539
+          460     462      4       9.0000       7.6250   18.03%   8777   3557
+          470     472      4       9.0000       7.6250   18.03%   8827   3580
+          478     479      4       9.0000       7.6250   18.03%   8867   3599
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 3599.72 seconds.
+NOTE: Real time limit reached.
+NOTE: Objective of the best integer solution found = 9.
+NOTE: There were 11219 observations read from the data set LIB.COLOR_CYCLOTOMIC_61.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           59:59.81
+      user cpu time       2:27:47.04
+      system cpu time     12:24.06
+      memory              217562.45k
+      OS Memory           227580.00k
+      Timestamp           12/13/2017 03:19:23 PM
+      Step Count                        1  Switch Count  118
+      Page Faults                       0
+      Page Reclaims                     9117812
+      Page Swaps                        0
+      Voluntary Context Switches        150192
+      Involuntary Context Switches      37171
+      Block Input Operations            0
+      Block Output Operations           264
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=TIME_LIM_SOL OBJECTIVE=9 RELATIVE_GAP=0.180328 ABSOLUTE_GAP=1.375 
+      PRIMAL_INFEASIBILITY=7.105427E-14 BOUND_INFEASIBILITY=3.552714E-15 INTEGER_INFEASIBILITY=3.552714E-15 
+      BEST_BOUND=7.625 NODES=479 ITERATIONS=2399 PRESOLVE_TIME=0.10 SOLUTION_TIME=3599.73
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           1:00:00.03
+      user cpu time       2:27:47.07
+      system cpu time     12:24.10
+      memory              223817.92k
+      OS Memory           227580.00k
+      Timestamp           12/13/2017 03:19:23 PM
+      Step Count                        1  Switch Count  365
+      Page Faults                       0
+      Page Reclaims                     9123095
+      Page Swaps                        0
+      Voluntary Context Switches        151027
+      Involuntary Context Switches      37176
+      Block Input Operations            8
+      Block Output Operations           368
+      
+
+

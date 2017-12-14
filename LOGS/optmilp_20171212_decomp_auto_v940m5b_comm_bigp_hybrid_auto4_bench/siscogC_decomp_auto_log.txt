@@ -1,0 +1,132 @@
+NOTE: Log file opened at Tue, 12 Dec 2017 17:28:59.060
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12062017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.12 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171212_decomp_auto_v940m5b_comm_bipg_hybrid_aut
+      o4_bench/_scripts/siscogC.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.SISCOGC.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem siscogC has 170376 variables (135347 binary, 35028 integer, 0 free, 1 fixed).
+NOTE: The problem has 113908 constraints (3 LE, 110999 EQ, 2906 GE, 0 range).
+NOTE: The problem has 13120055 constraint coefficients.
+NOTE: The following rows have no coefficients:
+      Constraint12_1_1
+      Constraint12_1_2
+      Constraint12_1_3
+      Constraint12_2_1
+      Constraint12_2_2
+      Constraint12_2_3
+      Constraint12_5_1
+      Constraint12_5_2
+      Constraint12_5_3
+      Constraint12_9_1
+      Constraint12_9_2
+      Constraint12_9_3
+NOTE: The above is a partial list of empty rows; the complete list would have 57 entries.
+NOTE: The following columns have no constraint coefficients:
+      Z_9_1_2
+      Z_9_1_6
+      Z_9_1_10
+      Z_9_2_3
+      Z_9_2_7
+      Z_9_2_11
+      Z_9_3_2
+      Z_9_4_2
+      Z_9_5_2
+      Z_9_6_4
+      Z_9_6_8
+      Z_9_6_12
+NOTE: The above is a partial list of empty columns; the complete list would have 1996 entries.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 165885 variables and 111401 constraints.
+NOTE: The MILP presolver removed 13087242 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 4491 variables, 2507 constraints, and 32813 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      1       13818072              0  1.382E7      18
+             0        1      1       13818072       13818072    0.00%      18
+             0        0      1       13818072       13818072    0.00%      18
+NOTE: Optimal.
+NOTE: Objective = 13818072.
+NOTE: There were 13506142 observations read from the data set LIB.SISCOGC.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           48.75 seconds
+      user cpu time       47.03 seconds
+      system cpu time     1.55 seconds
+      memory              1506214.43k
+      OS Memory           1515032.00k
+      Timestamp           12/12/2017 05:29:47 PM
+      Step Count                        1  Switch Count  16
+      Page Faults                       0
+      Page Reclaims                     41589
+      Page Swaps                        0
+      Voluntary Context Switches        293
+      Involuntary Context Switches      22055
+      Block Input Operations            1406088
+      Block Output Operations           16
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL OBJECTIVE=13818072 RELATIVE_GAP=0 ABSOLUTE_GAP=0 
+      PRIMAL_INFEASIBILITY=0 BOUND_INFEASIBILITY=0 INTEGER_INFEASIBILITY=0 BEST_BOUND=13818072 NODES=1 ITERATIONS=1379 
+      PRESOLVE_TIME=18.36 SOLUTION_TIME=18.48
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           48.99 seconds
+      user cpu time       47.06 seconds
+      system cpu time     1.58 seconds
+      memory              1512469.71k
+      OS Memory           1515032.00k
+      Timestamp           12/12/2017 05:29:47 PM
+      Step Count                        1  Switch Count  59
+      Page Faults                       0
+      Page Reclaims                     46878
+      Page Swaps                        0
+      Voluntary Context Switches        1134
+      Involuntary Context Switches      22060
+      Block Input Operations            1406096
+      Block Output Operations           120
+      
+
+

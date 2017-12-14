@@ -1,0 +1,137 @@
+NOTE: Log file opened at Tue, 12 Dec 2017 18:53:14.916
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12062017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.22 seconds
+      cpu time            0.03 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171212_decomp_auto_v940m5b_comm_bipg_hybrid_aut
+      o4_bench/_scripts/dbs01193.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.DBS01193.DATA is in a format that is native to another host, or the file encoding does not match 
+      the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources 
+      and might reduce performance.
+NOTE: The problem dbs01193 has 1500926 variables (1500926 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 77041 constraints (62 LE, 76979 EQ, 0 GE, 0 range).
+NOTE: The problem has 5914269 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 233212 variables and 5963 constraints.
+NOTE: The MILP presolver removed 1055502 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 1267714 variables, 71078 constraints, and 4858767 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      0              .   6413.6250000        .      83
+             0        1      4   6478.0000000   6413.6250000    1.00%     147
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+Time in community  621.030 (real)  621.190 (cpu)
+Community numComponents=2 numBlocks=1 Q=0 P=0.9999296572 QP=0 SBBBorderArea= 0.0000140691 BorderRows=1 LIndex=0
+Best Goodness=0 LIndex=0 in  621.265 (real)  621.370 (cpu) - total time in Comm  621.030
+Community numComponents=2 numBlocks=1 Q=0 P=0.9999296572 QP=0 SBBBorderArea= 0.0000140691 BorderRows=1 LIndex=1
+Final goodness:0
+TIME----BDFTime: 4.219700098 BDFGood: 0.9951328684 CommTime: 621.30819297 CommRemove: 621.10877919 CommMerge: 0 
+CommGood: 0 DBDF: 0 CommNBlocks: 1 HitMaxTime: 1
+STAT: 4.219700098 0.9951328684 621.30819297 621.10877919 0 0 0 1 1
+NOTE: The automated method will attempt to find block-angular form with 4 blocks.
+NOTE: The problem has a decomposable structure with 1277 blocks. The largest block covers 0.08019% of the constraints 
+      in the problem.
+NOTE: The decomposition subproblems cover 1267714 (100%) variables and 71021 (99.92%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .    6413.6250    6446.1250    6458.0000    0.51%    0.69%  987  984
+         3    6413.6250    6423.0370    6457.0000    0.15%    0.68% 1046 1004
+NOTE: The Decomposition algorithm stopped on the continuous RELOBJGAP= option.
+         .    6413.6250    6413.8000    6451.0000    0.00%    0.58% 1083 1022
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1     11    6451.0000    6413.6250    0.58%   1083   1022
+           10      12     13    6431.0000    6413.8571    0.27%   2499   1792
+           20      22     13    6431.0000    6413.8571    0.27%   3183   2153
+           30      32     13    6431.0000    6413.8571    0.27%   3895   2573
+           40      42     13    6431.0000    6413.8571    0.27%   4533   2966
+           41      42     13    6431.0000    6413.8571    0.27%   4533   2966
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 2966.81 seconds.
+NOTE: Real time limit reached.
+NOTE: Objective of the best integer solution found = 6431.
+NOTE: There were 4570276 observations read from the data set LIB.DBS01193.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           49:38.95
+      user cpu time       1:15:45.06
+      system cpu time     27:27.45
+      memory              8268140.00k
+      OS Memory           8297780.00k
+      Timestamp           12/12/2017 07:42:54 PM
+      Step Count                        1  Switch Count  45
+      Page Faults                       0
+      Page Reclaims                     64788974
+      Page Swaps                        0
+      Voluntary Context Switches        2893367
+      Involuntary Context Switches      673807
+      Block Input Operations            841856
+      Block Output Operations           88
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=TIME_LIM_SOL OBJECTIVE=6431 RELATIVE_GAP=0.002673 ABSOLUTE_GAP=17.142857143 
+      PRIMAL_INFEASIBILITY=2.842171E-14 BOUND_INFEASIBILITY=4.196643E-14 INTEGER_INFEASIBILITY=4.196643E-14 
+      BEST_BOUND=6413.8571429 NODES=42 ITERATIONS=537 PRESOLVE_TIME=5.52 SOLUTION_TIME=2966.87
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           49:39.32
+      user cpu time       1:15:45.08
+      system cpu time     27:27.49
+      memory              8274395.28k
+      OS Memory           8297780.00k
+      Timestamp           12/12/2017 07:42:54 PM
+      Step Count                        1  Switch Count  146
+      Page Faults                       0
+      Page Reclaims                     64794254
+      Page Swaps                        0
+      Voluntary Context Switches        2894233
+      Involuntary Context Switches      673812
+      Block Input Operations            841864
+      Block Output Operations           192
+      
+
+

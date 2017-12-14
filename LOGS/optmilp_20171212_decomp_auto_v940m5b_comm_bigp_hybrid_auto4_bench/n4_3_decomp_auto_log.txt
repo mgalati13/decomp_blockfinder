@@ -1,0 +1,1035 @@
+NOTE: Log file opened at Tue, 12 Dec 2017 17:02:35.148
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12062017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.06 seconds
+      cpu time            0.03 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171212_decomp_auto_v940m5b_comm_bipg_hybrid_aut
+      o4_bench/_scripts/n4_3.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.N4_3.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem n4-3 has 3596 variables (0 binary, 174 integer, 0 free, 0 fixed).
+NOTE: The problem has 1236 constraints (116 LE, 1120 EQ, 0 GE, 0 range).
+NOTE: The problem has 14036 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 483 variables and 305 constraints.
+NOTE: The MILP presolver removed 4973 constraint coefficients.
+NOTE: The MILP presolver modified 7 constraint coefficients.
+NOTE: The presolved problem has 3113 variables, 931 constraints, and 9063 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      0              .   4876.6806723        .       0
+             0        1      3  13975.0000000   6314.0888106  121.33%       0
+             0        1      3  13975.0000000   6790.1649500  105.81%       0
+             0        1      3  13975.0000000   7077.5540030   97.46%       0
+             0        1      3  13975.0000000   7308.7640917   91.21%       0
+             0        1      3  13975.0000000   7481.2785458   86.80%       0
+             0        1      3  13975.0000000   7561.1468951   84.83%       1
+             0        1      3  13975.0000000   7646.8958841   82.75%       1
+             0        1      3  13975.0000000   7726.6302573   80.87%       1
+             0        1      3  13975.0000000   7768.1696197   79.90%       1
+             0        1      3  13975.0000000   7795.9350160   79.26%       1
+             0        1      3  13975.0000000   7846.6353404   78.10%       1
+             0        1      3  13975.0000000   7864.3263057   77.70%       1
+             0        1      3  13975.0000000   7887.3004440   77.18%       1
+             0        1      3  13975.0000000   7902.1777719   76.85%       2
+             0        1      3  13975.0000000   7921.8628014   76.41%       2
+             0        1      3  13975.0000000   7935.9013168   76.10%       2
+             0        1      3  13975.0000000   7946.4698064   75.86%       2
+             0        1      3  13975.0000000   7953.1125081   75.72%       2
+             0        1      3  13975.0000000   7963.3705037   75.49%       2
+             0        1      3  13975.0000000   7981.1850750   75.10%       2
+             0        1      3  13975.0000000   7997.5116422   74.74%       3
+             0        1      3  13975.0000000   8006.7666344   74.54%       3
+             0        1      3  13975.0000000   8010.9439106   74.45%       3
+             0        1      3  13975.0000000   8015.8977244   74.34%       3
+             0        1      3  13975.0000000   8036.5006319   73.89%       3
+             0        1      3  13975.0000000   8043.5124801   73.74%       3
+             0        1      3  13975.0000000   8048.1093986   73.64%       3
+             0        1      3  13975.0000000   8052.7411396   73.54%       4
+             0        1      3  13975.0000000   8055.4189331   73.49%       4
+             0        1      3  13975.0000000   8057.1827898   73.45%       4
+             0        1      3  13975.0000000   8063.5228786   73.31%       4
+             0        1      3  13975.0000000   8068.8926764   73.20%       4
+             0        1      3  13975.0000000   8071.1635971   73.15%       4
+             0        1      3  13975.0000000   8072.0989906   73.13%       4
+             0        1      3  13975.0000000   8073.4261594   73.10%       5
+             0        1      3  13975.0000000   8073.7825946   73.09%       5
+NOTE: The MILP solver added 283 cuts with 4131 cut coefficients at the root.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+Time in community    0.027 (real)    0.020 (cpu)
+Community numComponents=7 numBlocks=6 Q=0.0019782618 P=0.9958898537 QP=0.0019701309 SBBBorderArea= 0.0008237232 
+BorderRows=1 LIndex=0
+Time in community    0.030 (real)    0.030 (cpu)
+Community numComponents=8 numBlocks=6 Q=0.0019974109 P=0.9917966007 QP=0.0019810254 SBBBorderArea= 0.0016474465 
+BorderRows=2 LIndex=1
+Time in community    0.028 (real)    0.020 (cpu)
+Community numComponents=9 numBlocks=6 Q=0.0020075901 P=0.9877201716 QP=0.0019829372 SBBBorderArea= 0.0024711697 
+BorderRows=3 LIndex=2
+Time in community    0.040 (real)    0.040 (cpu)
+Community numComponents=11 numBlocks=6 Q=0.0020274721 P=0.9796175087 QP=0.0019861472 SBBBorderArea= 0.0041186161 
+BorderRows=5 LIndex=3
+Time in community    0.027 (real)    0.030 (cpu)
+Community numComponents=12 numBlocks=6 Q=0.0020392395 P=0.9755911375 QP=0.001989464 SBBBorderArea= 0.0049423394 
+BorderRows=6 LIndex=4
+Time in community    0.031 (real)    0.030 (cpu)
+Community numComponents=18 numBlocks=6 Q=0.002097476 P=0.9517780675 QP=0.0019963316 SBBBorderArea= 0.0098846787 
+BorderRows=12 LIndex=5
+Time in community    0.038 (real)    0.040 (cpu)
+Community numComponents=20 numBlocks=6 Q=0.0021197061 P=0.943970252 QP=0.0020009395 SBBBorderArea= 0.0115321252 
+BorderRows=14 LIndex=6
+Time in community    0.038 (real)    0.040 (cpu)
+Community numComponents=21 numBlocks=6 Q=0.0021313482 P=0.9400903962 QP=0.00200366 SBBBorderArea= 0.0123558484 
+BorderRows=15 LIndex=7
+Time in community    0.015 (real)    0.010 (cpu)
+Community numComponents=23 numBlocks=6 Q=0.0021535923 P=0.9323784593 QP=0.0020079631 SBBBorderArea= 0.0140032949 
+BorderRows=17 LIndex=8
+Time in community    0.033 (real)    0.030 (cpu)
+Community numComponents=24 numBlocks=6 Q=0.0021648894 P=0.9285462475 QP=0.0020101999 SBBBorderArea= 0.0148270181 
+BorderRows=18 LIndex=9
+Time in community    0.026 (real)    0.020 (cpu)
+Community numComponents=25 numBlocks=6 Q=0.0021755772 P=0.9247297866 QP=0.0020118211 SBBBorderArea= 0.0156507414 
+BorderRows=19 LIndex=10
+Time in community    0.012 (real)    0.010 (cpu)
+Community numComponents=31 numBlocks=6 Q=0.0022419878 P=0.9021581843 QP=0.0020226277 SBBBorderArea= 0.0205930807 
+BorderRows=25 LIndex=11
+Time in community    0.031 (real)    0.030 (cpu)
+Community numComponents=32 numBlocks=6 Q=0.0022534525 P=0.8984501822 QP=0.0020246148 SBBBorderArea= 0.021416804 
+BorderRows=26 LIndex=12
+Time in community    0.027 (real)    0.020 (cpu)
+Community numComponents=34 numBlocks=6 Q=0.0022767371 P=0.8910798367 QP=0.0020287545 SBBBorderArea= 0.0230642504 
+BorderRows=28 LIndex=13
+Time in community    0.010 (real)    0.010 (cpu)
+Community numComponents=38 numBlocks=6 Q=0.0023247805 P=0.8765200352 QP=0.0020377167 SBBBorderArea= 0.0263591433 
+BorderRows=32 LIndex=14
+Time in community    0.011 (real)    0.010 (cpu)
+Community numComponents=39 numBlocks=6 Q=0.0023371098 P=0.8729174097 QP=0.0020401038 SBBBorderArea= 0.0271828666 
+BorderRows=33 LIndex=15
+Time in community    0.010 (real)    0.010 (cpu)
+Community numComponents=41 numBlocks=6 Q=0.002362165 P=0.8657565197 QP=0.0020450598 SBBBorderArea= 0.028830313 
+BorderRows=35 LIndex=16
+Time in community    0.010 (real)    0.020 (cpu)
+Community numComponents=42 numBlocks=6 Q=0.0023748951 P=0.8621981337 QP=0.0020476302 SBBBorderArea= 0.0296540362 
+BorderRows=36 LIndex=17
+Time in community    0.010 (real)    0.010 (cpu)
+Community numComponents=43 numBlocks=6 Q=0.0023903976 P=0.8586543733 QP=0.0020525253 SBBBorderArea= 0.0304777595 
+BorderRows=37 LIndex=18
+Time in community    0.010 (real)    0.010 (cpu)
+Community numComponents=44 numBlocks=6 Q=0.0024034347 P=0.8551251782 QP=0.0020552375 SBBBorderArea= 0.0313014827 
+BorderRows=38 LIndex=19
+Time in community    0.010 (real)    0.010 (cpu)
+Community numComponents=45 numBlocks=6 Q=0.0024166147 P=0.8516104886 QP=0.0020580145 SBBBorderArea= 0.0321252059 
+BorderRows=39 LIndex=20
+Time in community    0.009 (real)    0.000 (cpu)
+Community numComponents=48 numBlocks=6 Q=0.0024570368 P=0.841152858 QP=0.0020667435 SBBBorderArea= 0.0345963756 
+BorderRows=42 LIndex=21
+Time in community    0.009 (real)    0.000 (cpu)
+Community numComponents=53 numBlocks=6 Q=0.0025329152 P=0.8240080672 QP=0.0020871426 SBBBorderArea= 0.0387149918 
+BorderRows=47 LIndex=22
+Time in community    0.009 (real)    0.010 (cpu)
+Community numComponents=56 numBlocks=6 Q=0.0025783797 P=0.8138893896 QP=0.0020985159 SBBBorderArea= 0.0411861614 
+BorderRows=50 LIndex=23
+Time in community    0.009 (real)    0.010 (cpu)
+Community numComponents=58 numBlocks=6 Q=0.0026102184 P=0.80721273 QP=0.0021070015 SBBBorderArea= 0.0428336079 
+BorderRows=52 LIndex=24
+Time in community    0.008 (real)    0.010 (cpu)
+Community numComponents=59 numBlocks=6 Q=0.0026257713 P=0.8038949676 QP=0.0021108444 SBBBorderArea= 0.0436573311 
+BorderRows=53 LIndex=25
+Time in community    0.008 (real)    0.010 (cpu)
+Community numComponents=60 numBlocks=6 Q=0.0026415107 P=0.8005908417 QP=0.0021147693 SBBBorderArea= 0.0444810544 
+BorderRows=54 LIndex=26
+Time in community    0.008 (real)    0.010 (cpu)
+Community numComponents=61 numBlocks=6 Q=0.0026574399 P=0.7973002962 QP=0.0021187776 SBBBorderArea= 0.0453047776 
+BorderRows=55 LIndex=27
+Time in community    0.008 (real)    0.010 (cpu)
+Community numComponents=62 numBlocks=6 Q=0.0026735624 P=0.7940232754 QP=0.0021228708 SBBBorderArea= 0.0461285008 
+BorderRows=56 LIndex=28
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=63 numBlocks=6 Q=0.0026898817 P=0.7907597235 QP=0.0021270501 SBBBorderArea= 0.0469522241 
+BorderRows=57 LIndex=29
+Time in community    0.008 (real)    0.010 (cpu)
+Community numComponents=64 numBlocks=6 Q=0.0027064015 P=0.7875095854 QP=0.0021313171 SBBBorderArea= 0.0477759473 
+BorderRows=58 LIndex=30
+Time in community    0.008 (real)    0.010 (cpu)
+Community numComponents=65 numBlocks=6 Q=0.0027231254 P=0.7842728058 QP=0.0021356732 SBBBorderArea= 0.0485996705 
+BorderRows=59 LIndex=31
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=66 numBlocks=6 Q=0.0027400573 P=0.7810493299 QP=0.0021401199 SBBBorderArea= 0.0494233937 
+BorderRows=60 LIndex=32
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=67 numBlocks=6 Q=0.0027478762 P=0.7778391029 QP=0.0021374056 SBBBorderArea= 0.050247117 
+BorderRows=61 LIndex=33
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=68 numBlocks=6 Q=0.0027569087 P=0.7746420704 QP=0.0021356175 SBBBorderArea= 0.0510708402 
+BorderRows=62 LIndex=34
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=69 numBlocks=6 Q=0.0027680621 P=0.7714581782 QP=0.0021354442 SBBBorderArea= 0.0518945634 
+BorderRows=63 LIndex=35
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=70 numBlocks=6 Q=0.0027778215 P=0.7682873722 QP=0.0021341652 SBBBorderArea= 0.0527182867 
+BorderRows=64 LIndex=36
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=71 numBlocks=6 Q=0.0027966453 P=0.7651295987 QP=0.0021397961 SBBBorderArea= 0.0535420099 
+BorderRows=65 LIndex=37
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=72 numBlocks=6 Q=0.0028145068 P=0.7619848041 QP=0.0021446114 SBBBorderArea= 0.0543657331 
+BorderRows=66 LIndex=38
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=73 numBlocks=6 Q=0.0028387835 P=0.7588529351 QP=0.0021542192 SBBBorderArea= 0.0551894563 
+BorderRows=67 LIndex=39
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=75 numBlocks=6 Q=0.0028462418 P=0.7526277615 QP=0.0021421606 SBBBorderArea= 0.0568369028 
+BorderRows=69 LIndex=40
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=83 numBlocks=6 Q=0.0029028052 P=0.7282335709 QP=0.0021139202 SBBBorderArea= 0.0634266886 
+BorderRows=77 LIndex=41
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=84 numBlocks=6 Q=0.0029240249 P=0.7252404243 QP=0.0021206211 SBBBorderArea= 0.0642504119 
+BorderRows=78 LIndex=42
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=85 numBlocks=6 Q=0.0029435562 P=0.7222595801 QP=0.0021260117 SBBBorderArea= 0.0650741351 
+BorderRows=79 LIndex=43
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=86 numBlocks=6 Q=0.0029660547 P=0.7192909876 QP=0.0021334564 SBBBorderArea= 0.0658978583 
+BorderRows=80 LIndex=44
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=88 numBlocks=6 Q=0.0030148936 P=0.7133903564 QP=0.002150796 SBBBorderArea= 0.0675453048 
+BorderRows=82 LIndex=45
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=91 numBlocks=6 Q=0.0030300017 P=0.7046300453 QP=0.0021350302 SBBBorderArea= 0.0700164745 
+BorderRows=85 LIndex=46
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=93 numBlocks=6 Q=0.0030603165 P=0.6988496837 QP=0.0021387012 SBBBorderArea= 0.0716639209 
+BorderRows=87 LIndex=47
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=94 numBlocks=6 Q=0.0030868399 P=0.6959773093 QP=0.0021483705 SBBBorderArea= 0.0724876442 
+BorderRows=88 LIndex=48
+Time in community    0.007 (real)    0.010 (cpu)
+Community numComponents=95 numBlocks=6 Q=0.003091244 P=0.6931167408 QP=0.0021425929 SBBBorderArea= 0.0733113674 
+BorderRows=89 LIndex=49
+Time in community    0.007 (real)    0.000 (cpu)
+Community numComponents=101 numBlocks=6 Q=0.0031164397 P=0.6761985495 QP=0.002107332 SBBBorderArea= 0.0782537068 
+BorderRows=95 LIndex=50
+Time in community    0.006 (real)    0.000 (cpu)
+Community numComponents=102 numBlocks=6 Q=0.0031428091 P=0.6734192746 QP=0.0021164283 SBBBorderArea= 0.07907743 
+BorderRows=96 LIndex=51
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=107 numBlocks=10 Q=0.0975305099 P=0.6706514228 QP=0.0654089752 SBBBorderArea= 0.0799011532 
+BorderRows=97 LIndex=52
+Time in community    0.006 (real)    0.000 (cpu)
+Community numComponents=108 numBlocks=10 Q=0.097691834 P=0.6678949474 QP=0.0652478823 SBBBorderArea= 0.0807248764 
+BorderRows=98 LIndex=53
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=109 numBlocks=10 Q=0.0978768583 P=0.6651498015 QP=0.0651027729 SBBBorderArea= 0.0815485997 
+BorderRows=99 LIndex=54
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=110 numBlocks=10 Q=0.0980160867 P=0.6624159385 QP=0.064927418 SBBBorderArea= 0.0823723229 
+BorderRows=100 LIndex=55
+Time in community    0.006 (real)    0.000 (cpu)
+Community numComponents=111 numBlocks=10 Q=0.0981790207 P=0.6596933121 QP=0.0647680433 SBBBorderArea= 0.0831960461 
+BorderRows=101 LIndex=56
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=112 numBlocks=10 Q=0.0983308017 P=0.6569818761 QP=0.0646015546 SBBBorderArea= 0.0840197694 
+BorderRows=102 LIndex=57
+Time in community    0.006 (real)    0.000 (cpu)
+Community numComponents=114 numBlocks=10 Q=0.098647542 P=0.6515923914 QP=0.0642779878 SBBBorderArea= 0.0856672158 
+BorderRows=104 LIndex=58
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=127 numBlocks=11 Q=0.123623304 P=0.6201713471 QP=0.076667631 SBBBorderArea= 0.0955518946 
+BorderRows=116 LIndex=59
+Time in community    0.006 (real)    0.000 (cpu)
+Community numComponents=128 numBlocks=11 Q=0.1237572958 P=0.6176223522 QP=0.0764352721 SBBBorderArea= 0.0963756178 
+BorderRows=117 LIndex=60
+Time in community    0.006 (real)    0.000 (cpu)
+Community numComponents=129 numBlocks=11 Q=0.1239513522 P=0.6150838339 QP=0.076240473 SBBBorderArea= 0.097199341 
+BorderRows=118 LIndex=61
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=147 numBlocks=12 Q=0.1502915913 P=0.5734909175 QP=0.0861908626 SBBBorderArea= 0.1112026359 
+BorderRows=135 LIndex=62
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=150 numBlocks=12 Q=0.150771034 P=0.5664485474 QP=0.0854040332 SBBBorderArea= 0.1136738056 
+BorderRows=138 LIndex=63
+Time in community    0.005 (real)    0.010 (cpu)
+Community numComponents=164 numBlocks=15 Q=0.222235924 P=0.5413583659 QP=0.1203092767 SBBBorderArea= 0.1227347611 
+BorderRows=149 LIndex=64
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=165 numBlocks=15 Q=0.2224244732 P=0.5391333038 QP=0.1199164411 SBBBorderArea= 0.1235584843 
+BorderRows=150 LIndex=65
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=167 numBlocks=15 Q=0.2230191329 P=0.5347105781 QP=0.1192506895 SBBBorderArea= 0.1252059308 
+BorderRows=152 LIndex=66
+Time in community    0.006 (real)    0.000 (cpu)
+Community numComponents=168 numBlocks=15 Q=0.223508029 P=0.5325128394 QP=0.1190208951 SBBBorderArea= 0.126029654 
+BorderRows=153 LIndex=67
+Time in community    0.006 (real)    0.010 (cpu)
+Community numComponents=202 numBlocks=17 Q=0.2781652539 P=0.4667581727 QP=0.1298359057 SBBBorderArea= 0.1523887974 
+BorderRows=185 LIndex=68
+Time in community    0.005 (real)    0.010 (cpu)
+Community numComponents=203 numBlocks=17 Q=0.278648788 P=0.4648397284 QP=0.1295270269 SBBBorderArea= 0.1532125206 
+BorderRows=186 LIndex=69
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=204 numBlocks=17 Q=0.2788911798 P=0.4629291691 QP=0.1291068621 SBBBorderArea= 0.1540362438 
+BorderRows=187 LIndex=70
+Time in community    0.005 (real)    0.010 (cpu)
+Community numComponents=205 numBlocks=17 Q=0.2793076815 P=0.4610264625 QP=0.1287682323 SBBBorderArea= 0.1548599671 
+BorderRows=188 LIndex=71
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=206 numBlocks=17 Q=0.2796557083 P=0.4591315763 QP=0.1283987662 SBBBorderArea= 0.1556836903 
+BorderRows=189 LIndex=72
+Time in community    0.005 (real)    0.010 (cpu)
+Community numComponents=209 numBlocks=17 Q=0.280424398 P=0.4534935193 QP=0.1271706472 SBBBorderArea= 0.15815486 
+BorderRows=192 LIndex=73
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=250 numBlocks=24 Q=0.4798132844 P=0.3974961556 QP=0.1907239359 SBBBorderArea= 0.1845140033 
+BorderRows=224 LIndex=74
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=251 numBlocks=24 Q=0.481002608 P=0.3958623882 QP=0.1904108411 SBBBorderArea= 0.1853377265 
+BorderRows=225 LIndex=75
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=257 numBlocks=25 Q=0.5030874072 P=0.3877937265 QP=0.1950941404 SBBBorderArea= 0.1894563427 
+BorderRows=230 LIndex=76
+Time in community    0.005 (real)    0.010 (cpu)
+Community numComponents=272 numBlocks=30 Q=0.564557457 P=0.3752245461 QP=0.2118358156 SBBBorderArea= 0.1960461285 
+BorderRows=238 LIndex=77
+Time in community    0.005 (real)    0.000 (cpu)
+Community numComponents=273 numBlocks=30 Q=0.5650711047 P=0.3736823184 QP=0.2111570804 SBBBorderArea= 0.1968698517 
+BorderRows=239 LIndex=78
+Time in community    0.005 (real)    0.010 (cpu)
+Community numComponents=466 numBlocks=63 Q=0.9744124723 P=0.2600744145 QP=0.2534197532 SBBBorderArea= 0.2693574959 
+BorderRows=327 LIndex=79
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=469 numBlocks=64 Q=0.9761892764 P=0.2590054706 QP=0.2528383629 SBBBorderArea= 0.2701812191 
+BorderRows=328 LIndex=80
+Time in community    0.004 (real)    0.000 (cpu)
+Community numComponents=464 numBlocks=64 Q=0.9762496515 P=0.2600744145 QP=0.2538975565 SBBBorderArea= 0.2693574959 
+BorderRows=327 LIndex=81
+Community numComponents=456 numBlocks=63 Q=0.9763038116 P=0.26114777 QP=0.2549595632 SBBBorderArea= 0.2685337727 
+BorderRows=326 LIndex=82
+Community numComponents=453 numBlocks=63 Q=0.9763565197 P=0.2622255554 QP=0.2560256307 SBBBorderArea= 0.2677100494 
+BorderRows=325 LIndex=83
+Community numComponents=450 numBlocks=63 Q=0.9763977987 P=0.2633077889 QP=0.2570931455 SBBBorderArea= 0.2668863262 
+BorderRows=324 LIndex=84
+Community numComponents=447 numBlocks=63 Q=0.9764389348 P=0.264394489 QP=0.2581650732 SBBBorderArea= 0.266062603 
+BorderRows=323 LIndex=85
+Community numComponents=442 numBlocks=63 Q=0.9764794447 P=0.2654856739 QP=0.2592413034 SBBBorderArea= 0.2652388797 
+BorderRows=322 LIndex=86
+Community numComponents=441 numBlocks=63 Q=0.9765120978 P=0.2665813623 QP=0.2603199253 SBBBorderArea= 0.2644151565 
+BorderRows=321 LIndex=87
+Community numComponents=436 numBlocks=63 Q=0.9765407911 P=0.2676815727 QP=0.2614019748 SBBBorderArea= 0.2635914333 
+BorderRows=320 LIndex=88
+Community numComponents=433 numBlocks=63 Q=0.9765676073 P=0.2687863238 QP=0.2624880171 SBBBorderArea= 0.26276771 
+BorderRows=319 LIndex=89
+Community numComponents=432 numBlocks=63 Q=0.9765941199 P=0.2698956344 QP=0.2635784895 SBBBorderArea= 0.2619439868 
+BorderRows=318 LIndex=90
+Community numComponents=431 numBlocks=63 Q=0.9766205821 P=0.2710095231 QP=0.2646734782 SBBBorderArea= 0.2611202636 
+BorderRows=317 LIndex=91
+Community numComponents=429 numBlocks=63 Q=0.976628757 P=0.2721280091 QP=0.2657680392 SBBBorderArea= 0.2602965404 
+BorderRows=316 LIndex=92
+Community numComponents=427 numBlocks=63 Q=0.976631546 P=0.2732511111 QP=0.2668656551 SBBBorderArea= 0.2594728171 
+BorderRows=315 LIndex=93
+Community numComponents=425 numBlocks=63 Q=0.9766335499 P=0.2743788483 QP=0.2679675887 SBBBorderArea= 0.2586490939 
+BorderRows=314 LIndex=94
+Community numComponents=422 numBlocks=62 Q=0.976619232 P=0.2766483048 QP=0.270180055 SBBBorderArea= 0.2570016474 
+BorderRows=312 LIndex=95
+Community numComponents=418 numBlocks=62 Q=0.976589225 P=0.2777900626 QP=0.2712867819 SBBBorderArea= 0.2561779242 
+BorderRows=311 LIndex=96
+Community numComponents=413 numBlocks=62 Q=0.9765589134 P=0.2789365325 QP=0.2723979571 SBBBorderArea= 0.255354201 
+BorderRows=310 LIndex=97
+Community numComponents=411 numBlocks=62 Q=0.9765208183 P=0.2800877341 QP=0.2735115033 SBBBorderArea= 0.2545304778 
+BorderRows=309 LIndex=98
+Community numComponents=405 numBlocks=62 Q=0.9764624162 P=0.2812436868 QP=0.2746238899 SBBBorderArea= 0.2537067545 
+BorderRows=308 LIndex=99
+Community numComponents=403 numBlocks=62 Q=0.9763803432 P=0.2824044102 QP=0.275734115 SBBBorderArea= 0.2528830313 
+BorderRows=307 LIndex=100
+Community numComponents=399 numBlocks=62 Q=0.9762803544 P=0.2835699241 QP=0.276843746 SBBBorderArea= 0.2520593081 
+BorderRows=306 LIndex=101
+Community numComponents=397 numBlocks=62 Q=0.9761762393 P=0.2847402482 QP=0.2779566646 SBBBorderArea= 0.2512355848 
+BorderRows=305 LIndex=102
+Community numComponents=394 numBlocks=61 Q=0.9756904479 P=0.2870954064 QP=0.2801162457 SBBBorderArea= 0.2495881384 
+BorderRows=303 LIndex=103
+Community numComponents=389 numBlocks=60 Q=0.9746950086 P=0.2918643243 QP=0.2844787001 SBBBorderArea= 0.2462932455 
+BorderRows=299 LIndex=104
+Community numComponents=387 numBlocks=59 Q=0.9744491374 P=0.2930688803 QP=0.2855807176 SBBBorderArea= 0.2454695222 
+BorderRows=298 LIndex=105
+Community numComponents=382 numBlocks=58 Q=0.9738765684 P=0.2954929268 QP=0.2877736375 SBBBorderArea= 0.2438220758 
+BorderRows=296 LIndex=106
+Community numComponents=378 numBlocks=57 Q=0.9731164024 P=0.2979370231 QP=0.2899274041 SBBBorderArea= 0.2421746293 
+BorderRows=294 LIndex=107
+Community numComponents=375 numBlocks=56 Q=0.9723383147 P=0.3004013352 QP=0.292091728 SBBBorderArea= 0.2405271829 
+BorderRows=292 LIndex=108
+Community numComponents=370 numBlocks=54 Q=0.9719511549 P=0.3016411244 QP=0.2931804392 SBBBorderArea= 0.2397034596 
+BorderRows=291 LIndex=109
+Community numComponents=368 numBlocks=53 Q=0.9715199131 P=0.3028860302 QP=0.2942598098 SBBBorderArea= 0.2388797364 
+BorderRows=290 LIndex=110
+Community numComponents=362 numBlocks=52 Q=0.9690631993 P=0.309188053 QP=0.2996227639 SBBBorderArea= 0.2347611203 
+BorderRows=285 LIndex=111
+Community numComponents=360 numBlocks=51 Q=0.9685303741 P=0.3104641059 QP=0.3006939166 SBBBorderArea= 0.233937397 
+BorderRows=284 LIndex=112
+Community numComponents=356 numBlocks=50 Q=0.9669070875 P=0.3143239501 QP=0.3039220551 SBBBorderArea= 0.2314662273 
+BorderRows=281 LIndex=113
+Community numComponents=352 numBlocks=49 Q=0.965290848 P=0.3182317817 QP=0.3071862265 SBBBorderArea= 0.2289950577 
+BorderRows=278 LIndex=114
+Community numComponents=349 numBlocks=48 Q=0.9641560552 P=0.3208639569 QP=0.3093629269 SBBBorderArea= 0.2273476112 
+BorderRows=276 LIndex=115
+Community numComponents=347 numBlocks=47 Q=0.9635222068 P=0.3221881975 QP=0.3104354831 SBBBorderArea= 0.226523888 
+BorderRows=275 LIndex=116
+Community numComponents=344 numBlocks=46 Q=0.962191882 P=0.3248530972 QP=0.3125710129 SBBBorderArea= 0.2248764415 
+BorderRows=273 LIndex=117
+Community numComponents=339 numBlocks=45 Q=0.9593952563 P=0.330249205 QP=0.3168395206 SBBBorderArea= 0.2215815486 
+BorderRows=269 LIndex=118
+Community numComponents=335 numBlocks=44 Q=0.9572724296 P=0.3343550273 QP=0.3200688493 SBBBorderArea= 0.2191103789 
+BorderRows=266 LIndex=119
+Community numComponents=332 numBlocks=43 Q=0.9558386219 P=0.3371205619 QP=0.3222328533 SBBBorderArea= 0.2174629325 
+BorderRows=264 LIndex=120
+Community numComponents=330 numBlocks=42 Q=0.9549991279 P=0.3385118953 QP=0.3232785648 SBBBorderArea= 0.2166392092 
+BorderRows=263 LIndex=121
+Community numComponents=325 numBlocks=41 Q=0.9515286955 P=0.3441348882 QP=0.3274542213 SBBBorderArea= 0.2133443163 
+BorderRows=259 LIndex=122
+Community numComponents=322 numBlocks=40 Q=0.9498221101 P=0.3469813145 QP=0.3295705243 SBBBorderArea= 0.2116968699 
+BorderRows=257 LIndex=123
+Community numComponents=319 numBlocks=39 Q=0.9478860558 P=0.3498512842 QP=0.3316191539 SBBBorderArea= 0.2100494234 
+BorderRows=255 LIndex=124
+Community numComponents=315 numBlocks=38 Q=0.9457087079 P=0.3527449922 QP=0.3335940108 SBBBorderArea= 0.2084019769 
+BorderRows=253 LIndex=125
+Community numComponents=313 numBlocks=38 Q=0.9455683968 P=0.3556626348 QP=0.3363033474 SBBBorderArea= 0.2067545305 
+BorderRows=251 LIndex=126
+Community numComponents=309 numBlocks=37 Q=0.9420838121 P=0.3600844096 QP=0.3392296933 SBBBorderArea= 0.2042833608 
+BorderRows=248 LIndex=127
+Community numComponents=306 numBlocks=37 Q=0.9419728129 P=0.3630627583 QP=0.3419952477 SBBBorderArea= 0.2026359143 
+BorderRows=246 LIndex=128
+Community numComponents=304 numBlocks=36 Q=0.9408202231 P=0.364561158 QP=0.34298651 SBBBorderArea= 0.2018121911 
+BorderRows=245 LIndex=129
+Community numComponents=301 numBlocks=35 Q=0.9381744378 P=0.3675765351 QP=0.3448509092 SBBBorderArea= 0.2001647446 
+BorderRows=243 LIndex=130
+Community numComponents=298 numBlocks=35 Q=0.9380607511 P=0.3690935636 QP=0.3462321855 SBBBorderArea= 0.1993410214 
+BorderRows=242 LIndex=131
+Community numComponents=296 numBlocks=35 Q=0.937635151 P=0.3721464294 QP=0.3489375735 SBBBorderArea= 0.197693575 
+BorderRows=240 LIndex=132
+Community numComponents=293 numBlocks=34 Q=0.934698554 P=0.3752245461 QP=0.3507218407 SBBBorderArea= 0.1960461285 
+BorderRows=238 LIndex=133
+Community numComponents=291 numBlocks=33 Q=0.9332441804 P=0.3767731389 QP=0.3516213392 SBBBorderArea= 0.1952224053 
+BorderRows=237 LIndex=134
+Community numComponents=289 numBlocks=32 Q=0.9316512607 P=0.3783281228 QP=0.3524698726 SBBBorderArea= 0.194398682 
+BorderRows=236 LIndex=135
+Community numComponents=286 numBlocks=31 Q=0.9283208089 P=0.3814573699 QP=0.3541148142 SBBBorderArea= 0.1927512356 
+BorderRows=234 LIndex=136
+Community numComponents=283 numBlocks=31 Q=0.9279908737 P=0.3846124998 QP=0.3569168897 SBBBorderArea= 0.1911037891 
+BorderRows=232 LIndex=137
+Community numComponents=281 numBlocks=30 Q=0.9262874543 P=0.3861998376 QP=0.3577320644 SBBBorderArea= 0.1902800659 
+BorderRows=231 LIndex=138
+Community numComponents=276 numBlocks=29 Q=0.9244539 P=0.3877937265 QP=0.3584974229 SBBBorderArea= 0.1894563427 
+BorderRows=230 LIndex=139
+Community numComponents=273 numBlocks=29 Q=0.9243880302 P=0.391001266 QP=0.3614368901 SBBBorderArea= 0.1878088962 
+BorderRows=228 LIndex=140
+Community numComponents=272 numBlocks=29 Q=0.924342072 P=0.392614971 QP=0.3629105358 SBBBorderArea= 0.186985173 
+BorderRows=227 LIndex=141
+Community numComponents=270 numBlocks=28 Q=0.9221541221 P=0.3942353359 QP=0.3635457401 SBBBorderArea= 0.1861614498 
+BorderRows=226 LIndex=142
+Community numComponents=257 numBlocks=27 Q=0.8938193482 P=0.4142093092 QP=0.3702282948 SBBBorderArea= 0.176276771 
+BorderRows=214 LIndex=143
+Community numComponents=250 numBlocks=26 Q=0.8793550554 P=0.4245726446 QP=0.3733501014 SBBBorderArea= 0.1713344316 
+BorderRows=208 LIndex=144
+Community numComponents=248 numBlocks=26 Q=0.879296244 P=0.4263249023 QP=0.3748658853 SBBBorderArea= 0.1705107084 
+BorderRows=207 LIndex=145
+Community numComponents=244 numBlocks=26 Q=0.879207245 P=0.4280843917 QP=0.3763748987 SBBBorderArea= 0.1696869852 
+BorderRows=206 LIndex=146
+Community numComponents=242 numBlocks=26 Q=0.8791173124 P=0.4298511428 QP=0.3778895814 SBBBorderArea= 0.1688632619 
+BorderRows=205 LIndex=147
+Community numComponents=239 numBlocks=26 Q=0.8789038667 P=0.4334065498 QP=0.3809226925 SBBBorderArea= 0.1672158155 
+BorderRows=203 LIndex=148
+Community numComponents=236 numBlocks=26 Q=0.8787796523 P=0.435195266 QP=0.3824407445 SBBBorderArea= 0.1663920923 
+BorderRows=202 LIndex=149
+Community numComponents=232 numBlocks=26 Q=0.8785263799 P=0.4387948755 QP=0.3854928735 SBBBorderArea= 0.1647446458 
+BorderRows=200 LIndex=150
+Community numComponents=229 numBlocks=26 Q=0.8780511248 P=0.4442501916 QP=0.3900743805 SBBBorderArea= 0.1622734761 
+BorderRows=197 LIndex=151
+Community numComponents=222 numBlocks=25 Q=0.8635665633 P=0.4553651367 QP=0.3932381061 SBBBorderArea= 0.1573311367 
+BorderRows=191 LIndex=152
+Community numComponents=218 numBlocks=24 Q=0.8581123241 P=0.4610264625 QP=0.3956124892 SBBBorderArea= 0.1548599671 
+BorderRows=188 LIndex=153
+Community numComponents=215 numBlocks=23 Q=0.853458989 P=0.4648397284 QP=0.3967216446 SBBBorderArea= 0.1532125206 
+BorderRows=186 LIndex=154
+Community numComponents=212 numBlocks=22 Q=0.8468891466 P=0.4686845347 QP=0.3969238457 SBBBorderArea= 0.1515650741 
+BorderRows=184 LIndex=155
+Community numComponents=198 numBlocks=21 Q=0.8035224235 P=0.4944627987 QP=0.3973119464 SBBBorderArea= 0.1408566722 
+BorderRows=171 LIndex=156
+Community numComponents=195 numBlocks=21 Q=0.8031249916 P=0.498552625 QP=0.4004000728 SBBBorderArea= 0.1392092257 
+BorderRows=169 LIndex=157
+Community numComponents=192 numBlocks=20 Q=0.7965097975 P=0.5026762792 QP=0.4003865814 SBBBorderArea= 0.1375617792 
+BorderRows=167 LIndex=158
+Community numComponents=180 numBlocks=19 Q=0.7438257379 P=0.5259736731 QP=0.3912327555 SBBBorderArea= 0.1285008237 
+BorderRows=156 LIndex=159
+Community numComponents=178 numBlocks=18 Q=0.7390641061 P=0.5281444239 QP=0.3903325866 SBBBorderArea= 0.1276771005 
+BorderRows=155 LIndex=160
+Community numComponents=176 numBlocks=17 Q=0.7325364884 P=0.5303241337 QP=0.3884817786 SBBBorderArea= 0.1268533773 
+BorderRows=154 LIndex=161
+Community numComponents=159 numBlocks=16 Q=0.6223592704 P=0.5664485474 QP=0.3525345047 SBBBorderArea= 0.1136738056 
+BorderRows=138 LIndex=162
+Community numComponents=156 numBlocks=15 Q=0.6097897659 P=0.5711337859 QP=0.3482715376 SBBBorderArea= 0.1120263591 
+BorderRows=136 LIndex=163
+Community numComponents=109 numBlocks=14 Q=0.2187174066 P=0.6902679296 QP=0.1509736114 SBBBorderArea= 0.0741350906 
+BorderRows=90 LIndex=164
+Community numComponents=105 numBlocks=14 Q=0.2185727111 P=0.6931167408 QP=0.1514964052 SBBBorderArea= 0.0733113674 
+BorderRows=89 LIndex=165
+Community numComponents=101 numBlocks=14 Q=0.2179239294 P=0.7017339128 QP=0.1529246117 SBBBorderArea= 0.0708401977 
+BorderRows=86 LIndex=166
+Community numComponents=97 numBlocks=14 Q=0.2170648191 P=0.7104582177 QP=0.1542154845 SBBBorderArea= 0.068369028 
+BorderRows=83 LIndex=167
+Community numComponents=16 numBlocks=6 Q=0.0019870307 P=0.9596504634 QP=0.0019068549 SBBBorderArea= 0.0082372323 
+BorderRows=10 LIndex=168
+Best Goodness=0.4004000728 LIndex=157 in    0.960 (real)    0.940 (cpu) - total time in Comm    0.870
+Community numComponents=195 numBlocks=180 Q=0.8031249916 P=0.498552625 QP=0.4004000728 SBBBorderArea= 0.1392092257 
+BorderRows=169 LIndex=169
+Final goodness:0.4004000728
+TIME----BDFTime: 0.2568998337 BDFGood: 0.4014790091 CommTime: 0.9607257843 CommRemove: 0.8923149109 CommMerge: 
+0.0645489693 CommGood: 0.4004000728 DBDF: 1 CommNBlocks: 21 HitMaxTime: 0
+STAT: 0.2568998337 0.4014790091 0.9607257843 0.8923149109 0.0645489693 0.4004000728 1 21 0
+NOTE: The automated method will attempt to find block-angular form with 3 blocks.
+NOTE: The stretched problem has 3144 variables, 1245 constraints, and 13256 constraint coefficients.
+NOTE: The problem has a decomposable structure with 22 blocks. The largest block covers 31.65% of the constraints in 
+      the problem.
+NOTE: The decomposition subproblems cover 3135 (99.71%) variables and 1082 (86.91%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .    8073.7826   10780.0000   10780.0000   33.52%   33.52%    9   10
+         9    8073.7826   10375.0000   10375.0000   28.50%   28.50%   10   10
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%   11   11
+        10    8073.7826   10375.0000   10375.0000   28.50%   28.50%   11   11
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%   14   14
+        20    8073.7826   10375.0000   10375.0000   28.50%   28.50%   14   14
+        30    8073.7826   10375.0000   10375.0000   28.50%   28.50%   15   15
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%   17   16
+        40    8073.7826   10375.0000   10375.0000   28.50%   28.50%   17   16
+        50    8073.7826   10375.0000   10375.0000   28.50%   28.50%   19   18
+        60    8073.7826   10375.0000   10375.0000   28.50%   28.50%   20   19
+        70    8073.7826   10375.0000   10375.0000   28.50%   28.50%   22   21
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%   24   23
+        80    8073.7826   10375.0000   10375.0000   28.50%   28.50%   24   23
+        90    8073.7826   10375.0000   10375.0000   28.50%   28.50%   26   25
+       100    8073.7826   10375.0000   10375.0000   28.50%   28.50%   28   26
+       110    8073.7826   10375.0000   10375.0000   28.50%   28.50%   30   28
+       120    8073.7826   10375.0000   10375.0000   28.50%   28.50%   31   29
+       130    8073.7826   10375.0000   10375.0000   28.50%   28.50%   33   30
+       140    8073.7826   10375.0000   10375.0000   28.50%   28.50%   34   31
+       150    8073.7826   10375.0000   10375.0000   28.50%   28.50%   36   33
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%   39   35
+       160    8073.7826   10375.0000   10375.0000   28.50%   28.50%   39   35
+       170    8073.7826   10375.0000   10375.0000   28.50%   28.50%   41   37
+       180    8073.7826   10375.0000   10375.0000   28.50%   28.50%   43   38
+       190    8073.7826   10375.0000   10375.0000   28.50%   28.50%   45   40
+       200    8073.7826   10375.0000   10375.0000   28.50%   28.50%   47   42
+       210    8073.7826   10375.0000   10375.0000   28.50%   28.50%   49   43
+       220    8073.7826   10375.0000   10375.0000   28.50%   28.50%   51   45
+       230    8073.7826   10375.0000   10375.0000   28.50%   28.50%   53   47
+       240    8073.7826   10375.0000   10375.0000   28.50%   28.50%   55   49
+       250    8073.7826   10375.0000   10375.0000   28.50%   28.50%   57   51
+       260    8073.7826   10375.0000   10375.0000   28.50%   28.50%   59   52
+       270    8073.7826   10375.0000   10375.0000   28.50%   28.50%   61   54
+       280    8073.7826   10375.0000   10375.0000   28.50%   28.50%   64   56
+       290    8073.7826   10375.0000   10375.0000   28.50%   28.50%   66   58
+       300    8073.7826   10375.0000   10375.0000   28.50%   28.50%   68   60
+       310    8073.7826   10375.0000   10375.0000   28.50%   28.50%   70   62
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%   74   65
+       320    8073.7826   10375.0000   10375.0000   28.50%   28.50%   74   65
+       330    8073.7826   10375.0000   10375.0000   28.50%   28.50%   76   67
+       340    8073.7826   10375.0000   10375.0000   28.50%   28.50%   78   69
+       350    8073.7826   10375.0000   10375.0000   28.50%   28.50%   80   71
+       360    8073.7826   10375.0000   10375.0000   28.50%   28.50%   82   73
+       370    8073.7826   10375.0000   10375.0000   28.50%   28.50%   85   75
+       380    8073.7826   10375.0000   10375.0000   28.50%   28.50%   87   77
+       390    8073.7826   10375.0000   10375.0000   28.50%   28.50%   89   79
+       400    8073.7826   10375.0000   10375.0000   28.50%   28.50%   92   81
+       410    8073.7826   10375.0000   10375.0000   28.50%   28.50%   94   83
+       420    8073.7826   10375.0000   10375.0000   28.50%   28.50%   97   85
+       430    8073.7826   10375.0000   10375.0000   28.50%   28.50%   99   88
+       440    8073.7826   10375.0000   10375.0000   28.50%   28.50%  102   90
+       450    8073.7826   10375.0000   10375.0000   28.50%   28.50%  104   92
+       460    8073.7826   10375.0000   10375.0000   28.50%   28.50%  107   94
+       470    8073.7826   10375.0000   10375.0000   28.50%   28.50%  110   97
+       480    8073.7826   10375.0000   10375.0000   28.50%   28.50%  113   99
+       490    8073.7826   10375.0000   10375.0000   28.50%   28.50%  116  102
+       500    8073.7826   10375.0000   10375.0000   28.50%   28.50%  118  104
+       510    8073.7826   10375.0000   10375.0000   28.50%   28.50%  121  107
+       520    8073.7826   10375.0000   10375.0000   28.50%   28.50%  124  109
+       530    8073.7826   10375.0000   10375.0000   28.50%   28.50%  127  112
+       540    8073.7826   10375.0000   10375.0000   28.50%   28.50%  129  114
+       550    8073.7826   10375.0000   10375.0000   28.50%   28.50%  132  117
+       560    8073.7826   10375.0000   10375.0000   28.50%   28.50%  135  120
+       570    8073.7826   10375.0000   10375.0000   28.50%   28.50%  138  122
+       580    8073.7826   10375.0000   10375.0000   28.50%   28.50%  140  124
+       590    8073.7826   10375.0000   10375.0000   28.50%   28.50%  143  126
+       600    8073.7826   10375.0000   10375.0000   28.50%   28.50%  145  129
+       610    8073.7826   10375.0000   10375.0000   28.50%   28.50%  148  131
+       620    8073.7826   10375.0000   10375.0000   28.50%   28.50%  151  134
+       630    8073.7826   10375.0000   10375.0000   28.50%   28.50%  154  136
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%  158  140
+       640    8073.7826   10375.0000   10375.0000   28.50%   28.50%  158  140
+       650    8073.7826   10375.0000   10375.0000   28.50%   28.50%  161  143
+       660    8073.7826   10375.0000   10375.0000   28.50%   28.50%  164  146
+       670    8073.7826   10375.0000   10375.0000   28.50%   28.50%  167  148
+       680    8073.7826   10375.0000   10375.0000   28.50%   28.50%  170  151
+       690    8073.7826   10375.0000   10375.0000   28.50%   28.50%  173  154
+       700    8073.7826   10375.0000   10375.0000   28.50%   28.50%  176  157
+       710    8073.7826   10375.0000   10375.0000   28.50%   28.50%  179  160
+       720    8073.7826   10375.0000   10375.0000   28.50%   28.50%  182  162
+       730    8073.7826   10375.0000   10375.0000   28.50%   28.50%  186  166
+       740    8073.7826   10375.0000   10375.0000   28.50%   28.50%  189  168
+       750    8073.7826   10375.0000   10375.0000   28.50%   28.50%  192  171
+       760    8073.7826   10375.0000   10375.0000   28.50%   28.50%  195  174
+       770    8073.7826   10375.0000   10375.0000   28.50%   28.50%  198  177
+       780    8073.7826   10375.0000   10375.0000   28.50%   28.50%  201  180
+       790    8073.7826   10375.0000   10375.0000   28.50%   28.50%  204  182
+       800    8073.7826   10375.0000   10375.0000   28.50%   28.50%  208  185
+       810    8073.7826   10375.0000   10375.0000   28.50%   28.50%  211  188
+       820    8073.7826   10375.0000   10375.0000   28.50%   28.50%  214  191
+       830    8073.7826   10375.0000   10375.0000   28.50%   28.50%  217  194
+       840    8073.7826   10375.0000   10375.0000   28.50%   28.50%  220  197
+       850    8073.7826   10375.0000   10375.0000   28.50%   28.50%  223  200
+       860    8073.7826   10375.0000   10375.0000   28.50%   28.50%  227  203
+       870    8073.7826   10375.0000   10375.0000   28.50%   28.50%  230  206
+       880    8073.7826   10375.0000   10375.0000   28.50%   28.50%  233  209
+       890    8073.7826   10375.0000   10375.0000   28.50%   28.50%  237  212
+       900    8073.7826   10375.0000   10375.0000   28.50%   28.50%  240  215
+       910    8073.7826   10375.0000   10375.0000   28.50%   28.50%  243  218
+       920    8073.7826   10375.0000   10375.0000   28.50%   28.50%  247  221
+       930    8073.7826   10375.0000   10375.0000   28.50%   28.50%  250  224
+       940    8073.7826   10375.0000   10375.0000   28.50%   28.50%  253  227
+       950    8073.7826   10375.0000   10375.0000   28.50%   28.50%  257  231
+       960    8073.7826   10375.0000   10375.0000   28.50%   28.50%  260  234
+       970    8073.7826   10375.0000   10375.0000   28.50%   28.50%  264  237
+       980    8073.7826   10375.0000   10375.0000   28.50%   28.50%  267  239
+       990    8073.7826   10375.0000   10375.0000   28.50%   28.50%  270  243
+      1000    8073.7826   10375.0000   10375.0000   28.50%   28.50%  273  245
+      1010    8073.7826   10375.0000   10375.0000   28.50%   28.50%  276  248
+      1020    8073.7826   10375.0000   10375.0000   28.50%   28.50%  280  251
+      1030    8073.7826   10375.0000   10375.0000   28.50%   28.50%  283  255
+      1040    8073.7826   10375.0000   10375.0000   28.50%   28.50%  287  258
+      1050    8073.7826   10375.0000   10375.0000   28.50%   28.50%  290  261
+      1060    8073.7826   10375.0000   10375.0000   28.50%   28.50%  294  264
+      1070    8073.7826   10375.0000   10375.0000   28.50%   28.50%  297  267
+      1080    8073.7826   10375.0000   10375.0000   28.50%   28.50%  300  270
+      1090    8073.7826   10375.0000   10375.0000   28.50%   28.50%  304  273
+      1100    8073.7826   10375.0000   10375.0000   28.50%   28.50%  307  277
+      1110    8073.7826   10375.0000   10375.0000   28.50%   28.50%  311  280
+      1120    8073.7826   10375.0000   10375.0000   28.50%   28.50%  314  283
+      1130    8073.7826   10375.0000   10375.0000   28.50%   28.50%  318  286
+      1140    8073.7826   10375.0000   10375.0000   28.50%   28.50%  322  290
+      1150    8073.7826   10375.0000   10375.0000   28.50%   28.50%  326  294
+      1160    8073.7826   10375.0000   10375.0000   28.50%   28.50%  329  297
+      1170    8073.7826   10375.0000   10375.0000   28.50%   28.50%  333  300
+      1180    8073.7826   10375.0000   10375.0000   28.50%   28.50%  336  303
+      1190    8073.7826   10375.0000   10375.0000   28.50%   28.50%  340  307
+      1200    8073.7826   10375.0000   10375.0000   28.50%   28.50%  344  311
+      1210    8073.7826   10375.0000   10375.0000   28.50%   28.50%  348  314
+      1220    8073.7826   10375.0000   10375.0000   28.50%   28.50%  351  317
+      1230    8073.7826   10375.0000   10375.0000   28.50%   28.50%  355  321
+      1240    8073.7826   10375.0000   10375.0000   28.50%   28.50%  359  324
+      1250    8073.7826   10375.0000   10375.0000   28.50%   28.50%  363  328
+      1260    8073.7826   10375.0000   10375.0000   28.50%   28.50%  367  332
+      1270    8073.7826   10375.0000   10375.0000   28.50%   28.50%  371  335
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%  378  342
+      1280    8073.7826   10375.0000   10375.0000   28.50%   28.50%  378  342
+      1290    8073.7826   10375.0000   10375.0000   28.50%   28.50%  381  345
+      1300    8073.7826   10375.0000   10375.0000   28.50%   28.50%  385  349
+      1310    8073.7826   10375.0000   10375.0000   28.50%   28.50%  389  352
+      1320    8073.7826   10375.0000   10375.0000   28.50%   28.50%  392  355
+      1330    8073.7826   10375.0000   10375.0000   28.50%   28.50%  396  358
+      1340    8073.7826   10375.0000   10375.0000   28.50%   28.50%  399  361
+      1350    8073.7826   10375.0000   10375.0000   28.50%   28.50%  403  365
+      1360    8073.7826   10375.0000   10375.0000   28.50%   28.50%  407  368
+      1370    8073.7826   10375.0000   10375.0000   28.50%   28.50%  411  372
+      1380    8073.7826   10375.0000   10375.0000   28.50%   28.50%  414  375
+      1390    8073.7826   10375.0000   10375.0000   28.50%   28.50%  418  378
+      1400    8073.7826   10375.0000   10375.0000   28.50%   28.50%  422  382
+      1410    8073.7826   10375.0000   10375.0000   28.50%   28.50%  427  387
+      1420    8073.7826   10375.0000   10375.0000   28.50%   28.50%  432  392
+      1430    8073.7826   10375.0000   10375.0000   28.50%   28.50%  437  397
+      1440    8073.7826   10375.0000   10375.0000   28.50%   28.50%  442  402
+      1450    8073.7826   10375.0000   10375.0000   28.50%   28.50%  446  406
+      1460    8073.7826   10375.0000   10375.0000   28.50%   28.50%  451  410
+      1470    8073.7826   10375.0000   10375.0000   28.50%   28.50%  455  413
+      1480    8073.7826   10375.0000   10375.0000   28.50%   28.50%  459  417
+      1490    8073.7826   10375.0000   10375.0000   28.50%   28.50%  463  421
+      1500    8073.7826   10375.0000   10375.0000   28.50%   28.50%  466  424
+      1510    8073.7826   10375.0000   10375.0000   28.50%   28.50%  470  428
+      1520    8073.7826   10375.0000   10375.0000   28.50%   28.50%  474  431
+      1530    8073.7826   10375.0000   10375.0000   28.50%   28.50%  478  435
+      1540    8073.7826   10375.0000   10375.0000   28.50%   28.50%  481  438
+      1550    8073.7826   10375.0000   10375.0000   28.50%   28.50%  485  442
+      1560    8073.7826   10375.0000   10375.0000   28.50%   28.50%  489  445
+      1570    8073.7826   10375.0000   10375.0000   28.50%   28.50%  493  449
+      1580    8073.7826   10375.0000   10375.0000   28.50%   28.50%  496  452
+      1590    8073.7826   10375.0000   10375.0000   28.50%   28.50%  500  456
+      1600    8073.7826   10375.0000   10375.0000   28.50%   28.50%  504  459
+      1610    8073.7826   10375.0000   10375.0000   28.50%   28.50%  507  462
+      1620    8073.7826   10375.0000   10375.0000   28.50%   28.50%  511  466
+      1630    8073.7826   10375.0000   10375.0000   28.50%   28.50%  515  469
+      1640    8073.7826   10375.0000   10375.0000   28.50%   28.50%  519  473
+      1650    8073.7826   10375.0000   10375.0000   28.50%   28.50%  523  477
+      1660    8073.7826   10375.0000   10375.0000   28.50%   28.50%  526  480
+      1670    8073.7826   10375.0000   10375.0000   28.50%   28.50%  529  483
+      1680    8073.7826   10375.0000   10375.0000   28.50%   28.50%  533  486
+      1690    8073.7826   10375.0000   10375.0000   28.50%   28.50%  537  489
+      1700    8073.7826   10375.0000   10375.0000   28.50%   28.50%  541  493
+      1710    8073.7826   10375.0000   10375.0000   28.50%   28.50%  545  497
+      1720    8073.7826   10375.0000   10375.0000   28.50%   28.50%  548  500
+      1730    8073.7826   10375.0000   10375.0000   28.50%   28.50%  552  504
+      1740    8073.7826   10375.0000   10375.0000   28.50%   28.50%  556  508
+      1750    8073.7826   10375.0000   10375.0000   28.50%   28.50%  561  512
+      1760    8073.7826   10375.0000   10375.0000   28.50%   28.50%  564  515
+      1770    8073.7826   10375.0000   10375.0000   28.50%   28.50%  569  519
+      1780    8073.7826   10375.0000   10375.0000   28.50%   28.50%  573  523
+      1790    8073.7826   10375.0000   10375.0000   28.50%   28.50%  577  527
+      1800    8073.7826   10375.0000   10375.0000   28.50%   28.50%  581  531
+      1810    8073.7826   10375.0000   10375.0000   28.50%   28.50%  585  535
+      1820    8073.7826   10375.0000   10375.0000   28.50%   28.50%  589  538
+      1830    8073.7826   10375.0000   10375.0000   28.50%   28.50%  592  541
+      1840    8073.7826   10375.0000   10375.0000   28.50%   28.50%  596  545
+      1850    8073.7826   10375.0000   10375.0000   28.50%   28.50%  600  549
+      1860    8073.7826   10375.0000   10375.0000   28.50%   28.50%  604  552
+      1870    8073.7826   10375.0000   10375.0000   28.50%   28.50%  608  556
+      1880    8073.7826   10375.0000   10375.0000   28.50%   28.50%  611  559
+      1890    8073.7826   10375.0000   10375.0000   28.50%   28.50%  615  563
+      1900    8073.7826   10375.0000   10375.0000   28.50%   28.50%  619  567
+      1910    8073.7826   10375.0000   10375.0000   28.50%   28.50%  623  570
+      1920    8073.7826   10375.0000   10375.0000   28.50%   28.50%  627  574
+      1930    8073.7826   10375.0000   10375.0000   28.50%   28.50%  631  578
+      1940    8073.7826   10375.0000   10375.0000   28.50%   28.50%  635  581
+      1950    8073.7826   10375.0000   10375.0000   28.50%   28.50%  639  585
+      1960    8073.7826   10375.0000   10375.0000   28.50%   28.50%  644  589
+      1970    8073.7826   10375.0000   10375.0000   28.50%   28.50%  648  594
+      1980    8073.7826   10375.0000   10375.0000   28.50%   28.50%  652  597
+      1990    8073.7826   10375.0000   10375.0000   28.50%   28.50%  656  601
+      2000    8073.7826   10375.0000   10375.0000   28.50%   28.50%  661  606
+      2010    8073.7826   10375.0000   10375.0000   28.50%   28.50%  665  610
+      2020    8073.7826   10375.0000   10375.0000   28.50%   28.50%  670  614
+      2030    8073.7826   10375.0000   10375.0000   28.50%   28.50%  674  618
+      2040    8073.7826   10375.0000   10375.0000   28.50%   28.50%  678  622
+      2050    8073.7826   10375.0000   10375.0000   28.50%   28.50%  683  626
+      2060    8073.7826   10375.0000   10375.0000   28.50%   28.50%  687  630
+      2070    8073.7826   10375.0000   10375.0000   28.50%   28.50%  691  633
+      2080    8073.7826   10375.0000   10375.0000   28.50%   28.50%  695  637
+      2090    8073.7826   10375.0000   10375.0000   28.50%   28.50%  699  641
+      2100    8073.7826   10375.0000   10375.0000   28.50%   28.50%  703  645
+      2110    8073.7826   10375.0000   10375.0000   28.50%   28.50%  707  649
+      2120    8073.7826   10375.0000   10375.0000   28.50%   28.50%  711  653
+      2130    8073.7826   10375.0000   10375.0000   28.50%   28.50%  716  657
+      2140    8073.7826   10375.0000   10375.0000   28.50%   28.50%  720  660
+      2150    8073.7826   10375.0000   10375.0000   28.50%   28.50%  725  665
+      2160    8073.7826   10375.0000   10375.0000   28.50%   28.50%  729  669
+      2170    8073.7826   10375.0000   10375.0000   28.50%   28.50%  733  673
+      2180    8073.7826   10375.0000   10375.0000   28.50%   28.50%  738  677
+      2190    8073.7826   10375.0000   10375.0000   28.50%   28.50%  742  681
+      2200    8073.7826   10375.0000   10375.0000   28.50%   28.50%  746  685
+      2210    8073.7826   10375.0000   10375.0000   28.50%   28.50%  750  689
+      2220    8073.7826   10375.0000   10375.0000   28.50%   28.50%  756  694
+      2230    8073.7826   10375.0000   10375.0000   28.50%   28.50%  760  698
+      2240    8073.7826   10375.0000   10375.0000   28.50%   28.50%  765  703
+      2250    8073.7826   10375.0000   10375.0000   28.50%   28.50%  770  708
+      2260    8073.7826   10375.0000   10375.0000   28.50%   28.50%  775  712
+      2270    8073.7826   10375.0000   10375.0000   28.50%   28.50%  780  716
+      2280    8073.7826   10375.0000   10375.0000   28.50%   28.50%  785  721
+      2290    8073.7826   10375.0000   10375.0000   28.50%   28.50%  789  726
+      2300    8073.7826   10375.0000   10375.0000   28.50%   28.50%  794  730
+      2310    8073.7826   10375.0000   10375.0000   28.50%   28.50%  798  734
+      2320    8073.7826   10375.0000   10375.0000   28.50%   28.50%  803  738
+      2330    8073.7826   10375.0000   10375.0000   28.50%   28.50%  807  742
+      2340    8073.7826   10375.0000   10375.0000   28.50%   28.50%  812  747
+      2350    8073.7826   10375.0000   10375.0000   28.50%   28.50%  816  751
+      2360    8073.7826   10375.0000   10375.0000   28.50%   28.50%  821  756
+      2370    8073.7826   10375.0000   10375.0000   28.50%   28.50%  826  760
+      2380    8073.7826   10375.0000   10375.0000   28.50%   28.50%  830  764
+      2390    8073.7826   10375.0000   10375.0000   28.50%   28.50%  835  769
+      2400    8073.7826   10375.0000   10375.0000   28.50%   28.50%  839  772
+      2410    8073.7826   10375.0000   10375.0000   28.50%   28.50%  843  776
+      2420    8073.7826   10375.0000   10375.0000   28.50%   28.50%  848  781
+      2430    8073.7826   10375.0000   10375.0000   28.50%   28.50%  853  785
+      2440    8073.7826   10375.0000   10375.0000   28.50%   28.50%  857  790
+      2450    8073.7826   10375.0000   10375.0000   28.50%   28.50%  861  793
+      2460    8073.7826   10375.0000   10375.0000   28.50%   28.50%  866  797
+      2470    8073.7826   10375.0000   10375.0000   28.50%   28.50%  870  801
+      2480    8073.7826   10375.0000   10375.0000   28.50%   28.50%  875  806
+      2490    8073.7826   10375.0000   10375.0000   28.50%   28.50%  880  811
+      2500    8073.7826   10375.0000   10375.0000   28.50%   28.50%  886  816
+      2510    8073.7826   10375.0000   10375.0000   28.50%   28.50%  892  821
+      2520    8073.7826   10375.0000   10375.0000   28.50%   28.50%  896  825
+      2530    8073.7826   10375.0000   10375.0000   28.50%   28.50%  901  830
+      2540    8073.7826   10375.0000   10375.0000   28.50%   28.50%  906  835
+      2550    8073.7826   10375.0000   10375.0000   28.50%   28.50%  911  839
+         .    8073.7826   10375.0000   10375.0000   28.50%   28.50%  917  845
+      2560    8073.7826   10375.0000   10375.0000   28.50%   28.50%  917  845
+      2570    8073.7826   10375.0000   10375.0000   28.50%   28.50%  921  849
+      2580    8073.7826   10375.0000   10375.0000   28.50%   28.50%  929  856
+      2590    8073.7826   10375.0000   10375.0000   28.50%   28.50%  934  860
+      2600    8073.7826   10375.0000   10375.0000   28.50%   28.50%  938  865
+      2610    8073.7826   10375.0000   10375.0000   28.50%   28.50%  942  869
+      2620    8073.7826   10375.0000   10375.0000   28.50%   28.50%  947  873
+      2630    8073.7826   10375.0000   10375.0000   28.50%   28.50%  952  878
+      2640    8073.7826   10375.0000   10375.0000   28.50%   28.50%  957  883
+      2650    8073.7826   10375.0000   10375.0000   28.50%   28.50%  962  888
+      2660    8073.7826   10375.0000   10375.0000   28.50%   28.50%  967  892
+      2670    8073.7826   10375.0000   10375.0000   28.50%   28.50%  971  896
+      2680    8073.7826   10375.0000   10375.0000   28.50%   28.50%  975  900
+      2690    8073.7826   10375.0000   10375.0000   28.50%   28.50%  980  904
+      2700    8073.7826   10375.0000   10375.0000   28.50%   28.50%  985  909
+      2710    8073.7826   10375.0000   10375.0000   28.50%   28.50%  990  913
+      2720    8073.7826   10375.0000   10375.0000   28.50%   28.50%  995  918
+      2730    8073.7826   10375.0000   10375.0000   28.50%   28.50%  999  922
+      2740    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1004  927
+      2750    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1010  932
+      2760    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1015  937
+      2770    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1022  944
+      2780    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1028  949
+      2790    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1032  953
+      2800    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1038  959
+      2810    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1042  963
+      2820    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1047  967
+      2830    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1052  972
+      2840    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1058  978
+      2850    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1064  984
+      2860    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1069  988
+      2870    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1075  994
+      2880    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1080  999
+      2890    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1085 1003
+      2900    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1090 1007
+      2910    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1094 1012
+      2920    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1099 1016
+      2930    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1104 1021
+      2940    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1109 1025
+      2950    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1114 1031
+      2960    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1120 1036
+      2970    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1127 1043
+      2980    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1134 1049
+      2990    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1140 1055
+      3000    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1146 1061
+      3010    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1152 1067
+      3020    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1158 1072
+      3030    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1164 1078
+      3040    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1169 1082
+      3050    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1175 1088
+      3060    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1181 1094
+      3070    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1189 1102
+      3080    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1195 1107
+      3090    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1201 1113
+      3100    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1207 1118
+      3110    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1214 1126
+      3120    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1220 1131
+      3130    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1226 1137
+      3140    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1232 1142
+      3150    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1241 1152
+      3160    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1247 1157
+      3170    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1259 1170
+      3180    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1265 1175
+      3190    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1271 1181
+      3200    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1281 1191
+      3210    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1289 1199
+      3220    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1297 1206
+      3230    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1307 1216
+      3240    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1335 1245
+      3250    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1344 1253
+      3260    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1374 1285
+      3270    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1403 1315
+      3280    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1433 1345
+      3290    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1440 1351
+      3300    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1474 1387
+      3310    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1480 1393
+      3320    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1487 1400
+      3330    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1494 1406
+      3340    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1500 1412
+      3350    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1506 1418
+      3360    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1514 1425
+      3370    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1520 1431
+      3380    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1527 1438
+      3390    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1534 1444
+      3400    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1540 1450
+      3410    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1547 1457
+      3420    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1553 1462
+      3430    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1559 1468
+      3440    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1565 1474
+      3450    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1575 1484
+      3460    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1580 1489
+      3470    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1593 1501
+      3480    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1599 1508
+      3490    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1606 1515
+      3500    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1617 1524
+      3510    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1625 1531
+      3520    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1634 1538
+      3530    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1639 1543
+      3540    8073.7826   10375.0000   10375.0000   28.50%   28.50% 1644 1547
+      3550    8073.7826   10374.9383   10375.0000   28.50%   28.50% 1649 1553
+      3560    8073.7826   10371.6158   10375.0000   28.46%   28.50% 1655 1558
+      3570    8073.7826   10364.4993   10375.0000   28.37%   28.50% 1683 1587
+      3580    8073.7826   10338.8893   10375.0000   28.06%   28.50% 1692 1595
+      3590    8073.7826   10338.0266   10375.0000   28.04%   28.50% 1698 1600
+      3600    8073.7826   10335.6845   10375.0000   28.02%   28.50% 1702 1604
+      3610    8073.7826   10333.4981   10375.0000   27.99%   28.50% 1708 1610
+      3620    8073.7826   10329.1785   10375.0000   27.93%   28.50% 1737 1640
+      3630    8073.7826   10301.4957   10375.0000   27.59%   28.50% 1749 1652
+      3640    8073.7826   10297.8532   10375.0000   27.55%   28.50% 1753 1656
+      3650    8073.7826   10293.1499   10375.0000   27.49%   28.50% 1758 1661
+      3660    8073.7826   10290.0385   10375.0000   27.45%   28.50% 1789 1693
+      3670    8073.7826   10265.9905   10375.0000   27.15%   28.50% 1820 1725
+      3680    8073.7826   10244.0772   10375.0000   26.88%   28.50% 1837 1743
+      3690    8073.7826   10227.6493   10375.0000   26.68%   28.50% 1841 1746
+      3700    8073.7826   10210.7932   10375.0000   26.47%   28.50% 1845 1750
+      3710    8073.7826   10161.2254   10375.0000   25.85%   28.50% 1851 1757
+      3720    8073.7826   10150.1370   10375.0000   25.72%   28.50% 1877 1784
+      3730    8073.7826   10120.0127   10375.0000   25.34%   28.50% 1890 1796
+      3740    8073.7826   10107.8640   10375.0000   25.19%   28.50% 1921 1829
+      3750    8073.7826   10091.8271   10375.0000   25.00%   28.50% 1928 1836
+      3760    8073.7826   10045.1146   10375.0000   24.42%   28.50% 1932 1839
+      3770    8073.7826   10038.8075   10375.0000   24.34%   28.50% 1939 1846
+      3780    8073.7826   10018.9178   10375.0000   24.09%   28.50% 1974 1883
+      3790    8073.7826   10011.3628   10375.0000   24.00%   28.50% 2009 1918
+      3800    8073.7826    9936.8417   10375.0000   23.08%   28.50% 2036 1946
+      3810    8073.7826    9924.5159   10375.0000   22.92%   28.50% 2064 1975
+      3820    8073.7826    9868.5501   10375.0000   22.23%   28.50% 2094 2006
+      3830    8073.7826    9858.5036   10375.0000   22.11%   28.50% 2104 2016
+      3840    8073.7826    9790.5808   10375.0000   21.26%   28.50% 2129 2041
+      3850    8073.7826    9773.9826   10375.0000   21.06%   28.50% 2137 2049
+      3860    8073.7826    9769.0612   10375.0000   21.00%   28.50% 2142 2053
+      3870    8073.7826    9688.2267   10375.0000   20.00%   28.50% 2147 2058
+      3880    8073.7826    9589.0330   10375.0000   18.77%   28.50% 2159 2070
+      3890    8073.7826    9580.2060   10375.0000   18.66%   28.50% 2171 2082
+      3900    8073.7826    9571.5439   10375.0000   18.55%   28.50% 2178 2088
+      3910    8073.7826    9544.7613   10375.0000   18.22%   28.50% 2218 2131
+      3920    8073.7826    9531.3049   10375.0000   18.05%   28.50% 2242 2155
+      3930    8073.7826    9478.6948   10375.0000   17.40%   28.50% 2275 2189
+      3940    8073.7826    9452.1158   10375.0000   17.07%   28.50% 2343 2260
+      3950    8073.7826    9432.9948   10375.0000   16.83%   28.50% 2377 2295
+      3960    8073.7826    9412.9063   10375.0000   16.59%   28.50% 2388 2306
+      3970    8073.7826    9378.5506   10375.0000   16.16%   28.50% 2397 2315
+      3980    8073.7826    9368.2828   10375.0000   16.03%   28.50% 2434 2352
+      3990    8073.7826    9332.8718   10375.0000   15.59%   28.50% 2442 2359
+      4000    8073.7826    9317.1996   10375.0000   15.40%   28.50% 2452 2368
+      4010    8073.7826    9300.9822   10375.0000   15.20%   28.50% 2467 2382
+      4020    8073.7826    9282.2441   10375.0000   14.97%   28.50% 2487 2402
+      4030    8073.7826    9226.1570   10375.0000   14.27%   28.50% 2546 2464
+      4040    8073.7826    9203.6467   10375.0000   13.99%   28.50% 2558 2474
+      4050    8073.7826    9173.5143   10375.0000   13.62%   28.50% 2572 2488
+      4060    8073.7826    9130.4700   10375.0000   13.09%   28.50% 2602 2519
+      4070    8073.7826    9108.5052   10375.0000   12.82%   28.50% 2613 2530
+      4080    8073.7826    9096.8181   10375.0000   12.67%   28.50% 2628 2544
+      4090    8073.7826    9077.5877   10375.0000   12.43%   28.50% 2654 2570
+      4100    8073.7826    9054.6766   10375.0000   12.15%   28.50% 2671 2586
+      4110    8073.7826    9026.5552   10375.0000   11.80%   28.50% 2704 2618
+      4120    8073.7826    8989.5842   10375.0000   11.34%   28.50% 2716 2629
+      4130    8073.7826    8980.3904   10375.0000   11.23%   28.50% 2726 2638
+      4140    8073.7826    8970.9938   10375.0000   11.11%   28.50% 2736 2646
+      4150    8073.7826    8944.3739   10375.0000   10.78%   28.50% 2770 2681
+      4160    8073.7826    8922.3446   10375.0000   10.51%   28.50% 2814 2724
+      4170    8073.7826    8905.5920   10375.0000   10.30%   28.50% 2828 2737
+      4180    8073.7826    8893.8306   10375.0000   10.16%   28.50% 2949 2863
+      4190    8073.7826    8860.6362   10375.0000    9.75%   28.50% 3011 2927
+      4200    8073.7826    8852.6271   10375.0000    9.65%   28.50% 3121 3041
+      4210    8073.7826    8837.2917   10375.0000    9.46%   28.50% 3196 3116
+      4220    8073.7826    8826.8558   10375.0000    9.33%   28.50% 3296 3219
+      4230    8073.7826    8808.8463   10375.0000    9.10%   28.50% 3310 3231
+      4240    8073.7826    8797.4761   10375.0000    8.96%   28.50% 3324 3245
+      4250    8073.7826    8783.8726   10375.0000    8.80%   28.50% 3335 3253
+      4260    8073.7826    8761.4852   10375.0000    8.52%   28.50% 3357 3273
+      4270    8073.7826    8747.7868   10375.0000    8.35%   28.50% 3375 3289
+      4280    8073.7826    8742.8518   10375.0000    8.29%   28.50% 3383 3295
+      4290    8073.7826    8737.1470   10375.0000    8.22%   28.50% 3417 3328
+      4300    8073.7826    8733.7472   10375.0000    8.17%   28.50% 3428 3337
+      4310    8073.7826    8728.1303   10375.0000    8.10%   28.50% 3437 3344
+      4320    8073.7826    8718.4223   10375.0000    7.98%   28.50% 3445 3350
+      4330    8073.7826    8713.3724   10375.0000    7.92%   28.50% 3454 3356
+      4340    8073.7826    8710.1273   10375.0000    7.88%   28.50% 3462 3363
+      4350    8073.7826    8702.6845   10375.0000    7.79%   28.50% 3471 3369
+      4360    8073.7826    8692.7549   10375.0000    7.67%   28.50% 3480 3376
+      4370    8073.7826    8663.6186   10375.0000    7.31%   28.50% 3494 3387
+      4380    8073.7826    8640.1746   10375.0000    7.02%   28.50% 3546 3438
+      4390    8073.7826    8628.8959   10375.0000    6.88%   28.50% 3666 3560
+NOTE: The Decomposition algorithm stopped on the MAXTIME= option.
+      4393    8073.7826    8625.4591   10375.0000    6.83%   28.50% 3704 3598
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       0     12   10375.0000    8073.7826   28.50%   3704   3598
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 3598.74 seconds.
+NOTE: Real time limit reached.
+NOTE: Objective of the best integer solution found = 10375.
+NOTE: There were 19124 observations read from the data set LIB.N4_3.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           59:58.86
+      user cpu time       1:01:44.33
+      system cpu time     6:06.05
+      memory              599000.20k
+      OS Memory           665212.00k
+      Timestamp           12/12/2017 06:02:34 PM
+      Step Count                        1  Switch Count  773
+      Page Faults                       0
+      Page Reclaims                     18284651
+      Page Swaps                        0
+      Voluntary Context Switches        301544
+      Involuntary Context Switches      24911
+      Block Input Operations            1480
+      Block Output Operations           760
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=TIME_LIM_SOL OBJECTIVE=10375 RELATIVE_GAP=0.285023 ABSOLUTE_GAP=2301.2174054 
+      PRIMAL_INFEASIBILITY=1.550205E-11 BOUND_INFEASIBILITY=6.079234E-14 INTEGER_INFEASIBILITY=4.19575E-13 
+      BEST_BOUND=8073.7825946 NODES=1 ITERATIONS=4393 PRESOLVE_TIME=0.08 SOLUTION_TIME=3598.74
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           59:58.95
+      user cpu time       1:01:44.35
+      system cpu time     6:06.07
+      memory              605255.48k
+      OS Memory           665212.00k
+      Timestamp           12/12/2017 06:02:34 PM
+      Step Count                        1  Switch Count  2330
+      Page Faults                       0
+      Page Reclaims                     18289928
+      Page Swaps                        0
+      Voluntary Context Switches        301848
+      Involuntary Context Switches      24916
+      Block Input Operations            1488
+      Block Output Operations           864
+      
+
+

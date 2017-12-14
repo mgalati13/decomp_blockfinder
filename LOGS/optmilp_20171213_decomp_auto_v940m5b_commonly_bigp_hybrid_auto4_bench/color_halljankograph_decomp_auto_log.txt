@@ -1,0 +1,208 @@
+NOTE: Log file opened at Wed, 13 Dec 2017 14:34:00.023
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12122017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.11 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171213_decomp_auto_v940m5b_commonly_bipg_hybrid
+      _auto4_bench/_scripts/color_halljankograph.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.COLOR_HALLJANKOGRAPH.DATA is in a format that is native to another host, or the file encoding does 
+      not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU 
+      resources and might reduce performance.
+NOTE: The problem color_HallJankoGraph has 1818 variables (1818 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 3700 constraints (3600 LE, 0 EQ, 100 GE, 0 range).
+NOTE: The problem has 72000 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 0 variables and 0 constraints.
+NOTE: The MILP presolver removed 0 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 1818 variables, 3700 constraints, and 72000 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      2     15.0000000      1.0000000 1400.00%       0
+NOTE: The MILP solver's symmetry detection found 2 orbits. The largest orbit contains 1800 variables.
+             0        1      2     15.0000000      1.0000000 1400.00%       7
+             0        1      2     15.0000000      1.0000000 1400.00%       8
+             0        1      2     15.0000000      1.0000000 1400.00%      11
+             0        1      2     15.0000000      1.0000000 1400.00%      12
+NOTE: The MILP solver added 15 cuts with 75 cut coefficients at the root.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+Time in community    0.029 (real)    0.030 (cpu)
+Community numComponents=118 numBlocks=18 Q=0.9444441078 P=0.8740746439 QP=0.8255146472 SBBBorderArea= 0.0269179004 
+BorderRows=100 LIndex=0
+Time in community    0.026 (real)    0.030 (cpu)
+Best Goodness=0.8255146472 LIndex=0 in    0.061 (real)    0.060 (cpu) - total time in Comm    0.055
+Community numComponents=118 numBlocks=18 Q=0.9444441078 P=0.8740746439 QP=0.8255146472 SBBBorderArea= 0.0269179004 
+BorderRows=100 LIndex=1
+Final goodness:0.8255146472
+TIME----BDFTime: 0.6848988533 BDFGood: 0.8255146472 CommTime: 0.0613899231 CommRemove: 0.0566940308 CommMerge: 
+0.0006201267 CommGood: 0.8255146472 DBDF: 0 CommNBlocks: 18 HitMaxTime: 0
+STAT: 0.6848988533 0.8255146472 0.0613899231 0.0566940308 0.0006201267 0.8255146472 0 18 0
+Using community decomposition with goodness=0.8255146472
+NOTE: The problem has a decomposable structure with 18 blocks. The largest block covers 5.572% of the constraints in 
+      the problem.
+NOTE: The decomposition subproblems cover 1818 (100%) variables and 3615 (97.31%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   13   13
+         1       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   13   13
+         .       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   14   14
+        10       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   14   14
+         .       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   14   14
+        20       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   14   14
+        30       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   16   15
+         .       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   27   18
+        40       1.0000      15.0000      15.0000 1.40e+01 1.40e+01   29   19
+        44       1.0000      14.0000      14.0000 1.30e+01 1.30e+01   42   23
+        50       1.0000      14.0000      14.0000 1.30e+01 1.30e+01   48   25
+        60       1.0000      14.0000      14.0000 1.30e+01 1.30e+01   70   31
+        70       1.0000      13.6858      14.0000 1.27e+01 1.30e+01  142   62
+         .       1.0000      12.9597      14.0000 1.20e+01 1.30e+01  195   77
+        80       1.0000      12.9597      14.0000 1.20e+01 1.30e+01  202   79
+        90       1.0000      12.3789      14.0000 1.14e+01 1.30e+01  265   98
+       100       1.0000      11.8398      14.0000 1.08e+01 1.30e+01  340  120
+       110       1.0000      11.5703      14.0000 1.06e+01 1.30e+01  438  148
+       120       1.0000      11.3429      14.0000 1.03e+01 1.30e+01  578  189
+       130       1.0000      11.2230      14.0000 1.02e+01 1.30e+01  773  246
+       140       1.0000      10.9549      14.0000  995.49% 1.30e+01  975  304
+       149       2.8679      10.8650      14.0000  278.85%  388.16% 1207  372
+       150       2.8679      10.8619      14.0000  278.74%  388.16% 1239  381
+       151       3.5710      10.8518      14.0000  203.89%  292.05% 1279  393
+         .       3.5710      10.7743      14.0000  201.72%  292.05% 1623  494
+       160       3.5710      10.7743      14.0000  201.72%  292.05% 1666  506
+       164       3.9616      10.7575      14.0000  171.54%  253.39% 1838  557
+       170       3.9616      10.6971      14.0000  170.02%  253.39% 2099  633
+       180       3.9616      10.5506      14.0000  166.32%  253.39% 2504  751
+       190       3.9616      10.4170      14.0000  162.95%  253.39% 2916  871
+       193       4.7088      10.3870      14.0000  120.59%  197.32% 3064  914
+       200       4.7088      10.3132      14.0000  119.02%  197.32% 3425 1018
+       210       4.7088      10.2496      14.0000  117.67%  197.32% 3878 1150
+       217       4.8325      10.2008      14.0000  111.09%  189.71% 4216 1248
+       218       5.3827      10.1988      14.0000   89.48%  160.09% 4268 1263
+       220       5.3827      10.1862      14.0000   89.24%  160.09% 4378 1296
+       230       5.5069      10.1504      14.0000   84.32%  154.23% 4954 1462
+       231       5.7596      10.1497      14.0000   76.22%  143.07% 5022 1482
+       240       5.7596      10.1103      14.0000   75.54%  143.07% 5550 1636
+       244       5.9069      10.0981      14.0000   70.96%  137.01% 5804 1710
+       250       5.9297      10.0796      14.0000   69.99%  136.10% 6164 1815
+       251       5.9886      10.0775      14.0000   68.28%  133.78% 6234 1835
+       253       6.0626      10.0738      14.0000   66.16%  130.92% 6404 1885
+       256       6.0660      10.0643      14.0000   65.91%  130.80% 6633 1952
+       260       6.0660      10.0489      14.0000   65.66%  130.80% 6901 2031
+       262       6.2238      10.0458      14.0000   61.41%  124.94% 7025 2067
+       263       6.4010      10.0448      14.0000   56.93%  118.72% 7108 2091
+       264       6.4851      10.0432      14.0000   54.87%  115.88% 7182 2112
+       268       6.8158      10.0388      14.0000   47.29%  105.40% 7481 2199
+       270       6.8158      10.0370      14.0000   47.26%  105.40% 7629 2241
+       280       6.8158      10.0203      14.0000   47.02%  105.40% 8352 2452
+       290       6.8158      10.0000      14.0000   46.72%  105.40% 8700 2554
+       293       6.8500      10.0000      14.0000   45.99%  104.38% 8736 2564
+       294       7.1579      10.0000      14.0000   39.71%   95.59% 8773 2575
+       295       7.5000      10.0000      14.0000   33.33%   86.67% 8806 2585
+       296       8.2000      10.0000      14.0000   21.95%   70.73% 8830 2592
+       300       8.2000      10.0000      14.0000   21.95%   70.73% 8917 2618
+       310       8.2000      10.0000      14.0000   21.95%   70.73% 9178 2695
+         .       8.2000      10.0000      14.0000   21.95%   70.73% 9379 2755
+       320       8.2000      10.0000      14.0000   21.95%   70.73% 9422 2768
+       330       8.2000      10.0000      14.0000   21.95%   70.73% 9617 2825
+       340       8.2000      10.0000      14.0000   21.95%   70.73% 9903 2910
+       350       8.2000      10.0000      14.0000   21.95%   70.73% 10098 2967
+       360       8.2000      10.0000      14.0000   21.95%   70.73% 10407 3058
+       370       8.2000      10.0000      14.0000   21.95%   70.73% 10661 3133
+       380       8.2000      10.0000      14.0000   21.95%   70.73% 10927 3212
+       390       8.2000      10.0000      14.0000   21.95%   70.73% 11182 3287
+       400       8.2000      10.0000      14.0000   21.95%   70.73% 11391 3349
+       410       8.2857      10.0000      14.0000   20.69%   68.97% 11629 3420
+       420       8.2857      10.0000      14.0000   20.69%   68.97% 11905 3500
+       430       8.2857      10.0000      14.0000   20.69%   68.97% 12159 3575
+NOTE: The Decomposition algorithm stopped on the MAXTIME= option.
+       433       8.2857      10.0000      14.0000   20.69%   68.97% 12241 3599
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       0      3      14.0000       8.2857   68.97%  12241   3599
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 3599.10 seconds.
+NOTE: Real time limit reached.
+NOTE: Objective of the best integer solution found = 14.
+NOTE: There were 44345 observations read from the data set LIB.COLOR_HALLJANKOGRAPH.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           59:59.37
+      user cpu time       3:24:02.03
+      system cpu time     12:28.92
+      memory              295609.40k
+      OS Memory           306180.00k
+      Timestamp           12/13/2017 03:33:59 PM
+      Step Count                        1  Switch Count  114
+      Page Faults                       0
+      Page Reclaims                     6864691
+      Page Swaps                        0
+      Voluntary Context Switches        91505
+      Involuntary Context Switches      37163
+      Block Input Operations            9760
+      Block Output Operations           376
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=TIME_LIM_SOL OBJECTIVE=14 RELATIVE_GAP=0.689655 ABSOLUTE_GAP=5.7142857143 
+      PRIMAL_INFEASIBILITY=1.421085E-14 BOUND_INFEASIBILITY=2.220446E-16 INTEGER_INFEASIBILITY=1.287859E-14 
+      BEST_BOUND=8.2857142857 NODES=1 ITERATIONS=433 PRESOLVE_TIME=0.27 SOLUTION_TIME=3599.11
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           59:59.53
+      user cpu time       3:24:02.05
+      system cpu time     12:28.95
+      memory              301864.87k
+      OS Memory           306180.00k
+      Timestamp           12/13/2017 03:33:59 PM
+      Step Count                        1  Switch Count  353
+      Page Faults                       0
+      Page Reclaims                     6869938
+      Page Swaps                        0
+      Voluntary Context Switches        92174
+      Involuntary Context Switches      37169
+      Block Input Operations            9768
+      Block Output Operations           480
+      
+
+
