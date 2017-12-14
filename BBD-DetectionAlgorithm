@@ -259,7 +259,6 @@ noise.d = function(G, S, membership){
   out.edge
 }
 
-# Remove #
 remove = function(G, S, L){
   S.best = NULL
   check = F
@@ -282,8 +281,8 @@ remove = function(G, S, L){
     R.G.base = V(G.base)$names[which(V(G.base)$type==0)]
     comm.base = fastgreedy.community(G.base, weights=NULL)
     mod.base = max(comm.base$modularity)
-    print(paste("Modularity:", mod.base, sep=""))
-    print(paste("Goodness  :", goodness(G,S), sep=""))
+#    print(paste("Modularity:", mod.base, sep=""))
+#    print(paste("Goodness  :", goodness(G,S), sep=""))
     N = noise.d(G, S, comm.base$membership)
     max.N = max(N)    
     if(max.N <= 0){
@@ -346,10 +345,11 @@ merge = function(G, S, L){
     communities = 1:length(comp.rest$csize)
     col.memberships = comp.rest$membership[(length(comp.rest$membership)-length(which(V(G)$type==1)) +1):length(comp.rest$membership)]
     
-    print(comp.rest$csize)
-    print(length(S))
-    print(Gamma.curr)
+#    print(comp.rest$csize)
+#    print(length(S))
+#    print(Gamma.curr)
   } 
+
   list(S=S, S.best=S.best, L = L)
 }
 
@@ -367,9 +367,15 @@ KEE = function(instance){
   Gamma.best = 0.001
   prev.best = 0
   check = FALSE
+  rem.count = 0
+  mer.count = 0
+  
   while(!check){
     prev.best = Gamma.best
+    start = Sys.time()
     rem = remove(G, S, L)
+    end = Sys.time()
+    rem.count = rem.count + 1
     S = rem$S
     L = rem$L
     breaks = c(breaks, length(L))
@@ -380,7 +386,16 @@ KEE = function(instance){
       S.best = rem.S.best
     }
     
+    print(paste("(TIME)         at Remove ", rem.count, ": ", round(as.numeric(difftime(end,start,units = "secs")),2), "s", sep="" ))
+    print(paste("(Q_{best})     at Remove ", rem.count, ": ", round(quality.B(G, S.best),10), sep="" ))
+    print(paste("(Gamma_{best}) at Remove ", rem.count, ": ", round(goodness(G, S.best),10), sep="" ))
+    print(paste("(|S.best|)     at Remove ", rem.count, ": ", length(S.best), sep="" ))
+    print(paste("(nBlocks)      at Remove ", rem.count, ": ", clusters(G-S.best)$no, sep="" ))
+
+    start = Sys.time()
     mer = merge(G, S, L)
+    mer.count = mer.count + 1
+    end = Sys.time()
     S = mer$S
     L = mer$L
     breaks = c(breaks, length(L))
@@ -390,6 +405,13 @@ KEE = function(instance){
       Gamma.best = Gamma.mer
       S.best = mer.S.best
     }
+    
+    print(paste("(TIME)         at Merge ", mer.count, ": ", round(as.numeric(difftime(end,start,units = "secs")),2), "s", sep="" ))
+    print(paste("(Q_{best})     at Merge ", mer.count, ": ", round(quality.B(G, S.best),10), sep="" ))
+    print(paste("(Gamma_{best}) at Merge ", mer.count, ": ", round(goodness(G, S.best),10), sep="" ))
+    print(paste("(|S.best|)     at Merge ", mer.count, ": ", length(S.best), sep="" ))
+    print(paste("(nBlocks)      at Merge ", mer.count, ": ", clusters(G-S.best)$no, sep="" ))
+    
     for(j in 1:(length(L)-1) ){
       if(identical(S, L[[j]])){
         check = TRUE
