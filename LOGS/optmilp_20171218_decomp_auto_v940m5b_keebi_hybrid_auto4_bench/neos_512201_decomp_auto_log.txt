@@ -1,0 +1,675 @@
+NOTE: Log file opened at Mon, 18 Dec 2017 15:34:42.552
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12132017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.12 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171218_decomp_auto_v940m5b_keebi_hybrid_auto4_b
+      ench/_scripts/neos_512201.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.NEOS_512201.DATA is in a format that is native to another host, or the file encoding does not match 
+      the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources 
+      and might reduce performance.
+NOTE: The problem file has 838 variables (150 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 1337 constraints (656 LE, 244 EQ, 437 GE, 0 range).
+NOTE: The problem has 3418 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 217 variables and 234 constraints.
+NOTE: The MILP presolver removed 441 constraint coefficients.
+NOTE: The MILP presolver modified 571 constraint coefficients.
+NOTE: The presolved problem has 621 variables, 1103 constraints, and 2977 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      4   3665.4628000      3.4628000   3662.0       0
+             0        1      4   3665.4628000     92.8297175 3848.59%       0
+             0        1      5   2549.9653600    253.3723705  906.41%       0
+             0        1      5   2549.9653600    282.4057864  802.94%       0
+             0        1      5   2549.9653600    293.7268681  768.14%       0
+             0        1      5   2549.9653600    298.0350938  755.59%       0
+             0        1      5   2549.9653600    300.6449203  748.17%       0
+             0        1      5   2549.9653600    303.7719183  739.43%       0
+             0        1      5   2549.9653600    305.7789679  733.92%       0
+             0        1      5   2549.9653600    308.2709378  727.18%       0
+             0        1      5   2549.9653600    309.5056580  723.88%       0
+             0        1      5   2549.9653600    309.9683441  722.65%       0
+             0        1      5   2549.9653600    310.7779970  720.51%       0
+             0        1      5   2549.9653600    311.3461411  719.01%       0
+             0        1      5   2549.9653600    312.4071384  716.23%       0
+             0        1      5   2549.9653600    313.0278839  714.61%       0
+             0        1      5   2549.9653600    313.2754536  713.97%       0
+             0        1      5   2549.9653600    314.2365965  711.48%       0
+             0        1      5   2549.9653600    315.0052629  709.50%       0
+             0        1      5   2549.9653600    316.0079771  706.93%       0
+             0        1      5   2549.9653600    316.4532512  705.80%       0
+             0        1      5   2549.9653600    316.4696997  705.75%       1
+             0        1      5   2549.9653600    316.5632767  705.52%       1
+             0        1      5   2549.9653600    316.7149894  705.13%       1
+             0        1      5   2549.9653600    316.8511408  704.78%       1
+             0        1      5   2549.9653600    317.0798649  704.20%       1
+             0        1      5   2549.9653600    317.1402306  704.05%       1
+             0        1      5   2549.9653600    317.1847355  703.94%       1
+             0        1      5   2549.9653600    317.2070514  703.88%       1
+             0        1      5   2549.9653600    317.2790944  703.70%       1
+             0        1      5   2549.9653600    317.3088171  703.62%       1
+             0        1      5   2549.9653600    317.3295013  703.57%       1
+NOTE: The MILP solver added 240 cuts with 1147 cut coefficients at the root.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+nBlocksTry=22 nRowsOrig=1343 nColsOrig=621 nLinkCons=327 nLinkVars=271 nLinksConsOrig=56 borderAreaR=0.0416976917 
+borderAreaC=0.4363929147
+nBlocksTry=22 nBlocksUsed=47 Q=0.9528076172 PR=0.811810404 PC=0.0001620091 G=0.0001253139 BorderAreaR=0.0416976917 
+BorderAreaC=0.4363929147 BorderRows=56 BorderCols=271
+nBlocksTry=21 nRowsOrig=1343 nColsOrig=621 nLinkCons=317 nLinkVars=260 nLinksConsOrig=57 borderAreaR=0.0424422934 
+borderAreaC=0.4186795491
+nBlocksTry=21 nBlocksUsed=44 Q=0.9497557364 PR=0.8087936464 PC=0.000230885 G=0.0001773558 BorderAreaR=0.0424422934 
+BorderAreaC=0.4186795491 BorderRows=57 BorderCols=260
+nBlocksTry=20 nRowsOrig=1343 nColsOrig=621 nLinkCons=302 nLinkVars=245 nLinksConsOrig=57 borderAreaR=0.0424422934 
+borderAreaC=0.3945249597
+nBlocksTry=20 nBlocksUsed=42 Q=0.9483281077 PR=0.8087936464 PC=0.0003742827 G=0.0002870755 BorderAreaR=0.0424422934 
+BorderAreaC=0.3945249597 BorderRows=57 BorderCols=245
+nBlocksTry=19 nRowsOrig=1343 nColsOrig=621 nLinkCons=281 nLinkVars=227 nLinksConsOrig=54 borderAreaR=0.0402084885 
+borderAreaC=0.3655394525
+nBlocksTry=19 nBlocksUsed=37 Q=0.9452365277 PR=0.8178777182 PC=0.0006682895 G=0.0005166465 BorderAreaR=0.0402084885 
+BorderAreaC=0.3655394525 BorderRows=54 BorderCols=227
+nBlocksTry=18 nRowsOrig=1343 nColsOrig=621 nLinkCons=270 nLinkVars=215 nLinksConsOrig=55 borderAreaR=0.0409530901 
+borderAreaC=0.346215781
+nBlocksTry=18 nBlocksUsed=34 Q=0.9417447711 PR=0.814838414 PC=0.000983576 G=0.0007547666 BorderAreaR=0.0409530901 
+BorderAreaC=0.346215781 BorderRows=55 BorderCols=215
+nBlocksTry=17 nRowsOrig=1343 nColsOrig=621 nLinkCons=267 nLinkVars=215 nLinksConsOrig=52 borderAreaR=0.0387192852 
+borderAreaC=0.346215781
+nBlocksTry=17 nBlocksUsed=36 Q=0.9429369362 PR=0.8239903783 PC=0.000983576 G=0.00076421 BorderAreaR=0.0387192852 
+BorderAreaC=0.346215781 BorderRows=52 BorderCols=215
+nBlocksTry=16 nRowsOrig=1343 nColsOrig=621 nLinkCons=242 nLinkVars=191 nLinksConsOrig=51 borderAreaR=0.0379746835 
+borderAreaC=0.307568438
+nBlocksTry=16 nBlocksUsed=31 Q=0.93916043 PR=0.8270638189 PC=0.0021305635 G=0.0016549059 BorderAreaR=0.0379746835 
+BorderAreaC=0.307568438 BorderRows=51 BorderCols=191
+nBlocksTry=15 nRowsOrig=1343 nColsOrig=621 nLinkCons=254 nLinkVars=209 nLinksConsOrig=45 borderAreaR=0.0335070737 
+borderAreaC=0.3365539452
+nBlocksTry=15 nBlocksUsed=35 Q=0.9364169861 PR=0.8457467039 PC=0.0011932449 G=0.000945016 BorderAreaR=0.0335070737 
+BorderAreaC=0.3365539452 BorderRows=45 BorderCols=209
+nBlocksTry=14 nRowsOrig=1343 nColsOrig=621 nLinkCons=248 nLinkVars=203 nLinksConsOrig=45 borderAreaR=0.0335070737 
+borderAreaC=0.3268921095
+nBlocksTry=14 nBlocksUsed=34 Q=0.9292347367 PR=0.8457467039 PC=0.0014476088 G=0.0011376717 BorderAreaR=0.0335070737 
+BorderAreaC=0.3268921095 BorderRows=45 BorderCols=203
+nBlocksTry=13 nRowsOrig=1343 nColsOrig=621 nLinkCons=221 nLinkVars=175 nLinksConsOrig=46 borderAreaR=0.0342516754 
+borderAreaC=0.2818035427
+nBlocksTry=13 nBlocksUsed=31 Q=0.9198085224 PR=0.8426038361 PC=0.0035668556 G=0.002764435 BorderAreaR=0.0342516754 
+BorderAreaC=0.2818035427 BorderRows=46 BorderCols=175
+nBlocksTry=12 nRowsOrig=1343 nColsOrig=621 nLinkCons=207 nLinkVars=162 nLinksConsOrig=45 borderAreaR=0.0335070737 
+borderAreaC=0.2608695652
+nBlocksTry=12 nBlocksUsed=26 Q=0.9118449134 PR=0.8457467039 PC=0.0054214536 G=0.0041809699 BorderAreaR=0.0335070737 
+BorderAreaC=0.2608695652 BorderRows=45 BorderCols=162
+nBlocksTry=11 nRowsOrig=1343 nColsOrig=621 nLinkCons=190 nLinkVars=154 nLinksConsOrig=36 borderAreaR=0.026805659 
+borderAreaC=0.2479871176
+nBlocksTry=11 nBlocksUsed=23 Q=0.9021002773 PR=0.8745653185 PC=0.0070147349 G=0.0055342444 BorderAreaR=0.026805659 
+BorderAreaC=0.2479871176 BorderRows=36 BorderCols=154
+nBlocksTry=10 nRowsOrig=1343 nColsOrig=621 nLinkCons=179 nLinkVars=142 nLinksConsOrig=37 borderAreaR=0.0275502606 
+borderAreaC=0.2286634461
+nBlocksTry=10 nBlocksUsed=19 Q=0.8912413661 PR=0.8713153583 PC=0.0103241556 G=0.0080172467 BorderAreaR=0.0275502606 
+BorderAreaC=0.2286634461 BorderRows=37 BorderCols=142
+nBlocksTry=9 nRowsOrig=1343 nColsOrig=621 nLinkCons=168 nLinkVars=136 nLinksConsOrig=32 borderAreaR=0.0238272524 
+borderAreaC=0.2190016103
+nBlocksTry=9 nBlocksUsed=18 Q=0.8890147044 PR=0.8876868344 PC=0.0125249552 G=0.0098842769 BorderAreaR=0.0238272524 
+BorderAreaC=0.2190016103 BorderRows=32 BorderCols=136
+nBlocksTry=8 nRowsOrig=1343 nColsOrig=621 nLinkCons=160 nLinkVars=129 nLinksConsOrig=31 borderAreaR=0.0230826508 
+borderAreaC=0.2077294686
+nBlocksTry=8 nBlocksUsed=17 Q=0.8829268697 PR=0.8909978595 PC=0.0156922335 G=0.0123448596 BorderAreaR=0.0230826508 
+BorderAreaC=0.2077294686 BorderRows=31 BorderCols=129
+nBlocksTry=7 nRowsOrig=1343 nColsOrig=621 nLinkCons=142 nLinkVars=110 nLinksConsOrig=32 borderAreaR=0.0238272524 
+borderAreaC=0.1771336554
+nBlocksTry=7 nBlocksUsed=15 Q=0.8442156222 PR=0.8876868344 PC=0.0289358749 G=0.0216845184 BorderAreaR=0.0238272524 
+BorderAreaC=0.1771336554 BorderRows=32 BorderCols=110
+nBlocksTry=6 nRowsOrig=1343 nColsOrig=621 nLinkCons=122 nLinkVars=93 nLinksConsOrig=29 borderAreaR=0.0215934475 
+borderAreaC=0.1497584541
+nBlocksTry=6 nBlocksUsed=12 Q=0.8189449761 PR=0.8976570054 PC=0.0500281675 G=0.0367772916 BorderAreaR=0.0215934475 
+BorderAreaC=0.1497584541 BorderRows=29 BorderCols=93
+nBlocksTry=5 nRowsOrig=1343 nColsOrig=621 nLinkCons=96 nLinkVars=68 nLinksConsOrig=28 borderAreaR=0.0208488459 
+borderAreaC=0.1095008052
+nBlocksTry=5 nBlocksUsed=8 Q=0.7819792892 PR=0.9010052186 PC=0.1119149464 G=0.0788516251 BorderAreaR=0.0208488459 
+BorderAreaC=0.1095008052 BorderRows=28 BorderCols=68
+nBlocksTry=4 nRowsOrig=1343 nColsOrig=621 nLinkCons=82 nLinkVars=57 nLinksConsOrig=25 borderAreaR=0.018615041 
+borderAreaC=0.0917874396
+nBlocksTry=4 nBlocksUsed=6 Q=0.7497565749 PR=0.9111249768 PC=0.1594940291 G=0.1089538709 BorderAreaR=0.018615041 
+BorderAreaC=0.0917874396 BorderRows=25 BorderCols=57
+nBlocksTry=3 nRowsOrig=1343 nColsOrig=621 nLinkCons=60 nLinkVars=38 nLinksConsOrig=22 borderAreaR=0.016381236 
+borderAreaC=0.0611916264
+nBlocksTry=3 nBlocksUsed=4 Q=0.6315246683 PR=0.9213583963 PC=0.2941008544 G=0.1711256866 BorderAreaR=0.016381236 
+BorderAreaC=0.0611916264 BorderRows=22 BorderCols=38
+nBlocksTry=2 nRowsOrig=1343 nColsOrig=621 nLinkCons=35 nLinkVars=24 nLinksConsOrig=11 borderAreaR=0.008190618 
+borderAreaC=0.038647343
+nBlocksTry=2 nBlocksUsed=2 Q=0.4992977993 PR=0.9598741565 PC=0.4616506421 G=0.2212520966 BorderAreaR=0.008190618 
+BorderAreaC=0.038647343 BorderRows=11 BorderCols=24
+Time in community    0.003 (real)    0.010 (cpu)
+Starting length of S=0
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=2 numBlocks=1 Q=0 P=0.9962839136 QP=0 SBBBorderArea= 0.0007446016 BorderRows=1 LIndex=0
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=4 numBlocks=1 Q=0 P=0.9888931174 QP=0 SBBBorderArea= 0.0022338049 BorderRows=3 LIndex=1
+Time in community    0.003 (real)    0.010 (cpu)
+Community numComponents=7 numBlocks=1 Q=0 P=0.9779095977 QP=0 SBBBorderArea= 0.0044676098 BorderRows=6 LIndex=2
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=14 numBlocks=1 Q=0 P=0.9527534611 QP=0 SBBBorderArea= 0.0096798213 BorderRows=13 LIndex=3
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=16 numBlocks=1 Q=0 P=0.9456855896 QP=0 SBBBorderArea= 0.0111690246 BorderRows=15 LIndex=4
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=17 numBlocks=1 Q=0 P=0.9421713403 QP=0 SBBBorderArea= 0.0119136262 BorderRows=16 LIndex=5
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=22 numBlocks=1 Q=0 P=0.9247950145 QP=0 SBBBorderArea= 0.0156366344 BorderRows=21 LIndex=6
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=49 numBlocks=1 Q=0 P=0.8363530946 QP=0 SBBBorderArea= 0.0357408786 BorderRows=48 LIndex=7
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=51 numBlocks=1 Q=0 P=0.8301487233 QP=0 SBBBorderArea= 0.0372300819 BorderRows=50 LIndex=8
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=62 numBlocks=1 Q=0 P=0.7968383056 QP=0 SBBBorderArea= 0.0454206999 BorderRows=61 LIndex=9
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=65 numBlocks=1 Q=0 P=0.7879879161 QP=0 SBBBorderArea= 0.0476545048 BorderRows=64 LIndex=10
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=274 numBlocks=17 Q=0.9355121428 P=0.3884293106 QP=0.3633803367 SBBBorderArea= 0.1891288161 
+BorderRows=254 LIndex=11
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=287 numBlocks=18 Q=0.939843615 P=0.3714577391 QP=0.3491121844 SBBBorderArea= 0.1980640357 
+BorderRows=266 LIndex=12
+Time in community    0.002 (real)    0.000 (cpu)
+Remove at time    0.041 count=14
+Community numComponents=285 numBlocks=18 Q=0.9398826625 P=0.3728432569 QP=0.350428913 SBBBorderArea= 0.1973194341 
+BorderRows=265 LIndex=13
+Community numComponents=283 numBlocks=18 Q=0.9399166603 P=0.3742339425 QP=0.3517487174 SBBBorderArea= 0.1965748325 
+BorderRows=264 LIndex=14
+Community numComponents=281 numBlocks=18 Q=0.9399365644 P=0.3756298154 QP=0.3530681981 SBBBorderArea= 0.1958302308 
+BorderRows=263 LIndex=15
+Community numComponents=268 numBlocks=17 Q=0.9356285153 P=0.3927920053 QP=0.3675074007 SBBBorderArea= 0.1868950112 
+BorderRows=251 LIndex=16
+Community numComponents=257 numBlocks=16 Q=0.9315020576 P=0.4076913141 QP=0.379765298 SBBBorderArea= 0.1794489948 
+BorderRows=241 LIndex=17
+Community numComponents=250 numBlocks=15 Q=0.9289144529 P=0.416900821 QP=0.3872651981 SBBBorderArea= 0.174981385 
+BorderRows=235 LIndex=18
+Community numComponents=240 numBlocks=14 Q=0.9247971221 P=0.4311066158 QP=0.3986861576 SBBBorderArea= 0.1682799702 
+BorderRows=226 LIndex=19
+Community numComponents=225 numBlocks=13 Q=0.9166010384 P=0.4541727093 QP=0.4162951769 SBBBorderArea= 0.1578555473 
+BorderRows=212 LIndex=20
+Community numComponents=214 numBlocks=12 Q=0.9110118872 P=0.4714002989 QP=0.4294512759 SBBBorderArea= 0.1504095309 
+BorderRows=202 LIndex=21
+Community numComponents=200 numBlocks=11 Q=0.9010299253 P=0.4947767897 QP=0.4458086939 SBBBorderArea= 0.1407297096 
+BorderRows=189 LIndex=22
+Community numComponents=188 numBlocks=10 Q=0.8909899205 P=0.5154600594 QP=0.4592697173 SBBBorderArea= 0.1325390916 
+BorderRows=178 LIndex=23
+Community numComponents=178 numBlocks=9 Q=0.8794812691 P=0.5330242364 QP=0.4687848319 SBBBorderArea= 0.1258376768 
+BorderRows=169 LIndex=24
+Community numComponents=170 numBlocks=8 Q=0.8674951508 P=0.5470980037 QP=0.4746048652 SBBBorderArea= 0.1206254654 
+BorderRows=162 LIndex=25
+Community numComponents=157 numBlocks=7 Q=0.8474501781 P=0.5720944215 QP=0.4848215194 SBBBorderArea= 0.1116902457 
+BorderRows=150 LIndex=26
+Community numComponents=143 numBlocks=6 Q=0.8228481999 P=0.6004642805 QP=0.4940909523 SBBBorderArea= 0.1020104244 
+BorderRows=137 LIndex=27
+Community numComponents=128 numBlocks=5 Q=0.7855181822 P=0.6325917514 QP=0.4969123226 SBBBorderArea= 0.0915860015 
+BorderRows=123 LIndex=28
+Community numComponents=99 numBlocks=4 Q=0.7102793579 P=0.7020955465 QP=0.498683974 SBBBorderArea= 0.0707371556 
+BorderRows=95 LIndex=29
+Community numComponents=76 numBlocks=3 Q=0.5979613649 P=0.7620221939 QP=0.4556598312 SBBBorderArea= 0.0543559196 
+BorderRows=73 LIndex=30
+Community numComponents=54 numBlocks=2 Q=0.498123867 P=0.8239903783 QP=0.4104492736 SBBBorderArea= 0.0387192852 
+BorderRows=52 LIndex=31
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=55 numBlocks=2 Q=0.4979885009 P=0.8209283589 QP=0.4088128828 SBBBorderArea= 0.0394638868 
+BorderRows=53 LIndex=32
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=56 numBlocks=2 Q=0.4978657108 P=0.8178777182 QP=0.4071932715 SBBBorderArea= 0.0402084885 
+BorderRows=54 LIndex=33
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=57 numBlocks=2 Q=0.4977203584 P=0.814838414 QP=0.4055616674 SBBBorderArea= 0.0409530901 
+BorderRows=55 LIndex=34
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=60 numBlocks=2 Q=0.4973533246 P=0.8057880994 QP=0.4007613901 SBBBorderArea= 0.043186895 
+BorderRows=58 LIndex=35
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=65 numBlocks=2 Q=0.4976913271 P=0.7909270694 QP=0.3936375428 SBBBorderArea= 0.0469099032 
+BorderRows=63 LIndex=36
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=68 numBlocks=2 Q=0.4977940195 P=0.7821423353 QP=0.3893457769 SBBBorderArea= 0.0491437081 
+BorderRows=66 LIndex=37
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=87 numBlocks=2 Q=0.4975688522 P=0.7287272962 QP=0.3625920043 SBBBorderArea= 0.0632911392 
+BorderRows=85 LIndex=38
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=90 numBlocks=2 Q=0.4973857392 P=0.7206334077 QP=0.3584327802 SBBBorderArea= 0.0655249442 
+BorderRows=88 LIndex=39
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=91 numBlocks=2 Q=0.497323022 P=0.7179554717 QP=0.3570557849 SBBBorderArea= 0.0662695458 
+BorderRows=89 LIndex=40
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=92 numBlocks=2 Q=0.4972594586 P=0.7152874872 QP=0.3556834686 SBBBorderArea= 0.0670141474 
+BorderRows=90 LIndex=41
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=281 numBlocks=17 Q=0.9366041949 P=0.3812655666 QP=0.3570949291 SBBBorderArea= 0.1928518243 
+BorderRows=259 LIndex=42
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=284 numBlocks=18 Q=0.9371192208 P=0.3798487509 QP=0.3559635654 SBBBorderArea= 0.1935964259 
+BorderRows=260 LIndex=43
+Time in community    0.002 (real)    0.000 (cpu)
+Remove at time    0.080 count=13
+Community numComponents=282 numBlocks=18 Q=0.9371520114 P=0.3812655666 QP=0.3573037926 SBBBorderArea= 0.1928518243 
+BorderRows=259 LIndex=44
+Community numComponents=280 numBlocks=18 Q=0.937175683 P=0.3826876671 QP=0.3586455758 SBBBorderArea= 0.1921072226 
+BorderRows=258 LIndex=45
+Community numComponents=278 numBlocks=18 Q=0.9371914535 P=0.3841150719 QP=0.3599893625 SBBBorderArea= 0.191362621 
+BorderRows=257 LIndex=46
+Community numComponents=276 numBlocks=18 Q=0.9371898951 P=0.3855478008 QP=0.361331503 SBBBorderArea= 0.1906180194 
+BorderRows=256 LIndex=47
+Community numComponents=275 numBlocks=18 Q=0.9371808944 P=0.3869858737 QP=0.3626757673 SBBBorderArea= 0.1898734177 
+BorderRows=255 LIndex=48
+Community numComponents=271 numBlocks=17 Q=0.9358931004 P=0.3913323563 QP=0.3662452522 SBBBorderArea= 0.1876396128 
+BorderRows=252 LIndex=49
+Community numComponents=266 numBlocks=16 Q=0.9339902285 P=0.3972037001 QP=0.3709843747 SBBBorderArea= 0.1846612063 
+BorderRows=248 LIndex=50
+Community numComponents=262 numBlocks=16 Q=0.9339749224 P=0.4001723239 QP=0.3737509152 SBBBorderArea= 0.183172003 
+BorderRows=246 LIndex=51
+Community numComponents=249 numBlocks=15 Q=0.9281871253 P=0.418455839 QP=0.3884053223 SBBBorderArea= 0.1742367833 
+BorderRows=234 LIndex=52
+Community numComponents=240 numBlocks=14 Q=0.9231720974 P=0.4311066158 QP=0.3979855987 SBBBorderArea= 0.1682799702 
+BorderRows=226 LIndex=53
+Community numComponents=225 numBlocks=13 Q=0.9128809705 P=0.4541727093 QP=0.4146056236 SBBBorderArea= 0.1578555473 
+BorderRows=212 LIndex=54
+Community numComponents=210 numBlocks=12 Q=0.901797965 P=0.4784729398 QP=0.4314859235 SBBBorderArea= 0.1474311243 
+BorderRows=198 LIndex=55
+Community numComponents=198 numBlocks=11 Q=0.8916383425 P=0.4984746559 QP=0.4444591159 SBBBorderArea= 0.1392405063 
+BorderRows=187 LIndex=56
+Community numComponents=183 numBlocks=10 Q=0.8789087478 P=0.5251452348 QP=0.4615547407 SBBBorderArea= 0.1288160834 
+BorderRows=173 LIndex=57
+Community numComponents=176 numBlocks=9 Q=0.8729513295 P=0.5370079566 QP=0.4687818097 SBBBorderArea= 0.1243484736 
+BorderRows=167 LIndex=58
+Community numComponents=166 numBlocks=8 Q=0.8627858782 P=0.555306373 QP=0.4791104967 SBBBorderArea= 0.1176470588 
+BorderRows=158 LIndex=59
+Community numComponents=152 numBlocks=7 Q=0.8440519528 P=0.5828437216 QP=0.4919503814 SBBBorderArea= 0.1079672375 
+BorderRows=145 LIndex=60
+Community numComponents=143 numBlocks=6 Q=0.8298631423 P=0.6004642805 QP=0.4983031747 SBBBorderArea= 0.1020104244 
+BorderRows=137 LIndex=61
+Community numComponents=119 numBlocks=5 Q=0.7719118609 P=0.6541471625 QP=0.5049439535 SBBBorderArea= 0.0848845867 
+BorderRows=114 LIndex=62
+Community numComponents=104 numBlocks=4 Q=0.7220205033 P=0.6891469028 QP=0.4975781936 SBBBorderArea= 0.0744601638 
+BorderRows=100 LIndex=63
+Community numComponents=89 numBlocks=3 Q=0.6662454454 P=0.7260192826 QP=0.4837070403 SBBBorderArea= 0.0640357409 
+BorderRows=86 LIndex=64
+Community numComponents=48 numBlocks=2 Q=0.4261418065 P=0.8426038361 QP=0.3590687209 SBBBorderArea= 0.0342516754 
+BorderRows=46 LIndex=65
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=49 numBlocks=2 Q=0.4265672101 P=0.8394726474 QP=0.3580915052 SBBBorderArea= 0.034996277 
+BorderRows=47 LIndex=66
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=54 numBlocks=2 Q=0.4285766291 P=0.8239903783 QP=0.3531430188 SBBBorderArea= 0.0387192852 
+BorderRows=52 LIndex=67
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=56 numBlocks=2 Q=0.4293088691 P=0.8178777182 QP=0.3511221582 SBBBorderArea= 0.0402084885 
+BorderRows=54 LIndex=68
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=58 numBlocks=2 Q=0.4301641314 P=0.811810404 QP=0.3492117173 SBBBorderArea= 0.0416976917 
+BorderRows=56 LIndex=69
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=59 numBlocks=2 Q=0.4305921459 P=0.8087936464 QP=0.3482601918 SBBBorderArea= 0.0424422934 
+BorderRows=57 LIndex=70
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=80 numBlocks=2 Q=0.4327124024 P=0.747968332 QP=0.3236551738 SBBBorderArea= 0.0580789278 
+BorderRows=78 LIndex=71
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=81 numBlocks=2 Q=0.4323092689 P=0.745188817 QP=0.3221520327 SBBBorderArea= 0.0588235294 
+BorderRows=79 LIndex=72
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=295 numBlocks=19 Q=0.9398398967 P=0.3659669642 QP=0.3439503538 SBBBorderArea= 0.2010424423 
+BorderRows=270 LIndex=73
+Time in community    0.002 (real)    0.000 (cpu)
+Remove at time    0.110 count=9
+Community numComponents=293 numBlocks=19 Q=0.9398691738 P=0.3673320016 QP=0.3452440249 SBBBorderArea= 0.2002978407 
+BorderRows=269 LIndex=74
+Community numComponents=291 numBlocks=19 Q=0.9398928346 P=0.3687021306 QP=0.3465404906 SBBBorderArea= 0.199553239 
+BorderRows=268 LIndex=75
+Community numComponents=290 numBlocks=19 Q=0.9398831672 P=0.3700773701 QP=0.3478294907 SBBBorderArea= 0.1988086374 
+BorderRows=267 LIndex=76
+Community numComponents=288 numBlocks=19 Q=0.939866254 P=0.3714577391 QP=0.3491205938 SBBBorderArea= 0.1980640357 
+BorderRows=266 LIndex=77
+Community numComponents=286 numBlocks=19 Q=0.9398486362 P=0.3728432569 QP=0.3504162265 SBBBorderArea= 0.1973194341 
+BorderRows=265 LIndex=78
+Community numComponents=278 numBlocks=18 Q=0.9378032581 P=0.3826876671 QP=0.358885741 SBBBorderArea= 0.1921072226 
+BorderRows=258 LIndex=79
+Community numComponents=265 numBlocks=17 Q=0.9328984864 P=0.4001723239 QP=0.3733201553 SBBBorderArea= 0.183172003 
+BorderRows=246 LIndex=80
+Community numComponents=263 numBlocks=17 Q=0.932828075 P=0.4016649455 QP=0.3746843379 SBBBorderArea= 0.1824274013 
+BorderRows=245 LIndex=81
+Community numComponents=260 numBlocks=16 Q=0.9320052167 P=0.4046669118 QP=0.3771516728 SBBBorderArea= 0.1809381981 
+BorderRows=243 LIndex=82
+Community numComponents=255 numBlocks=15 Q=0.9302051317 P=0.4107383203 QP=0.3820708933 SBBBorderArea= 0.1779597915 
+BorderRows=239 LIndex=83
+Community numComponents=246 numBlocks=14 Q=0.9246247823 P=0.4231557806 QP=0.3912603215 SBBBorderArea= 0.1720029784 
+BorderRows=231 LIndex=84
+Community numComponents=233 numBlocks=13 Q=0.9149357691 P=0.4424893893 QP=0.4048493697 SBBBorderArea= 0.1630677587 
+BorderRows=219 LIndex=85
+Community numComponents=220 numBlocks=12 Q=0.9053950254 P=0.4627063333 QP=0.4189320124 SBBBorderArea= 0.1541325391 
+BorderRows=207 LIndex=86
+Community numComponents=208 numBlocks=11 Q=0.8949843369 P=0.4820489542 QP=0.4314262636 SBBBorderArea= 0.1459419211 
+BorderRows=196 LIndex=87
+Community numComponents=197 numBlocks=10 Q=0.8844126692 P=0.50033394 QP=0.4425016754 SBBBorderArea= 0.1384959047 
+BorderRows=186 LIndex=88
+Community numComponents=190 numBlocks=9 Q=0.8766130589 P=0.5116361893 QP=0.448506965 SBBBorderArea= 0.1340282949 
+BorderRows=180 LIndex=89
+Community numComponents=176 numBlocks=8 Q=0.85743089 P=0.5370079566 QP=0.4604472101 SBBBorderArea= 0.1243484736 
+BorderRows=167 LIndex=90
+Community numComponents=161 numBlocks=7 Q=0.8364929988 P=0.565740236 QP=0.4732377465 SBBBorderArea= 0.1139240506 
+BorderRows=153 LIndex=91
+Community numComponents=141 numBlocks=6 Q=0.8003746902 P=0.6072084738 QP=0.4859942941 SBBBorderArea= 0.0997766195 
+BorderRows=134 LIndex=92
+Community numComponents=132 numBlocks=5 Q=0.7832996999 P=0.6255656291 QP=0.4900053695 SBBBorderArea= 0.0938198064 
+BorderRows=126 LIndex=93
+Community numComponents=116 numBlocks=4 Q=0.7393553987 P=0.661494302 QP=0.4890793834 SBBBorderArea= 0.0826507818 
+BorderRows=111 LIndex=94
+Community numComponents=94 numBlocks=3 Q=0.6546611054 P=0.7152874872 QP=0.468270897 SBBBorderArea= 0.0670141474 
+BorderRows=90 LIndex=95
+Community numComponents=59 numBlocks=2 Q=0.4785001178 P=0.811810404 QP=0.3884513739 SBBBorderArea= 0.0416976917 
+BorderRows=56 LIndex=96
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=60 numBlocks=2 Q=0.4788356959 P=0.8087936464 QP=0.3872792686 SBBBorderArea= 0.0424422934 
+BorderRows=57 LIndex=97
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=62 numBlocks=2 Q=0.4795029959 P=0.8027937212 QP=0.3849419944 SBBBorderArea= 0.0439314966 
+BorderRows=59 LIndex=98
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=63 numBlocks=2 Q=0.4798346687 P=0.7998104704 QP=0.3837767921 SBBBorderArea= 0.0446760983 
+BorderRows=60 LIndex=99
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=65 numBlocks=2 Q=0.4802473565 P=0.7938771856 QP=0.3812574198 SBBBorderArea= 0.0461653016 
+BorderRows=62 LIndex=100
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=70 numBlocks=2 Q=0.4796858687 P=0.7792358268 QP=0.3737884145 SBBBorderArea= 0.0498883098 
+BorderRows=67 LIndex=101
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=73 numBlocks=2 Q=0.480520811 P=0.770580946 QP=0.3702801811 SBBBorderArea= 0.0521221147 
+BorderRows=70 LIndex=102
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=76 numBlocks=2 Q=0.481674518 P=0.7620221939 QP=0.3670466729 SBBBorderArea= 0.0543559196 
+BorderRows=73 LIndex=103
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=97 numBlocks=2 Q=0.4847088109 P=0.7047143258 QP=0.3415812429 SBBBorderArea= 0.069992554 
+BorderRows=94 LIndex=104
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=104 numBlocks=2 Q=0.4853274915 P=0.6865859734 QP=0.3332190481 SBBBorderArea= 0.0752047655 
+BorderRows=101 LIndex=105
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=109 numBlocks=2 Q=0.4861339641 P=0.676437069 QP=0.3288390338 SBBBorderArea= 0.078183172 
+BorderRows=105 LIndex=106
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=111 numBlocks=2 Q=0.4867015762 P=0.671419013 QP=0.3267806919 SBBBorderArea= 0.0796723753 
+BorderRows=107 LIndex=107
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=290 numBlocks=18 Q=0.9376579228 P=0.3687021306 QP=0.3457164739 SBBBorderArea= 0.199553239 
+BorderRows=268 LIndex=108
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=293 numBlocks=19 Q=0.9382962838 P=0.3673320016 QP=0.344666252 SBBBorderArea= 0.2002978407 
+BorderRows=269 LIndex=109
+Time in community    0.002 (real)    0.000 (cpu)
+Remove at time    0.154 count=14
+Community numComponents=291 numBlocks=19 Q=0.9383887125 P=0.3687021306 QP=0.3459859176 SBBBorderArea= 0.199553239 
+BorderRows=268 LIndex=110
+Community numComponents=289 numBlocks=19 Q=0.9384024566 P=0.3700773701 QP=0.3472815132 SBBBorderArea= 0.1988086374 
+BorderRows=267 LIndex=111
+Community numComponents=287 numBlocks=19 Q=0.9383832429 P=0.3714577391 QP=0.3485697179 SBBBorderArea= 0.1980640357 
+BorderRows=266 LIndex=112
+Community numComponents=286 numBlocks=19 Q=0.9383636616 P=0.3728432569 QP=0.3498625637 SBBBorderArea= 0.1973194341 
+BorderRows=265 LIndex=113
+Community numComponents=284 numBlocks=19 Q=0.9383238439 P=0.3742339425 QP=0.3511526315 SBBBorderArea= 0.1965748325 
+BorderRows=264 LIndex=114
+Community numComponents=282 numBlocks=19 Q=0.9382701571 P=0.3756298154 QP=0.3524422459 SBBBorderArea= 0.1958302308 
+BorderRows=263 LIndex=115
+Community numComponents=274 numBlocks=18 Q=0.9367243316 P=0.3855478008 QP=0.361152006 SBBBorderArea= 0.1906180194 
+BorderRows=256 LIndex=116
+Community numComponents=271 numBlocks=17 Q=0.9360987731 P=0.3884293106 QP=0.3636082011 SBBBorderArea= 0.1891288161 
+BorderRows=254 LIndex=117
+Community numComponents=260 numBlocks=16 Q=0.9312484567 P=0.4031631346 QP=0.3754450469 SBBBorderArea= 0.1816827997 
+BorderRows=244 LIndex=118
+Community numComponents=247 numBlocks=15 Q=0.925573704 P=0.4215832972 QP=0.3902064139 SBBBorderArea= 0.17274758 
+BorderRows=232 LIndex=119
+Community numComponents=240 numBlocks=14 Q=0.9225721698 P=0.4311066158 QP=0.3977269659 SBBBorderArea= 0.1682799702 
+BorderRows=226 LIndex=120
+Community numComponents=232 numBlocks=13 Q=0.9189955899 P=0.4424893893 QP=0.4066457974 SBBBorderArea= 0.1630677587 
+BorderRows=219 LIndex=121
+Community numComponents=217 numBlocks=12 Q=0.9086849343 P=0.4661645111 QP=0.4235966681 SBBBorderArea= 0.1526433358 
+BorderRows=205 LIndex=122
+Community numComponents=200 numBlocks=11 Q=0.8949467007 P=0.4947767897 QP=0.4427988555 SBBBorderArea= 0.1407297096 
+BorderRows=189 LIndex=123
+Community numComponents=188 numBlocks=10 Q=0.8851839967 P=0.5154600594 QP=0.4562769955 SBBBorderArea= 0.1325390916 
+BorderRows=178 LIndex=124
+Community numComponents=178 numBlocks=9 Q=0.8746920816 P=0.5330242364 QP=0.4662320789 SBBBorderArea= 0.1258376768 
+BorderRows=169 LIndex=125
+Community numComponents=164 numBlocks=8 Q=0.860029707 P=0.5594566256 QP=0.4811493178 SBBBorderArea= 0.1161578555 
+BorderRows=156 LIndex=126
+Community numComponents=154 numBlocks=7 Q=0.8482284708 P=0.578519975 QP=0.4907171137 SBBBorderArea= 0.1094564408 
+BorderRows=147 LIndex=127
+Community numComponents=141 numBlocks=6 Q=0.8274354356 P=0.6049520346 QP=0.5005587503 SBBBorderArea= 0.1005212211 
+BorderRows=135 LIndex=128
+Community numComponents=113 numBlocks=5 Q=0.7573472544 P=0.6689239619 QP=0.506607726 SBBBorderArea= 0.0804169769 
+BorderRows=108 LIndex=129
+Community numComponents=98 numBlocks=4 Q=0.7098142685 P=0.7047143258 QP=0.5002162836 SBBBorderArea= 0.069992554 
+BorderRows=94 LIndex=130
+Community numComponents=83 numBlocks=3 Q=0.663967145 P=0.742419631 QP=0.4929422428 SBBBorderArea= 0.059568131 
+BorderRows=80 LIndex=131
+Community numComponents=45 numBlocks=2 Q=0.4177409078 P=0.8520676514 QP=0.3559435142 SBBBorderArea= 0.0320178704 
+BorderRows=43 LIndex=132
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=46 numBlocks=2 Q=0.4182240702 P=0.8489012944 QP=0.3550309546 SBBBorderArea= 0.0327624721 
+BorderRows=44 LIndex=133
+Time in community    0.003 (real)    0.010 (cpu)
+Community numComponents=47 numBlocks=2 Q=0.4186472572 P=0.8457467039 QP=0.3540695379 SBBBorderArea= 0.0335070737 
+BorderRows=45 LIndex=134
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=49 numBlocks=2 Q=0.4192524821 P=0.8394726474 QP=0.3519509911 SBBBorderArea= 0.034996277 
+BorderRows=47 LIndex=135
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=56 numBlocks=2 Q=0.4192639957 P=0.8178777182 QP=0.3429066801 SBBBorderArea= 0.0402084885 
+BorderRows=54 LIndex=136
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=59 numBlocks=2 Q=0.4209830936 P=0.8087936464 QP=0.3404884513 SBBBorderArea= 0.0424422934 
+BorderRows=57 LIndex=137
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=62 numBlocks=2 Q=0.4220914127 P=0.7998104704 QP=0.3375931314 SBBBorderArea= 0.0446760983 
+BorderRows=60 LIndex=138
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=63 numBlocks=2 Q=0.4225230793 P=0.7968383056 QP=0.3366825746 SBBBorderArea= 0.0454206999 
+BorderRows=61 LIndex=139
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=65 numBlocks=2 Q=0.4233256949 P=0.7909270694 QP=0.3348197513 SBBBorderArea= 0.0469099032 
+BorderRows=63 LIndex=140
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=95 numBlocks=2 Q=0.4291977158 P=0.707342873 QP=0.3035899454 SBBBorderArea= 0.0692479523 
+BorderRows=93 LIndex=141
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=98 numBlocks=2 Q=0.4288804765 P=0.6994864988 QP=0.2999961029 SBBBorderArea= 0.0714817573 
+BorderRows=96 LIndex=142
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=99 numBlocks=2 Q=0.4290695374 P=0.6968871465 QP=0.2990130456 SBBBorderArea= 0.0722263589 
+BorderRows=97 LIndex=143
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=287 numBlocks=18 Q=0.9385272362 P=0.3687021306 QP=0.3460369916 SBBBorderArea= 0.199553239 
+BorderRows=268 LIndex=144
+Time in community    0.002 (real)    0.000 (cpu)
+Remove at time    0.196 count=13
+Community numComponents=285 numBlocks=18 Q=0.9385629706 P=0.3700773701 QP=0.3473409158 SBBBorderArea= 0.1988086374 
+BorderRows=267 LIndex=145
+Community numComponents=275 numBlocks=17 Q=0.9363523654 P=0.3826876671 QP=0.3583305023 SBBBorderArea= 0.1921072226 
+BorderRows=258 LIndex=146
+Community numComponents=266 numBlocks=16 Q=0.9336857486 P=0.3942570987 QP=0.3681122344 SBBBorderArea= 0.1861504095 
+BorderRows=250 LIndex=147
+Community numComponents=249 numBlocks=15 Q=0.9275803093 P=0.418455839 QP=0.3881513966 SBBBorderArea= 0.1742367833 
+BorderRows=234 LIndex=148
+Community numComponents=241 numBlocks=14 Q=0.9238558851 P=0.4295045863 QP=0.3968003398 SBBBorderArea= 0.1690245719 
+BorderRows=227 LIndex=149
+Community numComponents=232 numBlocks=13 Q=0.9196069597 P=0.4424893893 QP=0.406916322 SBBBorderArea= 0.1630677587 
+BorderRows=219 LIndex=150
+Community numComponents=217 numBlocks=12 Q=0.9106810044 P=0.4661645111 QP=0.4245271652 SBBBorderArea= 0.1526433358 
+BorderRows=205 LIndex=151
+Community numComponents=202 numBlocks=11 Q=0.9016337286 P=0.4911063556 QP=0.4427980545 SBBBorderArea= 0.1422189129 
+BorderRows=191 LIndex=152
+Community numComponents=190 numBlocks=10 Q=0.8916236419 P=0.5116361893 QP=0.4561869224 SBBBorderArea= 0.1340282949 
+BorderRows=180 LIndex=153
+Community numComponents=176 numBlocks=9 Q=0.8760746673 P=0.5370079566 QP=0.4704590669 SBBBorderArea= 0.1243484736 
+BorderRows=167 LIndex=154
+Community numComponents=166 numBlocks=8 Q=0.865062065 P=0.555306373 QP=0.4803744778 SBBBorderArea= 0.1176470588 
+BorderRows=158 LIndex=155
+Community numComponents=151 numBlocks=7 Q=0.8447835056 P=0.5850176979 QP=0.4942133016 SBBBorderArea= 0.1072226359 
+BorderRows=144 LIndex=156
+Community numComponents=138 numBlocks=6 Q=0.825298503 P=0.6117466326 QP=0.5048735801 SBBBorderArea= 0.0982874162 
+BorderRows=132 LIndex=157
+Community numComponents=117 numBlocks=5 Q=0.7618229281 P=0.6590361321 QP=0.5020688359 SBBBorderArea= 0.0833953835 
+BorderRows=112 LIndex=158
+Community numComponents=102 numBlocks=4 Q=0.7138313259 P=0.6942974537 QP=0.495611272 SBBBorderArea= 0.0729709605 
+BorderRows=98 LIndex=159
+Community numComponents=88 numBlocks=3 Q=0.6655370209 P=0.7287272962 QP=0.4849949938 SBBBorderArea= 0.0632911392 
+BorderRows=85 LIndex=160
+Best Goodness=0.506607726 LIndex=129 in    0.201 (real)    0.200 (cpu) - total time in Comm    0.157
+Community numComponents=113 numBlocks=5 Q=0.7573472544 P=0.6689239619 QP=0.506607726 SBBBorderArea= 0.0804169769 
+BorderRows=108 LIndex=161
+Final goodness:0.506607726
+TIME----BDFTime: 0.1123049259 BDFGood: 0.2212520966 CommTime: 0.2011179924 CommRemove: 0.1629588604 CommMerge: 
+0.0339286327 CommGood: 0.506607726 DBDF: 1 CommNBlocks: 5 HitMaxTime: 0
+STAT: 0.1123049259 0.2212520966 0.2011179924 0.1629588604 0.0339286327 0.506607726 1 5 0
+Using community decomposition with goodness=0.506607726
+NOTE: The problem has a decomposable structure with 5 blocks. The largest block covers 32.69% of the constraints in the 
+      problem.
+NOTE: The decomposition subproblems cover 621 (100%) variables and 1235 (91.96%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .     317.3295    2541.0854    2541.0854  700.77%  700.77%    2    1
+         .     317.3295    2541.0854    2541.0854  700.77%  700.77%    3    3
+        10     317.3295    2541.0854    2541.0854  700.77%  700.77%    3    3
+        16     317.3295    2161.6079    2161.6079  581.19%  581.19%    5    4
+         .     317.3295    1877.8526    2161.6079  491.77%  581.19%    7    6
+        20     317.3295    1877.8526    2161.6079  491.77%  581.19%    7    6
+        30     317.3295     950.6467    2161.6079  199.58%  581.19%   14   11
+        34     317.3295     903.3450    2147.6674  184.67%  576.79%   16   13
+         .     317.3295     763.4650    2147.6674  140.59%  576.79%   23   19
+        40     317.3295     763.4650    2147.6674  140.59%  576.79%   25   20
+        50     317.3295     655.7564    2147.6674  106.65%  576.79%   38   29
+        60     327.5969     587.4952    2147.6674   79.33%  555.58%   57   42
+        62     356.3955     579.1761    2147.6674   62.51%  502.61%   61   45
+        64     387.9422     574.8270    2147.6674   48.17%  453.61%   65   48
+        68     388.9999     558.4265    2147.6674   43.55%  452.10%   73   54
+        70     402.4357     553.4464    2147.6674   37.52%  433.67%   77   57
+        72     416.1076     548.0412    2147.6674   31.71%  416.13%   84   63
+        77     442.7992     539.6042    2147.6674   21.86%  385.02%   98   74
+         .     442.7992     534.8697    2147.6674   20.79%  385.02%  103   77
+        80     442.7992     534.8697    2147.6674   20.79%  385.02%  107   81
+        81     448.3509     534.1474    2147.6674   19.14%  379.01%  111   84
+        82     451.6572     533.9089    2147.6674   18.21%  375.51%  114   86
+        83     456.3307     533.1903    2147.6674   16.84%  370.64%  117   88
+        88     472.6791     527.6210    2147.6674   11.62%  354.36%  131   99
+        89     480.9289     527.4660    2147.6674    9.68%  346.57%  137  105
+        90     480.9289     527.2783    2147.6674    9.64%  346.57%  140  107
+       100     480.9289     521.4584    2147.6674    8.43%  346.57%  180  141
+       104     492.6899     519.5199    2147.6674    5.45%  335.91%  194  152
+       110     492.6899     517.1810    2147.6674    4.97%  335.91%  216  170
+       120     492.6899     511.9655    2147.6674    3.91%  335.91%  251  200
+       130     492.6899     510.0017    2147.6674    3.51%  335.91%  286  228
+       140     492.6899     509.2549    2147.6674    3.36%  335.91%  331  272
+       141     497.5066     509.2520    2147.6674    2.36%  331.69%  334  274
+       143     498.3241     509.0975    2147.6674    2.16%  330.98%  344  282
+       150     498.3241     508.6990    2147.6674    2.08%  330.98%  373  310
+         .     498.3241     508.2251    2147.6674    1.99%  330.98%  409  347
+       160     498.3241     508.2251    2147.6674    1.99%  330.98%  412  351
+       163     500.1952     508.0119    2147.6674    1.56%  329.37%  428  365
+       170     500.1952     507.8745    2147.6674    1.54%  329.37%  451  386
+       180     500.1952     507.7399    2147.6674    1.51%  329.37%  484  420
+       181     506.5191     507.7242    2147.6674    0.24%  324.01%  490  426
+       182     506.5248     507.7071    2147.6674    0.23%  324.00%  496  431
+       190     506.5248     507.6926    2147.6674    0.23%  324.00%  540  475
+       200     506.5248     507.6793    2147.6674    0.23%  324.00%  596  532
+       201     507.4440     507.6739    2147.6674    0.05%  323.23%  601  537
+       202     507.6180     507.6735    2147.6674    0.01%  323.09%  608  543
+       203     507.6375     507.6735    2147.6674    0.01%  323.07%  615  549
+NOTE: The Decomposition algorithm stopped on the continuous RELOBJGAP= option.
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1     10    2147.6674     507.6375  323.07%    616    550
+           10      12     10    2147.6674     512.7940  318.82%   1694   1386
+           20       2     11     513.8607     513.4711    0.08%   1902   1517
+           22       0     13     513.5708     513.5708    0.00%   1937   1544
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 1544.43 seconds.
+NOTE: Optimal within relative gap.
+NOTE: Objective = 513.5708208.
+NOTE: There were 5642 observations read from the data set LIB.NEOS_512201.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           25:44.53
+      user cpu time       32:17.44
+      system cpu time     1:43.19
+      memory              167536.21k
+      OS Memory           176724.00k
+      Timestamp           12/18/2017 04:00:27 PM
+      Step Count                        1  Switch Count  389
+      Page Faults                       0
+      Page Reclaims                     3244813
+      Page Swaps                        0
+      Voluntary Context Switches        44972
+      Involuntary Context Switches      5498
+      Block Input Operations            456
+      Block Output Operations           192
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL_RGAP OBJECTIVE=513.5708208 RELATIVE_GAP=5.22E-11 
+      ABSOLUTE_GAP=2.6784676E-8 PRIMAL_INFEASIBILITY=5.684342E-14 BOUND_INFEASIBILITY=1.776357E-15 
+      INTEGER_INFEASIBILITY=1.776357E-15 BEST_BOUND=513.57082077 NODES=23 ITERATIONS=1766 PRESOLVE_TIME=0.05 
+      SOLUTION_TIME=1544.43
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           25:44.70
+      user cpu time       32:17.46
+      system cpu time     1:43.22
+      memory              173791.12k
+      OS Memory           176724.00k
+      Timestamp           12/18/2017 04:00:27 PM
+      Step Count                        1  Switch Count  1178
+      Page Faults                       0
+      Page Reclaims                     3250093
+      Page Swaps                        0
+      Voluntary Context Switches        45641
+      Involuntary Context Switches      5503
+      Block Input Operations            464
+      Block Output Operations           296
+      
+
+

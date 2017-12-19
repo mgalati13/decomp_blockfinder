@@ -1,0 +1,108 @@
+NOTE: Log file opened at Mon, 18 Dec 2017 16:02:28.620
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12132017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.12 seconds
+      cpu time            0.05 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171218_decomp_auto_v940m5b_keebi_hybrid_auto4_b
+      ench/_scripts/mitre.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.MITRE.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem MITRE has 10724 variables (10724 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 2054 constraints (1288 LE, 383 EQ, 383 GE, 0 range).
+NOTE: The problem has 39704 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 5786 variables and 922 constraints.
+NOTE: The MILP presolver removed 24488 constraint coefficients.
+NOTE: The MILP presolver modified 2339 constraint coefficients.
+NOTE: The presolved problem has 4938 variables, 1132 constraints, and 15216 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      1         116145       -2617710  104.44%       1
+             0        1      1         116145         115155    0.86%       1
+             0        1      1         116145         115155    0.86%       1
+             0        1      1         116145         115155    0.86%       1
+             0        1      1         116145         115155    0.86%       1
+             0        0      2         115155         115155    0.00%       1
+NOTE: The MILP solver added 24 cuts with 473 cut coefficients at the root.
+NOTE: Optimal.
+NOTE: Objective = 115155.
+NOTE: There were 41394 observations read from the data set LIB.MITRE.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           1.93 seconds
+      user cpu time       1.65 seconds
+      system cpu time     0.22 seconds
+      memory              52842.40k
+      OS Memory           61080.00k
+      Timestamp           12/18/2017 04:02:30 PM
+      Step Count                        1  Switch Count  20
+      Page Faults                       0
+      Page Reclaims                     7693
+      Page Swaps                        0
+      Voluntary Context Switches        259
+      Involuntary Context Switches      61
+      Block Input Operations            3560
+      Block Output Operations           8
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL OBJECTIVE=115155 RELATIVE_GAP=0 ABSOLUTE_GAP=0 
+      PRIMAL_INFEASIBILITY=1.136868E-13 BOUND_INFEASIBILITY=0 INTEGER_INFEASIBILITY=2.220446E-16 BEST_BOUND=115155 
+      NODES=1 ITERATIONS=1288 PRESOLVE_TIME=1.46 SOLUTION_TIME=1.72
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           2.10 seconds
+      user cpu time       1.68 seconds
+      system cpu time     0.25 seconds
+      memory              59097.31k
+      OS Memory           61080.00k
+      Timestamp           12/18/2017 04:02:30 PM
+      Step Count                        1  Switch Count  71
+      Page Faults                       0
+      Page Reclaims                     12984
+      Page Swaps                        0
+      Voluntary Context Switches        941
+      Involuntary Context Switches      67
+      Block Input Operations            3568
+      Block Output Operations           112
+      
+
+

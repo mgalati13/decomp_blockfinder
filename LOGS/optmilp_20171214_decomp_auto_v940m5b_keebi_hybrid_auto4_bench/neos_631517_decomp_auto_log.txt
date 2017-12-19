@@ -1,0 +1,2049 @@
+NOTE: Log file opened at Fri, 15 Dec 2017 05:25:58.594
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12132017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.06 seconds
+      cpu time            0.03 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171214_decomp_auto_v940m5b_keebi_hybrid_auto4_b
+      ench/_scripts/neos_631517.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.NEOS_631517.DATA is in a format that is native to another host, or the file encoding does not match 
+      the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources 
+      and might reduce performance.
+NOTE: The problem file has 1090 variables (859 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 351 constraints (184 LE, 167 EQ, 0 GE, 0 range).
+NOTE: The problem has 2743 constraint coefficients.
+NOTE: The following columns have no constraint coefficients:
+      C0001
+      C0003
+      C0005
+      C0006
+      C0007
+      C0008
+      C0014
+      C0015
+      C0021
+      C0022
+      C0029
+      C0035
+NOTE: The above is a partial list of empty columns; the complete list would have 47 entries.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 54 variables and 7 constraints.
+NOTE: The MILP presolver removed 14 constraint coefficients.
+NOTE: The MILP presolver modified 22 constraint coefficients.
+NOTE: The presolved problem has 1036 variables, 344 constraints, and 2729 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      5       19984728              0  1.998E7       0
+             0        1      5       19984728        6519542  206.54%       0
+NOTE: The MILP solver's symmetry detection found 1024 orbits. The largest orbit contains 2 variables.
+             0        1      7       12849408        7241085   77.45%       0
+             0        1      7       12849408        8589240   49.60%       0
+             0        1      7       12849408       10258033   25.26%       0
+             0        1      7       12849408       10675014   20.37%       0
+             0        1      7       12849408       11340071   13.31%       0
+             0        1      7       12849408       11389220   12.82%       0
+             0        1      7       12849408       11418182   12.53%       0
+             0        1      7       12849408       11451079   12.21%       0
+             0        1      7       12849408       11459716   12.13%       0
+             0        1      7       12849408       11480454   11.92%       1
+             0        1      7       12849408       11480454   11.92%       1
+             0        1      7       12849408       11480454   11.92%       1
+             0        1      7       12849408       11480703   11.92%       1
+             0        1      7       12849408       11480703   11.92%       1
+             0        1      8       12849408       11480703   11.92%       1
+NOTE: The MILP solver added 212 cuts with 1396 cut coefficients at the root.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+nBlocksTry=22 nRowsOrig=556 nColsOrig=1036 nLinkCons=68 nLinkVars=2 nLinksConsOrig=66 borderAreaR=0.118705036 
+borderAreaC=0.0019305019
+nBlocksTry=22 nBlocksUsed=44 Q=0.9634661695 PR=0.5523766216 PC=0.9621258279 G=0.5120396977 BorderAreaR=0.118705036 
+BorderAreaC=0.0019305019 BorderRows=66 BorderCols=2
+nBlocksTry=21 nRowsOrig=556 nColsOrig=1036 nLinkCons=74 nLinkVars=1 nLinksConsOrig=73 borderAreaR=0.131294964 
+borderAreaC=0.000965251
+nBlocksTry=21 nBlocksUsed=38 Q=0.962877033 PR=0.5186765436 PC=0.9808801292 G=0.4898728525 BorderAreaR=0.131294964 
+BorderAreaC=0.000965251 BorderRows=73 BorderCols=1
+nBlocksTry=20 nRowsOrig=556 nColsOrig=1036 nLinkCons=66 nLinkVars=1 nLinksConsOrig=65 borderAreaR=0.1169064748 
+borderAreaC=0.000965251
+nBlocksTry=20 nBlocksUsed=38 Q=0.9629737041 PR=0.5573664399 PC=0.9808801292 G=0.5264670317 BorderAreaR=0.1169064748 
+BorderAreaC=0.000965251 BorderRows=65 BorderCols=1
+nBlocksTry=19 nRowsOrig=556 nColsOrig=1036 nLinkCons=67 nLinkVars=1 nLinksConsOrig=66 borderAreaR=0.118705036 
+borderAreaC=0.000965251
+nBlocksTry=19 nBlocksUsed=40 Q=0.9649271186 PR=0.5523766216 PC=0.9808801292 G=0.5228122299 BorderAreaR=0.118705036 
+BorderAreaC=0.000965251 BorderRows=66 BorderCols=1
+nBlocksTry=18 nRowsOrig=556 nColsOrig=1036 nLinkCons=68 nLinkVars=0 nLinksConsOrig=68 borderAreaR=0.1223021583 
+borderAreaC=0
+nBlocksTry=18 nBlocksUsed=42 Q=0.9628452824 PR=0.5425305991 PC=1 G=0.5223730279 BorderAreaR=0.1223021583 BorderAreaC=0 
+BorderRows=68 BorderCols=0
+nBlocksTry=17 nRowsOrig=556 nColsOrig=1036 nLinkCons=62 nLinkVars=0 nLinksConsOrig=62 borderAreaR=0.1115107914 
+borderAreaC=0
+nBlocksTry=17 nBlocksUsed=38 Q=0.9633786593 PR=0.5726079761 PC=1 G=0.5516383043 BorderAreaR=0.1115107914 BorderAreaC=0 
+BorderRows=62 BorderCols=0
+nBlocksTry=16 nRowsOrig=556 nColsOrig=1036 nLinkCons=62 nLinkVars=0 nLinksConsOrig=62 borderAreaR=0.1115107914 
+borderAreaC=0
+nBlocksTry=16 nBlocksUsed=38 Q=0.9633786593 PR=0.5726079761 PC=1 G=0.5516383043 BorderAreaR=0.1115107914 BorderAreaC=0 
+BorderRows=62 BorderCols=0
+nBlocksTry=15 nRowsOrig=556 nColsOrig=1036 nLinkCons=48 nLinkVars=0 nLinksConsOrig=48 borderAreaR=0.0863309353 
+borderAreaC=0
+nBlocksTry=15 nBlocksUsed=31 Q=0.9626348616 PR=0.6494336028 PC=1 G=0.6251674263 BorderAreaR=0.0863309353 BorderAreaC=0 
+BorderRows=48 BorderCols=0
+nBlocksTry=14 nRowsOrig=556 nColsOrig=1036 nLinkCons=42 nLinkVars=0 nLinksConsOrig=42 borderAreaR=0.0755395683 
+borderAreaC=0
+nBlocksTry=14 nBlocksUsed=34 Q=0.9629059634 PR=0.68543758 PC=1 G=0.6600119334 BorderAreaR=0.0755395683 BorderAreaC=0 
+BorderRows=42 BorderCols=0
+nBlocksTry=13 nRowsOrig=556 nColsOrig=1036 nLinkCons=47 nLinkVars=2 nLinksConsOrig=45 borderAreaR=0.0809352518 
+borderAreaC=0.0019305019
+nBlocksTry=13 nBlocksUsed=32 Q=0.9629514918 PR=0.6671927736 PC=0.9621258279 G=0.6181410953 BorderAreaR=0.0809352518 
+BorderAreaC=0.0019305019 BorderRows=45 BorderCols=2
+nBlocksTry=12 nRowsOrig=556 nColsOrig=1036 nLinkCons=46 nLinkVars=0 nLinksConsOrig=46 borderAreaR=0.0827338129 
+borderAreaC=0
+nBlocksTry=12 nBlocksUsed=31 Q=0.962872092 PR=0.661219736 PC=1 G=0.6366700305 BorderAreaR=0.0827338129 BorderAreaC=0 
+BorderRows=46 BorderCols=0
+nBlocksTry=11 nRowsOrig=556 nColsOrig=1036 nLinkCons=36 nLinkVars=0 nLinksConsOrig=36 borderAreaR=0.0647482014 
+borderAreaC=0
+nBlocksTry=11 nBlocksUsed=30 Q=0.9630659082 PR=0.7234375832 PC=1 G=0.6967180731 BorderAreaR=0.0647482014 BorderAreaC=0 
+BorderRows=36 BorderCols=0
+nBlocksTry=10 nRowsOrig=556 nColsOrig=1036 nLinkCons=44 nLinkVars=0 nLinksConsOrig=44 borderAreaR=0.0791366906 
+borderAreaC=0
+nBlocksTry=10 nBlocksUsed=31 Q=0.9645375326 PR=0.6732197678 PC=1 G=0.6493457337 BorderAreaR=0.0791366906 BorderAreaC=0 
+BorderRows=44 BorderCols=0
+nBlocksTry=9 nRowsOrig=556 nColsOrig=1036 nLinkCons=34 nLinkVars=0 nLinksConsOrig=34 borderAreaR=0.0611510791 
+borderAreaC=0
+nBlocksTry=9 nBlocksUsed=30 Q=0.9631179188 PR=0.7365667648 PC=1 G=0.7094006496 BorderAreaR=0.0611510791 BorderAreaC=0 
+BorderRows=34 BorderCols=0
+nBlocksTry=8 nRowsOrig=556 nColsOrig=1036 nLinkCons=34 nLinkVars=0 nLinksConsOrig=34 borderAreaR=0.0611510791 
+borderAreaC=0
+nBlocksTry=8 nBlocksUsed=30 Q=0.9631179188 PR=0.7365667648 PC=1 G=0.7094006496 BorderAreaR=0.0611510791 BorderAreaC=0 
+BorderRows=34 BorderCols=0
+nBlocksTry=7 nRowsOrig=556 nColsOrig=1036 nLinkCons=34 nLinkVars=0 nLinksConsOrig=34 borderAreaR=0.0611510791 
+borderAreaC=0
+nBlocksTry=7 nBlocksUsed=30 Q=0.9631179188 PR=0.7365667648 PC=1 G=0.7094006496 BorderAreaR=0.0611510791 BorderAreaC=0 
+BorderRows=34 BorderCols=0
+nBlocksTry=6 nRowsOrig=556 nColsOrig=1036 nLinkCons=34 nLinkVars=0 nLinksConsOrig=34 borderAreaR=0.0611510791 
+borderAreaC=0
+nBlocksTry=6 nBlocksUsed=30 Q=0.9631179188 PR=0.7365667648 PC=1 G=0.7094006496 BorderAreaR=0.0611510791 BorderAreaC=0 
+BorderRows=34 BorderCols=0
+nBlocksTry=5 nRowsOrig=556 nColsOrig=1036 nLinkCons=34 nLinkVars=0 nLinksConsOrig=34 borderAreaR=0.0611510791 
+borderAreaC=0
+nBlocksTry=5 nBlocksUsed=30 Q=0.9631179188 PR=0.7365667648 PC=1 G=0.7094006496 BorderAreaR=0.0611510791 BorderAreaC=0 
+BorderRows=34 BorderCols=0
+nBlocksTry=4 nRowsOrig=556 nColsOrig=1036 nLinkCons=34 nLinkVars=0 nLinksConsOrig=34 borderAreaR=0.0611510791 
+borderAreaC=0
+nBlocksTry=4 nBlocksUsed=30 Q=0.9631179188 PR=0.7365667648 PC=1 G=0.7094006496 BorderAreaR=0.0611510791 BorderAreaC=0 
+BorderRows=34 BorderCols=0
+nBlocksTry=3 nRowsOrig=556 nColsOrig=1036 nLinkCons=33 nLinkVars=1 nLinksConsOrig=32 borderAreaR=0.0575539568 
+borderAreaC=0.000965251
+nBlocksTry=3 nBlocksUsed=23 Q=0.8781088504 PR=0.7499342191 PC=0.9808801292 G=0.6459329836 BorderAreaR=0.0575539568 
+BorderAreaC=0.000965251 BorderRows=32 BorderCols=1
+nBlocksTry=2 nRowsOrig=556 nColsOrig=1036 nLinkCons=24 nLinkVars=1 nLinksConsOrig=23 borderAreaR=0.0413669065 
+borderAreaC=0.000965251
+nBlocksTry=2 nBlocksUsed=13 Q=0.7304910156 PR=0.8131541895 PC=0.9808801292 G=0.5826445916 BorderAreaR=0.0413669065 
+BorderAreaC=0.000965251 BorderRows=23 BorderCols=1
+Time in community    0.004 (real)    0.000 (cpu)
+Community numComponents=3 numBlocks=1 Q=0 P=0.9910475086 QP=0 SBBBorderArea= 0.0017985612 BorderRows=1 LIndex=0
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=5 numBlocks=1 Q=0 P=0.9821751643 QP=0 SBBBorderArea= 0.0035971223 BorderRows=2 LIndex=1
+Time in community    0.003 (real)    0.010 (cpu)
+Community numComponents=6 numBlocks=1 Q=0 P=0.9733822495 QP=0 SBBBorderArea= 0.0053956835 BorderRows=3 LIndex=2
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=8 numBlocks=1 Q=0 P=0.9646680533 QP=0 SBBBorderArea= 0.0071942446 BorderRows=4 LIndex=3
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=9 numBlocks=1 Q=0 P=0.9560318709 QP=0 SBBBorderArea= 0.0089928058 BorderRows=5 LIndex=4
+Time in community    0.003 (real)    0.010 (cpu)
+Community numComponents=11 numBlocks=1 Q=0 P=0.9474730037 QP=0 SBBBorderArea= 0.0107913669 BorderRows=6 LIndex=5
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=16 numBlocks=1 Q=0 P=0.9139969381 QP=0 SBBBorderArea= 0.0179856115 BorderRows=10 LIndex=6
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=18 numBlocks=1 Q=0 P=0.9058143883 QP=0 SBBBorderArea= 0.0197841727 BorderRows=11 LIndex=7
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=19 numBlocks=1 Q=0 P=0.8977050928 QP=0 SBBBorderArea= 0.0215827338 BorderRows=12 LIndex=8
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=21 numBlocks=1 Q=0 P=0.8896683957 QP=0 SBBBorderArea= 0.023381295 BorderRows=13 LIndex=9
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=25 numBlocks=3 Q=0.0737467685 P=0.881703647 QP=0.0650227948 SBBBorderArea= 0.0251798561 
+BorderRows=14 LIndex=10
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=29 numBlocks=3 Q=0.0747660816 P=0.8659874243 QP=0.0647464864 SBBBorderArea= 0.0287769784 
+BorderRows=16 LIndex=11
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=30 numBlocks=3 Q=0.0753198228 P=0.8582346793 QP=0.064642084 SBBBorderArea= 0.0305755396 
+BorderRows=17 LIndex=12
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=31 numBlocks=3 Q=0.0759725168 P=0.8505513407 QP=0.064618526 SBBBorderArea= 0.0323741007 
+BorderRows=18 LIndex=13
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=37 numBlocks=7 Q=0.2288428301 P=0.8429367872 QP=0.19290004 SBBBorderArea= 0.0341726619 
+BorderRows=19 LIndex=14
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=38 numBlocks=7 Q=0.2303561293 P=0.8353904028 QP=0.1924372997 SBBBorderArea= 0.035971223 
+BorderRows=20 LIndex=15
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=50 numBlocks=11 Q=0.4349803798 P=0.7986598497 QP=0.3474013648 SBBBorderArea= 0.0449640288 
+BorderRows=25 LIndex=16
+Time in community    0.002 (real)    0.010 (cpu)
+Community numComponents=55 numBlocks=13 Q=0.5263766623 P=0.7844238691 QP=0.412902418 SBBBorderArea= 0.0485611511 
+BorderRows=27 LIndex=17
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=58 numBlocks=14 Q=0.5751993702 P=0.7704416425 QP=0.4431575475 SBBBorderArea= 0.0521582734 
+BorderRows=29 LIndex=18
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=64 numBlocks=18 Q=0.7249253376 P=0.7635442703 QP=0.5535125879 SBBBorderArea= 0.0539568345 
+BorderRows=30 LIndex=19
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=70 numBlocks=22 Q=0.8660855314 P=0.7567086468 QP=0.6553744105 SBBBorderArea= 0.0557553957 
+BorderRows=31 LIndex=20
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=76 numBlocks=24 Q=0.9123246263 P=0.7299726572 QP=0.6659720317 SBBBorderArea= 0.0629496403 
+BorderRows=35 LIndex=21
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=84 numBlocks=30 Q=0.9631470105 P=0.7234375832 QP=0.6967767456 SBBBorderArea= 0.0647482014 
+BorderRows=36 LIndex=22
+Time in community    0.002 (real)    0.000 (cpu)
+Remove at time    0.065 count=24
+Community numComponents=83 numBlocks=30 Q=0.9631351262 P=0.7299726572 QP=0.7030623073 SBBBorderArea= 0.0629496403 
+BorderRows=35 LIndex=23
+Community numComponents=82 numBlocks=30 Q=0.9631179188 P=0.7365667648 QP=0.7094006496 SBBBorderArea= 0.0611510791 
+BorderRows=34 LIndex=24
+Community numComponents=75 numBlocks=25 Q=0.9284121901 P=0.7432204394 QP=0.6900149159 SBBBorderArea= 0.059352518 
+BorderRows=33 LIndex=25
+Community numComponents=73 numBlocks=24 Q=0.9103450722 P=0.7499342191 QP=0.6826989209 SBBBorderArea= 0.0575539568 
+BorderRows=32 LIndex=26
+Community numComponents=65 numBlocks=20 Q=0.8174794105 P=0.7704416425 QP=0.6298201797 SBBBorderArea= 0.0521582734 
+BorderRows=29 LIndex=27
+Community numComponents=63 numBlocks=20 Q=0.8141968673 P=0.7774013211 QP=0.6329577203 SBBBorderArea= 0.0503597122 
+BorderRows=28 LIndex=28
+Community numComponents=62 numBlocks=20 Q=0.810921568 P=0.7844238691 QP=0.6361062339 SBBBorderArea= 0.0485611511 
+BorderRows=27 LIndex=29
+Community numComponents=59 numBlocks=20 Q=0.8032643573 P=0.7986598497 QP=0.6415349909 SBBBorderArea= 0.0449640288 
+BorderRows=25 LIndex=30
+Community numComponents=50 numBlocks=13 Q=0.7267545702 P=0.8058744336 QP=0.5856729276 SBBBorderArea= 0.0431654676 
+BorderRows=24 LIndex=31
+Community numComponents=48 numBlocks=12 Q=0.7060967247 P=0.8131541895 QP=0.5741655099 SBBBorderArea= 0.0413669065 
+BorderRows=23 LIndex=32
+Community numComponents=44 numBlocks=11 Q=0.4235663783 P=0.8279115774 QP=0.3506755084 SBBBorderArea= 0.0377697842 
+BorderRows=21 LIndex=33
+Community numComponents=40 numBlocks=9 Q=0.3663265354 P=0.8353904028 QP=0.306025672 SBBBorderArea= 0.035971223 
+BorderRows=20 LIndex=34
+Community numComponents=37 numBlocks=8 Q=0.3008268881 P=0.8429367872 QP=0.2535780506 SBBBorderArea= 0.0341726619 
+BorderRows=19 LIndex=35
+Community numComponents=34 numBlocks=7 Q=0.2641460272 P=0.8505513407 QP=0.2246697576 SBBBorderArea= 0.0323741007 
+BorderRows=18 LIndex=36
+Community numComponents=32 numBlocks=6 Q=0.2204349568 P=0.8582346793 QP=0.1891849245 SBBBorderArea= 0.0305755396 
+BorderRows=17 LIndex=37
+Community numComponents=28 numBlocks=4 Q=0.1196690507 P=0.8738102027 QP=0.1045680374 SBBBorderArea= 0.0269784173 
+BorderRows=15 LIndex=38
+Community numComponents=26 numBlocks=4 Q=0.117125504 P=0.881703647 QP=0.103269984 SBBBorderArea= 0.0251798561 
+BorderRows=14 LIndex=39
+Community numComponents=22 numBlocks=3 Q=0.0711662336 P=0.8977050928 QP=0.0638862904 SBBBorderArea= 0.0215827338 
+BorderRows=12 LIndex=40
+Community numComponents=16 numBlocks=1 Q=0 P=0.9305844531 QP=0 SBBBorderArea= 0.0143884892 BorderRows=8 LIndex=41
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=18 numBlocks=1 Q=0 P=0.9222534038 QP=0 SBBBorderArea= 0.0161870504 BorderRows=9 LIndex=42
+Time in community    0.003 (real)    0.010 (cpu)
+Community numComponents=19 numBlocks=1 Q=0 P=0.9139969381 QP=0 SBBBorderArea= 0.0179856115 BorderRows=10 LIndex=43
+Time in community    0.003 (real)    0.000 (cpu)
+Community numComponents=21 numBlocks=1 Q=0 P=0.8977050928 QP=0 SBBBorderArea= 0.0215827338 BorderRows=12 LIndex=44
+Time in community    0.002 (real)    0.000 (cpu)
+Community numComponents=24 numBlocks=3 Q=0.0727132306 P=0.8896683957 QP=0.0646906632 SBBBorderArea= 0.023381295 
+BorderRows=13 LIndex=45
+Time in community    0.003 (real)    0.000 (cpu)
+Remove at time    0.083 count=5
+Time in community    0.003 (real)    0.010 (cpu)
+Remove at time    0.086 count=1
+Best Goodness=0.7094006496 LIndex=24 in    0.086 (real)    0.080 (cpu) - total time in Comm    0.076
+Community numComponents=82 numBlocks=51 Q=0.9631179188 P=0.7365667648 QP=0.7094006496 SBBBorderArea= 0.0611510791 
+BorderRows=34 LIndex=46
+Final goodness:0.7094006496
+TIME----BDFTime: 0.0735111237 BDFGood: 0.7094006496 CommTime: 0.0860750675 CommRemove: 0.0799548626 CommMerge: 
+0.004450798 CommGood: 0.7094006496 DBDF: 0 CommNBlocks: 30 HitMaxTime: 0
+STAT: 0.0735111237 0.7094006496 0.0860750675 0.0799548626 0.004450798 0.7094006496 0 30 0
+Using community decomposition with goodness=0.7094006496
+NOTE: The problem has a decomposable structure with 30 blocks. The largest block covers 4.856% of the constraints in 
+      the problem.
+NOTE: The decomposition subproblems cover 1018 (98.26%) variables and 522 (93.88%) constraints.
+NOTE: The deterministic parallel mode is enabled.
+NOTE: The Decomposition algorithm is using up to 4 threads.
+      Iter         Best       Master         Best       LP       IP  CPU Real
+                  Bound    Objective      Integer      Gap      Gap Time Time
+         .   1.1491e+07   1.2054e+07   1.2091e+07    4.90%    5.23%    1    1
+         1   1.1491e+07   1.2054e+07   1.2091e+07    4.90%    5.23%    1    1
+         2   1.1491e+07   1.1575e+07   1.1733e+07    0.73%    2.11%    2    2
+NOTE: The Decomposition algorithm stopped on the continuous RELOBJGAP= option.
+         .   1.1491e+07   1.1491e+07   1.1600e+07    0.00%    0.95%    2    2
+NOTE: Starting branch and bound.
+         Node  Active   Sols         Best         Best      Gap    CPU   Real
+                                  Integer        Bound            Time   Time
+            0       1     15   1.1600e+07   1.1491e+07    0.95%      2      2
+           10      12     21   1.1562e+07   1.1491e+07    0.62%      8      8
+           20      22     21   1.1562e+07   1.1491e+07    0.62%     10     11
+           30      32     21   1.1562e+07   1.1491e+07    0.62%     12     14
+           40      42     21   1.1562e+07   1.1491e+07    0.62%     15     17
+           50      52     21   1.1562e+07   1.1491e+07    0.62%     16     19
+           60      62     21   1.1562e+07   1.1491e+07    0.62%     19     22
+           70      72     21   1.1562e+07   1.1491e+07    0.62%     20     23
+           80      82     23   1.1549e+07   1.1491e+07    0.51%     21     24
+           90      92     23   1.1549e+07   1.1491e+07    0.51%     22     25
+          100     102     23   1.1549e+07   1.1491e+07    0.51%     22     26
+          110     112     23   1.1549e+07   1.1491e+07    0.51%     23     27
+          120     122     23   1.1549e+07   1.1491e+07    0.51%     24     28
+          130     132     23   1.1549e+07   1.1491e+07    0.51%     27     31
+          140     142     23   1.1549e+07   1.1491e+07    0.51%     29     33
+          150     152     23   1.1549e+07   1.1491e+07    0.51%     31     36
+          160     162     23   1.1549e+07   1.1491e+07    0.51%     33     38
+          170     172     23   1.1549e+07   1.1491e+07    0.51%     34     39
+          180     182     23   1.1549e+07   1.1491e+07    0.51%     34     39
+          190     192     23   1.1549e+07   1.1491e+07    0.51%     35     40
+          200     202     23   1.1549e+07   1.1491e+07    0.51%     35     40
+          210     212     23   1.1549e+07   1.1491e+07    0.51%     37     42
+          220     222     23   1.1549e+07   1.1491e+07    0.51%     37     42
+          230     232     23   1.1549e+07   1.1491e+07    0.51%     39     44
+          240     242     23   1.1549e+07   1.1491e+07    0.51%     42     48
+          250     252     23   1.1549e+07   1.1491e+07    0.51%     43     48
+          260     262     23   1.1549e+07   1.1491e+07    0.51%     43     49
+          270     272     23   1.1549e+07   1.1491e+07    0.51%     44     50
+          280     282     23   1.1549e+07   1.1491e+07    0.51%     44     50
+          290     292     23   1.1549e+07   1.1491e+07    0.51%     44     50
+          300     302     23   1.1549e+07   1.1491e+07    0.51%     45     51
+          310     312     23   1.1549e+07   1.1491e+07    0.51%     46     52
+          320     322     23   1.1549e+07   1.1491e+07    0.51%     47     53
+          330     332     23   1.1549e+07   1.1491e+07    0.51%     48     54
+          340     342     23   1.1549e+07   1.1491e+07    0.51%     48     55
+          350     352     23   1.1549e+07   1.1491e+07    0.51%     49     55
+          360     362     23   1.1549e+07   1.1491e+07    0.51%     50     56
+          370     372     23   1.1549e+07   1.1491e+07    0.51%     50     57
+          380     382     23   1.1549e+07   1.1491e+07    0.51%     51     57
+          390     392     23   1.1549e+07   1.1491e+07    0.51%     51     58
+          400     402     23   1.1549e+07   1.1491e+07    0.51%     52     59
+          410     412     23   1.1549e+07   1.1491e+07    0.51%     52     59
+          420     422     23   1.1549e+07   1.1491e+07    0.51%     53     59
+          430     432     23   1.1549e+07   1.1491e+07    0.51%     53     60
+          440     442     23   1.1549e+07   1.1491e+07    0.51%     53     60
+          450     452     23   1.1549e+07   1.1491e+07    0.51%     55     62
+          460     462     23   1.1549e+07   1.1491e+07    0.51%     56     62
+          470     472     23   1.1549e+07   1.1491e+07    0.51%     56     63
+          480     482     23   1.1549e+07   1.1491e+07    0.51%     57     64
+          490     492     23   1.1549e+07   1.1491e+07    0.51%     57     64
+          500     502     23   1.1549e+07   1.1491e+07    0.51%     58     65
+          510     512     23   1.1549e+07   1.1491e+07    0.51%     60     67
+          520     522     23   1.1549e+07   1.1491e+07    0.51%     60     67
+          530     532     23   1.1549e+07   1.1491e+07    0.51%     61     68
+          540     542     23   1.1549e+07   1.1491e+07    0.51%     62     69
+          550     552     23   1.1549e+07   1.1491e+07    0.51%     65     72
+          560     562     23   1.1549e+07   1.1491e+07    0.51%     65     72
+          570     572     23   1.1549e+07   1.1491e+07    0.51%     68     75
+          580     582     23   1.1549e+07   1.1491e+07    0.51%     68     76
+          590     592     23   1.1549e+07   1.1491e+07    0.51%     69     76
+          600     602     23   1.1549e+07   1.1491e+07    0.51%     70     78
+          610     612     23   1.1549e+07   1.1491e+07    0.51%     70     78
+          620     622     23   1.1549e+07   1.1491e+07    0.51%     70     79
+          630     632     23   1.1549e+07   1.1491e+07    0.51%     72     80
+          640     642     23   1.1549e+07   1.1491e+07    0.51%     74     82
+          650     652     23   1.1549e+07   1.1491e+07    0.51%     77     84
+          660     662     23   1.1549e+07   1.1491e+07    0.51%     77     85
+          670     672     23   1.1549e+07   1.1491e+07    0.51%     78     86
+          680     682     23   1.1549e+07   1.1491e+07    0.51%     80     87
+          690     692     23   1.1549e+07   1.1491e+07    0.51%     80     87
+          700     702     23   1.1549e+07   1.1491e+07    0.51%     81     89
+          710     712     23   1.1549e+07   1.1491e+07    0.51%     83     91
+          720     722     23   1.1549e+07   1.1491e+07    0.51%     84     92
+          730     732     23   1.1549e+07   1.1491e+07    0.51%     85     93
+          740     742     23   1.1549e+07   1.1491e+07    0.51%     86     94
+          750     752     23   1.1549e+07   1.1491e+07    0.51%     88     96
+          760     762     23   1.1549e+07   1.1491e+07    0.51%     89     96
+          770     772     23   1.1549e+07   1.1491e+07    0.51%     90     97
+          780     782     23   1.1549e+07   1.1491e+07    0.51%     91     99
+          790     792     23   1.1549e+07   1.1491e+07    0.51%     91     99
+          800     802     23   1.1549e+07   1.1491e+07    0.51%     92    100
+          810     812     23   1.1549e+07   1.1491e+07    0.51%     92    100
+          820     822     23   1.1549e+07   1.1491e+07    0.51%     94    101
+          830     832     23   1.1549e+07   1.1491e+07    0.51%     95    103
+          840     842     23   1.1549e+07   1.1491e+07    0.51%     96    103
+          850     852     23   1.1549e+07   1.1491e+07    0.51%     96    104
+          860     862     23   1.1549e+07   1.1491e+07    0.51%     98    106
+          870     872     23   1.1549e+07   1.1491e+07    0.51%    100    107
+          880     882     23   1.1549e+07   1.1491e+07    0.51%    102    109
+          890     892     23   1.1549e+07   1.1491e+07    0.51%    103    110
+          900     902     23   1.1549e+07   1.1491e+07    0.51%    103    110
+          910     912     23   1.1549e+07   1.1491e+07    0.51%    103    111
+          920     922     23   1.1549e+07   1.1491e+07    0.51%    104    112
+          930     932     23   1.1549e+07   1.1491e+07    0.51%    105    112
+          937     939     26   1.1542e+07   1.1491e+07    0.44%    105    113
+          939     937     27   1.1536e+07   1.1491e+07    0.39%    105    113
+          940     938     27   1.1536e+07   1.1491e+07    0.39%    106    113
+          950     948     27   1.1536e+07   1.1491e+07    0.39%    107    115
+          960     958     27   1.1536e+07   1.1491e+07    0.39%    109    116
+          970     968     27   1.1536e+07   1.1491e+07    0.39%    110    117
+          980     978     27   1.1536e+07   1.1491e+07    0.39%    111    118
+          990     988     27   1.1536e+07   1.1491e+07    0.39%    112    119
+         1000     998     27   1.1536e+07   1.1491e+07    0.39%    114    121
+         1010    1008     27   1.1536e+07   1.1491e+07    0.39%    115    122
+         1020    1018     27   1.1536e+07   1.1491e+07    0.39%    117    123
+         1030    1028     27   1.1536e+07   1.1491e+07    0.39%    118    124
+         1040    1038     27   1.1536e+07   1.1491e+07    0.39%    119    125
+         1050    1048     27   1.1536e+07   1.1491e+07    0.39%    119    126
+         1060    1058     27   1.1536e+07   1.1491e+07    0.39%    120    126
+         1070    1068     27   1.1536e+07   1.1491e+07    0.39%    121    127
+         1080    1078     27   1.1536e+07   1.1491e+07    0.39%    122    128
+         1090    1088     27   1.1536e+07   1.1491e+07    0.39%    123    129
+         1100    1098     27   1.1536e+07   1.1491e+07    0.39%    124    130
+         1110    1108     27   1.1536e+07   1.1491e+07    0.39%    125    131
+         1120    1118     27   1.1536e+07   1.1491e+07    0.39%    126    132
+         1130    1128     27   1.1536e+07   1.1491e+07    0.39%    127    133
+         1140    1138     27   1.1536e+07   1.1491e+07    0.39%    128    134
+         1150    1148     27   1.1536e+07   1.1491e+07    0.39%    130    136
+         1160    1158     27   1.1536e+07   1.1491e+07    0.39%    131    137
+         1170    1168     27   1.1536e+07   1.1491e+07    0.39%    164    171
+         1180    1178     27   1.1536e+07   1.1491e+07    0.39%    164    172
+         1190    1188     27   1.1536e+07   1.1491e+07    0.39%    165    172
+         1200    1198     27   1.1536e+07   1.1491e+07    0.39%    166    173
+         1210    1208     27   1.1536e+07   1.1491e+07    0.39%    167    174
+         1220    1218     27   1.1536e+07   1.1491e+07    0.39%    168    175
+         1230    1228     27   1.1536e+07   1.1491e+07    0.39%    171    177
+         1240    1238     27   1.1536e+07   1.1491e+07    0.39%    172    179
+         1250    1248     27   1.1536e+07   1.1491e+07    0.39%    174    181
+         1260    1258     27   1.1536e+07   1.1491e+07    0.39%    176    182
+         1270    1268     27   1.1536e+07   1.1491e+07    0.39%    177    183
+         1280    1278     27   1.1536e+07   1.1491e+07    0.39%    178    184
+         1290    1288     27   1.1536e+07   1.1491e+07    0.39%    179    185
+         1300    1298     27   1.1536e+07   1.1491e+07    0.39%    181    187
+         1310    1308     27   1.1536e+07   1.1491e+07    0.39%    182    188
+         1320    1318     27   1.1536e+07   1.1491e+07    0.39%    182    189
+         1330    1328     27   1.1536e+07   1.1491e+07    0.39%    183    190
+         1340    1338     27   1.1536e+07   1.1491e+07    0.39%    184    191
+         1350    1348     27   1.1536e+07   1.1491e+07    0.39%    185    191
+         1360    1358     27   1.1536e+07   1.1491e+07    0.39%    185    192
+         1370    1368     27   1.1536e+07   1.1491e+07    0.39%    185    192
+         1380    1378     27   1.1536e+07   1.1491e+07    0.39%    187    194
+         1390    1388     27   1.1536e+07   1.1491e+07    0.39%    188    195
+         1400    1398     27   1.1536e+07   1.1491e+07    0.39%    189    196
+         1410    1408     27   1.1536e+07   1.1491e+07    0.39%    190    198
+         1420    1418     27   1.1536e+07   1.1491e+07    0.39%    191    198
+         1430    1428     27   1.1536e+07   1.1491e+07    0.39%    192    199
+         1440    1438     27   1.1536e+07   1.1491e+07    0.39%    193    200
+         1450    1448     27   1.1536e+07   1.1491e+07    0.39%    193    201
+         1460    1458     27   1.1536e+07   1.1491e+07    0.39%    194    201
+         1470    1468     27   1.1536e+07   1.1491e+07    0.39%    195    202
+         1480    1478     27   1.1536e+07   1.1491e+07    0.39%    196    203
+         1490    1488     27   1.1536e+07   1.1491e+07    0.39%    200    208
+         1500    1498     27   1.1536e+07   1.1491e+07    0.39%    203    211
+         1510    1508     27   1.1536e+07   1.1491e+07    0.39%    205    215
+         1520    1518     27   1.1536e+07   1.1491e+07    0.39%    206    216
+         1530    1528     27   1.1536e+07   1.1491e+07    0.39%    208    218
+         1540    1538     27   1.1536e+07   1.1491e+07    0.39%    209    219
+         1550    1548     27   1.1536e+07   1.1491e+07    0.39%    210    219
+         1560    1558     27   1.1536e+07   1.1491e+07    0.39%    211    220
+         1570    1568     27   1.1536e+07   1.1491e+07    0.39%    212    222
+         1580    1578     27   1.1536e+07   1.1491e+07    0.39%    216    226
+         1590    1588     27   1.1536e+07   1.1491e+07    0.39%    218    228
+         1600    1598     27   1.1536e+07   1.1491e+07    0.39%    219    229
+         1607    1587     28   1.1535e+07   1.1491e+07    0.39%    220    230
+         1608    1588     31   1.1523e+07   1.1491e+07    0.28%    220    230
+         1610    1590     31   1.1523e+07   1.1491e+07    0.28%    220    230
+         1620    1600     31   1.1523e+07   1.1491e+07    0.28%    221    231
+         1630    1610     31   1.1523e+07   1.1491e+07    0.28%    222    232
+         1640    1620     31   1.1523e+07   1.1491e+07    0.28%    222    232
+         1650    1630     31   1.1523e+07   1.1491e+07    0.28%    223    233
+         1660    1640     31   1.1523e+07   1.1491e+07    0.28%    225    235
+         1670    1650     31   1.1523e+07   1.1491e+07    0.28%    226    236
+         1680    1660     31   1.1523e+07   1.1491e+07    0.28%    226    236
+         1690    1670     31   1.1523e+07   1.1491e+07    0.28%    227    237
+         1700    1680     31   1.1523e+07   1.1491e+07    0.28%    229    239
+         1710    1690     31   1.1523e+07   1.1491e+07    0.28%    232    241
+         1720    1700     31   1.1523e+07   1.1491e+07    0.28%    233    243
+         1730    1710     31   1.1523e+07   1.1491e+07    0.28%    234    243
+         1740    1720     31   1.1523e+07   1.1491e+07    0.28%    236    245
+         1750    1730     31   1.1523e+07   1.1491e+07    0.28%    237    246
+         1760    1740     31   1.1523e+07   1.1491e+07    0.28%    238    247
+         1770    1750     31   1.1523e+07   1.1491e+07    0.28%    239    248
+         1780    1760     31   1.1523e+07   1.1491e+07    0.28%    241    250
+         1790    1770     31   1.1523e+07   1.1491e+07    0.28%    242    251
+         1800    1780     31   1.1523e+07   1.1491e+07    0.28%    242    251
+         1810    1790     31   1.1523e+07   1.1491e+07    0.28%    244    253
+         1820    1800     31   1.1523e+07   1.1491e+07    0.28%    244    253
+         1830    1810     31   1.1523e+07   1.1491e+07    0.28%    245    254
+         1840    1820     31   1.1523e+07   1.1491e+07    0.28%    246    255
+         1850    1830     31   1.1523e+07   1.1491e+07    0.28%    248    256
+         1860    1840     31   1.1523e+07   1.1491e+07    0.28%    249    257
+         1870    1850     31   1.1523e+07   1.1491e+07    0.28%    249    258
+         1880    1860     31   1.1523e+07   1.1491e+07    0.28%    250    258
+         1890    1870     31   1.1523e+07   1.1491e+07    0.28%    250    259
+         1900    1880     31   1.1523e+07   1.1491e+07    0.28%    252    260
+         1910    1890     31   1.1523e+07   1.1491e+07    0.28%    252    261
+         1920    1900     31   1.1523e+07   1.1491e+07    0.28%    253    261
+         1930    1910     31   1.1523e+07   1.1491e+07    0.28%    254    262
+         1940    1918     31   1.1523e+07   1.1491e+07    0.28%    255    263
+         1950    1928     31   1.1523e+07   1.1491e+07    0.28%    256    264
+         1960    1936     31   1.1523e+07   1.1491e+07    0.28%    257    265
+         1970    1944     31   1.1523e+07   1.1491e+07    0.28%    258    266
+         1980    1954     31   1.1523e+07   1.1491e+07    0.28%    258    266
+         1990    1964     31   1.1523e+07   1.1491e+07    0.28%    269    278
+         2000    1974     31   1.1523e+07   1.1491e+07    0.28%    270    279
+         2010    1984     31   1.1523e+07   1.1491e+07    0.28%    271    280
+         2020    1994     31   1.1523e+07   1.1491e+07    0.28%    273    282
+         2030    2004     31   1.1523e+07   1.1491e+07    0.28%    285    295
+         2040    2014     31   1.1523e+07   1.1491e+07    0.28%    287    297
+         2050    2024     31   1.1523e+07   1.1491e+07    0.28%    288    298
+         2060    2034     31   1.1523e+07   1.1491e+07    0.28%    289    300
+         2070    2044     31   1.1523e+07   1.1491e+07    0.28%    290    301
+         2080    2054     31   1.1523e+07   1.1491e+07    0.28%    291    302
+         2090    2064     31   1.1523e+07   1.1491e+07    0.28%    291    302
+         2100    2074     31   1.1523e+07   1.1491e+07    0.28%    293    304
+         2110    2084     31   1.1523e+07   1.1491e+07    0.28%    294    305
+         2120    2094     31   1.1523e+07   1.1491e+07    0.28%    295    306
+         2130    2104     31   1.1523e+07   1.1491e+07    0.28%    296    307
+         2140    2114     31   1.1523e+07   1.1491e+07    0.28%    297    308
+         2150    2124     31   1.1523e+07   1.1491e+07    0.28%    298    309
+         2160    2134     31   1.1523e+07   1.1491e+07    0.28%    300    310
+         2170    2144     31   1.1523e+07   1.1491e+07    0.28%    302    312
+         2180    2154     31   1.1523e+07   1.1491e+07    0.28%    304    315
+         2190    2164     31   1.1523e+07   1.1491e+07    0.28%    305    316
+         2200    2174     31   1.1523e+07   1.1491e+07    0.28%    306    317
+         2210    2184     31   1.1523e+07   1.1491e+07    0.28%    307    318
+         2220    2194     31   1.1523e+07   1.1491e+07    0.28%    308    319
+         2230    2204     31   1.1523e+07   1.1491e+07    0.28%    309    320
+         2240    2214     31   1.1523e+07   1.1491e+07    0.28%    310    321
+         2250    2224     31   1.1523e+07   1.1491e+07    0.28%    312    323
+         2260    2234     31   1.1523e+07   1.1491e+07    0.28%    314    325
+         2270    2244     31   1.1523e+07   1.1491e+07    0.28%    315    326
+         2280    2254     31   1.1523e+07   1.1491e+07    0.28%    317    328
+         2290    2264     31   1.1523e+07   1.1491e+07    0.28%    319    329
+         2300    2274     31   1.1523e+07   1.1491e+07    0.28%    321    331
+         2310    2284     31   1.1523e+07   1.1491e+07    0.28%    323    333
+         2320    2294     31   1.1523e+07   1.1491e+07    0.28%    324    334
+         2330    2304     31   1.1523e+07   1.1491e+07    0.28%    326    335
+         2340    2314     31   1.1523e+07   1.1491e+07    0.28%    328    337
+         2350    2324     31   1.1523e+07   1.1491e+07    0.28%    329    338
+         2360    2334     31   1.1523e+07   1.1491e+07    0.28%    329    339
+         2370    2344     31   1.1523e+07   1.1491e+07    0.28%    330    340
+         2380    2354     31   1.1523e+07   1.1491e+07    0.28%    332    341
+         2390    2364     31   1.1523e+07   1.1491e+07    0.28%    344    353
+         2400    2374     31   1.1523e+07   1.1491e+07    0.28%    345    354
+         2410    2384     31   1.1523e+07   1.1491e+07    0.28%    346    355
+         2420    2394     31   1.1523e+07   1.1491e+07    0.28%    348    357
+         2430    2404     31   1.1523e+07   1.1491e+07    0.28%    350    361
+         2440    2414     31   1.1523e+07   1.1491e+07    0.28%    353    363
+         2450    2424     31   1.1523e+07   1.1491e+07    0.28%    354    364
+         2460    2434     31   1.1523e+07   1.1491e+07    0.28%    355    365
+         2470    2444     31   1.1523e+07   1.1491e+07    0.28%    357    367
+         2480    2454     31   1.1523e+07   1.1491e+07    0.28%    357    367
+         2490    2464     31   1.1523e+07   1.1491e+07    0.28%    358    368
+         2500    2474     31   1.1523e+07   1.1491e+07    0.28%    359    369
+         2510    2484     31   1.1523e+07   1.1491e+07    0.28%    360    370
+         2520    2494     31   1.1523e+07   1.1491e+07    0.28%    361    371
+         2530    2504     31   1.1523e+07   1.1491e+07    0.28%    362    372
+         2540    2514     31   1.1523e+07   1.1491e+07    0.28%    364    373
+         2550    2524     31   1.1523e+07   1.1491e+07    0.28%    365    374
+         2560    2534     31   1.1523e+07   1.1491e+07    0.28%    366    375
+         2570    2544     31   1.1523e+07   1.1491e+07    0.28%    367    376
+         2580    2554     31   1.1523e+07   1.1491e+07    0.28%    368    377
+         2590    2564     31   1.1523e+07   1.1491e+07    0.28%    369    378
+         2600    2574     31   1.1523e+07   1.1491e+07    0.28%    371    381
+         2610    2584     31   1.1523e+07   1.1491e+07    0.28%    374    384
+         2620    2594     31   1.1523e+07   1.1491e+07    0.28%    375    385
+         2630    2604     31   1.1523e+07   1.1491e+07    0.28%    377    387
+         2640    2614     31   1.1523e+07   1.1491e+07    0.28%    378    388
+         2650    2624     31   1.1523e+07   1.1491e+07    0.28%    380    390
+         2660    2634     31   1.1523e+07   1.1491e+07    0.28%    382    392
+         2670    2644     31   1.1523e+07   1.1491e+07    0.28%    382    392
+         2680    2654     31   1.1523e+07   1.1491e+07    0.28%    384    394
+         2690    2664     31   1.1523e+07   1.1491e+07    0.28%    387    398
+         2700    2674     31   1.1523e+07   1.1491e+07    0.28%    389    400
+         2710    2684     31   1.1523e+07   1.1491e+07    0.28%    391    402
+         2720    2694     31   1.1523e+07   1.1491e+07    0.28%    392    403
+         2730    2704     31   1.1523e+07   1.1491e+07    0.28%    393    404
+         2740    2714     31   1.1523e+07   1.1491e+07    0.28%    396    406
+         2750    2724     31   1.1523e+07   1.1491e+07    0.28%    398    409
+         2760    2734     31   1.1523e+07   1.1491e+07    0.28%    398    409
+         2770    2744     31   1.1523e+07   1.1491e+07    0.28%    400    411
+         2780    2754     31   1.1523e+07   1.1491e+07    0.28%    401    412
+         2790    2764     31   1.1523e+07   1.1491e+07    0.28%    402    413
+         2800    2774     31   1.1523e+07   1.1491e+07    0.28%    403    414
+         2810    2784     31   1.1523e+07   1.1491e+07    0.28%    405    416
+         2820    2794     31   1.1523e+07   1.1491e+07    0.28%    407    417
+         2830    2804     31   1.1523e+07   1.1491e+07    0.28%    408    419
+         2840    2814     31   1.1523e+07   1.1491e+07    0.28%    409    419
+         2850    2824     31   1.1523e+07   1.1491e+07    0.28%    409    420
+         2860    2834     31   1.1523e+07   1.1491e+07    0.28%    410    421
+         2870    2844     31   1.1523e+07   1.1491e+07    0.28%    411    422
+         2880    2854     31   1.1523e+07   1.1491e+07    0.28%    414    424
+         2890    2864     31   1.1523e+07   1.1491e+07    0.28%    416    425
+         2900    2874     31   1.1523e+07   1.1491e+07    0.28%    416    426
+         2910    2884     31   1.1523e+07   1.1491e+07    0.28%    417    427
+         2920    2894     31   1.1523e+07   1.1491e+07    0.28%    417    427
+         2930    2904     31   1.1523e+07   1.1491e+07    0.28%    418    428
+         2940    2914     31   1.1523e+07   1.1491e+07    0.28%    418    428
+         2950    2924     31   1.1523e+07   1.1491e+07    0.28%    421    432
+         2960    2934     31   1.1523e+07   1.1491e+07    0.28%    423    434
+         2970    2944     31   1.1523e+07   1.1491e+07    0.28%    425    437
+         2980    2954     31   1.1523e+07   1.1491e+07    0.28%    427    439
+         2990    2964     31   1.1523e+07   1.1491e+07    0.28%    429    440
+         3000    2974     31   1.1523e+07   1.1491e+07    0.28%    431    442
+         3010    2984     31   1.1523e+07   1.1491e+07    0.28%    433    444
+         3020    2994     31   1.1523e+07   1.1491e+07    0.28%    435    445
+         3030    3004     31   1.1523e+07   1.1491e+07    0.28%    436    447
+         3040    3014     31   1.1523e+07   1.1491e+07    0.28%    438    448
+         3050    3024     31   1.1523e+07   1.1491e+07    0.28%    440    450
+         3060    3034     31   1.1523e+07   1.1491e+07    0.28%    442    452
+         3070    3044     31   1.1523e+07   1.1491e+07    0.28%    443    453
+         3080    3054     31   1.1523e+07   1.1491e+07    0.28%    444    453
+         3090    3064     31   1.1523e+07   1.1491e+07    0.28%    444    454
+         3100    3074     31   1.1523e+07   1.1491e+07    0.28%    445    455
+         3110    3084     31   1.1523e+07   1.1491e+07    0.28%    448    457
+         3120    3094     31   1.1523e+07   1.1491e+07    0.28%    449    459
+         3130    3104     31   1.1523e+07   1.1491e+07    0.28%    451    460
+         3140    3114     31   1.1523e+07   1.1491e+07    0.28%    452    461
+         3150    3124     31   1.1523e+07   1.1491e+07    0.28%    453    462
+         3160    3134     31   1.1523e+07   1.1491e+07    0.28%    455    464
+         3170    3144     31   1.1523e+07   1.1491e+07    0.28%    456    466
+         3180    3154     31   1.1523e+07   1.1491e+07    0.28%    458    467
+         3190    3164     31   1.1523e+07   1.1491e+07    0.28%    461    469
+         3200    3174     31   1.1523e+07   1.1491e+07    0.28%    464    473
+         3210    3184     31   1.1523e+07   1.1491e+07    0.28%    465    475
+         3220    3194     31   1.1523e+07   1.1491e+07    0.28%    469    479
+         3230    3204     31   1.1523e+07   1.1491e+07    0.28%    470    480
+         3240    3214     31   1.1523e+07   1.1491e+07    0.28%    472    481
+         3250    3224     31   1.1523e+07   1.1491e+07    0.28%    473    482
+         3260    3234     31   1.1523e+07   1.1491e+07    0.28%    475    484
+         3270    3244     31   1.1523e+07   1.1491e+07    0.28%    478    487
+         3280    3254     31   1.1523e+07   1.1491e+07    0.28%    478    488
+         3290    3264     31   1.1523e+07   1.1491e+07    0.28%    479    488
+         3300    3274     31   1.1523e+07   1.1491e+07    0.28%    480    490
+         3310    3284     31   1.1523e+07   1.1491e+07    0.28%    481    491
+         3320    3294     31   1.1523e+07   1.1491e+07    0.28%    483    492
+         3330    3304     31   1.1523e+07   1.1491e+07    0.28%    485    494
+         3340    3314     31   1.1523e+07   1.1491e+07    0.28%    486    495
+         3350    3324     31   1.1523e+07   1.1491e+07    0.28%    487    496
+         3360    3334     31   1.1523e+07   1.1491e+07    0.28%    489    497
+         3370    3344     31   1.1523e+07   1.1491e+07    0.28%    491    500
+         3380    3354     31   1.1523e+07   1.1491e+07    0.28%    493    501
+         3390    3364     31   1.1523e+07   1.1491e+07    0.28%    495    503
+         3400    3374     31   1.1523e+07   1.1491e+07    0.28%    497    505
+         3410    3384     31   1.1523e+07   1.1491e+07    0.28%    499    507
+         3420    3394     31   1.1523e+07   1.1491e+07    0.28%    501    509
+         3430    3404     31   1.1523e+07   1.1491e+07    0.28%    503    511
+         3440    3414     31   1.1523e+07   1.1491e+07    0.28%    507    515
+         3450    3424     31   1.1523e+07   1.1491e+07    0.28%    510    518
+         3460    3434     31   1.1523e+07   1.1491e+07    0.28%    512    520
+         3470    3444     31   1.1523e+07   1.1491e+07    0.28%    515    522
+         3480    3454     31   1.1523e+07   1.1491e+07    0.28%    518    525
+         3490    3464     31   1.1523e+07   1.1491e+07    0.28%    520    527
+         3500    3474     31   1.1523e+07   1.1491e+07    0.28%    522    528
+         3510    3484     31   1.1523e+07   1.1491e+07    0.28%    525    531
+         3520    3494     31   1.1523e+07   1.1491e+07    0.28%    528    535
+         3530    3504     31   1.1523e+07   1.1491e+07    0.28%    530    536
+         3540    3514     31   1.1523e+07   1.1491e+07    0.28%    531    537
+         3550    3524     31   1.1523e+07   1.1491e+07    0.28%    532    538
+         3560    3534     31   1.1523e+07   1.1491e+07    0.28%    533    539
+         3570    3544     31   1.1523e+07   1.1491e+07    0.28%    536    542
+         3580    3554     31   1.1523e+07   1.1491e+07    0.28%    538    544
+         3590    3564     31   1.1523e+07   1.1491e+07    0.28%    540    546
+         3600    3572     31   1.1523e+07   1.1491e+07    0.28%    542    548
+         3610    3582     31   1.1523e+07   1.1491e+07    0.28%    543    548
+         3620    3592     31   1.1523e+07   1.1491e+07    0.28%    543    549
+         3630    3602     31   1.1523e+07   1.1491e+07    0.28%    544    549
+         3640    3612     31   1.1523e+07   1.1491e+07    0.28%    544    550
+         3650    3622     31   1.1523e+07   1.1491e+07    0.28%    545    551
+         3660    3632     31   1.1523e+07   1.1491e+07    0.28%    546    551
+         3670    3642     31   1.1523e+07   1.1491e+07    0.28%    546    552
+         3680    3652     31   1.1523e+07   1.1491e+07    0.28%    548    554
+         3690    3662     31   1.1523e+07   1.1491e+07    0.28%    550    556
+         3700    3672     31   1.1523e+07   1.1491e+07    0.28%    552    557
+         3710    3682     31   1.1523e+07   1.1491e+07    0.28%    553    558
+         3720    3692     31   1.1523e+07   1.1491e+07    0.28%    555    560
+         3730    3702     31   1.1523e+07   1.1491e+07    0.28%    556    561
+         3740    3712     31   1.1523e+07   1.1491e+07    0.28%    558    563
+         3750    3722     31   1.1523e+07   1.1491e+07    0.28%    562    566
+         3760    3732     31   1.1523e+07   1.1491e+07    0.28%    564    568
+         3770    3742     31   1.1523e+07   1.1491e+07    0.28%    565    569
+         3780    3752     31   1.1523e+07   1.1491e+07    0.28%    565    570
+         3790    3762     31   1.1523e+07   1.1491e+07    0.28%    567    571
+         3800    3772     31   1.1523e+07   1.1491e+07    0.28%    570    575
+         3810    3782     31   1.1523e+07   1.1491e+07    0.28%    574    580
+         3820    3792     31   1.1523e+07   1.1491e+07    0.28%    578    583
+         3830    3802     31   1.1523e+07   1.1491e+07    0.28%    579    584
+         3840    3812     31   1.1523e+07   1.1491e+07    0.28%    581    586
+         3850    3822     31   1.1523e+07   1.1491e+07    0.28%    583    588
+         3860    3832     31   1.1523e+07   1.1491e+07    0.28%    585    590
+         3870    3842     31   1.1523e+07   1.1491e+07    0.28%    588    593
+         3880    3852     31   1.1523e+07   1.1491e+07    0.28%    590    595
+         3890    3862     31   1.1523e+07   1.1491e+07    0.28%    591    596
+         3900    3872     31   1.1523e+07   1.1491e+07    0.28%    593    597
+         3910    3882     31   1.1523e+07   1.1491e+07    0.28%    593    597
+         3920    3892     31   1.1523e+07   1.1491e+07    0.28%    595    599
+         3930    3902     31   1.1523e+07   1.1491e+07    0.28%    596    600
+         3940    3912     31   1.1523e+07   1.1491e+07    0.28%    597    601
+         3950    3922     31   1.1523e+07   1.1491e+07    0.28%    599    603
+         3960    3932     31   1.1523e+07   1.1491e+07    0.28%    601    604
+         3970    3942     31   1.1523e+07   1.1491e+07    0.28%    601    605
+         3980    3952     31   1.1523e+07   1.1491e+07    0.28%    602    606
+         3990    3962     31   1.1523e+07   1.1491e+07    0.28%    603    607
+         4000    3972     31   1.1523e+07   1.1491e+07    0.28%    605    609
+         4010    3982     31   1.1523e+07   1.1491e+07    0.28%    607    611
+         4020    3992     31   1.1523e+07   1.1491e+07    0.28%    609    613
+         4030    4002     31   1.1523e+07   1.1491e+07    0.28%    612    615
+         4040    4012     31   1.1523e+07   1.1491e+07    0.28%    613    616
+         4050    4022     31   1.1523e+07   1.1491e+07    0.28%    617    619
+         4060    4032     31   1.1523e+07   1.1491e+07    0.28%    618    620
+         4070    4042     31   1.1523e+07   1.1491e+07    0.28%    619    621
+         4080    4052     31   1.1523e+07   1.1491e+07    0.28%    621    623
+         4090    4062     31   1.1523e+07   1.1491e+07    0.28%    622    624
+         4100    4072     31   1.1523e+07   1.1491e+07    0.28%    624    625
+         4110    4082     31   1.1523e+07   1.1491e+07    0.28%    625    626
+         4120    4092     31   1.1523e+07   1.1491e+07    0.28%    626    628
+         4130    4102     31   1.1523e+07   1.1491e+07    0.28%    627    628
+         4140    4112     31   1.1523e+07   1.1491e+07    0.28%    627    629
+         4150    4122     31   1.1523e+07   1.1491e+07    0.28%    629    630
+         4160    4132     31   1.1523e+07   1.1491e+07    0.28%    631    632
+         4170    4142     31   1.1523e+07   1.1491e+07    0.28%    632    633
+         4180    4152     31   1.1523e+07   1.1491e+07    0.28%    635    635
+         4190    4162     31   1.1523e+07   1.1491e+07    0.28%    636    636
+         4200    4172     31   1.1523e+07   1.1491e+07    0.28%    637    637
+         4210    4182     31   1.1523e+07   1.1491e+07    0.28%    638    638
+         4220    4192     31   1.1523e+07   1.1491e+07    0.28%    638    639
+         4230    4202     31   1.1523e+07   1.1491e+07    0.28%    640    640
+         4240    4212     31   1.1523e+07   1.1491e+07    0.28%    641    642
+         4250    4222     31   1.1523e+07   1.1491e+07    0.28%    644    644
+         4260    4232     31   1.1523e+07   1.1491e+07    0.28%    646    646
+         4270    4242     31   1.1523e+07   1.1491e+07    0.28%    648    648
+         4280    4252     31   1.1523e+07   1.1491e+07    0.28%    649    649
+         4290    4262     31   1.1523e+07   1.1491e+07    0.28%    650    650
+         4300    4272     31   1.1523e+07   1.1491e+07    0.28%    652    651
+         4310    4282     31   1.1523e+07   1.1491e+07    0.28%    654    654
+         4320    4292     31   1.1523e+07   1.1491e+07    0.28%    656    655
+         4330    4302     31   1.1523e+07   1.1491e+07    0.28%    657    657
+         4340    4312     31   1.1523e+07   1.1491e+07    0.28%    659    658
+         4350    4322     31   1.1523e+07   1.1491e+07    0.28%    660    659
+         4360    4332     31   1.1523e+07   1.1491e+07    0.28%    661    660
+         4370    4342     31   1.1523e+07   1.1491e+07    0.28%    662    661
+         4380    4352     31   1.1523e+07   1.1491e+07    0.28%    665    664
+         4390    4362     31   1.1523e+07   1.1491e+07    0.28%    666    666
+         4400    4370     31   1.1523e+07   1.1491e+07    0.28%    667    667
+         4410    4380     31   1.1523e+07   1.1491e+07    0.28%    669    668
+         4420    4390     31   1.1523e+07   1.1491e+07    0.28%    670    669
+         4430    4400     31   1.1523e+07   1.1491e+07    0.28%    673    674
+         4440    4410     31   1.1523e+07   1.1491e+07    0.28%    674    675
+         4450    4420     31   1.1523e+07   1.1491e+07    0.28%    676    677
+         4460    4430     31   1.1523e+07   1.1491e+07    0.28%    678    679
+         4470    4440     31   1.1523e+07   1.1491e+07    0.28%    680    680
+         4480    4450     31   1.1523e+07   1.1491e+07    0.28%    681    681
+         4490    4460     31   1.1523e+07   1.1491e+07    0.28%    683    683
+         4500    4468     31   1.1523e+07   1.1491e+07    0.28%    684    684
+         4510    4478     31   1.1523e+07   1.1491e+07    0.28%    685    685
+         4520    4488     31   1.1523e+07   1.1491e+07    0.28%    686    686
+         4530    4498     31   1.1523e+07   1.1491e+07    0.28%    689    688
+         4540    4508     31   1.1523e+07   1.1491e+07    0.28%    690    690
+         4550    4518     31   1.1523e+07   1.1491e+07    0.28%    694    693
+         4560    4528     31   1.1523e+07   1.1491e+07    0.28%    696    695
+         4570    4538     31   1.1523e+07   1.1491e+07    0.28%    699    699
+         4580    4548     31   1.1523e+07   1.1491e+07    0.28%    700    700
+         4590    4558     31   1.1523e+07   1.1491e+07    0.28%    701    701
+         4600    4568     31   1.1523e+07   1.1491e+07    0.28%    701    701
+         4610    4578     31   1.1523e+07   1.1491e+07    0.28%    702    702
+         4620    4588     31   1.1523e+07   1.1491e+07    0.28%    702    703
+         4630    4598     31   1.1523e+07   1.1491e+07    0.28%    706    707
+         4640    4608     31   1.1523e+07   1.1491e+07    0.28%    707    708
+         4650    4618     31   1.1523e+07   1.1491e+07    0.28%    708    709
+         4660    4628     31   1.1523e+07   1.1491e+07    0.28%    710    711
+         4670    4638     31   1.1523e+07   1.1491e+07    0.28%    711    712
+         4680    4648     31   1.1523e+07   1.1491e+07    0.28%    713    713
+         4690    4658     31   1.1523e+07   1.1491e+07    0.28%    715    715
+         4700    4668     31   1.1523e+07   1.1491e+07    0.28%    717    717
+         4710    4678     31   1.1523e+07   1.1491e+07    0.28%    720    720
+         4720    4688     31   1.1523e+07   1.1491e+07    0.28%    721    722
+         4730    4698     31   1.1523e+07   1.1491e+07    0.28%    724    724
+         4740    4708     31   1.1523e+07   1.1491e+07    0.28%    725    725
+         4750    4718     31   1.1523e+07   1.1491e+07    0.28%    727    728
+         4760    4728     31   1.1523e+07   1.1491e+07    0.28%    730    729
+         4770    4738     31   1.1523e+07   1.1491e+07    0.28%    731    730
+         4780    4748     31   1.1523e+07   1.1491e+07    0.28%    732    732
+         4790    4758     31   1.1523e+07   1.1491e+07    0.28%    735    734
+         4800    4768     31   1.1523e+07   1.1491e+07    0.28%    737    736
+         4810    4778     31   1.1523e+07   1.1491e+07    0.28%    740    738
+         4820    4788     31   1.1523e+07   1.1491e+07    0.28%    741    740
+         4830    4798     31   1.1523e+07   1.1491e+07    0.28%    743    741
+         4840    4808     31   1.1523e+07   1.1491e+07    0.28%    744    743
+         4850    4818     31   1.1523e+07   1.1491e+07    0.28%    746    744
+         4860    4828     31   1.1523e+07   1.1491e+07    0.28%    747    745
+         4870    4838     31   1.1523e+07   1.1491e+07    0.28%    748    746
+         4880    4848     31   1.1523e+07   1.1491e+07    0.28%    750    748
+         4890    4858     31   1.1523e+07   1.1491e+07    0.28%    751    748
+         4900    4868     31   1.1523e+07   1.1491e+07    0.28%    755    753
+         4910    4878     31   1.1523e+07   1.1491e+07    0.28%    757    755
+         4920    4886     31   1.1523e+07   1.1491e+07    0.28%    758    756
+         4930    4896     31   1.1523e+07   1.1491e+07    0.28%    759    757
+         4940    4906     31   1.1523e+07   1.1491e+07    0.28%    761    759
+         4950    4916     31   1.1523e+07   1.1491e+07    0.28%    763    761
+         4960    4926     31   1.1523e+07   1.1491e+07    0.28%    765    763
+         4970    4936     31   1.1523e+07   1.1491e+07    0.28%    767    765
+         4980    4946     31   1.1523e+07   1.1491e+07    0.28%    768    766
+         4990    4956     31   1.1523e+07   1.1491e+07    0.28%    770    767
+         5000    4966     31   1.1523e+07   1.1491e+07    0.28%    771    769
+         5010    4976     31   1.1523e+07   1.1491e+07    0.28%    772    770
+         5020    4986     31   1.1523e+07   1.1491e+07    0.28%    774    771
+         5030    4996     31   1.1523e+07   1.1491e+07    0.28%    776    774
+         5040    5006     31   1.1523e+07   1.1491e+07    0.28%    778    775
+         5050    5016     31   1.1523e+07   1.1491e+07    0.28%    780    777
+         5060    5026     31   1.1523e+07   1.1491e+07    0.28%    781    778
+         5070    5036     31   1.1523e+07   1.1491e+07    0.28%    783    780
+         5080    5046     31   1.1523e+07   1.1491e+07    0.28%    785    781
+         5090    5056     31   1.1523e+07   1.1491e+07    0.28%    787    783
+         5100    5066     31   1.1523e+07   1.1491e+07    0.28%    789    785
+         5110    5076     31   1.1523e+07   1.1491e+07    0.28%    790    786
+         5120    5086     31   1.1523e+07   1.1491e+07    0.28%    791    787
+         5130    5096     31   1.1523e+07   1.1491e+07    0.28%    792    788
+         5140    5106     31   1.1523e+07   1.1491e+07    0.28%    793    789
+         5150    5116     31   1.1523e+07   1.1491e+07    0.28%    794    790
+         5160    5126     31   1.1523e+07   1.1491e+07    0.28%    795    791
+         5170    5136     31   1.1523e+07   1.1491e+07    0.28%    796    791
+         5180    5146     31   1.1523e+07   1.1491e+07    0.28%    797    793
+         5190    5156     31   1.1523e+07   1.1491e+07    0.28%    798    794
+         5200    5166     31   1.1523e+07   1.1491e+07    0.28%    800    795
+         5210    5176     31   1.1523e+07   1.1491e+07    0.28%    801    796
+         5220    5186     31   1.1523e+07   1.1491e+07    0.28%    801    796
+         5230    5196     31   1.1523e+07   1.1491e+07    0.28%    802    797
+         5240    5206     31   1.1523e+07   1.1491e+07    0.28%    803    798
+         5250    5216     31   1.1523e+07   1.1491e+07    0.28%    804    799
+         5260    5226     31   1.1523e+07   1.1491e+07    0.28%    805    800
+         5270    5236     31   1.1523e+07   1.1491e+07    0.28%    806    801
+         5280    5246     31   1.1523e+07   1.1491e+07    0.28%    808    803
+         5290    5254     31   1.1523e+07   1.1491e+07    0.28%    810    805
+         5300    5264     31   1.1523e+07   1.1491e+07    0.28%    813    808
+         5310    5274     31   1.1523e+07   1.1491e+07    0.28%    815    810
+         5320    5284     31   1.1523e+07   1.1491e+07    0.28%    817    812
+         5330    5294     31   1.1523e+07   1.1491e+07    0.28%    820    814
+         5340    5304     31   1.1523e+07   1.1491e+07    0.28%    822    816
+         5350    5314     31   1.1523e+07   1.1491e+07    0.28%    825    818
+         5360    5324     31   1.1523e+07   1.1491e+07    0.28%    826    820
+         5370    5334     31   1.1523e+07   1.1491e+07    0.28%    828    821
+         5380    5344     31   1.1523e+07   1.1491e+07    0.28%    829    823
+         5390    5354     31   1.1523e+07   1.1491e+07    0.28%    831    824
+         5400    5364     31   1.1523e+07   1.1491e+07    0.28%    832    826
+         5410    5374     31   1.1523e+07   1.1491e+07    0.28%    833    827
+         5420    5384     31   1.1523e+07   1.1491e+07    0.28%    836    829
+         5430    5394     31   1.1523e+07   1.1491e+07    0.28%    838    831
+         5440    5404     31   1.1523e+07   1.1491e+07    0.28%    841    833
+         5450    5414     31   1.1523e+07   1.1491e+07    0.28%    843    835
+         5460    5424     31   1.1523e+07   1.1491e+07    0.28%    844    836
+         5470    5434     31   1.1523e+07   1.1491e+07    0.28%    846    838
+         5480    5444     31   1.1523e+07   1.1491e+07    0.28%    847    839
+         5490    5454     31   1.1523e+07   1.1491e+07    0.28%    848    841
+         5500    5464     31   1.1523e+07   1.1491e+07    0.28%    850    842
+         5510    5474     31   1.1523e+07   1.1491e+07    0.28%    852    843
+         5520    5484     31   1.1523e+07   1.1491e+07    0.28%    854    845
+         5530    5494     31   1.1523e+07   1.1491e+07    0.28%    857    849
+         5540    5504     31   1.1523e+07   1.1491e+07    0.28%    860    853
+         5550    5514     31   1.1523e+07   1.1491e+07    0.28%    862    855
+         5560    5524     31   1.1523e+07   1.1491e+07    0.28%    864    858
+         5570    5534     31   1.1523e+07   1.1491e+07    0.28%    866    859
+         5580    5544     31   1.1523e+07   1.1491e+07    0.28%    867    861
+         5590    5554     31   1.1523e+07   1.1491e+07    0.28%    869    863
+         5600    5564     31   1.1523e+07   1.1491e+07    0.28%    872    865
+         5610    5574     31   1.1523e+07   1.1491e+07    0.28%    874    867
+         5620    5584     31   1.1523e+07   1.1491e+07    0.28%    876    869
+         5630    5594     31   1.1523e+07   1.1491e+07    0.28%    878    871
+         5640    5604     31   1.1523e+07   1.1491e+07    0.28%    881    873
+         5650    5614     31   1.1523e+07   1.1491e+07    0.28%    882    874
+         5660    5624     31   1.1523e+07   1.1491e+07    0.28%    883    876
+         5670    5634     31   1.1523e+07   1.1491e+07    0.28%    885    877
+         5680    5644     31   1.1523e+07   1.1491e+07    0.28%    887    879
+         5690    5654     31   1.1523e+07   1.1491e+07    0.28%    888    880
+         5700    5664     31   1.1523e+07   1.1491e+07    0.28%    891    882
+         5710    5674     31   1.1523e+07   1.1491e+07    0.28%    892    883
+         5720    5684     31   1.1523e+07   1.1491e+07    0.28%    894    885
+         5730    5694     31   1.1523e+07   1.1491e+07    0.28%    894    885
+         5740    5704     31   1.1523e+07   1.1491e+07    0.28%    896    887
+         5750    5714     31   1.1523e+07   1.1491e+07    0.28%    898    889
+         5760    5724     31   1.1523e+07   1.1491e+07    0.28%    900    891
+         5770    5734     31   1.1523e+07   1.1491e+07    0.28%    902    892
+         5780    5744     31   1.1523e+07   1.1491e+07    0.28%    903    893
+         5790    5754     31   1.1523e+07   1.1491e+07    0.28%    906    896
+         5800    5764     31   1.1523e+07   1.1491e+07    0.28%    907    897
+         5810    5774     31   1.1523e+07   1.1491e+07    0.28%    910    901
+         5820    5784     31   1.1523e+07   1.1491e+07    0.28%    911    901
+         5830    5794     31   1.1523e+07   1.1491e+07    0.28%    912    903
+         5840    5804     31   1.1523e+07   1.1491e+07    0.28%    914    904
+         5850    5814     31   1.1523e+07   1.1491e+07    0.28%    917    907
+         5860    5824     31   1.1523e+07   1.1491e+07    0.28%    919    908
+         5870    5834     31   1.1523e+07   1.1491e+07    0.28%    920    909
+         5880    5844     31   1.1523e+07   1.1491e+07    0.28%    922    912
+         5890    5854     31   1.1523e+07   1.1491e+07    0.28%    923    913
+         5900    5864     31   1.1523e+07   1.1491e+07    0.28%    924    914
+         5910    5874     31   1.1523e+07   1.1491e+07    0.28%    925    915
+         5920    5884     31   1.1523e+07   1.1491e+07    0.28%    925    916
+         5930    5894     31   1.1523e+07   1.1491e+07    0.28%    926    916
+         5940    5904     31   1.1523e+07   1.1491e+07    0.28%    926    917
+         5950    5912     31   1.1523e+07   1.1491e+07    0.28%    927    918
+         5960    5920     31   1.1523e+07   1.1491e+07    0.28%    928    918
+         5970    5930     31   1.1523e+07   1.1491e+07    0.28%    929    919
+         5980    5940     31   1.1523e+07   1.1491e+07    0.28%    930    921
+         5990    5950     31   1.1523e+07   1.1491e+07    0.28%    931    921
+         6000    5960     31   1.1523e+07   1.1491e+07    0.28%    933    923
+         6010    5970     31   1.1523e+07   1.1491e+07    0.28%    934    924
+         6020    5980     31   1.1523e+07   1.1491e+07    0.28%    936    926
+         6030    5990     31   1.1523e+07   1.1491e+07    0.28%    936    927
+         6040    6000     31   1.1523e+07   1.1491e+07    0.28%    940    931
+         6050    6010     31   1.1523e+07   1.1491e+07    0.28%    942    932
+         6060    6020     31   1.1523e+07   1.1491e+07    0.28%    943    934
+         6070    6030     31   1.1523e+07   1.1491e+07    0.28%    946    936
+         6080    6040     31   1.1523e+07   1.1491e+07    0.28%    947    937
+         6090    6050     31   1.1523e+07   1.1491e+07    0.28%    948    938
+         6100    6060     31   1.1523e+07   1.1491e+07    0.28%    949    939
+         6110    6068     31   1.1523e+07   1.1491e+07    0.28%    951    941
+         6120    6078     31   1.1523e+07   1.1491e+07    0.28%    953    942
+         6130    6088     31   1.1523e+07   1.1491e+07    0.28%    955    945
+         6140    6098     31   1.1523e+07   1.1491e+07    0.28%    956    946
+         6150    6106     31   1.1523e+07   1.1491e+07    0.28%    957    947
+         6160    6114     31   1.1523e+07   1.1491e+07    0.28%    958    948
+         6170    6122     31   1.1523e+07   1.1491e+07    0.28%    962    953
+         6180    6130     31   1.1523e+07   1.1491e+07    0.28%    964    955
+         6190    6140     31   1.1523e+07   1.1491e+07    0.28%    966    957
+         6200    6150     31   1.1523e+07   1.1491e+07    0.28%    968    958
+         6210    6160     31   1.1523e+07   1.1491e+07    0.28%    969    959
+         6220    6170     31   1.1523e+07   1.1491e+07    0.28%    970    960
+         6230    6180     31   1.1523e+07   1.1491e+07    0.28%    973    962
+         6240    6190     31   1.1523e+07   1.1491e+07    0.28%    975    965
+         6250    6200     31   1.1523e+07   1.1491e+07    0.28%    978    968
+         6260    6210     31   1.1523e+07   1.1491e+07    0.28%    982    972
+         6270    6220     31   1.1523e+07   1.1491e+07    0.28%    984    975
+         6280    6230     31   1.1523e+07   1.1491e+07    0.28%    988    979
+         6290    6240     31   1.1523e+07   1.1491e+07    0.28%    991    982
+         6300    6250     31   1.1523e+07   1.1491e+07    0.28%    993    984
+         6310    6260     31   1.1523e+07   1.1491e+07    0.28%    996    986
+         6320    6270     31   1.1523e+07   1.1491e+07    0.28%    998    989
+         6330    6280     31   1.1523e+07   1.1491e+07    0.28%   1001    991
+         6340    6290     31   1.1523e+07   1.1491e+07    0.28%   1004    993
+         6350    6300     31   1.1523e+07   1.1491e+07    0.28%   1006    996
+         6360    6310     31   1.1523e+07   1.1491e+07    0.28%   1008    997
+         6370    6320     31   1.1523e+07   1.1491e+07    0.28%   1010    999
+         6380    6330     31   1.1523e+07   1.1491e+07    0.28%   1011   1000
+         6390    6340     31   1.1523e+07   1.1491e+07    0.28%   1014   1002
+         6400    6350     31   1.1523e+07   1.1491e+07    0.28%   1014   1003
+         6410    6360     31   1.1523e+07   1.1491e+07    0.28%   1015   1004
+         6420    6370     31   1.1523e+07   1.1491e+07    0.28%   1016   1005
+         6430    6380     31   1.1523e+07   1.1491e+07    0.28%   1019   1007
+         6440    6390     31   1.1523e+07   1.1491e+07    0.28%   1020   1009
+         6450    6400     31   1.1523e+07   1.1491e+07    0.28%   1022   1010
+         6460    6410     31   1.1523e+07   1.1491e+07    0.28%   1023   1012
+         6470    6420     31   1.1523e+07   1.1491e+07    0.28%   1025   1013
+         6480    6430     31   1.1523e+07   1.1491e+07    0.28%   1026   1014
+         6490    6440     31   1.1523e+07   1.1491e+07    0.28%   1027   1015
+         6500    6450     31   1.1523e+07   1.1491e+07    0.28%   1029   1017
+         6510    6460     31   1.1523e+07   1.1491e+07    0.28%   1030   1018
+         6520    6470     31   1.1523e+07   1.1491e+07    0.28%   1033   1020
+         6530    6480     31   1.1523e+07   1.1491e+07    0.28%   1034   1021
+         6540    6490     31   1.1523e+07   1.1491e+07    0.28%   1042   1030
+         6550    6500     31   1.1523e+07   1.1491e+07    0.28%   1044   1032
+         6560    6510     31   1.1523e+07   1.1491e+07    0.28%   1045   1033
+         6570    6520     31   1.1523e+07   1.1491e+07    0.28%   1046   1034
+         6580    6530     31   1.1523e+07   1.1491e+07    0.28%   1047   1035
+         6590    6540     31   1.1523e+07   1.1491e+07    0.28%   1048   1035
+         6600    6550     31   1.1523e+07   1.1491e+07    0.28%   1049   1037
+         6610    6560     31   1.1523e+07   1.1491e+07    0.28%   1051   1038
+         6620    6570     31   1.1523e+07   1.1491e+07    0.28%   1052   1039
+         6630    6580     31   1.1523e+07   1.1491e+07    0.28%   1053   1040
+         6640    6590     31   1.1523e+07   1.1491e+07    0.28%   1053   1041
+         6650    6600     31   1.1523e+07   1.1491e+07    0.28%   1054   1042
+         6660    6610     31   1.1523e+07   1.1491e+07    0.28%   1057   1045
+         6670    6620     31   1.1523e+07   1.1491e+07    0.28%   1060   1048
+         6680    6628     31   1.1523e+07   1.1491e+07    0.28%   1072   1061
+         6690    6638     31   1.1523e+07   1.1491e+07    0.28%   1074   1063
+         6700    6648     31   1.1523e+07   1.1491e+07    0.28%   1077   1065
+         6710    6658     31   1.1523e+07   1.1491e+07    0.28%   1079   1067
+         6720    6668     31   1.1523e+07   1.1491e+07    0.28%   1081   1069
+         6730    6678     31   1.1523e+07   1.1491e+07    0.28%   1092   1080
+         6740    6688     31   1.1523e+07   1.1491e+07    0.28%   1094   1082
+         6750    6698     31   1.1523e+07   1.1491e+07    0.28%   1096   1084
+         6760    6708     31   1.1523e+07   1.1491e+07    0.28%   1097   1086
+         6770    6718     31   1.1523e+07   1.1491e+07    0.28%   1098   1086
+         6780    6728     31   1.1523e+07   1.1491e+07    0.28%   1100   1088
+         6790    6738     31   1.1523e+07   1.1491e+07    0.28%   1102   1090
+         6800    6748     31   1.1523e+07   1.1491e+07    0.28%   1104   1093
+         6810    6758     31   1.1523e+07   1.1491e+07    0.28%   1105   1094
+         6820    6768     31   1.1523e+07   1.1491e+07    0.28%   1108   1097
+         6830    6776     31   1.1523e+07   1.1491e+07    0.28%   1111   1098
+         6840    6786     31   1.1523e+07   1.1491e+07    0.28%   1112   1100
+         6850    6796     31   1.1523e+07   1.1491e+07    0.28%   1114   1102
+         6860    6806     31   1.1523e+07   1.1491e+07    0.28%   1117   1104
+         6870    6816     31   1.1523e+07   1.1491e+07    0.28%   1119   1106
+         6880    6826     31   1.1523e+07   1.1491e+07    0.28%   1121   1108
+         6890    6836     31   1.1523e+07   1.1491e+07    0.28%   1123   1110
+         6900    6846     31   1.1523e+07   1.1491e+07    0.28%   1126   1112
+         6910    6856     31   1.1523e+07   1.1491e+07    0.28%   1128   1114
+         6920    6866     31   1.1523e+07   1.1491e+07    0.28%   1129   1115
+         6930    6876     31   1.1523e+07   1.1491e+07    0.28%   1133   1119
+         6940    6886     31   1.1523e+07   1.1491e+07    0.28%   1135   1121
+         6950    6896     31   1.1523e+07   1.1491e+07    0.28%   1138   1124
+         6960    6906     31   1.1523e+07   1.1491e+07    0.28%   1139   1126
+         6970    6916     31   1.1523e+07   1.1491e+07    0.28%   1141   1127
+         6980    6926     31   1.1523e+07   1.1491e+07    0.28%   1142   1128
+         6990    6936     31   1.1523e+07   1.1491e+07    0.28%   1146   1133
+         7000    6946     31   1.1523e+07   1.1491e+07    0.28%   1147   1134
+         7010    6956     31   1.1523e+07   1.1491e+07    0.28%   1150   1138
+         7020    6966     31   1.1523e+07   1.1491e+07    0.28%   1151   1139
+         7030    6976     31   1.1523e+07   1.1491e+07    0.28%   1153   1141
+         7040    6986     31   1.1523e+07   1.1491e+07    0.28%   1155   1142
+         7050    6996     31   1.1523e+07   1.1491e+07    0.28%   1158   1146
+         7060    7006     31   1.1523e+07   1.1491e+07    0.28%   1161   1148
+         7070    7016     31   1.1523e+07   1.1491e+07    0.28%   1161   1149
+         7080    7026     31   1.1523e+07   1.1491e+07    0.28%   1164   1151
+         7090    7036     31   1.1523e+07   1.1491e+07    0.28%   1166   1153
+         7100    7046     31   1.1523e+07   1.1491e+07    0.28%   1170   1156
+         7110    7056     31   1.1523e+07   1.1491e+07    0.28%   1172   1158
+         7120    7066     31   1.1523e+07   1.1491e+07    0.28%   1174   1160
+         7130    7076     31   1.1523e+07   1.1491e+07    0.28%   1177   1163
+         7140    7086     31   1.1523e+07   1.1491e+07    0.28%   1180   1165
+         7150    7096     31   1.1523e+07   1.1491e+07    0.28%   1183   1168
+         7160    7106     31   1.1523e+07   1.1491e+07    0.28%   1187   1172
+         7170    7116     31   1.1523e+07   1.1491e+07    0.28%   1188   1174
+         7180    7126     31   1.1523e+07   1.1491e+07    0.28%   1190   1176
+         7190    7136     31   1.1523e+07   1.1491e+07    0.28%   1193   1178
+         7200    7146     31   1.1523e+07   1.1491e+07    0.28%   1194   1179
+         7210    7156     31   1.1523e+07   1.1491e+07    0.28%   1196   1181
+         7220    7166     31   1.1523e+07   1.1491e+07    0.28%   1196   1181
+         7230    7176     31   1.1523e+07   1.1491e+07    0.28%   1198   1183
+         7240    7186     31   1.1523e+07   1.1491e+07    0.28%   1201   1186
+         7250    7196     31   1.1523e+07   1.1491e+07    0.28%   1206   1191
+         7260    7206     31   1.1523e+07   1.1491e+07    0.28%   1209   1194
+         7270    7216     31   1.1523e+07   1.1491e+07    0.28%   1212   1197
+         7280    7226     31   1.1523e+07   1.1491e+07    0.28%   1215   1198
+         7290    7236     31   1.1523e+07   1.1491e+07    0.28%   1217   1200
+         7300    7246     31   1.1523e+07   1.1491e+07    0.28%   1221   1205
+         7310    7256     31   1.1523e+07   1.1491e+07    0.28%   1223   1208
+         7320    7266     31   1.1523e+07   1.1491e+07    0.28%   1226   1210
+         7330    7276     31   1.1523e+07   1.1491e+07    0.28%   1228   1212
+         7340    7286     31   1.1523e+07   1.1491e+07    0.28%   1232   1215
+         7350    7296     31   1.1523e+07   1.1491e+07    0.28%   1234   1217
+         7360    7304     31   1.1523e+07   1.1491e+07    0.28%   1239   1222
+         7370    7314     31   1.1523e+07   1.1491e+07    0.28%   1240   1224
+         7380    7324     31   1.1523e+07   1.1491e+07    0.28%   1242   1225
+         7390    7334     31   1.1523e+07   1.1491e+07    0.28%   1242   1226
+         7400    7344     31   1.1523e+07   1.1491e+07    0.28%   1245   1228
+         7410    7354     31   1.1523e+07   1.1491e+07    0.28%   1246   1229
+         7420    7364     31   1.1523e+07   1.1491e+07    0.28%   1255   1238
+         7430    7374     31   1.1523e+07   1.1491e+07    0.28%   1257   1240
+         7440    7384     31   1.1523e+07   1.1491e+07    0.28%   1259   1241
+         7450    7392     31   1.1523e+07   1.1491e+07    0.28%   1261   1243
+         7460    7402     31   1.1523e+07   1.1491e+07    0.28%   1262   1244
+         7470    7412     31   1.1523e+07   1.1491e+07    0.28%   1264   1246
+         7480    7422     31   1.1523e+07   1.1491e+07    0.28%   1266   1248
+         7490    7430     31   1.1523e+07   1.1491e+07    0.28%   1269   1251
+         7500    7440     31   1.1523e+07   1.1491e+07    0.28%   1271   1253
+         7510    7450     31   1.1523e+07   1.1491e+07    0.28%   1273   1255
+         7520    7460     31   1.1523e+07   1.1491e+07    0.28%   1277   1259
+         7530    7470     31   1.1523e+07   1.1491e+07    0.28%   1279   1262
+         7540    7480     31   1.1523e+07   1.1491e+07    0.28%   1282   1264
+         7550    7490     31   1.1523e+07   1.1491e+07    0.28%   1283   1265
+         7560    7500     31   1.1523e+07   1.1491e+07    0.28%   1285   1267
+         7570    7510     31   1.1523e+07   1.1491e+07    0.28%   1287   1268
+         7580    7520     31   1.1523e+07   1.1491e+07    0.28%   1289   1270
+         7590    7530     31   1.1523e+07   1.1491e+07    0.28%   1291   1272
+         7600    7540     31   1.1523e+07   1.1491e+07    0.28%   1293   1274
+         7610    7550     31   1.1523e+07   1.1491e+07    0.28%   1295   1276
+         7620    7560     31   1.1523e+07   1.1491e+07    0.28%   1296   1277
+         7630    7570     31   1.1523e+07   1.1491e+07    0.28%   1298   1279
+         7640    7580     31   1.1523e+07   1.1491e+07    0.28%   1301   1281
+         7650    7590     31   1.1523e+07   1.1491e+07    0.28%   1303   1283
+         7660    7600     31   1.1523e+07   1.1491e+07    0.28%   1306   1285
+         7670    7610     31   1.1523e+07   1.1491e+07    0.28%   1329   1310
+         7680    7620     31   1.1523e+07   1.1491e+07    0.28%   1330   1311
+         7690    7630     31   1.1523e+07   1.1491e+07    0.28%   1331   1312
+         7700    7640     31   1.1523e+07   1.1491e+07    0.28%   1333   1314
+         7710    7650     31   1.1523e+07   1.1491e+07    0.28%   1335   1315
+         7720    7660     31   1.1523e+07   1.1491e+07    0.28%   1337   1317
+         7730    7670     31   1.1523e+07   1.1491e+07    0.28%   1339   1319
+         7740    7680     31   1.1523e+07   1.1491e+07    0.28%   1342   1321
+         7750    7690     31   1.1523e+07   1.1491e+07    0.28%   1344   1323
+         7760    7700     31   1.1523e+07   1.1491e+07    0.28%   1345   1324
+         7770    7710     31   1.1523e+07   1.1491e+07    0.28%   1346   1325
+         7780    7720     31   1.1523e+07   1.1491e+07    0.28%   1348   1327
+         7790    7730     31   1.1523e+07   1.1491e+07    0.28%   1349   1328
+         7800    7740     31   1.1523e+07   1.1491e+07    0.28%   1350   1329
+         7810    7750     31   1.1523e+07   1.1491e+07    0.28%   1354   1333
+         7820    7760     31   1.1523e+07   1.1491e+07    0.28%   1355   1335
+         7830    7770     31   1.1523e+07   1.1491e+07    0.28%   1357   1336
+         7840    7780     31   1.1523e+07   1.1491e+07    0.28%   1358   1337
+         7850    7790     31   1.1523e+07   1.1491e+07    0.28%   1361   1340
+         7860    7800     31   1.1523e+07   1.1491e+07    0.28%   1363   1341
+         7870    7810     31   1.1523e+07   1.1491e+07    0.28%   1364   1342
+         7880    7820     31   1.1523e+07   1.1491e+07    0.28%   1365   1343
+         7890    7830     31   1.1523e+07   1.1491e+07    0.28%   1365   1344
+         7900    7840     31   1.1523e+07   1.1491e+07    0.28%   1367   1345
+         7910    7850     31   1.1523e+07   1.1491e+07    0.28%   1369   1347
+         7920    7860     31   1.1523e+07   1.1491e+07    0.28%   1370   1348
+         7930    7870     31   1.1523e+07   1.1491e+07    0.28%   1371   1349
+         7940    7880     31   1.1523e+07   1.1491e+07    0.28%   1374   1351
+         7950    7890     31   1.1523e+07   1.1491e+07    0.28%   1374   1352
+         7960    7900     31   1.1523e+07   1.1491e+07    0.28%   1375   1353
+         7970    7910     31   1.1523e+07   1.1491e+07    0.28%   1375   1353
+         7980    7920     31   1.1523e+07   1.1491e+07    0.28%   1376   1354
+         7990    7930     31   1.1523e+07   1.1491e+07    0.28%   1378   1356
+         8000    7940     31   1.1523e+07   1.1491e+07    0.28%   1379   1357
+         8010    7950     31   1.1523e+07   1.1491e+07    0.28%   1380   1358
+         8020    7960     31   1.1523e+07   1.1491e+07    0.28%   1382   1360
+         8030    7970     31   1.1523e+07   1.1491e+07    0.28%   1384   1361
+         8040    7980     31   1.1523e+07   1.1491e+07    0.28%   1387   1365
+         8050    7990     31   1.1523e+07   1.1491e+07    0.28%   1389   1367
+         8060    8000     31   1.1523e+07   1.1491e+07    0.28%   1391   1369
+         8070    8010     31   1.1523e+07   1.1491e+07    0.28%   1392   1370
+         8080    8020     31   1.1523e+07   1.1491e+07    0.28%   1394   1372
+         8090    8030     31   1.1523e+07   1.1491e+07    0.28%   1396   1374
+         8100    8040     31   1.1523e+07   1.1491e+07    0.28%   1399   1377
+         8110    8050     31   1.1523e+07   1.1491e+07    0.28%   1402   1380
+         8120    8060     31   1.1523e+07   1.1491e+07    0.28%   1405   1384
+         8130    8070     31   1.1523e+07   1.1491e+07    0.28%   1408   1387
+         8140    8080     31   1.1523e+07   1.1491e+07    0.28%   1409   1388
+         8150    8090     31   1.1523e+07   1.1491e+07    0.28%   1411   1389
+         8160    8100     31   1.1523e+07   1.1491e+07    0.28%   1412   1391
+         8170    8108     31   1.1523e+07   1.1491e+07    0.28%   1415   1395
+         8180    8118     31   1.1523e+07   1.1491e+07    0.28%   1416   1395
+         8190    8128     31   1.1523e+07   1.1491e+07    0.28%   1418   1398
+         8200    8138     31   1.1523e+07   1.1491e+07    0.28%   1420   1399
+         8210    8148     31   1.1523e+07   1.1491e+07    0.28%   1421   1401
+         8220    8158     31   1.1523e+07   1.1491e+07    0.28%   1423   1402
+         8230    8168     31   1.1523e+07   1.1491e+07    0.28%   1426   1404
+         8240    8178     31   1.1523e+07   1.1491e+07    0.28%   1427   1406
+         8250    8186     31   1.1523e+07   1.1491e+07    0.28%   1429   1408
+         8260    8196     31   1.1523e+07   1.1491e+07    0.28%   1432   1410
+         8270    8206     31   1.1523e+07   1.1491e+07    0.28%   1434   1412
+         8280    8216     31   1.1523e+07   1.1491e+07    0.28%   1436   1414
+         8290    8226     31   1.1523e+07   1.1491e+07    0.28%   1439   1417
+         8300    8236     31   1.1523e+07   1.1491e+07    0.28%   1441   1419
+         8310    8246     31   1.1523e+07   1.1491e+07    0.28%   1445   1423
+         8320    8254     31   1.1523e+07   1.1491e+07    0.28%   1447   1425
+         8330    8264     31   1.1523e+07   1.1491e+07    0.28%   1449   1427
+         8340    8274     31   1.1523e+07   1.1491e+07    0.28%   1450   1428
+         8350    8284     31   1.1523e+07   1.1491e+07    0.28%   1453   1431
+         8360    8294     31   1.1523e+07   1.1491e+07    0.28%   1455   1432
+         8370    8304     31   1.1523e+07   1.1491e+07    0.28%   1458   1435
+         8380    8314     31   1.1523e+07   1.1491e+07    0.28%   1470   1450
+         8390    8324     31   1.1523e+07   1.1491e+07    0.28%   1474   1456
+         8400    8334     31   1.1523e+07   1.1491e+07    0.28%   1476   1457
+         8410    8344     31   1.1523e+07   1.1491e+07    0.28%   1477   1459
+         8420    8354     31   1.1523e+07   1.1491e+07    0.28%   1479   1461
+         8430    8364     31   1.1523e+07   1.1491e+07    0.28%   1482   1463
+         8440    8374     31   1.1523e+07   1.1491e+07    0.28%   1484   1465
+         8450    8384     31   1.1523e+07   1.1491e+07    0.28%   1487   1468
+         8460    8394     31   1.1523e+07   1.1491e+07    0.28%   1490   1470
+         8470    8404     31   1.1523e+07   1.1491e+07    0.28%   1491   1472
+         8480    8414     31   1.1523e+07   1.1491e+07    0.28%   1494   1474
+         8490    8424     31   1.1523e+07   1.1491e+07    0.28%   1496   1476
+         8500    8434     31   1.1523e+07   1.1491e+07    0.28%   1498   1478
+         8510    8444     31   1.1523e+07   1.1491e+07    0.28%   1501   1480
+         8520    8452     31   1.1523e+07   1.1491e+07    0.28%   1502   1481
+         8530    8460     31   1.1523e+07   1.1491e+07    0.28%   1504   1483
+         8540    8470     31   1.1523e+07   1.1491e+07    0.28%   1507   1485
+         8550    8480     31   1.1523e+07   1.1491e+07    0.28%   1510   1490
+         8560    8490     31   1.1523e+07   1.1491e+07    0.28%   1511   1491
+         8570    8500     31   1.1523e+07   1.1491e+07    0.28%   1513   1492
+         8580    8510     31   1.1523e+07   1.1491e+07    0.28%   1515   1494
+         8590    8520     31   1.1523e+07   1.1491e+07    0.28%   1517   1496
+         8600    8530     31   1.1523e+07   1.1491e+07    0.28%   1519   1498
+         8610    8540     31   1.1523e+07   1.1491e+07    0.28%   1522   1501
+         8620    8548     31   1.1523e+07   1.1491e+07    0.28%   1524   1503
+         8630    8558     31   1.1523e+07   1.1491e+07    0.28%   1526   1504
+         8640    8568     31   1.1523e+07   1.1491e+07    0.28%   1528   1506
+         8650    8578     31   1.1523e+07   1.1491e+07    0.28%   1531   1508
+         8660    8588     31   1.1523e+07   1.1491e+07    0.28%   1533   1510
+         8670    8598     31   1.1523e+07   1.1491e+07    0.28%   1534   1511
+         8680    8608     31   1.1523e+07   1.1491e+07    0.28%   1536   1513
+         8690    8618     31   1.1523e+07   1.1491e+07    0.28%   1538   1515
+         8700    8628     31   1.1523e+07   1.1491e+07    0.28%   1540   1516
+         8710    8638     31   1.1523e+07   1.1491e+07    0.28%   1541   1518
+         8720    8648     31   1.1523e+07   1.1491e+07    0.28%   1543   1520
+         8730    8658     31   1.1523e+07   1.1491e+07    0.28%   1547   1523
+         8740    8668     31   1.1523e+07   1.1491e+07    0.28%   1549   1525
+         8750    8678     31   1.1523e+07   1.1491e+07    0.28%   1553   1529
+         8760    8688     31   1.1523e+07   1.1491e+07    0.28%   1565   1543
+         8770    8698     31   1.1523e+07   1.1491e+07    0.28%   1569   1548
+         8780    8708     31   1.1523e+07   1.1491e+07    0.28%   1572   1550
+         8790    8718     31   1.1523e+07   1.1491e+07    0.28%   1575   1554
+         8800    8728     31   1.1523e+07   1.1491e+07    0.28%   1578   1556
+         8810    8738     31   1.1523e+07   1.1491e+07    0.28%   1580   1558
+         8820    8748     31   1.1523e+07   1.1491e+07    0.28%   1583   1561
+         8830    8754     31   1.1523e+07   1.1491e+07    0.28%   1598   1576
+         8840    8762     31   1.1523e+07   1.1491e+07    0.28%   1600   1578
+         8850    8772     31   1.1523e+07   1.1491e+07    0.28%   1603   1581
+         8860    8782     31   1.1523e+07   1.1491e+07    0.28%   1604   1581
+         8870    8792     31   1.1523e+07   1.1491e+07    0.28%   1608   1585
+         8880    8802     31   1.1523e+07   1.1491e+07    0.28%   1610   1587
+         8890    8812     31   1.1523e+07   1.1491e+07    0.28%   1612   1589
+         8900    8822     31   1.1523e+07   1.1491e+07    0.28%   1614   1591
+         8910    8832     31   1.1523e+07   1.1491e+07    0.28%   1617   1593
+         8920    8842     31   1.1523e+07   1.1491e+07    0.28%   1619   1595
+         8930    8852     31   1.1523e+07   1.1491e+07    0.28%   1622   1597
+         8940    8862     31   1.1523e+07   1.1491e+07    0.28%   1624   1599
+         8950    8872     31   1.1523e+07   1.1491e+07    0.28%   1627   1602
+         8960    8882     31   1.1523e+07   1.1491e+07    0.28%   1629   1603
+         8970    8892     31   1.1523e+07   1.1491e+07    0.28%   1636   1610
+         8980    8902     31   1.1523e+07   1.1491e+07    0.28%   1637   1612
+         8990    8912     31   1.1523e+07   1.1491e+07    0.28%   1640   1614
+         9000    8922     31   1.1523e+07   1.1491e+07    0.28%   1643   1617
+         9010    8932     31   1.1523e+07   1.1491e+07    0.28%   1645   1619
+         9020    8942     31   1.1523e+07   1.1491e+07    0.28%   1648   1622
+         9030    8952     31   1.1523e+07   1.1491e+07    0.28%   1650   1623
+         9040    8962     31   1.1523e+07   1.1491e+07    0.28%   1653   1625
+         9050    8972     31   1.1523e+07   1.1491e+07    0.28%   1656   1628
+         9060    8982     31   1.1523e+07   1.1491e+07    0.28%   1660   1633
+         9070    8992     31   1.1523e+07   1.1491e+07    0.28%   1663   1635
+         9080    9002     31   1.1523e+07   1.1491e+07    0.28%   1665   1637
+         9090    9012     31   1.1523e+07   1.1491e+07    0.28%   1666   1638
+         9100    9020     31   1.1523e+07   1.1491e+07    0.28%   1669   1640
+         9110    9030     31   1.1523e+07   1.1491e+07    0.28%   1672   1643
+         9120    9040     31   1.1523e+07   1.1491e+07    0.28%   1673   1644
+         9130    9050     31   1.1523e+07   1.1491e+07    0.28%   1675   1646
+         9140    9060     31   1.1523e+07   1.1491e+07    0.28%   1677   1648
+         9150    9070     31   1.1523e+07   1.1491e+07    0.28%   1679   1650
+         9160    9080     31   1.1523e+07   1.1491e+07    0.28%   1680   1651
+         9170    9090     31   1.1523e+07   1.1491e+07    0.28%   1682   1652
+         9180    9100     31   1.1523e+07   1.1491e+07    0.28%   1684   1654
+         9190    9110     31   1.1523e+07   1.1491e+07    0.28%   1685   1655
+         9200    9120     31   1.1523e+07   1.1491e+07    0.28%   1687   1657
+         9210    9130     31   1.1523e+07   1.1491e+07    0.28%   1689   1659
+         9220    9140     31   1.1523e+07   1.1491e+07    0.28%   1691   1661
+         9230    9150     31   1.1523e+07   1.1491e+07    0.28%   1694   1663
+         9240    9160     31   1.1523e+07   1.1491e+07    0.28%   1695   1664
+         9250    9170     31   1.1523e+07   1.1491e+07    0.28%   1700   1670
+         9260    9180     31   1.1523e+07   1.1491e+07    0.28%   1703   1672
+         9270    9190     31   1.1523e+07   1.1491e+07    0.28%   1706   1674
+         9280    9200     31   1.1523e+07   1.1491e+07    0.28%   1708   1676
+         9290    9210     31   1.1523e+07   1.1491e+07    0.28%   1709   1678
+         9300    9220     31   1.1523e+07   1.1491e+07    0.28%   1712   1680
+         9310    9230     31   1.1523e+07   1.1491e+07    0.28%   1713   1681
+         9320    9240     31   1.1523e+07   1.1491e+07    0.28%   1715   1683
+         9330    9250     31   1.1523e+07   1.1491e+07    0.28%   1718   1685
+         9340    9260     31   1.1523e+07   1.1491e+07    0.28%   1718   1686
+         9350    9270     31   1.1523e+07   1.1491e+07    0.28%   1720   1687
+         9360    9280     31   1.1523e+07   1.1491e+07    0.28%   1721   1688
+         9370    9290     31   1.1523e+07   1.1491e+07    0.28%   1722   1690
+         9380    9300     31   1.1523e+07   1.1491e+07    0.28%   1724   1692
+         9390    9310     31   1.1523e+07   1.1491e+07    0.28%   1728   1697
+         9400    9320     31   1.1523e+07   1.1491e+07    0.28%   1730   1699
+         9410    9330     31   1.1523e+07   1.1491e+07    0.28%   1732   1701
+         9420    9340     31   1.1523e+07   1.1491e+07    0.28%   1734   1703
+         9430    9348     31   1.1523e+07   1.1491e+07    0.28%   1735   1704
+         9440    9358     31   1.1523e+07   1.1491e+07    0.28%   1739   1708
+         9450    9368     31   1.1523e+07   1.1491e+07    0.28%   1742   1710
+         9460    9378     31   1.1523e+07   1.1491e+07    0.28%   1744   1712
+         9470    9388     31   1.1523e+07   1.1491e+07    0.28%   1747   1714
+         9480    9398     31   1.1523e+07   1.1491e+07    0.28%   1749   1716
+         9490    9408     31   1.1523e+07   1.1491e+07    0.28%   1751   1719
+         9500    9418     31   1.1523e+07   1.1491e+07    0.28%   1754   1721
+         9510    9428     31   1.1523e+07   1.1491e+07    0.28%   1755   1722
+         9520    9438     31   1.1523e+07   1.1491e+07    0.28%   1756   1723
+         9530    9448     31   1.1523e+07   1.1491e+07    0.28%   1758   1725
+         9540    9458     31   1.1523e+07   1.1491e+07    0.28%   1759   1726
+         9550    9468     31   1.1523e+07   1.1491e+07    0.28%   1760   1727
+         9560    9478     31   1.1523e+07   1.1491e+07    0.28%   1762   1729
+         9570    9488     31   1.1523e+07   1.1491e+07    0.28%   1763   1730
+         9580    9498     31   1.1523e+07   1.1491e+07    0.28%   1765   1731
+         9590    9508     31   1.1523e+07   1.1491e+07    0.28%   1767   1733
+         9600    9518     31   1.1523e+07   1.1491e+07    0.28%   1769   1735
+         9610    9528     31   1.1523e+07   1.1491e+07    0.28%   1772   1738
+         9620    9538     31   1.1523e+07   1.1491e+07    0.28%   1774   1740
+         9630    9548     31   1.1523e+07   1.1491e+07    0.28%   1777   1743
+         9640    9558     31   1.1523e+07   1.1491e+07    0.28%   1780   1745
+         9650    9568     31   1.1523e+07   1.1491e+07    0.28%   1783   1748
+         9660    9578     31   1.1523e+07   1.1491e+07    0.28%   1784   1749
+         9670    9588     31   1.1523e+07   1.1491e+07    0.28%   1785   1750
+         9680    9598     31   1.1523e+07   1.1491e+07    0.28%   1787   1751
+         9690    9608     31   1.1523e+07   1.1491e+07    0.28%   1787   1752
+         9700    9618     31   1.1523e+07   1.1491e+07    0.28%   1789   1754
+         9710    9628     31   1.1523e+07   1.1491e+07    0.28%   1800   1765
+         9720    9638     31   1.1523e+07   1.1491e+07    0.28%   1802   1767
+         9730    9648     31   1.1523e+07   1.1491e+07    0.28%   1804   1769
+         9740    9658     31   1.1523e+07   1.1491e+07    0.28%   1806   1771
+         9750    9668     31   1.1523e+07   1.1491e+07    0.28%   1809   1773
+         9760    9678     31   1.1523e+07   1.1491e+07    0.28%   1813   1777
+         9770    9688     31   1.1523e+07   1.1491e+07    0.28%   1815   1780
+         9780    9698     31   1.1523e+07   1.1491e+07    0.28%   1817   1782
+         9790    9708     31   1.1523e+07   1.1491e+07    0.28%   1819   1783
+         9800    9718     31   1.1523e+07   1.1491e+07    0.28%   1821   1785
+         9810    9728     31   1.1523e+07   1.1491e+07    0.28%   1824   1788
+         9820    9736     31   1.1523e+07   1.1491e+07    0.28%   1826   1790
+         9830    9746     31   1.1523e+07   1.1491e+07    0.28%   1828   1793
+         9840    9756     31   1.1523e+07   1.1491e+07    0.28%   1832   1796
+         9850    9766     31   1.1523e+07   1.1491e+07    0.28%   1835   1801
+         9860    9776     31   1.1523e+07   1.1491e+07    0.28%   1837   1803
+         9870    9786     31   1.1523e+07   1.1491e+07    0.28%   1840   1805
+         9880    9796     31   1.1523e+07   1.1491e+07    0.28%   1842   1807
+         9890    9806     31   1.1523e+07   1.1491e+07    0.28%   1844   1809
+         9900    9816     31   1.1523e+07   1.1491e+07    0.28%   1846   1811
+         9910    9826     31   1.1523e+07   1.1491e+07    0.28%   1847   1811
+         9920    9836     31   1.1523e+07   1.1491e+07    0.28%   1848   1813
+         9930    9846     31   1.1523e+07   1.1491e+07    0.28%   1852   1817
+         9940    9856     31   1.1523e+07   1.1491e+07    0.28%   1854   1819
+         9950    9866     31   1.1523e+07   1.1491e+07    0.28%   1855   1821
+         9960    9876     31   1.1523e+07   1.1491e+07    0.28%   1857   1822
+         9970    9886     31   1.1523e+07   1.1491e+07    0.28%   1859   1824
+         9980    9896     31   1.1523e+07   1.1491e+07    0.28%   1860   1825
+         9990    9906     31   1.1523e+07   1.1491e+07    0.28%   1862   1827
+        10000    9916     31   1.1523e+07   1.1491e+07    0.28%   1863   1828
+        10010    9926     31   1.1523e+07   1.1491e+07    0.28%   1864   1828
+        10020    9936     31   1.1523e+07   1.1491e+07    0.28%   1865   1830
+        10030    9946     31   1.1523e+07   1.1491e+07    0.28%   1867   1831
+        10040    9956     31   1.1523e+07   1.1491e+07    0.28%   1868   1833
+        10050    9966     31   1.1523e+07   1.1491e+07    0.28%   1870   1834
+        10060    9976     31   1.1523e+07   1.1491e+07    0.28%   1872   1836
+        10070    9986     31   1.1523e+07   1.1491e+07    0.28%   1874   1838
+        10080    9996     31   1.1523e+07   1.1491e+07    0.28%   1874   1839
+        10090   10006     31   1.1523e+07   1.1491e+07    0.28%   1876   1840
+        10100   10016     31   1.1523e+07   1.1491e+07    0.28%   1879   1843
+        10110   10026     31   1.1523e+07   1.1491e+07    0.28%   1881   1844
+        10120   10036     31   1.1523e+07   1.1491e+07    0.28%   1882   1846
+        10130   10046     31   1.1523e+07   1.1491e+07    0.28%   1883   1846
+        10140   10056     31   1.1523e+07   1.1491e+07    0.28%   1884   1848
+        10150   10066     31   1.1523e+07   1.1491e+07    0.28%   1897   1862
+        10160   10076     31   1.1523e+07   1.1491e+07    0.28%   1900   1864
+        10170   10086     31   1.1523e+07   1.1491e+07    0.28%   1903   1867
+        10180   10096     31   1.1523e+07   1.1491e+07    0.28%   1906   1870
+        10190   10106     31   1.1523e+07   1.1491e+07    0.28%   1908   1871
+        10200   10116     31   1.1523e+07   1.1491e+07    0.28%   1909   1872
+        10210   10126     31   1.1523e+07   1.1491e+07    0.28%   1910   1874
+        10220   10136     31   1.1523e+07   1.1491e+07    0.28%   1912   1876
+        10230   10144     31   1.1523e+07   1.1491e+07    0.28%   1926   1890
+        10240   10154     31   1.1523e+07   1.1491e+07    0.28%   1927   1892
+        10250   10164     31   1.1523e+07   1.1491e+07    0.28%   1929   1893
+        10260   10174     31   1.1523e+07   1.1491e+07    0.28%   1930   1894
+        10270   10184     31   1.1523e+07   1.1491e+07    0.28%   1931   1895
+        10280   10194     31   1.1523e+07   1.1491e+07    0.28%   1933   1896
+        10290   10204     31   1.1523e+07   1.1491e+07    0.28%   1934   1898
+        10300   10214     31   1.1523e+07   1.1491e+07    0.28%   1938   1902
+        10310   10224     31   1.1523e+07   1.1491e+07    0.28%   1941   1906
+        10320   10234     31   1.1523e+07   1.1491e+07    0.28%   1942   1907
+        10330   10244     31   1.1523e+07   1.1491e+07    0.28%   1944   1909
+        10340   10254     31   1.1523e+07   1.1491e+07    0.28%   1945   1910
+        10350   10264     31   1.1523e+07   1.1491e+07    0.28%   1948   1914
+        10360   10274     31   1.1523e+07   1.1491e+07    0.28%   1950   1916
+        10370   10284     31   1.1523e+07   1.1491e+07    0.28%   1952   1917
+        10380   10294     31   1.1523e+07   1.1491e+07    0.28%   1953   1918
+        10390   10304     31   1.1523e+07   1.1491e+07    0.28%   1954   1919
+        10400   10314     31   1.1523e+07   1.1491e+07    0.28%   1955   1920
+        10410   10324     31   1.1523e+07   1.1491e+07    0.28%   1969   1934
+        10420   10334     31   1.1523e+07   1.1491e+07    0.28%   1970   1935
+        10430   10344     31   1.1523e+07   1.1491e+07    0.28%   1971   1936
+        10440   10354     31   1.1523e+07   1.1491e+07    0.28%   1971   1937
+        10450   10364     31   1.1523e+07   1.1491e+07    0.28%   1973   1938
+        10460   10374     31   1.1523e+07   1.1491e+07    0.28%   1973   1939
+        10470   10384     31   1.1523e+07   1.1491e+07    0.28%   1974   1940
+        10480   10394     31   1.1523e+07   1.1491e+07    0.28%   1975   1941
+        10490   10404     31   1.1523e+07   1.1491e+07    0.28%   1976   1942
+        10500   10414     31   1.1523e+07   1.1491e+07    0.28%   1978   1944
+        10510   10424     31   1.1523e+07   1.1491e+07    0.28%   1996   1963
+        10520   10434     31   1.1523e+07   1.1491e+07    0.28%   1998   1965
+        10530   10442     31   1.1523e+07   1.1491e+07    0.28%   2022   1991
+        10540   10452     31   1.1523e+07   1.1491e+07    0.28%   2023   1992
+        10550   10462     31   1.1523e+07   1.1491e+07    0.28%   2025   1994
+        10560   10472     31   1.1523e+07   1.1491e+07    0.28%   2027   1995
+        10570   10482     31   1.1523e+07   1.1491e+07    0.28%   2028   1997
+        10580   10492     31   1.1523e+07   1.1491e+07    0.28%   2030   1998
+        10590   10502     31   1.1523e+07   1.1491e+07    0.28%   2033   2002
+        10600   10512     31   1.1523e+07   1.1491e+07    0.28%   2036   2005
+        10610   10520     31   1.1523e+07   1.1491e+07    0.28%   2037   2006
+        10620   10530     31   1.1523e+07   1.1491e+07    0.28%   2040   2009
+        10630   10540     31   1.1523e+07   1.1491e+07    0.28%   2042   2010
+        10640   10550     31   1.1523e+07   1.1491e+07    0.28%   2043   2011
+        10650   10560     31   1.1523e+07   1.1491e+07    0.28%   2045   2013
+        10660   10570     31   1.1523e+07   1.1491e+07    0.28%   2046   2014
+        10670   10580     31   1.1523e+07   1.1491e+07    0.28%   2049   2017
+        10680   10590     31   1.1523e+07   1.1491e+07    0.28%   2051   2018
+        10690   10600     31   1.1523e+07   1.1491e+07    0.28%   2052   2020
+        10700   10610     31   1.1523e+07   1.1491e+07    0.28%   2055   2022
+        10710   10620     31   1.1523e+07   1.1491e+07    0.28%   2058   2024
+        10720   10630     31   1.1523e+07   1.1491e+07    0.28%   2060   2026
+        10730   10640     31   1.1523e+07   1.1491e+07    0.28%   2061   2027
+        10740   10650     31   1.1523e+07   1.1491e+07    0.28%   2063   2029
+        10750   10660     31   1.1523e+07   1.1491e+07    0.28%   2064   2030
+        10760   10670     31   1.1523e+07   1.1491e+07    0.28%   2066   2032
+        10770   10680     31   1.1523e+07   1.1491e+07    0.28%   2069   2034
+        10780   10690     31   1.1523e+07   1.1491e+07    0.28%   2072   2037
+        10790   10700     31   1.1523e+07   1.1491e+07    0.28%   2075   2040
+        10800   10710     31   1.1523e+07   1.1491e+07    0.28%   2077   2042
+        10810   10720     31   1.1523e+07   1.1491e+07    0.28%   2079   2044
+        10820   10730     31   1.1523e+07   1.1491e+07    0.28%   2082   2046
+        10830   10740     31   1.1523e+07   1.1491e+07    0.28%   2084   2048
+        10840   10750     31   1.1523e+07   1.1491e+07    0.28%   2086   2050
+        10850   10760     31   1.1523e+07   1.1491e+07    0.28%   2089   2052
+        10860   10770     31   1.1523e+07   1.1491e+07    0.28%   2092   2054
+        10870   10780     31   1.1523e+07   1.1491e+07    0.28%   2095   2057
+        10880   10790     31   1.1523e+07   1.1491e+07    0.28%   2096   2059
+        10890   10800     31   1.1523e+07   1.1491e+07    0.28%   2099   2062
+        10900   10810     31   1.1523e+07   1.1491e+07    0.28%   2102   2065
+        10910   10820     31   1.1523e+07   1.1491e+07    0.28%   2104   2067
+        10920   10830     31   1.1523e+07   1.1491e+07    0.28%   2106   2069
+        10930   10840     31   1.1523e+07   1.1491e+07    0.28%   2108   2071
+        10940   10850     31   1.1523e+07   1.1491e+07    0.28%   2110   2072
+        10950   10860     31   1.1523e+07   1.1491e+07    0.28%   2112   2074
+        10960   10870     31   1.1523e+07   1.1491e+07    0.28%   2115   2077
+        10970   10880     31   1.1523e+07   1.1491e+07    0.28%   2119   2081
+        10980   10890     31   1.1523e+07   1.1491e+07    0.28%   2122   2084
+        10990   10900     31   1.1523e+07   1.1491e+07    0.28%   2123   2086
+        11000   10910     31   1.1523e+07   1.1491e+07    0.28%   2126   2090
+        11010   10920     31   1.1523e+07   1.1491e+07    0.28%   2128   2091
+        11020   10930     31   1.1523e+07   1.1491e+07    0.28%   2130   2093
+        11030   10940     31   1.1523e+07   1.1491e+07    0.28%   2133   2097
+        11040   10950     31   1.1523e+07   1.1491e+07    0.28%   2134   2098
+        11050   10960     31   1.1523e+07   1.1491e+07    0.28%   2135   2099
+        11060   10970     31   1.1523e+07   1.1491e+07    0.28%   2137   2101
+        11070   10980     31   1.1523e+07   1.1491e+07    0.28%   2153   2119
+        11080   10988     31   1.1523e+07   1.1491e+07    0.28%   2167   2134
+        11090   10998     31   1.1523e+07   1.1491e+07    0.28%   2168   2135
+        11100   11008     31   1.1523e+07   1.1491e+07    0.28%   2169   2136
+        11110   11018     31   1.1523e+07   1.1491e+07    0.28%   2170   2137
+        11120   11028     31   1.1523e+07   1.1491e+07    0.28%   2171   2138
+        11130   11038     31   1.1523e+07   1.1491e+07    0.28%   2174   2141
+        11140   11048     31   1.1523e+07   1.1491e+07    0.28%   2176   2143
+        11150   11058     31   1.1523e+07   1.1491e+07    0.28%   2179   2145
+        11160   11068     31   1.1523e+07   1.1491e+07    0.28%   2181   2147
+        11170   11078     31   1.1523e+07   1.1491e+07    0.28%   2183   2149
+        11180   11088     31   1.1523e+07   1.1491e+07    0.28%   2185   2151
+        11190   11098     31   1.1523e+07   1.1491e+07    0.28%   2187   2153
+        11200   11108     31   1.1523e+07   1.1491e+07    0.28%   2190   2155
+        11210   11118     31   1.1523e+07   1.1491e+07    0.28%   2206   2172
+        11220   11128     31   1.1523e+07   1.1491e+07    0.28%   2207   2173
+        11230   11138     31   1.1523e+07   1.1491e+07    0.28%   2209   2175
+        11240   11148     31   1.1523e+07   1.1491e+07    0.28%   2211   2177
+        11250   11158     31   1.1523e+07   1.1491e+07    0.28%   2214   2179
+        11260   11168     31   1.1523e+07   1.1491e+07    0.28%   2220   2186
+        11270   11178     31   1.1523e+07   1.1491e+07    0.28%   2222   2188
+        11280   11188     31   1.1523e+07   1.1491e+07    0.28%   2224   2189
+        11290   11198     31   1.1523e+07   1.1491e+07    0.28%   2227   2194
+        11300   11208     31   1.1523e+07   1.1491e+07    0.28%   2228   2195
+        11310   11218     31   1.1523e+07   1.1491e+07    0.28%   2229   2196
+        11320   11228     31   1.1523e+07   1.1491e+07    0.28%   2230   2197
+        11330   11236     31   1.1523e+07   1.1491e+07    0.28%   2232   2199
+        11340   11242     31   1.1523e+07   1.1491e+07    0.28%   2234   2200
+        11350   11252     31   1.1523e+07   1.1491e+07    0.28%   2236   2203
+        11360   11262     31   1.1523e+07   1.1491e+07    0.28%   2239   2205
+        11370   11272     31   1.1523e+07   1.1491e+07    0.28%   2241   2207
+        11380   11282     31   1.1523e+07   1.1491e+07    0.28%   2244   2209
+        11390   11292     31   1.1523e+07   1.1491e+07    0.28%   2246   2211
+        11400   11302     31   1.1523e+07   1.1491e+07    0.28%   2248   2213
+        11410   11312     31   1.1523e+07   1.1491e+07    0.28%   2249   2214
+        11420   11322     31   1.1523e+07   1.1491e+07    0.28%   2251   2216
+        11430   11330     31   1.1523e+07   1.1491e+07    0.28%   2253   2218
+        11440   11340     31   1.1523e+07   1.1491e+07    0.28%   2256   2220
+        11450   11350     31   1.1523e+07   1.1491e+07    0.28%   2257   2221
+        11460   11360     31   1.1523e+07   1.1491e+07    0.28%   2259   2223
+        11470   11370     31   1.1523e+07   1.1491e+07    0.28%   2259   2223
+        11480   11380     31   1.1523e+07   1.1491e+07    0.28%   2261   2225
+        11490   11390     31   1.1523e+07   1.1491e+07    0.28%   2263   2227
+        11500   11400     31   1.1523e+07   1.1491e+07    0.28%   2264   2228
+        11510   11410     31   1.1523e+07   1.1491e+07    0.28%   2266   2230
+        11520   11420     31   1.1523e+07   1.1491e+07    0.28%   2276   2241
+        11530   11430     31   1.1523e+07   1.1491e+07    0.28%   2278   2243
+        11540   11440     31   1.1523e+07   1.1491e+07    0.28%   2281   2247
+        11550   11450     31   1.1523e+07   1.1491e+07    0.28%   2283   2249
+        11560   11460     31   1.1523e+07   1.1491e+07    0.28%   2285   2251
+        11570   11470     31   1.1523e+07   1.1491e+07    0.28%   2287   2252
+        11580   11480     31   1.1523e+07   1.1491e+07    0.28%   2289   2254
+        11590   11490     31   1.1523e+07   1.1491e+07    0.28%   2291   2256
+        11600   11500     31   1.1523e+07   1.1491e+07    0.28%   2294   2259
+        11610   11508     31   1.1523e+07   1.1491e+07    0.28%   2297   2261
+        11620   11518     31   1.1523e+07   1.1491e+07    0.28%   2301   2266
+        11630   11528     31   1.1523e+07   1.1491e+07    0.28%   2304   2269
+        11640   11538     31   1.1523e+07   1.1491e+07    0.28%   2306   2270
+        11650   11506     33   1.1516e+07   1.1491e+07    0.22%   2309   2273
+        11660   11516     33   1.1516e+07   1.1491e+07    0.22%   2312   2277
+        11670   11526     33   1.1516e+07   1.1491e+07    0.22%   2314   2279
+        11680   11536     33   1.1516e+07   1.1491e+07    0.22%   2316   2281
+        11690   11546     33   1.1516e+07   1.1491e+07    0.22%   2319   2283
+        11700   11556     33   1.1516e+07   1.1491e+07    0.22%   2321   2284
+        11710   11566     33   1.1516e+07   1.1491e+07    0.22%   2322   2285
+        11720   11576     33   1.1516e+07   1.1491e+07    0.22%   2323   2287
+        11730   11584     33   1.1516e+07   1.1491e+07    0.22%   2325   2288
+        11740   11594     33   1.1516e+07   1.1491e+07    0.22%   2326   2289
+        11750   11604     33   1.1516e+07   1.1491e+07    0.22%   2328   2291
+        11760   11614     33   1.1516e+07   1.1491e+07    0.22%   2333   2298
+        11770   11624     33   1.1516e+07   1.1491e+07    0.22%   2334   2299
+        11780   11634     33   1.1516e+07   1.1491e+07    0.22%   2335   2300
+        11790   11644     33   1.1516e+07   1.1491e+07    0.22%   2337   2302
+        11800   11654     33   1.1516e+07   1.1491e+07    0.22%   2340   2304
+        11810   11664     33   1.1516e+07   1.1491e+07    0.22%   2343   2307
+        11820   11674     33   1.1516e+07   1.1491e+07    0.22%   2345   2309
+        11830   11684     33   1.1516e+07   1.1491e+07    0.22%   2348   2312
+        11840   11694     33   1.1516e+07   1.1491e+07    0.22%   2349   2313
+        11850   11704     33   1.1516e+07   1.1491e+07    0.22%   2351   2315
+        11860   11714     33   1.1516e+07   1.1491e+07    0.22%   2351   2315
+        11870   11724     33   1.1516e+07   1.1491e+07    0.22%   2354   2318
+        11880   11734     33   1.1516e+07   1.1491e+07    0.22%   2357   2320
+        11890   11744     33   1.1516e+07   1.1491e+07    0.22%   2360   2323
+        11900   11754     33   1.1516e+07   1.1491e+07    0.22%   2363   2327
+        11910   11764     33   1.1516e+07   1.1491e+07    0.22%   2365   2328
+        11920   11774     33   1.1516e+07   1.1491e+07    0.22%   2368   2331
+        11930   11784     33   1.1516e+07   1.1491e+07    0.22%   2370   2333
+        11940   11794     33   1.1516e+07   1.1491e+07    0.22%   2372   2335
+        11950   11804     33   1.1516e+07   1.1491e+07    0.22%   2376   2340
+        11960   11814     33   1.1516e+07   1.1491e+07    0.22%   2377   2341
+        11970   11824     33   1.1516e+07   1.1491e+07    0.22%   2378   2342
+        11980   11834     33   1.1516e+07   1.1491e+07    0.22%   2379   2343
+        11990   11844     33   1.1516e+07   1.1491e+07    0.22%   2380   2344
+        12000   11854     33   1.1516e+07   1.1491e+07    0.22%   2384   2347
+        12010   11864     33   1.1516e+07   1.1491e+07    0.22%   2385   2348
+        12020   11874     33   1.1516e+07   1.1491e+07    0.22%   2387   2350
+        12030   11884     33   1.1516e+07   1.1491e+07    0.22%   2387   2351
+        12040   11894     33   1.1516e+07   1.1491e+07    0.22%   2389   2352
+        12050   11904     33   1.1516e+07   1.1491e+07    0.22%   2398   2362
+        12060   11914     33   1.1516e+07   1.1491e+07    0.22%   2400   2364
+        12070   11924     33   1.1516e+07   1.1491e+07    0.22%   2402   2366
+        12080   11934     33   1.1516e+07   1.1491e+07    0.22%   2404   2367
+        12090   11944     33   1.1516e+07   1.1491e+07    0.22%   2406   2370
+        12100   11954     33   1.1516e+07   1.1491e+07    0.22%   2408   2372
+        12110   11964     33   1.1516e+07   1.1491e+07    0.22%   2410   2373
+        12120   11974     33   1.1516e+07   1.1491e+07    0.22%   2412   2375
+        12130   11984     33   1.1516e+07   1.1491e+07    0.22%   2413   2376
+        12140   11994     33   1.1516e+07   1.1491e+07    0.22%   2415   2378
+        12150   12004     33   1.1516e+07   1.1491e+07    0.22%   2417   2381
+        12160   12014     33   1.1516e+07   1.1491e+07    0.22%   2419   2382
+        12170   12024     33   1.1516e+07   1.1491e+07    0.22%   2420   2383
+        12180   12034     33   1.1516e+07   1.1491e+07    0.22%   2421   2384
+        12190   12042     33   1.1516e+07   1.1491e+07    0.22%   2422   2385
+        12200   12052     33   1.1516e+07   1.1491e+07    0.22%   2426   2388
+        12210   12062     33   1.1516e+07   1.1491e+07    0.22%   2428   2390
+        12220   12072     33   1.1516e+07   1.1491e+07    0.22%   2430   2392
+        12230   12082     33   1.1516e+07   1.1491e+07    0.22%   2431   2393
+        12240   12092     33   1.1516e+07   1.1491e+07    0.22%   2433   2395
+        12250   12102     33   1.1516e+07   1.1491e+07    0.22%   2436   2397
+        12260   12112     33   1.1516e+07   1.1491e+07    0.22%   2437   2399
+        12270   12122     33   1.1516e+07   1.1491e+07    0.22%   2439   2400
+        12280   12132     33   1.1516e+07   1.1491e+07    0.22%   2445   2407
+        12290   12142     33   1.1516e+07   1.1491e+07    0.22%   2448   2409
+        12300   12152     33   1.1516e+07   1.1491e+07    0.22%   2451   2411
+        12310   12160     33   1.1516e+07   1.1491e+07    0.22%   2454   2414
+        12320   12170     33   1.1516e+07   1.1491e+07    0.22%   2456   2416
+        12330   12180     33   1.1516e+07   1.1491e+07    0.22%   2458   2418
+        12340   12190     33   1.1516e+07   1.1491e+07    0.22%   2460   2419
+        12350   12200     33   1.1516e+07   1.1491e+07    0.22%   2462   2421
+        12360   12210     33   1.1516e+07   1.1491e+07    0.22%   2468   2430
+        12370   12220     33   1.1516e+07   1.1491e+07    0.22%   2471   2433
+        12380   12230     33   1.1516e+07   1.1491e+07    0.22%   2472   2435
+        12390   12240     33   1.1516e+07   1.1491e+07    0.22%   2474   2436
+        12400   12250     33   1.1516e+07   1.1491e+07    0.22%   2477   2439
+        12410   12260     33   1.1516e+07   1.1491e+07    0.22%   2480   2441
+        12420   12270     33   1.1516e+07   1.1491e+07    0.22%   2482   2443
+        12430   12280     33   1.1516e+07   1.1491e+07    0.22%   2484   2445
+        12440   12290     33   1.1516e+07   1.1491e+07    0.22%   2485   2447
+        12450   12300     33   1.1516e+07   1.1491e+07    0.22%   2488   2449
+        12460   12310     33   1.1516e+07   1.1491e+07    0.22%   2490   2451
+        12470   12320     33   1.1516e+07   1.1491e+07    0.22%   2492   2453
+        12480   12330     33   1.1516e+07   1.1491e+07    0.22%   2493   2454
+        12490   12340     33   1.1516e+07   1.1491e+07    0.22%   2496   2456
+        12500   12350     33   1.1516e+07   1.1491e+07    0.22%   2498   2458
+        12510   12360     33   1.1516e+07   1.1491e+07    0.22%   2510   2472
+        12520   12370     33   1.1516e+07   1.1491e+07    0.22%   2512   2474
+        12530   12380     33   1.1516e+07   1.1491e+07    0.22%   2515   2476
+        12540   12390     33   1.1516e+07   1.1491e+07    0.22%   2517   2478
+        12550   12400     33   1.1516e+07   1.1491e+07    0.22%   2519   2480
+        12560   12410     33   1.1516e+07   1.1491e+07    0.22%   2521   2482
+        12570   12420     33   1.1516e+07   1.1491e+07    0.22%   2524   2484
+        12580   12428     33   1.1516e+07   1.1491e+07    0.22%   2527   2487
+        12590   12438     33   1.1516e+07   1.1491e+07    0.22%   2529   2489
+        12600   12448     33   1.1516e+07   1.1491e+07    0.22%   2531   2491
+        12610   12458     33   1.1516e+07   1.1491e+07    0.22%   2534   2494
+        12620   12468     33   1.1516e+07   1.1491e+07    0.22%   2536   2496
+        12630   12478     33   1.1516e+07   1.1491e+07    0.22%   2539   2499
+        12640   12488     33   1.1516e+07   1.1491e+07    0.22%   2543   2503
+        12650   12498     33   1.1516e+07   1.1491e+07    0.22%   2547   2507
+        12660   12508     33   1.1516e+07   1.1491e+07    0.22%   2556   2518
+        12670   12518     33   1.1516e+07   1.1491e+07    0.22%   2558   2519
+        12680   12528     33   1.1516e+07   1.1491e+07    0.22%   2561   2523
+        12690   12538     33   1.1516e+07   1.1491e+07    0.22%   2572   2534
+        12700   12548     33   1.1516e+07   1.1491e+07    0.22%   2574   2536
+        12710   12558     33   1.1516e+07   1.1491e+07    0.22%   2576   2538
+        12720   12568     33   1.1516e+07   1.1491e+07    0.22%   2578   2540
+        12730   12578     33   1.1516e+07   1.1491e+07    0.22%   2581   2544
+        12740   12588     33   1.1516e+07   1.1491e+07    0.22%   2585   2548
+        12750   12598     33   1.1516e+07   1.1491e+07    0.22%   2588   2550
+        12760   12606     33   1.1516e+07   1.1491e+07    0.22%   2590   2553
+        12770   12616     33   1.1516e+07   1.1491e+07    0.22%   2591   2554
+        12780   12626     33   1.1516e+07   1.1491e+07    0.22%   2594   2556
+        12790   12636     33   1.1516e+07   1.1491e+07    0.22%   2596   2558
+        12800   12646     33   1.1516e+07   1.1491e+07    0.22%   2598   2560
+        12810   12656     33   1.1516e+07   1.1491e+07    0.22%   2599   2560
+        12820   12666     33   1.1516e+07   1.1491e+07    0.22%   2601   2562
+        12830   12676     33   1.1516e+07   1.1491e+07    0.22%   2603   2564
+        12840   12686     33   1.1516e+07   1.1491e+07    0.22%   2605   2566
+        12850   12696     33   1.1516e+07   1.1491e+07    0.22%   2608   2570
+        12860   12706     33   1.1516e+07   1.1491e+07    0.22%   2610   2572
+        12870   12716     33   1.1516e+07   1.1491e+07    0.22%   2611   2573
+        12880   12726     33   1.1516e+07   1.1491e+07    0.22%   2613   2574
+        12890   12736     33   1.1516e+07   1.1491e+07    0.22%   2614   2576
+        12900   12746     33   1.1516e+07   1.1491e+07    0.22%   2617   2579
+        12910   12756     33   1.1516e+07   1.1491e+07    0.22%   2619   2581
+        12920   12766     33   1.1516e+07   1.1491e+07    0.22%   2621   2583
+        12930   12776     33   1.1516e+07   1.1491e+07    0.22%   2623   2585
+        12940   12786     33   1.1516e+07   1.1491e+07    0.22%   2625   2587
+        12950   12796     33   1.1516e+07   1.1491e+07    0.22%   2627   2589
+        12960   12806     33   1.1516e+07   1.1491e+07    0.22%   2629   2590
+        12970   12816     33   1.1516e+07   1.1491e+07    0.22%   2632   2593
+        12980   12826     33   1.1516e+07   1.1491e+07    0.22%   2634   2595
+        12990   12836     33   1.1516e+07   1.1491e+07    0.22%   2636   2596
+        13000   12846     33   1.1516e+07   1.1491e+07    0.22%   2639   2599
+        13010   12856     33   1.1516e+07   1.1491e+07    0.22%   2641   2601
+        13020   12866     33   1.1516e+07   1.1491e+07    0.22%   2643   2603
+        13030   12876     33   1.1516e+07   1.1491e+07    0.22%   2645   2605
+        13040   12886     33   1.1516e+07   1.1491e+07    0.22%   2648   2607
+        13050   12896     33   1.1516e+07   1.1491e+07    0.22%   2650   2609
+        13060   12906     33   1.1516e+07   1.1491e+07    0.22%   2653   2612
+        13070   12916     33   1.1516e+07   1.1491e+07    0.22%   2656   2615
+        13080   12926     33   1.1516e+07   1.1491e+07    0.22%   2658   2616
+        13090   12936     33   1.1516e+07   1.1491e+07    0.22%   2660   2619
+        13100   12946     33   1.1516e+07   1.1491e+07    0.22%   2664   2622
+        13110   12956     33   1.1516e+07   1.1491e+07    0.22%   2666   2624
+        13120   12966     33   1.1516e+07   1.1491e+07    0.22%   2669   2626
+        13130   12976     33   1.1516e+07   1.1491e+07    0.22%   2671   2629
+        13140   12986     33   1.1516e+07   1.1491e+07    0.22%   2673   2631
+        13150   12996     33   1.1516e+07   1.1491e+07    0.22%   2674   2632
+        13160   13006     33   1.1516e+07   1.1491e+07    0.22%   2681   2639
+        13170   13016     33   1.1516e+07   1.1491e+07    0.22%   2684   2644
+        13180   13026     33   1.1516e+07   1.1491e+07    0.22%   2687   2646
+        13190   13036     33   1.1516e+07   1.1491e+07    0.22%   2688   2647
+        13200   13046     33   1.1516e+07   1.1491e+07    0.22%   2691   2650
+        13210   13056     33   1.1516e+07   1.1491e+07    0.22%   2693   2652
+        13220   13066     33   1.1516e+07   1.1491e+07    0.22%   2695   2654
+        13230   13076     33   1.1516e+07   1.1491e+07    0.22%   2695   2654
+        13240   13086     33   1.1516e+07   1.1491e+07    0.22%   2697   2656
+        13250   13096     33   1.1516e+07   1.1491e+07    0.22%   2699   2658
+        13260   13106     33   1.1516e+07   1.1491e+07    0.22%   2701   2660
+        13270   13116     33   1.1516e+07   1.1491e+07    0.22%   2704   2662
+        13280   13126     33   1.1516e+07   1.1491e+07    0.22%   2705   2663
+        13290   13136     33   1.1516e+07   1.1491e+07    0.22%   2707   2665
+        13300   13146     33   1.1516e+07   1.1491e+07    0.22%   2709   2667
+        13310   13156     33   1.1516e+07   1.1491e+07    0.22%   2711   2669
+        13320   13166     33   1.1516e+07   1.1491e+07    0.22%   2713   2671
+        13330   13176     33   1.1516e+07   1.1491e+07    0.22%   2715   2673
+        13340   13184     33   1.1516e+07   1.1491e+07    0.22%   2718   2675
+        13350   13194     33   1.1516e+07   1.1491e+07    0.22%   2722   2678
+        13360   13204     33   1.1516e+07   1.1491e+07    0.22%   2725   2681
+        13370   13214     33   1.1516e+07   1.1491e+07    0.22%   2727   2683
+        13380   13224     33   1.1516e+07   1.1491e+07    0.22%   2730   2686
+        13390   13234     33   1.1516e+07   1.1491e+07    0.22%   2732   2688
+        13400   13244     33   1.1516e+07   1.1491e+07    0.22%   2735   2690
+        13410   13254     33   1.1516e+07   1.1491e+07    0.22%   2737   2692
+        13420   13262     33   1.1516e+07   1.1491e+07    0.22%   2739   2694
+        13430   13270     33   1.1516e+07   1.1491e+07    0.22%   2740   2695
+        13440   13280     33   1.1516e+07   1.1491e+07    0.22%   2741   2696
+        13450   13288     33   1.1516e+07   1.1491e+07    0.22%   2751   2707
+        13460   13296     33   1.1516e+07   1.1491e+07    0.22%   2753   2709
+        13470   13306     33   1.1516e+07   1.1491e+07    0.22%   2754   2710
+        13480   13316     33   1.1516e+07   1.1491e+07    0.22%   2756   2712
+        13490   13326     33   1.1516e+07   1.1491e+07    0.22%   2759   2714
+        13500   13334     33   1.1516e+07   1.1491e+07    0.22%   2760   2715
+        13510   13344     33   1.1516e+07   1.1491e+07    0.22%   2763   2718
+        13520   13354     33   1.1516e+07   1.1491e+07    0.22%   2766   2721
+        13530   13360     33   1.1516e+07   1.1491e+07    0.22%   2770   2726
+        13540   13370     33   1.1516e+07   1.1491e+07    0.22%   2772   2727
+        13550   13380     33   1.1516e+07   1.1491e+07    0.22%   2773   2728
+        13560   13390     33   1.1516e+07   1.1491e+07    0.22%   2777   2733
+        13570   13400     33   1.1516e+07   1.1491e+07    0.22%   2778   2734
+        13580   13408     33   1.1516e+07   1.1491e+07    0.22%   2779   2735
+        13590   13418     33   1.1516e+07   1.1491e+07    0.22%   2781   2738
+        13600   13428     33   1.1516e+07   1.1491e+07    0.22%   2782   2739
+        13610   13436     33   1.1516e+07   1.1491e+07    0.22%   2783   2740
+        13620   13446     33   1.1516e+07   1.1491e+07    0.22%   2785   2742
+        13630   13456     33   1.1516e+07   1.1491e+07    0.22%   2786   2742
+        13640   13466     33   1.1516e+07   1.1491e+07    0.22%   2787   2744
+        13650   13476     33   1.1516e+07   1.1491e+07    0.22%   2789   2745
+        13660   13486     33   1.1516e+07   1.1491e+07    0.22%   2791   2748
+        13670   13494     33   1.1516e+07   1.1491e+07    0.22%   2794   2750
+        13680   13504     33   1.1516e+07   1.1491e+07    0.22%   2797   2753
+        13690   13514     33   1.1516e+07   1.1491e+07    0.22%   2800   2757
+        13700   13524     33   1.1516e+07   1.1491e+07    0.22%   2803   2760
+        13710   13534     33   1.1516e+07   1.1491e+07    0.22%   2806   2762
+        13720   13544     33   1.1516e+07   1.1491e+07    0.22%   2809   2765
+        13730   13554     33   1.1516e+07   1.1491e+07    0.22%   2811   2767
+        13740   13564     33   1.1516e+07   1.1491e+07    0.22%   2814   2771
+        13750   13574     33   1.1516e+07   1.1491e+07    0.22%   2816   2773
+        13760   13584     33   1.1516e+07   1.1491e+07    0.22%   2818   2774
+        13770   13594     33   1.1516e+07   1.1491e+07    0.22%   2820   2776
+        13780   13604     33   1.1516e+07   1.1491e+07    0.22%   2822   2778
+        13790   13614     33   1.1516e+07   1.1491e+07    0.22%   2824   2780
+        13800   13624     33   1.1516e+07   1.1491e+07    0.22%   2826   2782
+        13810   13632     33   1.1516e+07   1.1491e+07    0.22%   2827   2783
+        13820   13642     33   1.1516e+07   1.1491e+07    0.22%   2831   2788
+        13830   13652     33   1.1516e+07   1.1491e+07    0.22%   2833   2789
+        13840   13662     33   1.1516e+07   1.1491e+07    0.22%   2835   2791
+        13850   13672     33   1.1516e+07   1.1491e+07    0.22%   2837   2793
+        13860   13682     33   1.1516e+07   1.1491e+07    0.22%   2839   2795
+        13870   13692     33   1.1516e+07   1.1491e+07    0.22%   2841   2798
+        13880   13702     33   1.1516e+07   1.1491e+07    0.22%   2844   2800
+        13890   13712     33   1.1516e+07   1.1491e+07    0.22%   2845   2801
+        13900   13722     33   1.1516e+07   1.1491e+07    0.22%   2847   2803
+        13910   13732     33   1.1516e+07   1.1491e+07    0.22%   2850   2807
+        13920   13742     33   1.1516e+07   1.1491e+07    0.22%   2853   2809
+        13930   13752     33   1.1516e+07   1.1491e+07    0.22%   2855   2811
+        13940   13762     33   1.1516e+07   1.1491e+07    0.22%   2857   2813
+        13950   13772     33   1.1516e+07   1.1491e+07    0.22%   2860   2816
+        13960   13782     33   1.1516e+07   1.1491e+07    0.22%   2862   2818
+        13970   13790     33   1.1516e+07   1.1491e+07    0.22%   2864   2820
+        13980   13800     33   1.1516e+07   1.1491e+07    0.22%   2867   2822
+        13990   13810     33   1.1516e+07   1.1491e+07    0.22%   2870   2826
+        14000   13820     33   1.1516e+07   1.1491e+07    0.22%   2873   2829
+        14010   13828     33   1.1516e+07   1.1491e+07    0.22%   2875   2831
+        14020   13838     33   1.1516e+07   1.1491e+07    0.22%   2877   2833
+        14030   13848     33   1.1516e+07   1.1491e+07    0.22%   2880   2835
+        14040   13858     33   1.1516e+07   1.1491e+07    0.22%   2882   2837
+        14050   13868     33   1.1516e+07   1.1491e+07    0.22%   2885   2839
+        14060   13878     33   1.1516e+07   1.1491e+07    0.22%   2887   2842
+        14070   13888     33   1.1516e+07   1.1491e+07    0.22%   2890   2844
+        14080   13898     33   1.1516e+07   1.1491e+07    0.22%   2892   2846
+        14090   13908     33   1.1516e+07   1.1491e+07    0.22%   2895   2849
+        14100   13918     33   1.1516e+07   1.1491e+07    0.22%   2898   2851
+        14110   13928     33   1.1516e+07   1.1491e+07    0.22%   2900   2853
+        14120   13938     33   1.1516e+07   1.1491e+07    0.22%   2902   2855
+        14130   13946     33   1.1516e+07   1.1491e+07    0.22%   2904   2857
+        14140   13956     33   1.1516e+07   1.1491e+07    0.22%   2907   2860
+        14150   13966     33   1.1516e+07   1.1491e+07    0.22%   2910   2862
+        14160   13974     33   1.1516e+07   1.1491e+07    0.22%   2912   2864
+        14170   13984     33   1.1516e+07   1.1491e+07    0.22%   2914   2866
+        14180   13992     33   1.1516e+07   1.1491e+07    0.22%   2917   2870
+        14190   14002     33   1.1516e+07   1.1491e+07    0.22%   2920   2873
+        14200   14012     33   1.1516e+07   1.1491e+07    0.22%   2924   2877
+        14210   14022     33   1.1516e+07   1.1491e+07    0.22%   2926   2879
+        14220   14032     33   1.1516e+07   1.1491e+07    0.22%   2930   2884
+        14230   14042     33   1.1516e+07   1.1491e+07    0.22%   2933   2886
+        14240   14052     33   1.1516e+07   1.1491e+07    0.22%   2935   2888
+        14250   14062     33   1.1516e+07   1.1491e+07    0.22%   2939   2891
+        14260   14070     33   1.1516e+07   1.1491e+07    0.22%   2939   2892
+        14270   14078     33   1.1516e+07   1.1491e+07    0.22%   2944   2897
+        14280   14088     33   1.1516e+07   1.1491e+07    0.22%   2946   2899
+        14290   14098     33   1.1516e+07   1.1491e+07    0.22%   2948   2901
+        14300   14108     33   1.1516e+07   1.1491e+07    0.22%   2950   2903
+        14310   14118     33   1.1516e+07   1.1491e+07    0.22%   2953   2906
+        14320   14128     33   1.1516e+07   1.1491e+07    0.22%   2956   2908
+        14330   14138     33   1.1516e+07   1.1491e+07    0.22%   2957   2910
+        14340   14148     33   1.1516e+07   1.1491e+07    0.22%   2960   2914
+        14350   14158     33   1.1516e+07   1.1491e+07    0.22%   2964   2916
+        14360   14168     33   1.1516e+07   1.1491e+07    0.22%   2968   2921
+        14370   14178     33   1.1516e+07   1.1491e+07    0.22%   2970   2923
+        14380   14188     33   1.1516e+07   1.1491e+07    0.22%   2973   2926
+        14390   14198     33   1.1516e+07   1.1491e+07    0.22%   2976   2929
+        14400   14208     33   1.1516e+07   1.1491e+07    0.22%   2980   2932
+        14410   14218     33   1.1516e+07   1.1491e+07    0.22%   2983   2934
+        14420   14228     33   1.1516e+07   1.1491e+07    0.22%   2986   2937
+        14430   14238     33   1.1516e+07   1.1491e+07    0.22%   2989   2939
+        14440   14246     33   1.1516e+07   1.1491e+07    0.22%   2991   2942
+        14450   14256     33   1.1516e+07   1.1491e+07    0.22%   2995   2945
+        14460   14266     33   1.1516e+07   1.1491e+07    0.22%   2996   2946
+        14470   14276     33   1.1516e+07   1.1491e+07    0.22%   2998   2947
+        14480   14286     33   1.1516e+07   1.1491e+07    0.22%   2999   2949
+        14490   14296     33   1.1516e+07   1.1491e+07    0.22%   3001   2951
+        14500   14306     33   1.1516e+07   1.1491e+07    0.22%   3003   2952
+        14510   14316     33   1.1516e+07   1.1491e+07    0.22%   3008   2958
+        14520   14322     33   1.1516e+07   1.1491e+07    0.22%   3011   2961
+        14530   14332     33   1.1516e+07   1.1491e+07    0.22%   3012   2963
+        14540   14340     33   1.1516e+07   1.1491e+07    0.22%   3015   2965
+        14550   14350     33   1.1516e+07   1.1491e+07    0.22%   3018   2968
+        14560   14360     33   1.1516e+07   1.1491e+07    0.22%   3021   2970
+        14570   14368     33   1.1516e+07   1.1491e+07    0.22%   3024   2973
+        14580   14376     33   1.1516e+07   1.1491e+07    0.22%   3027   2975
+        14590   14386     33   1.1516e+07   1.1491e+07    0.22%   3029   2978
+        14600   14390     33   1.1516e+07   1.1491e+07    0.22%   3034   2982
+        14610   14398     33   1.1516e+07   1.1491e+07    0.22%   3037   2985
+        14620   14406     33   1.1516e+07   1.1491e+07    0.22%   3040   2987
+        14630   14416     33   1.1516e+07   1.1491e+07    0.22%   3043   2990
+        14640   14426     33   1.1516e+07   1.1491e+07    0.22%   3045   2992
+        14650   14434     33   1.1516e+07   1.1491e+07    0.22%   3048   2995
+        14660   14444     33   1.1516e+07   1.1491e+07    0.22%   3051   2997
+        14670   14454     33   1.1516e+07   1.1491e+07    0.22%   3054   2999
+        14680   14464     33   1.1516e+07   1.1491e+07    0.22%   3055   3001
+        14690   14474     33   1.1516e+07   1.1491e+07    0.22%   3057   3003
+        14700   14484     33   1.1516e+07   1.1491e+07    0.22%   3059   3004
+        14710   14492     33   1.1516e+07   1.1491e+07    0.22%   3061   3006
+        14720   14502     33   1.1516e+07   1.1491e+07    0.22%   3063   3010
+        14730   14512     33   1.1516e+07   1.1491e+07    0.22%   3065   3012
+        14740   14520     33   1.1516e+07   1.1491e+07    0.22%   3068   3014
+        14750   14530     33   1.1516e+07   1.1491e+07    0.22%   3070   3016
+        14760   14540     33   1.1516e+07   1.1491e+07    0.22%   3089   3036
+        14770   14550     33   1.1516e+07   1.1491e+07    0.22%   3093   3041
+        14780   14560     33   1.1516e+07   1.1491e+07    0.22%   3096   3043
+        14790   14570     33   1.1516e+07   1.1491e+07    0.22%   3098   3046
+        14800   14580     33   1.1516e+07   1.1491e+07    0.22%   3100   3048
+        14810   14590     33   1.1516e+07   1.1491e+07    0.22%   3102   3049
+        14820   14600     33   1.1516e+07   1.1491e+07    0.22%   3104   3051
+        14830   14610     33   1.1516e+07   1.1491e+07    0.22%   3107   3054
+        14840   14620     33   1.1516e+07   1.1491e+07    0.22%   3109   3056
+        14850   14630     33   1.1516e+07   1.1491e+07    0.22%   3110   3057
+        14860   14640     33   1.1516e+07   1.1491e+07    0.22%   3111   3059
+        14870   14650     33   1.1516e+07   1.1491e+07    0.22%   3114   3061
+        14880   14660     33   1.1516e+07   1.1491e+07    0.22%   3117   3064
+        14890   14670     33   1.1516e+07   1.1491e+07    0.22%   3119   3066
+        14900   14680     33   1.1516e+07   1.1491e+07    0.22%   3121   3068
+        14910   14690     33   1.1516e+07   1.1491e+07    0.22%   3123   3070
+        14920   14700     33   1.1516e+07   1.1491e+07    0.22%   3124   3070
+        14930   14710     33   1.1516e+07   1.1491e+07    0.22%   3126   3072
+        14940   14720     33   1.1516e+07   1.1491e+07    0.22%   3127   3073
+        14950   14730     33   1.1516e+07   1.1491e+07    0.22%   3129   3075
+        14960   14740     33   1.1516e+07   1.1491e+07    0.22%   3131   3077
+        14970   14750     33   1.1516e+07   1.1491e+07    0.22%   3133   3079
+        14980   14758     33   1.1516e+07   1.1491e+07    0.22%   3135   3081
+        14990   14768     33   1.1516e+07   1.1491e+07    0.22%   3137   3083
+        15000   14778     33   1.1516e+07   1.1491e+07    0.22%   3140   3085
+        15010   14788     33   1.1516e+07   1.1491e+07    0.22%   3142   3088
+        15020   14796     33   1.1516e+07   1.1491e+07    0.22%   3146   3093
+        15030   14804     33   1.1516e+07   1.1491e+07    0.22%   3154   3101
+        15040   14814     33   1.1516e+07   1.1491e+07    0.22%   3157   3103
+        15050   14824     33   1.1516e+07   1.1491e+07    0.22%   3159   3106
+        15060   14834     33   1.1516e+07   1.1491e+07    0.22%   3163   3109
+        15070   14844     33   1.1516e+07   1.1491e+07    0.22%   3167   3114
+        15080   14850     33   1.1516e+07   1.1491e+07    0.22%   3171   3117
+        15090   14860     33   1.1516e+07   1.1491e+07    0.22%   3174   3120
+        15100   14870     33   1.1516e+07   1.1491e+07    0.22%   3177   3122
+        15110   14880     33   1.1516e+07   1.1491e+07    0.22%   3180   3125
+        15120   14890     33   1.1516e+07   1.1491e+07    0.22%   3182   3126
+        15130   14900     33   1.1516e+07   1.1491e+07    0.22%   3184   3128
+        15140   14910     33   1.1516e+07   1.1491e+07    0.22%   3186   3130
+        15150   14920     33   1.1516e+07   1.1491e+07    0.22%   3189   3133
+        15160   14930     33   1.1516e+07   1.1491e+07    0.22%   3191   3135
+        15170   14940     33   1.1516e+07   1.1491e+07    0.22%   3192   3136
+        15180   14950     33   1.1516e+07   1.1491e+07    0.22%   3195   3138
+        15190   14960     33   1.1516e+07   1.1491e+07    0.22%   3197   3140
+        15200   14970     33   1.1516e+07   1.1491e+07    0.22%   3199   3142
+        15210   14978     33   1.1516e+07   1.1491e+07    0.22%   3201   3144
+        15220   14988     33   1.1516e+07   1.1491e+07    0.22%   3203   3146
+        15230   14998     33   1.1516e+07   1.1491e+07    0.22%   3206   3148
+        15240   15008     33   1.1516e+07   1.1491e+07    0.22%   3209   3151
+        15250   15018     33   1.1516e+07   1.1491e+07    0.22%   3211   3153
+        15260   15028     33   1.1516e+07   1.1491e+07    0.22%   3214   3155
+        15270   15038     33   1.1516e+07   1.1491e+07    0.22%   3216   3157
+        15280   15046     33   1.1516e+07   1.1491e+07    0.22%   3218   3160
+        15290   15056     33   1.1516e+07   1.1491e+07    0.22%   3222   3164
+        15300   15066     33   1.1516e+07   1.1491e+07    0.22%   3224   3166
+        15310   15076     33   1.1516e+07   1.1491e+07    0.22%   3225   3167
+        15320   15086     33   1.1516e+07   1.1491e+07    0.22%   3225   3167
+        15330   15096     33   1.1516e+07   1.1491e+07    0.22%   3226   3168
+        15340   15106     33   1.1516e+07   1.1491e+07    0.22%   3229   3172
+        15350   15114     33   1.1516e+07   1.1491e+07    0.22%   3231   3173
+        15360   15124     33   1.1516e+07   1.1491e+07    0.22%   3234   3177
+        15370   15134     33   1.1516e+07   1.1491e+07    0.22%   3237   3180
+        15380   15144     33   1.1516e+07   1.1491e+07    0.22%   3239   3182
+        15390   15154     33   1.1516e+07   1.1491e+07    0.22%   3240   3183
+        15400   15164     33   1.1516e+07   1.1491e+07    0.22%   3243   3186
+        15410   15174     33   1.1516e+07   1.1491e+07    0.22%   3246   3188
+        15420   15184     33   1.1516e+07   1.1491e+07    0.22%   3248   3190
+        15430   15194     33   1.1516e+07   1.1491e+07    0.22%   3249   3191
+        15440   15204     33   1.1516e+07   1.1491e+07    0.22%   3251   3193
+        15450   15214     33   1.1516e+07   1.1491e+07    0.22%   3253   3195
+        15460   15224     33   1.1516e+07   1.1491e+07    0.22%   3256   3197
+        15470   15234     33   1.1516e+07   1.1491e+07    0.22%   3257   3198
+        15480   15244     33   1.1516e+07   1.1491e+07    0.22%   3260   3200
+        15490   15254     33   1.1516e+07   1.1491e+07    0.22%   3264   3205
+        15500   15264     33   1.1516e+07   1.1491e+07    0.22%   3267   3208
+        15510   15272     33   1.1516e+07   1.1491e+07    0.22%   3270   3211
+        15520   15282     33   1.1516e+07   1.1491e+07    0.22%   3271   3212
+        15530   15292     33   1.1516e+07   1.1491e+07    0.22%   3272   3213
+        15540   15302     33   1.1516e+07   1.1491e+07    0.22%   3276   3217
+        15550   15312     33   1.1516e+07   1.1491e+07    0.22%   3279   3219
+        15560   15322     33   1.1516e+07   1.1491e+07    0.22%   3283   3224
+        15570   15332     33   1.1516e+07   1.1491e+07    0.22%   3285   3226
+        15580   15342     33   1.1516e+07   1.1491e+07    0.22%   3287   3227
+        15590   15352     33   1.1516e+07   1.1491e+07    0.22%   3289   3229
+        15600   15362     33   1.1516e+07   1.1491e+07    0.22%   3292   3231
+        15610   15372     33   1.1516e+07   1.1491e+07    0.22%   3293   3233
+        15620   15382     33   1.1516e+07   1.1491e+07    0.22%   3295   3235
+        15630   15392     33   1.1516e+07   1.1491e+07    0.22%   3299   3237
+        15640   15402     33   1.1516e+07   1.1491e+07    0.22%   3302   3240
+        15650   15410     33   1.1516e+07   1.1491e+07    0.22%   3304   3242
+        15660   15418     33   1.1516e+07   1.1491e+07    0.22%   3306   3244
+        15670   15428     33   1.1516e+07   1.1491e+07    0.22%   3309   3247
+        15680   15438     33   1.1516e+07   1.1491e+07    0.22%   3313   3251
+        15690   15446     33   1.1516e+07   1.1491e+07    0.22%   3315   3253
+        15700   15456     33   1.1516e+07   1.1491e+07    0.22%   3317   3255
+        15710   15466     33   1.1516e+07   1.1491e+07    0.22%   3318   3256
+        15720   15474     33   1.1516e+07   1.1491e+07    0.22%   3320   3257
+        15730   15484     33   1.1516e+07   1.1491e+07    0.22%   3322   3260
+        15740   15494     33   1.1516e+07   1.1491e+07    0.22%   3325   3262
+        15750   15504     33   1.1516e+07   1.1491e+07    0.22%   3327   3264
+        15760   15514     33   1.1516e+07   1.1491e+07    0.22%   3329   3266
+        15770   15524     33   1.1516e+07   1.1491e+07    0.22%   3334   3273
+        15780   15534     33   1.1516e+07   1.1491e+07    0.22%   3335   3273
+        15790   15544     33   1.1516e+07   1.1491e+07    0.22%   3336   3275
+        15800   15552     33   1.1516e+07   1.1491e+07    0.22%   3338   3277
+        15810   15562     33   1.1516e+07   1.1491e+07    0.22%   3339   3278
+        15820   15572     33   1.1516e+07   1.1491e+07    0.22%   3341   3280
+        15830   15582     33   1.1516e+07   1.1491e+07    0.22%   3342   3281
+        15840   15592     33   1.1516e+07   1.1491e+07    0.22%   3344   3283
+        15850   15600     33   1.1516e+07   1.1491e+07    0.22%   3354   3293
+        15860   15610     33   1.1516e+07   1.1491e+07    0.22%   3355   3295
+        15870   15620     33   1.1516e+07   1.1491e+07    0.22%   3358   3297
+        15880   15630     33   1.1516e+07   1.1491e+07    0.22%   3360   3299
+        15890   15640     33   1.1516e+07   1.1491e+07    0.22%   3363   3301
+        15900   15650     33   1.1516e+07   1.1491e+07    0.22%   3364   3303
+        15910   15660     33   1.1516e+07   1.1491e+07    0.22%   3366   3304
+        15920   15668     33   1.1516e+07   1.1491e+07    0.22%   3370   3310
+        15930   15678     33   1.1516e+07   1.1491e+07    0.22%   3373   3314
+        15940   15688     33   1.1516e+07   1.1491e+07    0.22%   3374   3315
+        15950   15698     33   1.1516e+07   1.1491e+07    0.22%   3376   3317
+        15960   15708     33   1.1516e+07   1.1491e+07    0.22%   3378   3319
+        15970   15718     33   1.1516e+07   1.1491e+07    0.22%   3380   3320
+        15980   15728     33   1.1516e+07   1.1491e+07    0.22%   3381   3322
+        15990   15738     33   1.1516e+07   1.1491e+07    0.22%   3384   3325
+        16000   15748     33   1.1516e+07   1.1491e+07    0.22%   3387   3327
+        16010   15758     33   1.1516e+07   1.1491e+07    0.22%   3390   3330
+        16020   15766     33   1.1516e+07   1.1491e+07    0.22%   3392   3331
+        16030   15776     33   1.1516e+07   1.1491e+07    0.22%   3394   3333
+        16040   15786     33   1.1516e+07   1.1491e+07    0.22%   3395   3335
+        16050   15796     33   1.1516e+07   1.1491e+07    0.22%   3397   3337
+        16060   15806     33   1.1516e+07   1.1491e+07    0.22%   3398   3338
+        16070   15816     33   1.1516e+07   1.1491e+07    0.22%   3400   3339
+        16080   15826     33   1.1516e+07   1.1491e+07    0.22%   3402   3342
+        16090   15836     33   1.1516e+07   1.1491e+07    0.22%   3405   3344
+        16100   15846     33   1.1516e+07   1.1491e+07    0.22%   3407   3347
+        16110   15856     33   1.1516e+07   1.1491e+07    0.22%   3410   3349
+        16120   15866     33   1.1516e+07   1.1491e+07    0.22%   3412   3351
+        16130   15876     33   1.1516e+07   1.1491e+07    0.22%   3413   3353
+        16140   15886     33   1.1516e+07   1.1491e+07    0.22%   3415   3354
+        16150   15896     33   1.1516e+07   1.1491e+07    0.22%   3418   3357
+        16160   15904     33   1.1516e+07   1.1491e+07    0.22%   3421   3360
+        16170   15914     33   1.1516e+07   1.1491e+07    0.22%   3424   3362
+        16180   15922     33   1.1516e+07   1.1491e+07    0.22%   3425   3363
+        16190   15932     33   1.1516e+07   1.1491e+07    0.22%   3427   3365
+        16200   15942     33   1.1516e+07   1.1491e+07    0.22%   3432   3370
+        16210   15950     33   1.1516e+07   1.1491e+07    0.22%   3443   3382
+        16220   15960     33   1.1516e+07   1.1491e+07    0.22%   3445   3384
+        16230   15970     33   1.1516e+07   1.1491e+07    0.22%   3447   3386
+        16240   15980     33   1.1516e+07   1.1491e+07    0.22%   3449   3388
+        16250   15990     33   1.1516e+07   1.1491e+07    0.22%   3451   3389
+        16260   16000     33   1.1516e+07   1.1491e+07    0.22%   3456   3396
+        16270   16008     33   1.1516e+07   1.1491e+07    0.22%   3459   3401
+        16280   16018     33   1.1516e+07   1.1491e+07    0.22%   3462   3403
+        16290   16028     33   1.1516e+07   1.1491e+07    0.22%   3464   3405
+        16300   16038     33   1.1516e+07   1.1491e+07    0.22%   3485   3427
+        16310   16048     33   1.1516e+07   1.1491e+07    0.22%   3488   3429
+        16320   16058     33   1.1516e+07   1.1491e+07    0.22%   3490   3432
+        16330   16068     33   1.1516e+07   1.1491e+07    0.22%   3502   3445
+        16340   16078     33   1.1516e+07   1.1491e+07    0.22%   3505   3447
+        16350   16088     33   1.1516e+07   1.1491e+07    0.22%   3507   3449
+        16360   16098     33   1.1516e+07   1.1491e+07    0.22%   3509   3452
+        16370   16108     33   1.1516e+07   1.1491e+07    0.22%   3512   3454
+        16380   16118     33   1.1516e+07   1.1491e+07    0.22%   3515   3457
+        16390   16128     33   1.1516e+07   1.1491e+07    0.22%   3519   3462
+        16400   16138     33   1.1516e+07   1.1491e+07    0.22%   3522   3466
+        16410   16148     33   1.1516e+07   1.1491e+07    0.22%   3525   3468
+        16420   16158     33   1.1516e+07   1.1491e+07    0.22%   3527   3470
+        16430   16168     33   1.1516e+07   1.1491e+07    0.22%   3529   3472
+        16440   16178     33   1.1516e+07   1.1491e+07    0.22%   3532   3475
+        16450   16186     33   1.1516e+07   1.1491e+07    0.22%   3536   3480
+        16460   16196     33   1.1516e+07   1.1491e+07    0.22%   3538   3482
+        16470   16206     33   1.1516e+07   1.1491e+07    0.22%   3540   3483
+        16480   16216     33   1.1516e+07   1.1491e+07    0.22%   3544   3486
+        16490   16226     33   1.1516e+07   1.1491e+07    0.22%   3545   3488
+        16500   16236     33   1.1516e+07   1.1491e+07    0.22%   3548   3490
+        16510   16246     33   1.1516e+07   1.1491e+07    0.22%   3550   3492
+        16520   16256     33   1.1516e+07   1.1491e+07    0.22%   3552   3494
+        16530   16266     33   1.1516e+07   1.1491e+07    0.22%   3556   3498
+        16540   16276     33   1.1516e+07   1.1491e+07    0.22%   3558   3500
+        16550   16286     33   1.1516e+07   1.1491e+07    0.22%   3560   3502
+        16560   16296     33   1.1516e+07   1.1491e+07    0.22%   3562   3504
+        16570   16306     33   1.1516e+07   1.1491e+07    0.22%   3565   3506
+        16580   16316     33   1.1516e+07   1.1491e+07    0.22%   3568   3509
+        16590   16326     33   1.1516e+07   1.1491e+07    0.22%   3569   3510
+        16600   16334     33   1.1516e+07   1.1491e+07    0.22%   3572   3513
+        16610   16344     33   1.1516e+07   1.1491e+07    0.22%   3575   3516
+        16620   16354     33   1.1516e+07   1.1491e+07    0.22%   3578   3518
+        16630   16364     33   1.1516e+07   1.1491e+07    0.22%   3582   3523
+        16640   16374     33   1.1516e+07   1.1491e+07    0.22%   3585   3526
+        16650   16384     33   1.1516e+07   1.1491e+07    0.22%   3588   3528
+        16660   16394     33   1.1516e+07   1.1491e+07    0.22%   3592   3532
+        16670   16404     33   1.1516e+07   1.1491e+07    0.22%   3595   3536
+        16680   16414     33   1.1516e+07   1.1491e+07    0.22%   3598   3539
+        16690   16424     33   1.1516e+07   1.1491e+07    0.22%   3602   3542
+        16700   16430     33   1.1516e+07   1.1491e+07    0.22%   3611   3551
+        16710   16438     33   1.1516e+07   1.1491e+07    0.22%   3614   3554
+        16720   16448     33   1.1516e+07   1.1491e+07    0.22%   3618   3559
+        16730   16458     33   1.1516e+07   1.1491e+07    0.22%   3621   3562
+        16740   16468     33   1.1516e+07   1.1491e+07    0.22%   3624   3564
+        16750   16478     33   1.1516e+07   1.1491e+07    0.22%   3629   3569
+        16760   16488     33   1.1516e+07   1.1491e+07    0.22%   3632   3572
+        16770   16498     33   1.1516e+07   1.1491e+07    0.22%   3635   3574
+        16780   16508     33   1.1516e+07   1.1491e+07    0.22%   3638   3577
+        16790   16518     33   1.1516e+07   1.1491e+07    0.22%   3642   3582
+        16800   16528     33   1.1516e+07   1.1491e+07    0.22%   3645   3585
+        16810   16538     33   1.1516e+07   1.1491e+07    0.22%   3647   3586
+        16820   16548     33   1.1516e+07   1.1491e+07    0.22%   3650   3589
+        16830   16558     33   1.1516e+07   1.1491e+07    0.22%   3653   3591
+        16840   16568     33   1.1516e+07   1.1491e+07    0.22%   3656   3594
+        16850   16578     33   1.1516e+07   1.1491e+07    0.22%   3659   3598
+        16856   16583     33   1.1516e+07   1.1491e+07    0.22%   3661   3599
+NOTE: The Decomposition algorithm used 4 threads.
+NOTE: The Decomposition algorithm time is 3599.82 seconds.
+NOTE: Real time limit reached.
+NOTE: Objective of the best integer solution found = 11515692.666.
+NOTE: There were 4544 observations read from the data set LIB.NEOS_631517.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           59:59.96
+      user cpu time       1:01:01.69
+      system cpu time     37:21.42
+      memory              223200.95k
+      OS Memory           241096.00k
+      Timestamp           12/15/2017 06:25:58 AM
+      Step Count                        1  Switch Count  1867
+      Page Faults                       0
+      Page Reclaims                     40726617
+      Page Swaps                        0
+      Voluntary Context Switches        4649967
+      Involuntary Context Switches      365497
+      Block Input Operations            432
+      Block Output Operations           1112
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=TIME_LIM_SOL OBJECTIVE=11515692.666 RELATIVE_GAP=0.002178 
+      ABSOLUTE_GAP=25025.999814 PRIMAL_INFEASIBILITY=4.365575E-11 BOUND_INFEASIBILITY=5.4545355E-8 
+      INTEGER_INFEASIBILITY=5.4545355E-8 BEST_BOUND=11490666.667 NODES=16857 ITERATIONS=19257 PRESOLVE_TIME=0.02 
+      SOLUTION_TIME=3599.83
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           1:00:00.13
+      user cpu time       1:01:01.72
+      system cpu time     37:21.45
+      memory              229455.85k
+      OS Memory           241096.00k
+      Timestamp           12/15/2017 06:25:58 AM
+      Step Count                        1  Switch Count  5612
+      Page Faults                       0
+      Page Reclaims                     40731890
+      Page Swaps                        0
+      Voluntary Context Switches        4650458
+      Involuntary Context Switches      365502
+      Block Input Operations            440
+      Block Output Operations           1216
+      
+
+

@@ -1,0 +1,103 @@
+NOTE: Log file opened at Mon, 18 Dec 2017 16:42:25.330
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12132017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.14 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171218_decomp_auto_v940m5b_keebi_hybrid_auto4_b
+      ench/_scripts/dbs01295.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.DBS01295.DATA is in a format that is native to another host, or the file encoding does not match 
+      the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources 
+      and might reduce performance.
+NOTE: The problem dbs01295 has 1711533 variables (1711533 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 78458 constraints (64 LE, 78394 EQ, 0 GE, 0 range).
+NOTE: The problem has 8456503 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 292794 variables and 6106 constraints.
+NOTE: The MILP presolver removed 2948838 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 1418739 variables, 72352 constraints, and 5507665 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      0              .         145736        .     142
+             0        1      1         145732         145736    0.00%     151
+NOTE: Optimal within relative gap.
+NOTE: Objective = 145732.
+NOTE: There were 6870407 observations read from the data set LIB.DBS01295.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           2:50.28
+      user cpu time       2:47.43
+      system cpu time     2.30 seconds
+      memory              5334955.09k
+      OS Memory           5344268.00k
+      Timestamp           12/18/2017 04:45:15 PM
+      Step Count                        1  Switch Count  15
+      Page Faults                       0
+      Page Reclaims                     107957
+      Page Swaps                        0
+      Voluntary Context Switches        326
+      Involuntary Context Switches      39280
+      Block Input Operations            1243520
+      Block Output Operations           16
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=OPTIMAL_RGAP OBJECTIVE=145732 RELATIVE_GAP=0.000027 ABSOLUTE_GAP=4 
+      PRIMAL_INFEASIBILITY=2.131628E-14 BOUND_INFEASIBILITY=5.040413E-14 INTEGER_INFEASIBILITY=5.040413E-14 
+      BEST_BOUND=145736 NODES=1 ITERATIONS=92183 PRESOLVE_TIME=6.48 SOLUTION_TIME=151.76
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           2:50.46
+      user cpu time       2:47.46
+      system cpu time     2.33 seconds
+      memory              5341210.00k
+      OS Memory           5344268.00k
+      Timestamp           12/18/2017 04:45:15 PM
+      Step Count                        1  Switch Count  56
+      Page Faults                       0
+      Page Reclaims                     113250
+      Page Swaps                        0
+      Voluntary Context Switches        1011
+      Involuntary Context Switches      39285
+      Block Input Operations            1243528
+      Block Output Operations           120
+      
+
+

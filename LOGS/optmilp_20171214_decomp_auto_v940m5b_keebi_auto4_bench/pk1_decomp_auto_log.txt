@@ -1,0 +1,115 @@
+NOTE: Log file opened at Fri, 15 Dec 2017 06:15:03.003
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12132017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.15 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171214_decomp_auto_v940m5b_keebi_auto4_bench/_s
+      cripts/pk1.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.PK1.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+NOTE: The problem PK1 has 86 variables (55 binary, 0 integer, 0 free, 0 fixed).
+NOTE: The problem has 45 constraints (0 LE, 15 EQ, 30 GE, 0 range).
+NOTE: The problem has 915 constraint coefficients.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 0 variables and 0 constraints.
+NOTE: The MILP presolver removed 0 constraint coefficients.
+NOTE: The MILP presolver modified 0 constraint coefficients.
+NOTE: The presolved problem has 86 variables, 45 constraints, and 915 constraint coefficients.
+NOTE: The MILP solver is called.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+nBlocksTry=2 nRowsOrig=45 nColsOrig=86 nLinkCons=13 nLinkVars=1 nLinksConsOrig=12 borderAreaR=0.2666666667 borderAreaC=0.011627907
+nBlocksTry=2 nBlocksUsed=2 Q=0.3292292123 PR=0.2635971381 PC=0.7925036722 G=0.0687765421 BorderAreaR=0.2666666667 BorderAreaC=0.011627907 BorderRows=12 BorderCols=1
+Time in community    0.000 (real)    0.000 (cpu)
+Community numComponents=71 numBlocks=1 Q=0 P=0.1888756028 QP=0 SBBBorderArea= 0.3333333333 BorderRows=15 LIndex=0
+Time in community    0.000 (real)    0.000 (cpu)
+Community numComponents=123 numBlocks=1 Q=0 P=0.0105086605 QP=0 SBBBorderArea= 0.9111111111 BorderRows=41 LIndex=1
+Time in community    0.000 (real)    0.000 (cpu)
+Community numComponents=129 numBlocks=1 Q=0 P=0.0075297843 QP=0 SBBBorderArea= 0.9777777778 BorderRows=44 LIndex=2
+Time in community    0.000 (real)    0.000 (cpu)
+Remove at time    0.013 count=4
+Best Goodness=0 LIndex=0 in    0.013 (real)    0.000 (cpu) - total time in Comm    0.001
+Community numComponents=71 numBlocks=-28 Q=0 P=0.1888756028 QP=0 SBBBorderArea= 0.3333333333 BorderRows=15 LIndex=3
+Final goodness:0
+TIME----BDFTime: 0.0192420483 BDFGood: 0.0687765421 CommTime: 0.0127778053 CommRemove: 0.0010371208 CommMerge: 0 CommGood: 0 DBDF: 1 CommNBlocks: 1 HitMaxTime: 0
+STAT: 0.0192420483 0.0687765421 0.0127778053 0.0010371208 0 0 1 1 0
+Using community decomposition with goodness=0
+WARNING: The Decomposition algorithm was not run because the automated method was unable to find block-angular form.
+NOTE: Failed.
+NOTE: Objective of the best integer solution found = 731.
+NOTE: There were 603 observations read from the data set LIB.PK1.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           0.17 seconds
+      user cpu time       0.06 seconds
+      system cpu time     0.02 seconds
+      memory              23882.75k
+      OS Memory           30704.00k
+      Timestamp           12/15/2017 06:15:03 AM
+      Step Count                        1  Switch Count  28
+      Page Faults                       7
+      Page Reclaims                     3305
+      Page Swaps                        0
+      Voluntary Context Switches        407
+      Involuntary Context Switches      48
+      Block Input Operations            45448
+      Block Output Operations           8
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=FAIL_SOL OBJECTIVE=731 RELATIVE_GAP=7.31E12 ABSOLUTE_GAP=731 PRIMAL_INFEASIBILITY=0 BOUND_INFEASIBILITY=0 INTEGER_INFEASIBILITY=0 BEST_BOUND=0 NODES=1 ITERATIONS=0 PRESOLVE_TIME=0.02 SOLUTION_TIME=0.06
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.45 seconds
+      user cpu time       0.09 seconds
+      system cpu time     0.05 seconds
+      memory              30132.56k
+      OS Memory           30704.00k
+      Timestamp           12/15/2017 06:15:03 AM
+      Step Count                        1  Switch Count  95
+      Page Faults                       8
+      Page Reclaims                     8572
+      Page Swaps                        0
+      Voluntary Context Switches        1498
+      Involuntary Context Switches      54
+      Block Input Operations            46760
+      Block Output Operations           120
+      
+
+

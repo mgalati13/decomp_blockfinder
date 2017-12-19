@@ -1,0 +1,227 @@
+NOTE: Log file opened at Mon, 18 Dec 2017 16:12:17.437
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS04.01M5P12132017) 
+      Licensed to SAS Institute Inc., Site 1.
+NOTE: This session is executing on the Linux 2.6.32-431.el6.x86_64 (LIN X64) 
+      platform.
+
+
+
+NOTE: Analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-431.el6.x86_64 #1 SMP Sun Nov 10 22:19:54 EST 2013 
+      x86_64 Red Hat Enterprise Linux Server release 6.5 (Santiago) 
+
+NOTE: SAS initialization used:
+      real time           0.10 seconds
+      cpu time            0.04 seconds
+      
+
+NOTE: AUTOEXEC processing beginning; file is 
+      /LOG_DATA/LOGS/optmilp_20171218_decomp_auto_v940m5b_keebi_hybrid_auto4_b
+      ench/_scripts/bsnf.sas.
+
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /ORDATA/miplib
+OPTIONS=  maxtime=3600 timetype=real
+OPTIONSD=  decomp method=auto
+OPTIONSDS=  decomp_subprob loglevel=0
+OPTIONSDM=  decomp_master loglevel=0
+OPTIONSDMIP=  decomp_master_ip loglevel=0
+NOTE: Data file LIB.BSNF.DATA is in a format that is native to another host, or the file encoding does not match the 
+      session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and 
+      might reduce performance.
+NOTE: The problem bsnf has 357934 variables (122038 binary, 217857 integer, 0 free, 2020 fixed).
+NOTE: The problem has 242204 constraints (112774 LE, 22746 EQ, 101558 GE, 5126 range).
+NOTE: The problem has 1170126 constraint coefficients.
+NOTE: The following columns have no constraint coefficients:
+      Cancel[3574]
+      Cancel[3761]
+      Cancel[3826]
+      Cancel[3843]
+      Cancel[3939]
+      Cancel[800]
+      Cancel[3381]
+      Cancel[3427]
+      Cancel[3431]
+      Cancel[3449]
+      Cancel[3458]
+      Cancel[3523]
+NOTE: The above is a partial list of empty columns; the complete list would have 1152 entries.
+NOTE: The initial MILP heuristics are applied.
+NOTE: The MILP presolver value AUTOMATIC is applied.
+NOTE: The MILP presolver removed 24078 variables and 47413 constraints.
+NOTE: The MILP presolver removed 160517 constraint coefficients.
+NOTE: The MILP presolver added 3395 constraint coefficients.
+NOTE: The MILP presolver modified 75194 constraint coefficients.
+NOTE: The presolved problem has 333856 variables, 194791 constraints, and 1009609 constraint coefficients.
+NOTE: The Decomposition algorithm is using the direct MILP solver for the root node.
+NOTE: The MILP solver is called.
+NOTE: The Branch and Cut algorithm is used.
+          Node   Active   Sols    BestInteger      BestBound      Gap    Time
+             0        1      3     4707689528        9310044 50465.7%       8
+             0        1      3     4707689528      103301031 4457.25%     195
+             0        1      3     4707689528      103399032 4452.93%     276
+             0        1      3     4707689528      103440953 4451.09%     334
+             0        1      3     4707689528      103470856 4449.77%     406
+             0        1      3     4707689528      103490581 4448.91%     500
+             0        1      3     4707689528      103511713 4447.98%     586
+             0        1      3     4707689528      103529209 4447.21%     672
+             0        1      3     4707689528      103539386 4446.76%     776
+             0        1      3     4707689528      103548674 4446.35%     878
+             0        1      3     4707689528      103556883 4445.99%     976
+             0        1      4     4707689528      103556883 4445.99%    1006
+NOTE: The MILP solver added 5159 cuts with 79840 cut coefficients at the root.
+NOTE: The Decomposition algorithm is used.
+NOTE: The Decomposition algorithm is executing in single-machine mode.
+NOTE: The DECOMP method value AUTO is applied.
+nBlocksTry=22 nRowsOrig=199950 nColsOrig=333856 nLinkCons=14298 nLinkVars=8433 nLinksConsOrig=5865 
+borderAreaR=0.0293323331 borderAreaC=0.0252593933
+nBlocksTry=22 nBlocksUsed=3407 Q=0.9507939856 PR=0.863586109 PC=0.6033922082 G=0.4954408038 BorderAreaR=0.0293323331 
+BorderAreaC=0.0252593933 BorderRows=5865 BorderCols=8433
+nBlocksTry=21 nRowsOrig=199950 nColsOrig=333856 nLinkCons=14442 nLinkVars=8451 nLinksConsOrig=5991 
+borderAreaR=0.0299624906 borderAreaC=0.0253133087
+nBlocksTry=21 nBlocksUsed=3549 Q=0.9483828435 PR=0.8608694147 PC=0.6027419155 G=0.4920988625 BorderAreaR=0.0299624906 
+BorderAreaC=0.0253133087 BorderRows=5991 BorderCols=8451
+nBlocksTry=20 nRowsOrig=199950 nColsOrig=333856 nLinkCons=14072 nLinkVars=8158 nLinksConsOrig=5914 
+borderAreaR=0.0295773943 borderAreaC=0.0244356848
+nBlocksTry=20 nBlocksUsed=3493 Q=0.946460809 PR=0.8625285995 PC=0.6134149244 G=0.5007609767 BorderAreaR=0.0295773943 
+BorderAreaC=0.0244356848 BorderRows=5914 BorderCols=8158
+nBlocksTry=19 nRowsOrig=199950 nColsOrig=333856 nLinkCons=13520 nLinkVars=7681 nLinksConsOrig=5839 
+borderAreaR=0.0292023006 borderAreaC=0.0230069251
+nBlocksTry=19 nBlocksUsed=2914 Q=0.9447016992 PR=0.8641477629 PC=0.631196217 G=0.5152845178 BorderAreaR=0.0292023006 
+BorderAreaC=0.0230069251 BorderRows=5839 BorderCols=7681
+nBlocksTry=18 nRowsOrig=199950 nColsOrig=333856 nLinkCons=13355 nLinkVars=7483 nLinksConsOrig=5872 
+borderAreaR=0.0293673418 borderAreaC=0.0224138551
+nBlocksTry=18 nBlocksUsed=3063 Q=0.9434716871 PR=0.8634349569 PC=0.6387276671 G=0.5203244427 BorderAreaR=0.0293673418 
+BorderAreaC=0.0224138551 BorderRows=5872 BorderCols=7483
+nBlocksTry=17 nRowsOrig=199950 nColsOrig=333856 nLinkCons=12989 nLinkVars=7355 nLinksConsOrig=5634 
+borderAreaR=0.0281770443 borderAreaC=0.0220304562
+nBlocksTry=17 nBlocksUsed=2652 Q=0.9401816014 PR=0.8685890015 PC=0.6436442419 G=0.5256200973 BorderAreaR=0.0281770443 
+BorderAreaC=0.0220304562 BorderRows=5634 BorderCols=7355
+nBlocksTry=16 nRowsOrig=199950 nColsOrig=333856 nLinkCons=12757 nLinkVars=7182 nLinksConsOrig=5575 
+borderAreaR=0.0278819705 borderAreaC=0.0215122688
+nBlocksTry=16 nBlocksUsed=2626 Q=0.9388477717 PR=0.8698714364 PC=0.6503494955 G=0.5311253837 BorderAreaR=0.0278819705 
+BorderAreaC=0.0215122688 BorderRows=5575 BorderCols=7182
+nBlocksTry=15 nRowsOrig=199950 nColsOrig=333856 nLinkCons=12003 nLinkVars=6680 nLinksConsOrig=5323 
+borderAreaR=0.0266216554 borderAreaC=0.0200086265
+nBlocksTry=15 nBlocksUsed=2387 Q=0.9303080363 PR=0.8753703044 PC=0.670204406 G=0.5457903603 BorderAreaR=0.0266216554 
+BorderAreaC=0.0200086265 BorderRows=5323 BorderCols=6680
+nBlocksTry=14 nRowsOrig=199950 nColsOrig=333856 nLinkCons=11435 nLinkVars=6309 nLinksConsOrig=5126 
+borderAreaR=0.0256364091 borderAreaC=0.0188973689
+nBlocksTry=14 nBlocksUsed=2323 Q=0.9232693949 PR=0.8796932204 PC=0.6852665595 G=0.5565692696 BorderAreaR=0.0256364091 
+BorderAreaC=0.0188973689 BorderRows=5126 BorderCols=6309
+nBlocksTry=13 nRowsOrig=199950 nColsOrig=333856 nLinkCons=11154 nLinkVars=5987 nLinksConsOrig=5167 
+borderAreaR=0.0258414604 borderAreaC=0.0179328812
+nBlocksTry=13 nBlocksUsed=2539 Q=0.916099046 PR=0.8787917715 PC=0.6986134983 G=0.562425995 BorderAreaR=0.0258414604 
+BorderAreaC=0.0179328812 BorderRows=5167 BorderCols=5987
+nBlocksTry=12 nRowsOrig=199950 nColsOrig=333856 nLinkCons=10781 nLinkVars=5705 nLinksConsOrig=5076 
+borderAreaR=0.0253863466 borderAreaC=0.0170882057
+nBlocksTry=12 nBlocksUsed=2463 Q=0.9085188297 PR=0.8807937998 PC=0.7105157858 G=0.5685673449 BorderAreaR=0.0253863466 
+BorderAreaC=0.0170882057 BorderRows=5076 BorderCols=5705
+nBlocksTry=11 nRowsOrig=199950 nColsOrig=333856 nLinkCons=9825 nLinkVars=5206 nLinksConsOrig=4619 
+borderAreaR=0.0231007752 borderAreaC=0.0155935493
+nBlocksTry=11 nBlocksUsed=2331 Q=0.9004050466 PR=0.8909171191 PC=0.73207597 G=0.5872612918 BorderAreaR=0.0231007752 
+BorderAreaC=0.0155935493 BorderRows=4619 BorderCols=5206
+nBlocksTry=10 nRowsOrig=199950 nColsOrig=333856 nLinkCons=9126 nLinkVars=4851 nLinksConsOrig=4275 
+borderAreaR=0.0213803451 borderAreaC=0.0145302166
+nBlocksTry=10 nBlocksUsed=2012 Q=0.8921760868 PR=0.8986139796 PC=0.7478115043 G=0.5995368629 BorderAreaR=0.0213803451 
+BorderAreaC=0.0145302166 BorderRows=4275 BorderCols=4851
+nBlocksTry=9 nRowsOrig=199950 nColsOrig=333856 nLinkCons=9052 nLinkVars=4727 nLinksConsOrig=4325 
+borderAreaR=0.0216304076 borderAreaC=0.014158799
+nBlocksTry=9 nBlocksUsed=1839 Q=0.8842022718 PR=0.8974911333 PC=0.7533871951 G=0.5978607293 BorderAreaR=0.0216304076 
+BorderAreaC=0.014158799 BorderRows=4325 BorderCols=4727
+nBlocksTry=8 nRowsOrig=199950 nColsOrig=333856 nLinkCons=8573 nLinkVars=4363 nLinksConsOrig=4210 
+borderAreaR=0.0210552638 borderAreaC=0.0130685086
+nBlocksTry=8 nBlocksUsed=1788 Q=0.8763345134 PR=0.9000757801 PC=0.7699958363 G=0.6073476683 BorderAreaR=0.0210552638 
+BorderAreaC=0.0130685086 BorderRows=4210 BorderCols=4363
+nBlocksTry=7 nRowsOrig=199950 nColsOrig=333856 nLinkCons=7568 nLinkVars=3657 nLinksConsOrig=3911 borderAreaR=0.01955989 
+borderAreaC=0.0109538244
+nBlocksTry=7 nBlocksUsed=1549 Q=0.8422882577 PR=0.9068307506 PC=0.803260276 G=0.6135405552 BorderAreaR=0.01955989 
+BorderAreaC=0.0109538244 BorderRows=3911 BorderCols=3657
+nBlocksTry=6 nRowsOrig=199950 nColsOrig=333856 nLinkCons=6683 nLinkVars=3363 nLinksConsOrig=3320 
+borderAreaR=0.016604151 borderAreaC=0.0100732052
+nBlocksTry=6 nBlocksUsed=1316 Q=0.8188384566 PR=0.9203320454 PC=0.817532923 G=0.6160954854 BorderAreaR=0.016604151 
+BorderAreaC=0.0100732052 BorderRows=3320 BorderCols=3363
+nBlocksTry=5 nRowsOrig=199950 nColsOrig=333856 nLinkCons=5437 nLinkVars=2555 nLinksConsOrig=2882 
+borderAreaR=0.0144136034 borderAreaC=0.0076530001
+nBlocksTry=5 nBlocksUsed=835 Q=0.7788648735 PR=0.930467606 PC=0.8580782339 G=0.6218566192 BorderAreaR=0.0144136034 
+BorderAreaC=0.0076530001 BorderRows=2882 BorderCols=2555
+nBlocksTry=4 nRowsOrig=199950 nColsOrig=333856 nLinkCons=4604 nLinkVars=2172 nLinksConsOrig=2432 
+borderAreaR=0.0121630408 borderAreaC=0.0065057989
+nBlocksTry=4 nBlocksUsed=652 Q=0.7503444352 PR=0.9409971164 PC=0.8779935969 G=0.6199266509 BorderAreaR=0.0121630408 
+BorderAreaC=0.0065057989 BorderRows=2432 BorderCols=2172
+nBlocksTry=3 nRowsOrig=199950 nColsOrig=333856 nLinkCons=3598 nLinkVars=1597 nLinksConsOrig=2001 
+borderAreaR=0.0100075019 borderAreaC=0.0047834995
+nBlocksTry=3 nBlocksUsed=562 Q=0.6346908642 PR=0.9511937451 PC=0.9087638682 G=0.5486334519 BorderAreaR=0.0100075019 
+BorderAreaC=0.0047834995 BorderRows=2001 BorderCols=1597
+nBlocksTry=2 nRowsOrig=199950 nColsOrig=333856 nLinkCons=2286 nLinkVars=840 nLinksConsOrig=1446 borderAreaR=0.007231808 
+borderAreaC=0.0025160548
+nBlocksTry=2 nBlocksUsed=408 Q=0.5000731741 PR=0.9644868895 PC=0.9509240371 G=0.4586439953 BorderAreaR=0.007231808 
+BorderAreaC=0.0025160548 BorderRows=1446 BorderCols=840
+Time in community    1.285 (real)    1.200 (cpu)
+Starting length of S=54851
+Best Goodness=-1.79769E308 LIndex=-1 in  270.665 (real)  270.730 (cpu) - total time in Comm    1.285
+Community numComponents=1 numBlocks=1 Q=0 P=1 QP=0 SBBBorderArea= 0 BorderRows=0 LIndex=0
+Final goodness:0
+TIME----BDFTime: 25.882879019 BDFGood: 0.6218566192 CommTime: 270.684515 CommRemove: 0 CommMerge: 0 CommGood: 
+-1.79769E308 DBDF: 1 CommNBlocks: 1 HitMaxTime: 1
+STAT: 25.882879019 0.6218566192 270.684515 0 0 -1.79769E308 1 1 1
+Using community decomposition with goodness=-1.79769E308
+WARNING: The Decomposition algorithm was not run because the automated method was unable to find block-angular form.
+NOTE: Failed.
+NOTE: Objective of the best integer solution found = 4707689528.
+NOTE: There were 1533419 observations read from the data set LIB.BSNF.
+NOTE: PROCEDURE OPTMILP used (Total process time):
+      real time           21:46.17
+      user cpu time       21:36.96
+      system cpu time     9.18 seconds
+      memory              2248871.15k
+      OS Memory           2268876.00k
+      Timestamp           12/18/2017 04:34:03 PM
+      Step Count                        1  Switch Count  79
+      Page Faults                       0
+      Page Reclaims                     2046550
+      Page Swaps                        0
+      Voluntary Context Switches        810
+      Involuntary Context Switches      6754
+      Block Input Operations            337704
+      Block Output Operations           120
+      
+STATUS=OK ALGORITHM=DECOMP SOLUTION_STATUS=FAIL_SOL OBJECTIVE=4707689528 RELATIVE_GAP=44.45994 
+      ABSOLUTE_GAP=4604132645.1 PRIMAL_INFEASIBILITY=7.0588231E-7 BOUND_INFEASIBILITY=9.7560968E-7 
+      INTEGER_INFEASIBILITY=9.7560968E-7 BEST_BOUND=103556882.89 NODES=1 ITERATIONS=225873 PRESOLVE_TIME=7.83 
+      SOLUTION_TIME=1303.11
+
+NOTE: AUTOEXEC processing completed.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           21:46.31
+      user cpu time       21:36.98
+      system cpu time     9.21 seconds
+      memory              2255126.06k
+      OS Memory           2268876.00k
+      Timestamp           12/18/2017 04:34:03 PM
+      Step Count                        1  Switch Count  248
+      Page Faults                       0
+      Page Reclaims                     2051820
+      Page Swaps                        0
+      Voluntary Context Switches        1457
+      Involuntary Context Switches      6759
+      Block Input Operations            337712
+      Block Output Operations           224
+      
+
+
